@@ -1,8 +1,21 @@
 function IndexPage({ data }) {
   return (
     <Base>
-      <main className="container sans-serif">Add the good stuff here...</main>
+      <main className="container sans-serif min-vh-75">
+        <Directory tutorials={data.tutorials.edges} />
+      </main>
     </Base>
+  )
+}
+
+function Directory({ tutorials }) {
+  return (
+    <section>
+      <h2 className="sr-only">Search for Gatsby JS tutorials</h2>
+
+      {/* Currently visible tutorials */}
+      <Tutorials tutorials={tutorials} />
+    </section>
   )
 }
 
@@ -18,9 +31,12 @@ export const query = graphql`
       edges {
         node {
           title
-          author
           link
-          date(formatString: "MMMM DD, YYYY")
+          type
+          date(formatString: "MMM DD, YYYY")
+          length
+          author
+          source
           topics
         }
       }
@@ -38,5 +54,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Base from '../components/Base'
+import Tutorials from '../components/Tutorials'
 
 export default IndexPage

@@ -1,8 +1,21 @@
-- title: Video/post title
-  author: Author name
-  link: https://google.ca
-  date: 2018-11-10
+- title: 'GatsbyJS: How to Create the Fastest Sites in the World'
+  link: https://www.youtube.com/watch?v=Gtd-Ht-D0sg
+  type: video
+  date: 2017-10-01
+  length: '24:52'
+  author: Kyle Mathews
+  source: ReactNext 2017
   topics:
-    - animation
-    - gatsby-image
+    - general
+
+- title: 'Live Coding With Level Up Tuts: Moving My Personal Site To GatsbyJS'
+  link: https://www.youtube.com/watch?v=xqaThBnesfY
+  type: video
+  date: 2017-07-10
+  length: '54:05'
+  author: Scott Tolisnki
+  source: Level Up Tutorials
+  topics:
+    - migration
+    - v1
 

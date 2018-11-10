@@ -1,6 +1,6 @@
 const Header = ({ icon, count }) => (
   <header className="container pv4 sans-serif">
-    <div className="flex items-center" style={{ maxWidth: `31rem` }}>
+    <div className="flex items-center" style={{ maxWidth: `32rem` }}>
       <Img
         fluid={icon.childImageSharp.fluid}
         alt="Gatsby logo of a white 'G' on a purple circle"
@@ -9,8 +9,9 @@ const Header = ({ icon, count }) => (
 
       <h1 className="pl3 lh-copy f5 fw4">
         <span className="fw7">Gatsby Tutorials</span> is a community-driven list of
-        {` ${count}`} video and written resource{count > 1 && <span>s</span>}s to
-        help you learn{' '}
+        {` `}
+        <span className="fw7">{count}</span> video, audio and written resource
+        {count > 1 && <span>s</span>}s to help you learn{' '}
         <Anchor href="https://www.gatsbyjs.org" className="link">
           GatsbyJS
         </Anchor>

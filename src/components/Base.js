@@ -152,7 +152,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
-import Header from '../sections/Header'
-import Footer from '../sections/Footer'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 export default Base
