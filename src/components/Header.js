@@ -8,10 +8,8 @@ const Header = ({ icon, count }) => (
       />
 
       <h1 className="pl3 lh-copy f5 fw4">
-        <span className="fw7">Gatsby Tutorials</span> is a community-driven list of
-        {` `}
-        <span className="fw7">{count}</span> video, audio and written resource
-        {count > 1 && <span>s</span>}s to help you learn{' '}
+        <span className="fw7">Gatsby Tutorials</span> is a community-updated list of
+        {` ${count}`}&nbsp;video, audio and written tutorials to help you learn{' '}
         <Anchor href="https://www.gatsbyjs.org" className="link">
           GatsbyJS
         </Anchor>

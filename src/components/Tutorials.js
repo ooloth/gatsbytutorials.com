@@ -28,7 +28,7 @@ function Tutorial({ tutorial }) {
   }
 
   return (
-    <li className="bt b--black--05 pv4 lh-copy">
+    <li className="bt b--black--05 pv4 lh-tall">
       {/* Title */}
       <h3 className="lh-title">
         <Anchor href={tutorial.link} className="link">
