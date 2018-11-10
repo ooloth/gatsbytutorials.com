@@ -1,17 +1,19 @@
-function Tutorials({ tutorials }) {
+function Tutorials({ tutorials, filterByTopic }) {
   return (
     <ul>
       {tutorials.map(tutorial => (
         <Tutorial
           key={tutorial.node.title + tutorial.node.date}
           tutorial={tutorial.node}
+          filterByTopic={filterByTopic}
         />
       ))}
     </ul>
   )
 }
 
-function Tutorial({ tutorial }) {
+function Tutorial({ tutorial, filterByTopic }) {
+  // Choose which tutorial category emoji to show next to the title
   let tutorialEmoji
   if (tutorial.type === `video`) {
     tutorialEmoji = (
@@ -76,22 +78,13 @@ function Tutorial({ tutorial }) {
           <ul>
             {tutorial.topics.map(topic => (
               <li key={topic} className="dib mr2">
-                <FilterButton text={topic} count="1" />
+                <FilterButton text={topic} count="1" handleFilter={filterByTopic} />
               </li>
             ))}
           </ul>
         </div>
       )}
     </li>
-  )
-}
-
-function FilterButton({ text, count }) {
-  return (
-    <button className="group lh-copy mono f6 black-60">
-      <span className="underline group-hover:blue">{text}</span>[
-      <span className="blue">{count}</span>]
-    </button>
   )
 }
 
@@ -131,6 +124,7 @@ import { graphql } from 'gatsby'
 
 import Anchor from '../components/Anchor'
 import Emoji from '../components/Emoji'
+import FilterButton from '../components/FilterButton'
 
 import { ReactComponent as DateSVG } from '../svg/calendar.svg'
 import { ReactComponent as AuthorSVG } from '../svg/user.svg'
