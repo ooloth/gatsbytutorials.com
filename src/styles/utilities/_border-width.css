@@ -1,0 +1,27 @@
+/*
+
+BORDER WIDTH
+============
+
+Import after borders.css to override border-width of 1px.
+
+Adapted from: http://tachyons.io/docs/themes/borders/
+
+*/
+
+@variants responsive, hover, focus, group-hover {
+
+  .bw0 { border-width: var(--border-width-none) }
+  .bw1 { border-width: var(--border-width-1) }
+  .bw2 { border-width: var(--border-width-2) }
+  .bw3 { border-width: var(--border-width-3) }
+  .bw4 { border-width: var(--border-width-4) }
+  .bw5 { border-width: var(--border-width-5) }
+
+  /* Resets */
+  .bt-0 { border-top-width: 0 }
+  .br-0 { border-right-width: 0 }
+  .bb-0 { border-bottom-width: 0 }
+  .bl-0 { border-left-width: 0 }
+
+}

@@ -1,0 +1,158 @@
+/*
+
+HEIGHTS
+=======
+
+Adapted from: http://tachyons.io/docs/layout/heights/
+   
+*/
+
+@variants responsive, hover, focus, group-hover {
+
+  .h1 { height: var(--sizing-1) }
+  .h2 { height: var(--sizing-2) }
+  .h3 { height: var(--sizing-3) }
+  .h4 { height: var(--sizing-4) }
+  .h5 { height: var(--sizing-5) }
+  .h6 { height: var(--sizing-6) }
+  .h7 { height: var(--sizing-7) }
+  .h8 { height: var(--sizing-8) }
+  .h9 { height: var(--sizing-9) }
+
+  .h-0       { height: 0 }
+  .h-auto    { height: auto }
+  .h-inherit { height: inherit }
+
+  .max-h1 { max-height: var(--sizing-1) }
+  .max-h2 { max-height: var(--sizing-2) }
+  .max-h3 { max-height: var(--sizing-3) }
+  .max-h4 { max-height: var(--sizing-4) }
+  .max-h5 { max-height: var(--sizing-5) }
+  .max-h6 { max-height: var(--sizing-6) }
+  .max-h7 { max-height: var(--sizing-7) }
+  .max-h8 { max-height: var(--sizing-8) }
+  .max-h9 { max-height: var(--sizing-9) }
+
+  .max-h-none { max-height: none }
+
+  .min-h1 { min-height: var(--sizing-1) }
+  .min-h2 { min-height: var(--sizing-2) }
+  .min-h3 { min-height: var(--sizing-3) }
+  .min-h4 { min-height: var(--sizing-4) }
+  .min-h5 { min-height: var(--sizing-5) }
+  .min-h6 { min-height: var(--sizing-6) }
+  .min-h7 { min-height: var(--sizing-7) }
+  .min-h8 { min-height: var(--sizing-8) }
+  .min-h9 { min-height: var(--sizing-9) }
+
+  .min-h-none { min-height: none }
+
+ /* 
+  * 
+  * Percentage of parent height
+  *
+  */
+
+  .h-10  { height: 10% }
+  .h-20  { height: 20% }
+  .h-25  { height: 25% }
+  .h-30  { height: 30% }
+  .h-40  { height: 40% }
+  .h-50  { height: 50% }
+  .h-60  { height: 60% }
+  .h-70  { height: 70% }
+  .h-75  { height: 75% }
+  .h-80  { height: 80% }
+  .h-90  { height: 90% }
+  .h-100 { height: 100% }
+
+  .h-third      { height: calc(100% / 3) }
+  .h-two-thirds { height: calc(100% / 1.5) }
+
+  .max-h-10  { max-height: 10% }
+  .max-h-20  { max-height: 20% }
+  .max-h-25  { max-height: 25% }
+  .max-h-30  { max-height: 30% }
+  .max-h-40  { max-height: 40% }
+  .max-h-50  { max-height: 50% }
+  .max-h-60  { max-height: 60% }
+  .max-h-70  { max-height: 70% }
+  .max-h-75  { max-height: 75% }
+  .max-h-80  { max-height: 80% }
+  .max-h-90  { max-height: 90% }
+  .max-h-100 { max-height: 100% }
+
+  .max-h-third      { max-height: calc(100% / 3) }
+  .max-h-two-thirds { max-height: calc(100% / 1.5) }
+
+  .min-h-10  { min-height: 10% }
+  .min-h-20  { min-height: 20% }
+  .min-h-25  { min-height: 25% }
+  .min-h-30  { min-height: 30% }
+  .min-h-40  { min-height: 40% }
+  .min-h-50  { min-height: 50% }
+  .min-h-60  { min-height: 60% }
+  .min-h-70  { min-height: 70% }
+  .min-h-75  { min-height: 75% }
+  .min-h-80  { min-height: 80% }
+  .min-h-90  { min-height: 90% }
+  .min-h-100 { min-height: 100% }
+
+  .min-h-third      { min-height: calc(100% / 3) }
+  .min-h-two-thirds { min-height: calc(100% / 1.5) }
+
+ /* 
+  * 
+  * Percentage of viewport height
+  *
+  */
+
+  .vh-10  { height: 10vh }
+  .vh-20  { height: 20vh }
+  .vh-25  { height: 25vh }
+  .vh-30  { height: 30vh }
+  .vh-40  { height: 40vh }
+  .vh-50  { height: 50vh }
+  .vh-60  { height: 60vh }
+  .vh-70  { height: 70vh }
+  .vh-75  { height: 75vh }
+  .vh-80  { height: 80vh }
+  .vh-90  { height: 90vh }
+  .vh-100 { height: 100vh }
+
+  .vh-third      { height: calc(100vh / 3) }
+  .vh-two-thirds { height: calc(100vh / 1.5) }
+
+  .max-vh-10  { max-height: 10vh }
+  .max-vh-20  { max-height: 20vh }
+  .max-vh-25  { max-height: 25vh }
+  .max-vh-30  { max-height: 30vh }
+  .max-vh-40  { max-height: 40vh }
+  .max-vh-50  { max-height: 50vh }
+  .max-vh-60  { max-height: 60vh }
+  .max-vh-70  { max-height: 70vh }
+  .max-vh-75  { max-height: 75vh }
+  .max-vh-80  { max-height: 80vh }
+  .max-vh-90  { max-height: 90vh }
+  .max-vh-100 { max-height: 100vh }
+
+  .max-vh-third      { max-height: calc(100vh / 3) }
+  .max-vh-two-thirds { max-height: calc(100vh / 1.5) }
+
+  .min-vh-10  { min-height: 10vh }
+  .min-vh-20  { min-height: 20vh }
+  .min-vh-25  { min-height: 25vh }
+  .min-vh-30  { min-height: 30vh }
+  .min-vh-40  { min-height: 40vh }
+  .min-vh-50  { min-height: 50vh }
+  .min-vh-60  { min-height: 60vh }
+  .min-vh-70  { min-height: 70vh }
+  .min-vh-75  { min-height: 75vh }
+  .min-vh-80  { min-height: 80vh }
+  .min-vh-90  { min-height: 90vh }
+  .min-vh-100 { min-height: 100vh }
+
+  .min-vh-third      { min-height: calc(100vh / 3) }
+  .min-vh-two-thirds { min-height: calc(100vh / 1.5) }
+
+}

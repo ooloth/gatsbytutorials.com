@@ -1,0 +1,85 @@
+/*
+ *
+ * Column Count
+ *
+ */
+
+@responsive {
+
+  /* Column count */
+  .columns-2 { column-count: 2 }
+  .columns-3 { column-count: 3 }
+  .columns-4 { column-count: 4 }
+
+  /* Column width */
+  .column-w1 { width: var(--sizing-1) }
+  .column-w2 { width: var(--sizing-2) }
+  .column-w3 { width: var(--sizing-3) }
+  .column-w4 { width: var(--sizing-4) }
+  .column-w5 { width: var(--sizing-5) }
+  .column-w6 { width: var(--sizing-6) }
+  .column-w7 { width: var(--sizing-7) }
+  .column-w8 { width: var(--sizing-8) }
+  .column-w9 { width: var(--sizing-9) }
+
+  .column-w-10  { width: 10% }
+  .column-w-20  { width: 20% }
+  .column-w-25  { width: 25% }
+  .column-w-30  { width: 30% }
+  .column-w-40  { width: 40% }
+  .column-w-50  { width: 50% }
+  .column-w-60  { width: 60% }
+  .column-w-70  { width: 70% }
+  .column-w-75  { width: 75% }
+  .column-w-80  { width: 80% }
+  .column-w-90  { width: 90% }
+  .column-w-100 { width: 100% }
+
+  .column-w-third      { width: calc(100% / 3) }
+  .column-w-two-thirds { width: calc(100% / 1.5) }
+
+  /* Column gap */
+  .column-gap1 { width: var(--sizing-1) }
+  .column-gap2 { width: var(--sizing-2) }
+  .column-gap3 { width: var(--sizing-3) }
+  .column-gap4 { width: var(--sizing-4) }
+  .column-gap5 { width: var(--sizing-5) }
+  .column-gap6 { width: var(--sizing-6) }
+  .column-gap7 { width: var(--sizing-7) }
+  .column-gap8 { width: var(--sizing-8) }
+  .column-gap9 { width: var(--sizing-9) }
+
+  .column-gap-10  { width: 10% }
+  .column-gap-20  { width: 20% }
+  .column-gap-25  { width: 25% }
+  .column-gap-30  { width: 30% }
+  .column-gap-40  { width: 40% }
+  .column-gap-50  { width: 50% }
+  .column-gap-60  { width: 60% }
+  .column-gap-70  { width: 70% }
+  .column-gap-75  { width: 75% }
+  .column-gap-80  { width: 80% }
+  .column-gap-90  { width: 90% }
+  .column-gap-100 { width: 100% }
+
+  .column-gap-third      { width: calc(100% / 3) }
+  .column-gap-two-thirds { width: calc(100% / 1.5) }
+}
+
+/*
+ *
+ * Column Break
+ *
+ */
+
+.break-avoid {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* 
+
+For more column break properties, see: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
+
+*/

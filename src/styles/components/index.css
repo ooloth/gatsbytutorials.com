@@ -1,0 +1,29 @@
+/*
+
+Component classes
+
+*/
+
+@import './containers';
+@import './emoji';
+@import './icons';
+@import './links';
+
+/* 
+
+@import './examples/angles';
+@import './examples/arrows';
+@import './examples/arrows-aria';
+@import './examples/blockquotes';
+@import './examples/burger-1';
+@import './examples/burger-2';
+@import './examples/buttons';
+@import './examples/checkbox';
+@import './examples/fading-carousel';
+@import './examples/filters';
+@import './examples/floating-shapes';
+@import './examples/headings';
+@import './examples/inputs';
+@import './examples/tooltips'; 
+
+*/

@@ -1,0 +1,17 @@
+/*
+
+BACKGROUND SIZE
+===============
+
+Often used in combination with background image set as an inline style on an html element.
+
+Adapted from: https://github.com/tachyons-css/tachyons/blob/master/src/_background-size.css
+
+*/
+
+@responsive {
+
+  .bg-cover   { background-size: cover }
+  .bg-contain { background-size: contain }
+
+}

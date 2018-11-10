@@ -1,0 +1,28 @@
+/*
+
+CURSOR
+======
+
+Adapted from: 
+- https://tailwindcss.com/docs/cursor,
+- https://tailwindcss.com/docs/pointer-events,
+- https://tailwindcss.com/docs/user-select
+
+*/
+
+@variants responsive, hover, focus, group-hover {
+
+  /* Cursor */
+  .cursor-auto        { cursor: auto }
+  .cursor-pointer     { cursor: pointer }
+  .cursor-not-allowed { cursor: not-allowed }
+
+  /* Pointer events */
+  .pointer-events-none { pointer-events: none }
+  .pointer-events-auto { pointer-events: auto }
+
+  /* User select */
+  .select-none { user-select: none }
+  .select-text { user-select: text }
+
+}

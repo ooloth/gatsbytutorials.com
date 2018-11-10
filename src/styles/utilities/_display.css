@@ -1,0 +1,31 @@
+/*
+
+DISPLAY
+=======
+
+Adapted from: http://tachyons.io/docs/layout/display
+
+*/
+
+@responsive {
+
+  .dn              { display: none }
+  .di              { display: inline }
+  .db              { display: block }
+  .dib             { display: inline-block }
+
+  .flex            { display: flex }
+  .inline-flex     { display: inline-flex }
+
+  .dt              { display: table }
+  .dit             { display: inline-table }
+  .dtc             { display: table-cell }
+  .dt-row          { display: table-row }
+  .dt-row-group    { display: table-row-group }
+  .dt-column       { display: table-column }
+  .dt-column-group { display: table-column-group }
+
+  /* Set table to full width (all cells will be equal width) */
+  .dt--fixed { table-layout: fixed; width: 100%; }
+
+}

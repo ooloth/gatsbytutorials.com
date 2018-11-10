@@ -1,0 +1,8 @@
+- title: Video/post title
+  author: Author name
+  link: https://google.ca
+  date: 2018-11-10
+  topics:
+    - animation
+    - gatsby-image
+

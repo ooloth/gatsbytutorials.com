@@ -1,0 +1,28 @@
+/*
+
+VISIBILITY
+==========
+
+Adapted from:
+- https://tailwindcss.com/docs/visibility,
+- https://github.com/tachyons-css/tachyons/blob/master/src/_visibility.css
+
+*/
+
+@variants responsive, hover, focus, group-hover {
+
+.visible   { visibility: visible }
+.invisible { visibility: hidden }
+
+}
+
+/*
+
+Text that is hidden but accessible - see: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+
+*/
+
+.clip {
+  position: fixed !important;
+  clip: rect(1px, 1px, 1px, 1px);
+}

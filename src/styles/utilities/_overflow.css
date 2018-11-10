@@ -1,0 +1,42 @@
+/*
+
+OVERFLOW
+========
+
+Adapted from: https://github.com/tachyons-css/tachyons/blob/master/src/_overflow.csshttps://tailwindcss.com/docs/overflow
+
+ */
+
+.overflow-visible   { overflow: visible }
+.overflow-hidden    { overflow: hidden }
+.overflow-scroll    { overflow: scroll }
+.overflow-auto      { overflow: auto }
+
+.overflow-x-visible { overflow-x: visible }
+.overflow-x-hidden  { overflow-x: hidden }
+.overflow-x-scroll  { overflow-x: scroll }
+.overflow-x-auto    { overflow-x: auto }
+
+.overflow-y-visible { overflow-y: visible }
+.overflow-y-hidden  { overflow-y: hidden }
+.overflow-y-scroll  { overflow-y: scroll }
+.overflow-y-auto    { overflow-y: auto }
+
+/* Scrolling */
+.scroll-smooth      { scroll-behavior: smooth }
+.scrolling-touch    { -webkit-overflow-scrolling: touch }
+
+.hide-scrollbar {
+  /* For IE */
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  scrollbar-face-color: transparent;
+  scrollbar-track-color: transparent;
+  scrollbar-3dlight-color: transparent;
+  scrollbar-darkshadow-color: transparent;
+  scrollbar-arrow-color: transparent;
+
+  /* For Chrome */
+  &::-webkit-scrollbar { width: 0px; height: 0px }
+
+  /* For Firefox...? (Nothing yet.) */
+}

@@ -1,0 +1,29 @@
+/* 
+ * 
+ * Grid component classes (only applied if grid is supported)
+ *
+ * NOTE: reset margins and widths here (not using utilities) so these resets
+ * only kick in if the grid layout is supported
+ * 
+ */
+
+@supports (display: grid) {
+  
+ /* 
+  * 
+  * Media
+  *
+  */
+
+  .media-grid {
+    @media (--sm) {
+      display: grid;
+      grid-column-gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (--md) { grid-template-columns: repeat(3, 1fr) }
+    @media (--lg) { grid-template-columns: repeat(4, 1fr) }
+  }
+
+}

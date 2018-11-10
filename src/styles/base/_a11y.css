@@ -1,0 +1,68 @@
+/* 
+
+See: https://github.com/ten1seven/what-input
+
+*/
+
+/*
+ *
+ * Focus management
+ *
+ */
+
+/* Remove default focus outline ONLY if user is not navigating by keyboard  */
+[data-whatintent="mouse"] *:focus, 
+[data-whatintent="touch"] *:focus, 
+html:not([data-whatinput="keyboard"]) *:focus { outline: none; }
+
+/*
+
+Optionally, set custom focus styles (not necessarily recommended)
+
+*/
+
+/* Set custom focus styles */
+/* a:active,
+a:focus,
+button:active,
+button:focus,
+input:active,
+input:focus,
+select:active,
+select:focus,
+textarea:active,
+textarea:focus {
+  box-shadow: 0 0 0 3px orange !important;
+  outline: none !important;
+} */
+
+/* Remove custom focus styles for mouse users */
+/* [data-whatintent="mouse"] a:active,
+[data-whatintent="mouse"] a:focus,
+[data-whatintent="mouse"] button:active,
+[data-whatintent="mouse"] button:focus,
+[data-whatintent="mouse"] input:active,
+[data-whatintent="mouse"] input:focus,
+[data-whatintent="mouse"] select:active,
+[data-whatintent="mouse"] select:focus,
+[data-whatintent="mouse"] textarea:active,
+[data-whatintent="mouse"] textarea:focus { box-shadow: none !important } */
+
+/* 
+ *
+ * Screen reader
+ *
+ */
+
+/* See: https://css-tricks.com/small-tweaks-can-make-huge-impact-websites-accessibility/#article-header-id-5 */
+.sr-only { 
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(1px);
+  height: 1px;
+  width: 1px;
+  white-space: nowrap;
+}

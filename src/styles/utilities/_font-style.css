@@ -1,0 +1,46 @@
+/*
+
+FONT STYLE & DECORATION
+=======================
+
+Adapted from: 
+- http://tachyons.io/docs/typography/font-style/,
+- http://tachyons.io/docs/typography/text-decoration/,
+- http://tachyons.io/docs/typography/text-transform/
+
+*/
+
+@variants responsive, hover, focus, group-hover, group-hover {
+
+  /*
+  *
+  * Font style
+  *
+  */
+
+  .i         { font-style: italic }
+  .fs-normal { font-style: normal }
+
+  /*
+  *
+  * Text decoration
+  *
+  */
+
+  .strike       { text-decoration: line-through }
+  .underline    { text-decoration: underline }
+  .no-underline { text-decoration: none }
+
+  /*
+  *
+  * Text transform
+  *
+  */
+
+  .ttc        { text-transform: capitalize }
+  .ttl        { text-transform: lowercase }
+  .ttu        { text-transform: uppercase }
+  .ttn        { text-transform: none }
+  .small-caps { font-variant: small-caps }
+
+}

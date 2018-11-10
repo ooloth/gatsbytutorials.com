@@ -1,0 +1,27 @@
+/* 
+
+Icons
+
+*/
+
+/* Make gatsby-plugin-svgr icons fit into the flow of text */
+.icon {
+  @apply .dib .lh-none .fill-current;
+  width: 1em;
+  height: 1em;
+}
+
+/* .icon { 
+  @apply .animate;
+
+  &:hover { @apply .green }
+} */
+
+/* .icon-on-green { 
+  @apply .animate;
+
+  &:hover {
+    @apply .white;
+    filter: drop-shadow( 0px 15px 5px rgba(0, 0, 0, 0.11) )
+  }
+} */

@@ -1,0 +1,207 @@
+/*
+
+WIDTH
+=====
+
+Adapted from: 
+- http://tachyons.io/docs/layout/widths/,
+- http://tachyons.io/docs/layout/max-widths/
+
+*/
+
+@responsive {
+
+  /* Width (rem, scale) */
+  .w-0    { width: 0 }
+  .w1     { width: var(--sizing-1) }
+  .w2     { width: var(--sizing-2) }
+  .w3     { width: var(--sizing-3) }
+  .w4     { width: var(--sizing-4) }
+  .w5     { width: var(--sizing-5) }
+  .w6     { width: var(--sizing-6) }
+  .w7     { width: var(--sizing-7) }
+  .w8     { width: var(--sizing-8) }
+  .w9     { width: var(--sizing-9) }
+  .w-auto { width: auto }
+
+  /* Max-width (rem, scale) */
+  .mw-none { max-width: none }
+  .mw1     { max-width: var(--sizing-1) }
+  .mw2     { max-width: var(--sizing-2) }
+  .mw3     { max-width: var(--sizing-3) }
+  .mw4     { max-width: var(--sizing-4) }
+  .mw5     { max-width: var(--sizing-5) }
+  .mw6     { max-width: var(--sizing-6) }
+  .mw7     { max-width: var(--sizing-7) }
+  .mw8     { max-width: var(--sizing-8) }
+  .mw9     { max-width: var(--sizing-9) }
+
+  /* Min-width (rem, scale) */
+  .min-w-none { min-width: none }
+  .min-w1 { min-width: var(--sizing-1) }
+  .min-w2 { min-width: var(--sizing-2) }
+  .min-w3 { min-width: var(--sizing-3) }
+  .min-w4 { min-width: var(--sizing-4) }
+  .min-w5 { min-width: var(--sizing-5) }
+  .min-w6 { min-width: var(--sizing-6) }
+  .min-w7 { min-width: var(--sizing-7) }
+  .min-w8 { min-width: var(--sizing-8) }
+  .min-w9 { min-width: var(--sizing-9) }
+
+ /* 
+  * 
+  * Percentage of parent width
+  *
+  */
+
+  /* Width (%) */
+  .w-5          { width: 5% }
+  .w-10         { width: 10% }
+  .w-15         { width: 15% }
+  .w-20         { width: 20% }
+  .w-25         { width: 25% }
+  .w-30         { width: 30% }
+  .w-third      { width: calc(100% / 3) }
+  .w-35         { width: 35% }
+  .w-40         { width: 40% }
+  .w-45         { width: 45% }
+  .w-50         { width: 50% }
+  .w-55         { width: 55% }
+  .w-60         { width: 60% }
+  .w-65         { width: 65% }
+  .w-two-thirds { width: calc(100% / 1.5) }
+  .w-70         { width: 70% }
+  .w-75         { width: 75% }
+  .w-80         { width: 80% }
+  .w-85         { width: 85% }
+  .w-90         { width: 90% }
+  .w-95         { width: 95% }
+  .w-100        { width: 100% }
+
+  /* Max-width (%) */
+  .mw-5          { max-width: 5% }
+  .mw-10         { max-width: 10% }
+  .mw-15         { max-width: 15% }
+  .mw-20         { max-width: 20% }
+  .mw-25         { max-width: 25% }
+  .mw-30         { max-width: 30% }
+  .mw-third      { max-width: calc(100% / 3) }
+  .mw-35         { max-width: 35% }
+  .mw-40         { max-width: 40% }
+  .mw-45         { max-width: 45% }
+  .mw-50         { max-width: 50% }
+  .mw-55         { max-width: 55% }
+  .mw-60         { max-width: 60% }
+  .mw-65         { max-width: 65% }
+  .mw-two-thirds { max-width: calc(100% / 1.5) }
+  .mw-70         { max-width: 70% }
+  .mw-75         { max-width: 75% }
+  .mw-80         { max-width: 80% }
+  .mw-85         { max-width: 85% }
+  .mw-90         { max-width: 90% }
+  .mw-95         { max-width: 95% }
+  .mw-100        { max-width: 100% }
+
+  /* Min-width (%) */
+  .min-w-5          { min-width: 5% }
+  .min-w-10         { min-width: 10% }
+  .min-w-15         { min-width: 15% }
+  .min-w-20         { min-width: 20% }
+  .min-w-25         { min-width: 25% }
+  .min-w-30         { min-width: 30% }
+  .min-w-third      { min-width: calc(100% / 3) }
+  .min-w-35         { min-width: 35% }
+  .min-w-40         { min-width: 40% }
+  .min-w-45         { min-width: 45% }
+  .min-w-50         { min-width: 50% }
+  .min-w-55         { min-width: 55% }
+  .min-w-60         { min-width: 60% }
+  .min-w-65         { min-width: 65% }
+  .min-w-two-thirds { min-width: calc(100% / 1.5) }
+  .min-w-70         { min-width: 70% }
+  .min-w-75         { min-width: 75% }
+  .min-w-80         { min-width: 80% }
+  .min-w-85         { min-width: 85% }
+  .min-w-90         { min-width: 90% }
+  .min-w-95         { min-width: 95% }
+  .min-w-100        { min-width: 100% }
+
+ /* 
+  * 
+  * Percentage of viewport width
+  *
+  */
+
+  /* Width (vw) */
+  .vw-5          { width: 5vw }
+  .vw-10         { width: 10vw }
+  .vw-15         { width: 15vw }
+  .vw-20         { width: 20vw }
+  .vw-25         { width: 25vw }
+  .vw-30         { width: 30vw }
+  .vw-third      { width: calc(100vw / 3) }
+  .vw-35         { width: 35vw }
+  .vw-40         { width: 40vw }
+  .vw-45         { width: 45vw }
+  .vw-50         { width: 50vw }
+  .vw-55         { width: 55vw }
+  .vw-60         { width: 60vw }
+  .vw-65         { width: 65vw }
+  .vw-two-thirds { width: calc(100vw / 1.5) }
+  .vw-70         { width: 70vw }
+  .vw-75         { width: 75vw }
+  .vw-80         { width: 80vw }
+  .vw-85         { width: 85vw }
+  .vw-90         { width: 90vw }
+  .vw-95         { width: 95vw }
+  .vw-100        { width: 100vw }
+  
+  /* Max-width (vw) */
+  .max-vw-5          { max-width: 5vw }
+  .max-vw-10         { max-width: 10vw }
+  .max-vw-15         { max-width: 15vw }
+  .max-vw-20         { max-width: 20vw }
+  .max-vw-25         { max-width: 25vw }
+  .max-vw-30         { max-width: 30vw }
+  .max-vw-third      { max-width: calc(100vw / 3) }
+  .max-vw-35         { max-width: 35vw }
+  .max-vw-40         { max-width: 40vw }
+  .max-vw-45         { max-width: 45vw }
+  .max-vw-50         { max-width: 50vw }
+  .max-vw-55         { max-width: 55vw }
+  .max-vw-60         { max-width: 60vw }
+  .max-vw-65         { max-width: 65vw }
+  .max-vw-two-thirds { max-width: calc(100vw / 1.5) }
+  .max-vw-70         { max-width: 70vw }
+  .max-vw-75         { max-width: 75vw }
+  .max-vw-80         { max-width: 80vw }
+  .max-vw-85         { max-width: 85vw }
+  .max-vw-90         { max-width: 90vw }
+  .max-vw-95         { max-width: 95vw }
+  .max-vw-100        { max-width: 100vw }
+  
+  /* Min-width (vw) */
+  .min-vw-5          { min-width: 5vw }
+  .min-vw-10         { min-width: 10vw }
+  .min-vw-15         { min-width: 15vw }
+  .min-vw-20         { min-width: 20vw }
+  .min-vw-25         { min-width: 25vw }
+  .min-vw-30         { min-width: 30vw }
+  .min-vw-third      { min-width: calc(100vw / 3) }
+  .min-vw-35         { min-width: 35vw }
+  .min-vw-40         { min-width: 40vw }
+  .min-vw-45         { min-width: 45vw }
+  .min-vw-50         { min-width: 50vw }
+  .min-vw-55         { min-width: 55vw }
+  .min-vw-60         { min-width: 60vw }
+  .min-vw-65         { min-width: 65vw }
+  .min-vw-two-thirds { min-width: calc(100vw / 1.5) }
+  .min-vw-70         { min-width: 70vw }
+  .min-vw-75         { min-width: 75vw }
+  .min-vw-80         { min-width: 80vw }
+  .min-vw-85         { min-width: 85vw }
+  .min-vw-90         { min-width: 90vw }
+  .min-vw-95         { min-width: 95vw }
+  .min-vw-100        { min-width: 100vw }
+
+}

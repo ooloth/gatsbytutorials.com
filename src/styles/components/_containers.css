@@ -1,0 +1,41 @@
+/*
+
+Containers
+
+*/
+
+/* TODO: if this makes the horizontal spacing too irregular compared to the predictable spacing scale used for vertical spacing, go back to the defined values at each breakpoint */
+.container { 
+  /* @apply .ml-auto .mr-auto .ph3 .mw9; */
+  @apply .ml-auto .mr-auto .mw9;
+  padding-left: 3%;
+  padding-right: 3%;
+
+  /* TODO: try padding-left: 3%; padding-right: 3% instead? */
+
+ /*  @media (--md) { @apply .ph4 }
+  @media (--lg) { @apply .ph5 } */
+
+  /* @supports (display: grid) { @apply .mw9 } */
+}
+
+.container-not-centered { 
+  /* @apply .ph3 .mw8; */
+  @apply .ph3 .mw8;
+  padding-left: 3%;
+  padding-right: 3%;
+
+  /* @media (--md) { @apply .ph4 }
+  @media (--lg) { @apply .ph5 }
+
+  @supports (display: grid) { @apply .mw9 } */
+}
+
+.container-full { 
+  /* @apply .ph3; */
+  padding-left: 3%;
+  padding-right: 3%;
+
+  /* @media (--md) { @apply .ph4 }
+  @media (--lg) { @apply .ph5 } */
+}

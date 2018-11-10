@@ -1,0 +1,13 @@
+/* 
+ *
+ * Transform origin
+ *
+ */
+
+ @responsive { 
+  .origin-top    { transform-origin: top }
+  .origin-right  { transform-origin: right }
+  .origin-bottom { transform-origin: bottom }
+  .origin-left   { transform-origin: left }
+  .origin-center { transform-origin: center }
+ }

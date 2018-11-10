@@ -1,0 +1,212 @@
+/*
+
+POSITION
+========
+
+Adapted from: http://tachyons.io/docs/layout/position/
+
+*/
+
+@responsive {
+  
+  .static   { position: static }
+  .relative { position: relative }
+  .absolute { position: absolute }
+  .fixed    { position: fixed }
+
+  /* Positive spacing */
+  .fill { top: 0; right: 0; bottom: 0; left: 0 }
+
+  .top-0    { top: 0 }
+  .right-0  { right: 0 }
+  .bottom-0 { bottom: 0 }
+  .left-0   { left: 0 }
+
+  .top-1    { top: var(--spacing-1) }
+  .right-1  { right: var(--spacing-1) }
+  .bottom-1 { bottom: var(--spacing-1) }
+  .left-1   { left:  var(--spacing-1) }
+
+  .top-2    { top: var(--spacing-2) }
+  .right-2  { right: var(--spacing-2) }
+  .bottom-2 { bottom: var(--spacing-2) }
+  .left-2   { left: var(--spacing-2) }
+
+  .top-3    { top: var(--spacing-3) }
+  .right-3  { right: var(--spacing-3) }
+  .bottom-3 { bottom: var(--spacing-3) }
+  .left-3   { left: var(--spacing-3) }
+
+  .top-4    { top: var(--spacing-4) }
+  .right-4  { right: var(--spacing-4) }
+  .bottom-4 { bottom: var(--spacing-4) }
+  .left-4   { left: var(--spacing-4) }
+
+  .top-5    { top: var(--spacing-5) }
+  .right-5  { right: var(--spacing-5) }
+  .bottom-5 { bottom: var(--spacing-5) }
+  .left-5   { left: var(--spacing-5) }
+
+  .top-6    { top: var(--spacing-6) }
+  .right-6  { right: var(--spacing-6) }
+  .bottom-6 { bottom: var(--spacing-6) }
+  .left-6   { left: var(--spacing-6) }
+
+  .top-7    { top: var(--spacing-7) }
+  .right-7  { right: var(--spacing-7) }
+  .bottom-7 { bottom: var(--spacing-7) }
+  .left-7   { left: var(--spacing-7) }
+
+  /* Negative spacing */
+  .top--1    { top: -var(--spacing-1) }
+  .right--1  { right: -var(--spacing-1) }
+  .bottom--1 { bottom: -var(--spacing-1) }
+  .left--1   { left:  -var(--spacing-1) }
+
+  .top--2    { top: -var(--spacing-2) }
+  .right--2  { right: -var(--spacing-2) }
+  .bottom--2 { bottom: -var(--spacing-2) }
+  .left--2   { left: -var(--spacing-2) }
+
+  .top--3    { top: -var(--spacing-3) }
+  .right--3  { right: -var(--spacing-3) }
+  .bottom--3 { bottom: -var(--spacing-3) }
+  .left--3   { left: -var(--spacing-3) }
+
+  .top--4    { top: -var(--spacing-4) }
+  .right--4  { right: -var(--spacing-4) }
+  .bottom--4 { bottom: -var(--spacing-4) }
+  .left--4   { left: -var(--spacing-4) }
+
+  .top--5    { top: -var(--spacing-5) }
+  .right--5  { right: -var(--spacing-5) }
+  .bottom--5 { bottom: -var(--spacing-5) }
+  .left--5   { left: -var(--spacing-5) }
+
+  .top--6    { top: -var(--spacing-6) }
+  .right--6  { right: -var(--spacing-6) }
+  .bottom--6 { bottom: -var(--spacing-6) }
+  .left--6   { left: -var(--spacing-6) }
+
+  .top--7    { top: -var(--spacing-7) }
+  .right--7  { right: -var(--spacing-7) }
+  .bottom--7 { bottom: -var(--spacing-7) }
+  .left--7   { left: -var(--spacing-7) }
+
+  /* Percentage spacing */
+  .top-10  { top: 10% }
+  .top-15  { top: 15% }
+  .top-20  { top: 20% }
+  .top-25  { top: 25% }
+  .top-30  { top: 30% }
+  .top-40  { top: 40% }
+  .top-50  { top: 50% }
+  .top-60  { top: 60% }
+  .top-70  { top: 70% }
+  .top-75  { top: 75% }
+  .top-80  { top: 80% }
+  .top-90  { top: 90% }
+  .top-100 { top: 100% }
+
+  .right-10  { right: 10% }
+  .right-15  { right: 15% }
+  .right-20  { right: 20% }
+  .right-25  { right: 25% }
+  .right-30  { right: 30% }
+  .right-40  { right: 40% }
+  .right-50  { right: 50% }
+  .right-60  { right: 60% }
+  .right-70  { right: 70% }
+  .right-75  { right: 75% }
+  .right-80  { right: 80% }
+  .right-90  { right: 90% }
+  .right-100 { right: 100% }
+
+  .bottom-10  { bottom: 10% }
+  .bottom-15  { bottom: 15% }
+  .bottom-20  { bottom: 20% }
+  .bottom-25  { bottom: 25% }
+  .bottom-30  { bottom: 30% }
+  .bottom-40  { bottom: 40% }
+  .bottom-50  { bottom: 50% }
+  .bottom-60  { bottom: 60% }
+  .bottom-70  { bottom: 70% }
+  .bottom-75  { bottom: 75% }
+  .bottom-80  { bottom: 80% }
+  .bottom-90  { bottom: 90% }
+  .bottom-100 { bottom: 100% }
+
+  .left-10  { left: 10% }
+  .left-15  { left: 15% }
+  .left-20  { left: 20% }
+  .left-25  { left: 25% }
+  .left-30  { left: 30% }
+  .left-40  { left: 40% }
+  .left-50  { left: 50% }
+  .left-60  { left: 60% }
+  .left-70  { left: 70% }
+  .left-75  { left: 75% }
+  .left-80  { left: 80% }
+  .left-90  { left: 90% }
+  .left-100 { left: 100% }
+
+  /* Negative percentage spacing */
+  .top--10  { top: -10% }
+  .top--15  { top: -15% }
+  .top--20  { top: -20% }
+  .top--25  { top: -25% }
+  .top--30  { top: -30% }
+  .top--40  { top: -40% }
+  .top--50  { top: -50% }
+  .top--60  { top: -60% }
+  .top--70  { top: -70% }
+  .top--75  { top: -75% }
+  .top--80  { top: -80% }
+  .top--90  { top: -90% }
+  .top--100 { top: -100% }
+
+  .right--10  { right: -10% }
+  .right--15  { right: -15% }
+  .right--20  { right: -20% }
+  .right--25  { right: -25% }
+  .right--30  { right: -30% }
+  .right--40  { right: -40% }
+  .right--50  { right: -50% }
+  .right--60  { right: -60% }
+  .right--70  { right: -70% }
+  .right--75  { right: -75% }
+  .right--80  { right: -80% }
+  .right--90  { right: -90% }
+  .right--100 { right: -100% }
+
+  .bottom--10  { bottom: -10% }
+  .bottom--15  { bottom: -15% }
+  .bottom--20  { bottom: -20% }
+  .bottom--25  { bottom: -25% }
+  .bottom--30  { bottom: -30% }
+  .bottom--40  { bottom: -40% }
+  .bottom--50  { bottom: -50% }
+  .bottom--60  { bottom: -60% }
+  .bottom--70  { bottom: -70% }
+  .bottom--75  { bottom: -75% }
+  .bottom--80  { bottom: -80% }
+  .bottom--90  { bottom: -90% }
+  .bottom--100 { bottom: -100% }
+
+  .left--10  { left: -10% }
+  .left--15  { left: -15% }
+  .left--20  { left: -20% }
+  .left--25  { left: -25% }
+  .left--30  { left: -30% }
+  .left--40  { left: -40% }
+  .left--50  { left: -50% }
+  .left--60  { left: -60% }
+  .left--70  { left: -70% }
+  .left--75  { left: -75% }
+  .left--80  { left: -80% }
+  .left--90  { left: -90% }
+  .left--100 { left: -100% }
+
+}
+
+

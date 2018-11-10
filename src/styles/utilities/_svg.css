@@ -1,0 +1,15 @@
+/*
+
+SVG
+===
+
+Adapted from: https://tailwindcss.com/docs/svg
+
+*/
+
+@variants responsive, hover, focus, group-hover {
+
+  .fill-current   { fill: currentColor }
+  .stroke-current { stroke: currentColor }
+
+}

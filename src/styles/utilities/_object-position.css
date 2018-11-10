@@ -1,0 +1,57 @@
+/*
+
+OBJECT FIT
+==========
+
+Used to adapt inline images to their dimensions.
+
+*/
+
+@variants responsive, hover, focus, group-hover {
+
+  .object-center { 
+    background-repeat: no-repeat;
+    background-position: center center; 
+  }
+
+  .object-top {    
+    background-repeat: no-repeat; 
+    background-position: top center;    
+  }
+
+  .object-right {  
+    background-repeat: no-repeat; 
+    background-position: center right;  
+  }
+
+  .object-bottom { 
+    background-repeat: no-repeat; 
+    background-position: bottom center; 
+  }
+
+  .object-left {   
+    background-repeat: no-repeat; 
+    background-position: center left;   
+  }
+
+  .object-top-right {    
+    background-repeat: no-repeat; 
+    background-position: top right;    
+  }
+
+  .object-top-left {    
+    background-repeat: no-repeat; 
+    background-position: top left;    
+  }
+
+  .object-bottom-right { 
+    background-repeat: no-repeat; 
+    background-position: bottom right; 
+  }
+
+  .object-bottom-left { 
+    background-repeat: no-repeat; 
+    background-position: bottom left; 
+  }
+
+}

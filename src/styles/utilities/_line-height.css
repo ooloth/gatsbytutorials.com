@@ -1,0 +1,18 @@
+/*
+
+LINE HEIGHT
+===========
+
+Adapted from: http://tachyons.io/docs/typography/line-height
+
+*/
+
+@variants responsive, hover, focus, group-hover {
+
+  .lh-none  { line-height: 0 }
+  .lh-solid { line-height: 1 }
+  .lh-title { line-height: 1.25 }
+  .lh-copy  { line-height: 1.5 }
+  .lh-tall  { line-height: 1.7 }
+
+}

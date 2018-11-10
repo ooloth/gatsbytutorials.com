@@ -1,0 +1,42 @@
+/*
+
+BORDER RADIUS
+=============
+
+Set the border radius amount and locations using separate classes.
+
+Adapted from: http://tachyons.io/docs/themes/border-radius/
+
+*/
+
+@variants responsive, hover, focus, group-hover {
+
+  .br0     { border-radius: var(--border-radius-none) }
+  .br1     { border-radius: var(--border-radius-1) }
+  .br2     { border-radius: var(--border-radius-2) }
+  .br3     { border-radius: var(--border-radius-3) }
+  .br4     { border-radius: var(--border-radius-4) }
+  .br-100  { border-radius: var(--border-radius-circle) }
+  .br-pill { border-radius: var(--border-radius-pill) }
+
+  .br-top {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .br-right {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .br-bottom {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .br-left {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+}

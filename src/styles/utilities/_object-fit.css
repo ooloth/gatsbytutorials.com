@@ -1,0 +1,11 @@
+/*
+
+OBJECT FIT
+==========
+
+Used to adapt inline images to their dimensions.
+
+*/
+
+.object-cover   { object-fit: cover }
+.object-contain { object-fit: contain }

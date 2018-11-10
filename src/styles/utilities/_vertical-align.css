@@ -1,0 +1,23 @@
+/*
+
+VERTICAL ALIGN
+==============
+
+Adapted from: 
+- http://tachyons.io/docs/typography/vertical-align/,
+- https://tailwindcss.com/docs/vertical-alignment
+
+*/
+
+@responsive {
+
+  .v-top         { vertical-align: top }
+  .v-text-top    { vertical-align: text-top }
+
+  .v-mid         { vertical-align: middle }
+  .v-baseline    { vertical-align: baseline }
+
+  .v-bottom      { vertical-align: bottom }
+  .v-text-bottom { vertical-align: text-bottom }
+
+}

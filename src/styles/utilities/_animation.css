@@ -1,0 +1,86 @@
+/* 
+ *
+ * Transitions
+ *
+ */
+
+.animate { transition: all .2s ease-in-out }
+
+/*
+ *
+ * General animations
+ *
+ */
+
+.fade-in { animation: fadeIn 2s }
+
+/* TODO: use animation-delay instead of this timing */
+@keyframes fadeIn {
+  0%   { opacity: 0 }
+  70%  { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+/* 
+ *
+ * Ball Animations
+ *
+ */
+
+/*
+.anim-vertical
+  animation: anim-vertical 7s ease-in-out infinite alternate
+
+.anim-horizontal
+  animation: anim-horizontal 11s ease-in-out infinite alternate
+
+.anim-diagonal-right
+  animation: anim-diagonal-right 9s ease-in-out infinite alternate
+
+.anim-diagonal-left
+  animation: anim-diagonal-left 8s ease-in-out infinite alternate
+*/
+
+/* 
+ *
+ * Ball Keyframes
+ *
+ */
+
+/*
+@keyframes anim-vertical
+  0%
+    transform: matrix(1, 0, 0, 1, 0, 0)
+  100%
+    transform: matrix(-1, 0, 0, -1, 0, -80)
+
+@keyframes anim-horizontal
+  0%
+    transform: matrix(1, 0, 0, 1, 0, 0)
+  100%
+    transform: matrix(-1, 0, 0, -1, -80, 0)
+
+@keyframes anim-diagonal-right
+  0%
+    transform: matrix(1, 0, 0, 1, 0, 0)
+  100%
+    transform: matrix(-1, 0, 0, -1, 80, -80)
+
+@keyframes anim-diagonal-left
+  0%
+    transform: matrix(1, 0, 0, 1, 0, 0)
+  100%
+    transform: matrix(-1, 0, 0, -1, -80, -80)
+*/
+
+/* 
+ *
+ * Animation Delay (needs to come after all compound animation declarations)
+ *
+ */
+
+.anim-delay-1 { animation-delay: 1s }
+.anim-delay-2 { animation-delay: 2s }
+.anim-delay-3 { animation-delay: 3s }
+.anim-delay-4 { animation-delay: 4s }
+.anim-delay-5 { animation-delay: 5s }

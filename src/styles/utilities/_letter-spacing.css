@@ -1,0 +1,17 @@
+/*
+
+LETTER SPACING
+==============
+
+Adapted from: http://tachyons.io/docs/typography/tracking/
+
+*/
+
+@variants responsive, hover, focus, group-hover {
+
+  .tracked       { letter-spacing: .1em }
+  .tracked-sm    { letter-spacing: .05em }
+  .tracked-lg    { letter-spacing: .25em }
+  .tracked-tight { letter-spacing: -.05em }
+
+}

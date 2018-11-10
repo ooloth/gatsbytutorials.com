@@ -1,0 +1,25 @@
+/*
+
+HIDE CHILD
+==========
+
+Hide child & reveal on hover.
+
+Put the hide-child class on a parent element and any nested element with the child class will be hidden and displayed on hover or focus.
+
+<div class="hide-child">
+  <div class="child"> Hidden until hover or focus </div>
+  <div class="child"> Hidden until hover or focus </div>
+  <div class="child"> Hidden until hover or focus </div>
+  <div class="child"> Hidden until hover or focus </div>
+</div>
+
+Adapted from: http://tachyons.io/docs/themes/hovers/,
+
+*/
+
+.hide-child .child { opacity: 0 }
+
+.hide-child:hover .child,
+.hide-child:focus .child,
+.hide-child:active .child { opacity: 1 }

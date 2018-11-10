@@ -1,0 +1,19 @@
+/*
+
+BORDER STYLE
+============
+
+Depends on base border module in borders.css.
+
+Adapted from: http://tachyons.io/docs/themes/borders/
+
+*/
+
+@variants responsive, hover, focus, group-hover {
+
+  .b--dashed { border-style: dashed }
+  .b--dotted { border-style: dotted }
+  .b--solid  { border-style: solid }
+  .b--none   { border-style: none }
+
+}

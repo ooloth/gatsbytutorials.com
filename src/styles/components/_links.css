@@ -1,0 +1,25 @@
+/* 
+ *
+ * Links (that are not inside tweets)
+ *
+ */
+
+/* NOTE: The .customizable class is added to all Twitter links automatically" */
+.link {
+  @apply .blue;
+
+  &:hover { @apply .underline }
+}
+
+/* .link-white {
+  &:hover { @apply .b--white .bg-white .black }
+}
+
+.link-inline { 
+  @apply .animate;
+
+  border-bottom: 1px solid var(--pink);
+  box-shadow: inset 0 -2px 0px 0px var(--pink);
+
+  &:hover { box-shadow: inset 0 -12px 0px 0px var(--pink) }
+} */

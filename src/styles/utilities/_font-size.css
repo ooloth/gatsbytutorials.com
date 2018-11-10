@@ -1,0 +1,28 @@
+/*
+
+TYPE SCALE
+==========
+
+Adapted from: https://github.com/tachyons-css/tachyons/blob/master/src/_type-scale.css
+
+*/
+
+@variants responsive, hover, focus, group-hover, group-hover {
+
+  .f1            { font-size: var(--font-size-1) }
+  .f2            { font-size: var(--font-size-2) }
+  .f3            { font-size: var(--font-size-3) }
+  .f4            { font-size: var(--font-size-4) }
+  .f5            { font-size: var(--font-size-5) }
+  .f6            { font-size: var(--font-size-6) }
+  .f7            { font-size: var(--font-size-7) }
+
+  .f-4           { font-size: 4rem}
+  .f-5           { font-size: 5rem}
+  .f-6           { font-size: 6rem}
+
+  .f-headline    { font-size: var(--font-size-headline) }
+  .f-subheadline { font-size: var(--font-size-subheadline) }
+  .f-lead        { font-size: 1.125rem }
+
+}

@@ -1,0 +1,15 @@
+/*
+
+DEBUG CHILDREN
+==============
+
+Just add the debug class to any element to see outlines on its children.
+
+Adapted from: http://tachyons.io/docs/debug/
+
+*/
+
+.debug *       { outline: 1px solid var(--red) }
+.debug-white * { outline: 1px solid white }
+.debug-black * { outline: 1px solid black }
+

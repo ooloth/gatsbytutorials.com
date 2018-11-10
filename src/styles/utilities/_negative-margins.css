@@ -1,0 +1,146 @@
+/*
+
+NEGATIVE MARGINS
+================
+
+Adapted from: 
+- http://tachyons.io/docs/layout/spacing/
+- https://github.com/tachyons-css/tachyons/blob/master/src/_negative-margins.css
+
+*/
+
+@responsive {
+
+  /* All */
+  .na0 { margin: 0 }
+  .na1 { margin: calc(var(--spacing-1) * -1) }
+  .na2 { margin: calc(var(--spacing-2) * -1) }
+  .na3 { margin: calc(var(--spacing-3) * -1) }
+  .na4 { margin: calc(var(--spacing-4) * -1) }
+  .na5 { margin: calc(var(--spacing-5) * -1) }
+  .na6 { margin: calc(var(--spacing-6) * -1) }
+  .na7 { margin: calc(var(--spacing-7) * -1) }
+
+  /* Top */
+  .nt0 { margin-top: 0 }
+  .nt1 { margin-top: calc(var(--spacing-1) * -1) }
+  .nt2 { margin-top: calc(var(--spacing-2) * -1) }
+  .nt3 { margin-top: calc(var(--spacing-3) * -1) }
+  .nt4 { margin-top: calc(var(--spacing-4) * -1) }
+  .nt5 { margin-top: calc(var(--spacing-5) * -1) }
+  .nt6 { margin-top: calc(var(--spacing-6) * -1) }
+  .nt7 { margin-top: calc(var(--spacing-7) * -1) }
+
+  /* Right */
+  .nr0 { margin-right: 0 }
+  .nr1 { margin-right: calc(var(--spacing-1) * -1) }
+  .nr2 { margin-right: calc(var(--spacing-2) * -1) }
+  .nr3 { margin-right: calc(var(--spacing-3) * -1) }
+  .nr4 { margin-right: calc(var(--spacing-4) * -1) }
+  .nr5 { margin-right: calc(var(--spacing-5) * -1) }
+  .nr6 { margin-right: calc(var(--spacing-6) * -1) }
+  .nr7 { margin-right: calc(var(--spacing-7) * -1) }
+
+  /* Bottom */
+  .nb0 { margin-bottom: 0 }
+  .nb1 { margin-bottom: calc(var(--spacing-1) * -1) }
+  .nb2 { margin-bottom: calc(var(--spacing-2) * -1) }
+  .nb3 { margin-bottom: calc(var(--spacing-3) * -1) }
+  .nb4 { margin-bottom: calc(var(--spacing-4) * -1) }
+  .nb5 { margin-bottom: calc(var(--spacing-5) * -1) }
+  .nb6 { margin-bottom: calc(var(--spacing-6) * -1) }
+  .nb7 { margin-bottom: calc(var(--spacing-7) * -1) }
+
+  /* Left */
+  .nl0 { margin-left: 0 }
+  .nl1 { margin-left: calc(var(--spacing-1) * -1) }
+  .nl2 { margin-left: calc(var(--spacing-2) * -1) }
+  .nl3 { margin-left: calc(var(--spacing-3) * -1) }
+  .nl4 { margin-left: calc(var(--spacing-4) * -1) }
+  .nl5 { margin-left: calc(var(--spacing-5) * -1) }
+  .nl6 { margin-left: calc(var(--spacing-6) * -1) }
+  .nl7 { margin-left: calc(var(--spacing-7) * -1) }
+
+  /* Vertical (top + bottom) */
+  .nv0 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .nv1 {
+    margin-top: calc(var(--spacing-1) * -1);
+    margin-bottom: calc(var(--spacing-1) * -1);
+  }
+
+  .nv2 {
+    margin-top: calc(var(--spacing-2) * -1);
+    margin-bottom: calc(var(--spacing-2) * -1);
+  }
+
+  .nv3 {
+    margin-top: calc(var(--spacing-3) * -1);
+    margin-bottom: calc(var(--spacing-3) * -1);
+  }
+
+  .nv4 {
+    margin-top: calc(var(--spacing-4) * -1);
+    margin-bottom: calc(var(--spacing-4) * -1);
+  }
+
+  .nv5 {
+    margin-top: calc(var(--spacing-5) * -1);
+    margin-bottom: calc(var(--spacing-5) * -1);
+  }
+
+  .nv6 {
+    margin-top: calc(var(--spacing-6) * -1);
+    margin-bottom: calc(var(--spacing-6) * -1);
+  }
+
+  .nv7 {
+    margin-top: calc(var(--spacing-7) * -1);
+    margin-bottom: calc(var(--spacing-7) * -1);
+  }
+
+  /* Horizontal (left + right) */
+  .nh0 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .nh1 {
+    margin-left: calc(var(--spacing-1) * -1);
+    margin-right: calc(var(--spacing-1) * -1);
+  }
+
+  .nh2 {
+    margin-left: calc(var(--spacing-2) * -1);
+    margin-right: calc(var(--spacing-2) * -1);
+  }
+
+  .nh3 {
+    margin-left: calc(var(--spacing-3) * -1);
+    margin-right: calc(var(--spacing-3) * -1);
+  }
+
+  .nh4 {
+    margin-left: calc(var(--spacing-4) * -1);
+    margin-right: calc(var(--spacing-4) * -1);
+  }
+
+  .nh5 {
+    margin-left: calc(var(--spacing-5) * -1);
+    margin-right: calc(var(--spacing-5) * -1);
+  }
+
+  .nh6 {
+    margin-left: calc(var(--spacing-6) * -1);
+    margin-right: calc(var(--spacing-6) * -1);
+  }
+
+  .nh7 {
+    margin-left: calc(var(--spacing-7) * -1);
+    margin-right: calc(var(--spacing-7) * -1);
+  }
+
+}

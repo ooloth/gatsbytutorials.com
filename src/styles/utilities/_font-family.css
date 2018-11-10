@@ -1,0 +1,138 @@
+/*
+
+FONT FAMILY GROUPS
+==================
+
+Adapted from: 
+- http://tachyons.io/docs/typography/font-family/
+- https://tailwindcss.com/docs/fonts
+
+*/
+
+/* See: http://markdotto.com/2018/02/07/github-system-fonts/ */
+.sans-serif { 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
+}
+
+.serif { 
+  font-family: Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif', Lucida, 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', Georgia, serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
+}
+
+.system-sans-serif { 
+  font-family: sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' 
+}
+
+.system-serif { 
+  font-family: serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' 
+}
+
+/*
+ *
+ * Monospace (for code) 
+ *
+ */
+
+code,
+.mono { 
+  font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' 
+}
+
+.courier { 
+  font-family: 'Courier New', courier, monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
+}
+
+/*
+ *
+ * Sans-serif
+ *
+ */
+
+.abeezee { 
+  font-family: ABeeZee, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' 
+}
+
+.avenir { 
+  font-family: 'avenir next', avenir, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' 
+}
+
+.helvetica { 
+  font-family: 'helvetica neue', helvetica, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' 
+}
+
+.josefin-sans { 
+  font-family: 'Josefin Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' 
+}
+
+.lato {
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.mukta {
+  font-family: 'Mukta', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.news-cycle {
+  font-family: 'News Cycle', 'Arial Narrow', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
+}
+
+.open-sans { 
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' 
+}
+
+.oswald    { font-family: 'Oswald', sans-serif }
+
+.raleway { 
+  font-family: Raleway, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' 
+}
+
+/*
+ *
+ * Serif
+ *
+ */
+
+.athelas { 
+  font-family: athelas, georgia, serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' 
+}
+
+.baskerville { 
+  font-family: baskerville, serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' 
+}
+
+.bodoni { 
+  font-family: 'Bodoni MT', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' 
+}
+
+.calisto { 
+  font-family: 'Calisto MT', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' 
+}
+
+.garamond { 
+  font-family: garamond, serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' 
+}
+
+.georgia { 
+  font-family: georgia, serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' 
+}
+
+.lora { 
+  font-family: Lora, Georgia, serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' 
+}
+
+.times { 
+  font-family: times, serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' 
+}
+
+.ultra { 
+  font-family: Ultra, "Arial Black", Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif', Lucida, 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', Georgia, serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
+}
+
+/*
+ *
+ * Cursive
+ *
+ */
+
+.lobster { 
+  font-family: 'Lobster', cursive, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' 
+}

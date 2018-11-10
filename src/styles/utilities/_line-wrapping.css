@@ -1,0 +1,77 @@
+/*
+
+FONT-WRAPPING
+=============
+
+Adapted from: 
+- http://tachyons.io/docs/typography/measure/,
+- http://tachyons.io/docs/typography/white-space/,
+- https://tailwindcss.com/docs/whitespace-and-wrapping
+
+*/
+
+@responsive {
+
+  /*
+  *
+  * Line length
+  *
+  */
+
+  .measure-wide   { max-width: 75ch }
+  .measure        { max-width: 66ch }
+  .measure-medium { max-width: 55ch }
+  .measure-narrow { max-width: 45ch }
+  .measure-tight  { max-width: 28ch }
+
+  /*
+  *
+  * White space
+  *
+  */
+
+/* 
+
+.pre-line is useful when adding line breaks to JSON with '\n'
+See:  https://stackoverflow.com/questions/35351706/how-to-render-a-multi-line-text-string-in-react 
+*/
+
+  .ws-normal { white-space: normal }
+  .no-wrap    { white-space: nowrap }
+  .pre       { white-space: pre }
+  .pre-line  { white-space: pre-line }
+  .pre-wrap  { white-space: pre-wrap }
+
+  /*
+  *
+  * Word break
+  *
+  */
+
+  .break-normal { word-break: normal }
+  .break-all    { word-break: break-all }
+  .break-word   { word-break: break-word }
+  .break-none   { word-break: keep-all }
+
+  /*
+  *
+  * Truncation
+  *
+  */
+
+  /* Combine with a width to truncate text, or leave as is to truncate at width of containing element. */
+  .truncate {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  /*
+  *
+  * Indentation
+  *
+  */
+
+  .indent { text-indent: 1em }
+
+}

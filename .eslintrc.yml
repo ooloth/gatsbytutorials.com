@@ -1,0 +1,14 @@
+extends: "react-app"
+
+globals:
+  __dirname: false
+  graphql: false
+  process: false
+  TimelineLite: false
+  TimelineMax: false
+  TweenLite: false
+  TweenMax: false
+
+rules:
+  import/first: 0
+  no-use-before-define: 0

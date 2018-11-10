@@ -1,0 +1,16 @@
+/*
+
+BACKGROUND ATTACHMENT
+=====================
+
+Adapted from: https://tailwindcss.com/docs/background-attachment
+
+*/
+
+@responsive {
+
+  .bg-fixed  { background-attachment: fixed }
+  .bg-local  { background-attachment: local }
+  .bg-scroll { background-attachment: scroll }
+
+}
