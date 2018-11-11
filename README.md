@@ -9,7 +9,7 @@ Website: https://www.gatsbytutorials.com
 1. Add it to `src/data/tutorials.yml
 2. Submit a pull request.
 
-#### Please use this format and indentation:
+**Please use this format and indentation:**
 
 ```yaml
 - title: 'GatsbyJS: How to Create the Fastest Sites in the World'
