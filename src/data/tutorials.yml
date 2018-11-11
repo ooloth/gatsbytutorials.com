@@ -1,6 +1,6 @@
 - title: 'GatsbyJS: How to Create the Fastest Sites in the World'
   link: https://www.youtube.com/watch?v=Gtd-Ht-D0sg
-  type: video
+  format: video
   date: 2017-10-01
   length: '24:52'
   author: Kyle Mathews
@@ -10,7 +10,7 @@
 
 - title: 'Live Coding With Level Up Tuts: Moving My Personal Site To GatsbyJS'
   link: https://www.youtube.com/watch?v=xqaThBnesfY
-  type: video
+  format: video
   date: 2017-07-10
   length: '54:05'
   author: Scott Tolisnki
@@ -18,4 +18,6 @@
   topics:
     - migration
     - v1
+    - more
+    - a long one
 

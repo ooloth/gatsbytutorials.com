@@ -3,6 +3,22 @@ function IndexPage({ data }) {
 
   // TODO: replace these runtime calculations with detailed YAML version once we're compiling it at build time
 
+  // 1. Determine which formats exist
+  const allFormats = tutorials.map(tutorial => tutorial.node.format)
+
+  // 2. Create an objects with each topic and the number of times it appears
+  const formatsWithCounts = allFormats.reduce((acc, curr) => {
+    if (typeof acc[curr] == 'undefined') acc[curr] = 1
+    else acc[curr] += 1
+
+    return acc
+  }, {})
+
+  // 3. Create an array from the object above
+  const formats = Object.keys(formatsWithCounts).map(format => {
+    return { name: format, count: formatsWithCounts[format] }
+  })
+
   // 1. Determine which topics exist
   const topicArrays = tutorials.map(tutorial => tutorial.node.topics)
   const allTopics = topicArrays.reduce((acc, curr) => acc.concat(curr), [])
@@ -32,8 +48,8 @@ function IndexPage({ data }) {
   }, {})
 
   // 3. Create an array from the object above
-  const authors = Object.keys(authorsWithCounts).map(topic => {
-    return { name: topic, count: authorsWithCounts[topic] }
+  const authors = Object.keys(authorsWithCounts).map(author => {
+    return { name: author, count: authorsWithCounts[author] }
   })
 
   // 1. Determine which sources exist
@@ -48,8 +64,8 @@ function IndexPage({ data }) {
   }, {})
 
   // 3. Create an array from the object above
-  const sources = Object.keys(sourcesWithCounts).map(topic => {
-    return { name: topic, count: sourcesWithCounts[topic] }
+  const sources = Object.keys(sourcesWithCounts).map(source => {
+    return { name: source, count: sourcesWithCounts[source] }
   })
 
   return (
@@ -57,6 +73,7 @@ function IndexPage({ data }) {
       <main className="container sans-serif min-vh-75">
         <Directory
           tutorials={tutorials}
+          formats={formats}
           topics={topics}
           authors={authors}
           sources={sources}
@@ -66,7 +83,8 @@ function IndexPage({ data }) {
   )
 }
 
-function Directory({ tutorials, topics, authors, sources }) {
+function Directory({ tutorials, formats, topics, authors, sources }) {
+  const [format, setFormat] = useState(null)
   const [author, setAuthor] = useState(null)
   const [source, setSource] = useState(null)
   const [topic, setTopic] = useState(null)
@@ -74,6 +92,7 @@ function Directory({ tutorials, topics, authors, sources }) {
 
   // Filter the visible tutorials based on the active filters and/or search query
   const filteredTutorials = tutorials.filter(({ node: tutorial }) => {
+    let isFormatMatch = false
     let isAuthorMatch = false
     let isSourceMatch = false
     let isTopicMatch = false
@@ -157,6 +176,7 @@ function Directory({ tutorials, topics, authors, sources }) {
     <section>
       <h2 className="sr-only">Search for Gatsby JS tutorials</h2>
 
+      {/* <div className="search-grid bb b--black-05 bg-white"> */}
       <form className="pv3">
         <label className="mono">
           <span className="pr2 fw7">Search:</span>
@@ -169,26 +189,14 @@ function Directory({ tutorials, topics, authors, sources }) {
         </label>
       </form>
 
-      {author && (
+      {format && (
         <div className="flex items-baseline pb3">
           <p className="pr2 mono">
-            <span className="pr2 fw7">Author:</span>
-            <span className="lh-copy mono f6 black-60">{author}</span>
+            <span className="pr2 fw7">Format:</span>
+            <span className="lh-copy mono f6 black-60">{format}</span>
           </p>
-          <button onClick={() => setAuthor(null)} className="f6 mono">
-            [<span className="link">Clear author</span>]
-          </button>
-        </div>
-      )}
-
-      {source && (
-        <div className="flex items-baseline pb3">
-          <p className="pr2 mono">
-            <span className="pr2 fw7">Source:</span>
-            <span className="lh-copy mono f6 black-60">{source}</span>
-          </p>
-          <button onClick={() => setSource(null)} className="f6 mono">
-            [<span className="link">Clear source</span>]
+          <button onClick={() => setFormat(null)} className="f6 mono">
+            [<span className="link">Clear filter</span>]
           </button>
         </div>
       )}
@@ -200,12 +208,36 @@ function Directory({ tutorials, topics, authors, sources }) {
             <span className="lh-copy mono f6 black-60">{topic}</span>
           </p>
           <button onClick={() => setTopic(null)} className="f6 mono">
-            [<span className="link">Clear topic</span>]
+            [<span className="link">Clear filter</span>]
           </button>
         </div>
       )}
 
-      {(author || source || topic || query) && (
+      {author && (
+        <div className="flex items-baseline pb3">
+          <p className="pr2 mono">
+            <span className="pr2 fw7">Author:</span>
+            <span className="lh-copy mono f6 black-60">{author}</span>
+          </p>
+          <button onClick={() => setAuthor(null)} className="f6 mono">
+            [<span className="link">Clear filter</span>]
+          </button>
+        </div>
+      )}
+
+      {source && (
+        <div className="flex items-baseline pb3">
+          <p className="pr2 mono">
+            <span className="pr2 fw7">Source:</span>
+            <span className="lh-copy mono f6 black-60">{source}</span>
+          </p>
+          <button onClick={() => setSource(null)} className="f6 mono">
+            [<span className="link">Clear filter</span>]
+          </button>
+        </div>
+      )}
+
+      {(format || author || source || topic || query) && (
         <p className="pb3 mono">
           <span className="pr2 fw7">Results:</span>
           <span className="lh-copy mono f6 black-60">
@@ -213,6 +245,7 @@ function Directory({ tutorials, topics, authors, sources }) {
           </span>
         </p>
       )}
+      {/* </div> */}
 
       {/* Currently visible tutorials */}
       <div className="directory-grid">
@@ -223,8 +256,9 @@ function Directory({ tutorials, topics, authors, sources }) {
           setTopic={setTopic}
         />
 
-        {/* Lists of all topics, authors and sources */}
+        {/* Lists of all types, topics, authors and sources */}
         <aside>
+          <Formats formats={formats} setFormat={setFormat} />
           <Topics topics={topics} setTopic={setTopic} />
           <Authors authors={authors} setAuthor={setAuthor} />
           <Sources sources={sources} setSource={setSource} />
@@ -234,10 +268,30 @@ function Directory({ tutorials, topics, authors, sources }) {
   )
 }
 
+function Formats({ formats, setFormat }) {
+  return (
+    <section className="bt b--black-05 pv4">
+      <h2 className="mb3 mono f5">Formats</h2>
+
+      <ul className="lh-tall">
+        {formats.map(format => (
+          <li key={format.name}>
+            <FilterButton
+              text={format.name}
+              count={format.count}
+              handleFilter={() => setFormat(format.name)}
+            />
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}
+
 function Topics({ topics, setTopic }) {
   return (
     <section className="bt b--black-05 pv4">
-      <h2 className="mb3 f4">Topics</h2>
+      <h2 className="mb3 mono f5">Topics</h2>
 
       <ul className="lh-tall">
         {topics.map(topic => (
@@ -257,7 +311,7 @@ function Topics({ topics, setTopic }) {
 function Authors({ authors, setAuthor }) {
   return (
     <section className="bt b--black-05 pv4">
-      <h2 className="mb3 f4">Authors</h2>
+      <h2 className="mb3 mono f5">Authors</h2>
 
       <ul className="lh-tall">
         {authors.map(author => (
@@ -277,7 +331,7 @@ function Authors({ authors, setAuthor }) {
 function Sources({ sources, setSource }) {
   return (
     <section className="bt b--black-05 pv4">
-      <h2 className="mb3 f4">Sources</h2>
+      <h2 className="mb3 mono f5">Sources</h2>
 
       <ul className="lh-tall">
         {sources.map(source => (
@@ -307,7 +361,7 @@ export const query = graphql`
         node {
           title
           link
-          type
+          format
           date(formatString: "MMM DD, YYYY")
           length
           author

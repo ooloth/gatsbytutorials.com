@@ -9,26 +9,25 @@
 
 @supports (display: grid) {
   
- /* 
-  * 
-  * Media
-  *
-  */
+  /* .search-grid {
+    position: sticky;
+    top: 0;
+  } */
 
   .directory-grid {
     @media (--md) {
       display: grid;
       grid-template-columns: 1fr auto;
 
-      & ul > li { @apply .pr4 }
+      & > ul > li { @apply .pr4 }
 
       & aside {
-        @apply .relative .bl .b--black-05;
-        position: sticky;
+        @apply .bl .b--black-05;
+        /* position: sticky;
+        top: 0; */
 
         & section { @apply .pl4 }
       }
     }
   }
-
 }

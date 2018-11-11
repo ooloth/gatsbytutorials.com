@@ -17,23 +17,22 @@ function Tutorials({ tutorials, setAuthor, setSource, setTopic }) {
 function Tutorial({ tutorial, setAuthor, setSource, setTopic }) {
   // Choose which tutorial category emoji to show next to the title
   let tutorialEmoji
-  if (tutorial.type === `video`) {
+  if (tutorial.format === `video`) {
     tutorialEmoji = (
       <Emoji emoji="📺" ariaLabel="Emoji of a television" className="emoji pl2" />
     )
-  } else if (tutorial.type === `writing`) {
-    tutorialEmoji = (
-      <Emoji emoji="✍️" ariaLabel="Emoji of a hand writing" className="emoji pl2" />
-    )
-  } else if (tutorial.type === `audio`) {
+  } else if (tutorial.format === `audio`) {
     tutorialEmoji = (
       <Emoji emoji="🎧" ariaLabel="Emoji of a headphones" className="emoji pl2" />
+    )
+  } else if (tutorial.format === `text`) {
+    tutorialEmoji = (
+      <Emoji emoji="✍️" ariaLabel="Emoji of a hand writing" className="emoji pl2" />
     )
   }
 
   return (
     <li className="bt b--black-05 pv4 lh-tall">
-      {/* Title */}
       <h3 className="lh-title">
         <Anchor href={tutorial.link} className="link">
           {tutorial.title}
@@ -42,7 +41,6 @@ function Tutorial({ tutorial, setAuthor, setSource, setTopic }) {
         {tutorialEmoji}
       </h3>
 
-      {/* Date and length */}
       <div className="flex pt1">
         {tutorial.date && (
           <p className="flex items-center pr3">
@@ -82,7 +80,7 @@ function Tutorial({ tutorial, setAuthor, setSource, setTopic }) {
       )}
 
       {tutorial.topics && (
-        <div className="flex items-center mt3 pt1">
+        <div className="topics flex items-center mt3 pt1">
           <TopicSVG className="icon mr2 black-60" />
 
           <ul>
@@ -104,37 +102,11 @@ function Tutorial({ tutorial, setAuthor, setSource, setTopic }) {
 
 /*
  *
- * Queries
- *
- */
-
-export const query = graphql`
-  query {
-    tutorials: allTutorialsYaml(sort: { fields: [date], order: DESC }) {
-      edges {
-        node {
-          title
-          link
-          type
-          date(formatString: "MMM DD, YYYY")
-          length
-          author
-          source
-          topics
-        }
-      }
-    }
-  }
-`
-
-/*
- *
  * Imports & Exports
  *
  */
 
 import React from 'react'
-import { graphql } from 'gatsby'
 
 import Anchor from '../components/Anchor'
 import Emoji from '../components/Emoji'
