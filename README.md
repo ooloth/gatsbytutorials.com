@@ -23,14 +23,14 @@ Website: https://www.gatsbytutorials.com
     - performance
 ```
 
-- `title` - Title of tutorial (`string`, required)
-- `link` - Working URL where tutorial can be found (`string`, required)
-- `format` - Media format of tutorial (`string` with the value `video`, `audio` or `text`, required)
-- `date` - Date tutorial was originally published (`string` in `YYYY-MM-DD` format, required)
-- `length` - Length of tutorial, if applicable (`string`, optional)
-- `author` - Name of author or speaker (`string`, required)
-- `source` - Name of YouTube channel, podcast, conference, blog, etc. (`string`, optional)
-- `topics` - Array of primary topics covered by the tutorial (`array` of `strings`, optional)
+- `title` - Title of tutorial (`string`; required)
+- `link` - Working URL where tutorial can be found (`string`; required)
+- `format` - Media format of tutorial (`string` with the value `video`, `audio` or `text`; required)
+- `date` - Date tutorial was originally published (`string` in `YYYY-MM-DD` format; required)
+- `length` - Length of tutorial, if applicable (`string`; optional)
+- `author` - Name of author or speaker (`string`; required)
+- `source` - Name of YouTube channel, podcast, conference, blog, etc. (`string`; optional)
+- `topics` - Array of primary topics covered by the tutorial (`array` of `strings`; optional)
 
 ---
 
