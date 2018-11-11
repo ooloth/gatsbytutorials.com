@@ -1,18 +1,20 @@
-function Tutorials({ tutorials, filterByTopic }) {
+function Tutorials({ tutorials, setAuthor, setSource, setTopic }) {
   return (
     <ul>
       {tutorials.map(tutorial => (
         <Tutorial
           key={tutorial.node.title + tutorial.node.date}
           tutorial={tutorial.node}
-          filterByTopic={filterByTopic}
+          setAuthor={setAuthor}
+          setSource={setSource}
+          setTopic={setTopic}
         />
       ))}
     </ul>
   )
 }
 
-function Tutorial({ tutorial, filterByTopic }) {
+function Tutorial({ tutorial, setAuthor, setSource, setTopic }) {
   // Choose which tutorial category emoji to show next to the title
   let tutorialEmoji
   if (tutorial.type === `video`) {
@@ -30,7 +32,7 @@ function Tutorial({ tutorial, filterByTopic }) {
   }
 
   return (
-    <li className="bt b--black--05 pv4 lh-tall">
+    <li className="bt b--black-05 pv4 lh-tall">
       {/* Title */}
       <h3 className="lh-title">
         <Anchor href={tutorial.link} className="link">
@@ -60,14 +62,22 @@ function Tutorial({ tutorial, filterByTopic }) {
       {tutorial.author && (
         <p className="flex items-center mt3 pt1 f6">
           <AuthorSVG className="icon mr2 black-60" />
-          <FilterButton text={tutorial.author} count="1" />
+          <FilterButton
+            text={tutorial.author}
+            count="1"
+            handleFilter={() => setAuthor(tutorial.author)}
+          />
         </p>
       )}
 
       {tutorial.source && (
         <p className="flex items-center pt1 f6">
           <SourceSVG className="icon mr2 black-60" />
-          <FilterButton text={tutorial.source} count="1" />
+          <FilterButton
+            text={tutorial.source}
+            count="1"
+            handleFilter={() => setSource(tutorial.source)}
+          />
         </p>
       )}
 
@@ -78,7 +88,11 @@ function Tutorial({ tutorial, filterByTopic }) {
           <ul>
             {tutorial.topics.map(topic => (
               <li key={topic} className="dib mr2">
-                <FilterButton text={topic} count="1" handleFilter={filterByTopic} />
+                <FilterButton
+                  text={topic}
+                  count="1"
+                  handleFilter={() => setTopic(topic)}
+                />
               </li>
             ))}
           </ul>

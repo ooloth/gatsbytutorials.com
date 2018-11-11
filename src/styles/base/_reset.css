@@ -117,7 +117,7 @@ textarea {
 
 /* Solves placeholder's being invisible in some browsers bc of Tailwind's preflight styles */
 input::placeholder,
-textarea::placeholder { @apply .o-100 .black-50 }
+textarea::placeholder { @apply .o-100 .black-60 }
 
 /* Reset Chrome and Firefox behaviour which sets a 'min-width: min-content;' on fieldsets: */
 fieldset { min-width: 0; border: 0 }

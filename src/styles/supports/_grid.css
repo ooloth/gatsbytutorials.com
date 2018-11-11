@@ -15,15 +15,20 @@
   *
   */
 
-  .media-grid {
-    @media (--sm) {
+  .directory-grid {
+    @media (--md) {
       display: grid;
-      grid-column-gap: 1rem;
-      grid-template-columns: repeat(2, 1fr);
-    }
+      grid-template-columns: 1fr auto;
 
-    @media (--md) { grid-template-columns: repeat(3, 1fr) }
-    @media (--lg) { grid-template-columns: repeat(4, 1fr) }
+      & ul > li { @apply .pr4 }
+
+      & aside {
+        @apply .relative .bl .b--black-05;
+        position: sticky;
+
+        & section { @apply .pl4 }
+      }
+    }
   }
 
 }
