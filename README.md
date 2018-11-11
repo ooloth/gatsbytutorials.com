@@ -25,8 +25,8 @@ Website: https://www.gatsbytutorials.com
 
 - `title` - Title of tutorial (`string`, required)
 - `link` - Working URL where tutorial can be found (`string`, required)
-- `format` - Media format of tutorial (`string`: 'video', 'audio' or 'text', required)
-- `date` - Date tutorial was originally published (`string`: YYYY-MM-DD, required)
+- `format` - Media format of tutorial (`string`: `video`, `audio` or `text`, required)
+- `date` - Date tutorial was originally published (`string`: `YYYY-MM-DD`, required)
 - `length` - Length of tutorial, if applicable (`string`, optional)
 - `author` - Name of author or speaker (`string`, required)
 - `source` - Name of YouTube channel, podcast, conference, blog, etc. (`string`, optional)
