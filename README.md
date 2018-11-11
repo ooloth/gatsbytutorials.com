@@ -26,10 +26,10 @@ Please follow this example's format and indentation:
 ```
 
 - `title` - Title of tutorial (`string`, required)
-- `link` - Working URL for tutorial (`string`, required)
+- `link` - Working URL where tutorial can be found (`string`, required)
 - `format` - Media format of tutorial (`string`: 'video', 'audio' or 'text', required)
-- `date` - Publishing date (`string`: YYYY-MM-DD, required)
+- `date` - Date tutorial was originally published (`string`: YYYY-MM-DD, required)
 - `length` - Length of tutorial, if applicable (`string`, optional)
 - `author` - Name of author or speaker (`string`, required)
 - `source` - Name of YouTube channel, podcast, conference, blog, etc. (`string`, optional)
-- `topics` - Array of topics covered by the tutorial (`array` of `strings`, optional)
+- `topics` - Array of primary topics covered by the tutorial (`array` of `strings`, optional)
