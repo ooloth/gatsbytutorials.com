@@ -2,8 +2,6 @@
 
 Gatsby Tutorials is a website where you can find all of the GatsbyJS tutorials that are available online.
 
-Hope it helps!
-
 Website: https://www.gatsbytutorials.com
 
 ## How do I add a tutorial?
@@ -33,3 +31,5 @@ Please follow this example's format and indentation:
 - `author` - Name of author or speaker (`string`, required)
 - `source` - Name of YouTube channel, podcast, conference, blog, etc. (`string`, optional)
 - `topics` - Array of primary topics covered by the tutorial (`array` of `strings`, optional)
+
+Happy learning! 🤓
