@@ -6,7 +6,7 @@
   author: Kyle Mathews
   source: ReactNext 2017
   topics:
-    - general
+    - introduction
     - performance
 
 - title: 'Live Coding With Level Up Tuts: Moving My Personal Site To GatsbyJS'
@@ -28,7 +28,7 @@
   author: Jason Lengstorf
   source: devMode.fm
   topics:
-    - general
+    - introduction
     - graphql
     - performance
     - v2
@@ -72,6 +72,6 @@
   author: Jesse R. Weigel
   source: freeCodeCamp
   topics:
-    - general
+    - introduction
     - v1
 
