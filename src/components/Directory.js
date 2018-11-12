@@ -1,8 +1,8 @@
 function Directory({ tutorials, formats, topics, authors, sources }) {
   const [format, setFormat] = useState(null)
+  const [topic, setTopic] = useState(null)
   const [author, setAuthor] = useState(null)
   const [source, setSource] = useState(null)
-  const [topic, setTopic] = useState(null)
   const [query, setQuery] = useState(null)
 
   // TODO: add format to search...
@@ -10,22 +10,68 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
   // Filter the visible tutorials based on the active filters and/or search query
   const filteredTutorials = tutorials.filter(({ node: tutorial }) => {
     let isFormatMatch = false
+    let isTopicMatch = false
     let isAuthorMatch = false
     let isSourceMatch = false
-    let isTopicMatch = false
     let isTitleMatch = false
     let isQueryMatch = false
 
     // If the user hasn't filtered or searched, abort and include all the tutorials
-    if (!author && !source && !topic && !query) return true
+    if (!format && !author && !source && !topic && !query) return true
 
     // Check if the tutorial matches any active filters
+    if (format && tutorial.format.includes(format)) isFormatMatch = true
+    if (topic && tutorial.topics.includes(topic)) isTopicMatch = true
     if (author && tutorial.author.includes(author)) isAuthorMatch = true
     if (source && tutorial.source.includes(source)) isSourceMatch = true
-    if (topic && tutorial.topics.includes(topic)) isTopicMatch = true
 
-    // If the user has typed a query, check if it matches the tutorial's author, source or title (partial string matches of topics to be added soon)
+    // If the user hasn't typed a query, filter just by author, source and topic
+    if (!query) {
+      // Format combos
+      if (format && !topic && !author && !source) {
+        return isFormatMatch
+      }
+      if (format && topic && !author && !source) {
+        return isFormatMatch && isTopicMatch
+      }
+      if (format && topic && author && !source) {
+        return isFormatMatch && isTopicMatch && isAuthorMatch
+      }
+      if (format && topic && author && source) {
+        return isFormatMatch && isTopicMatch && isAuthorMatch && isSourceMatch
+      }
+
+      // Remaining topic combos
+      if (!format && topic && !author && !source) {
+        return isTopicMatch
+      }
+      if (!format && topic && author && !source) {
+        return isTopicMatch && isAuthorMatch
+      }
+      if (!format && topic && !author && source) {
+        return isTopicMatch && isSourceMatch
+      }
+
+      // Remaining author combos
+      if (!format && !topic && author && !source) {
+        return isAuthorMatch
+      }
+      if (!format && !topic && author && source) {
+        return isAuthorMatch && isSourceMatch
+      }
+
+      // Remaining source combo
+      if (!format && !topic && !author && source) {
+        return isSourceMatch
+      }
+    }
+
+    // If the user has typed a query, check if it matches the tutorial's format, author, source or title (TODO: add partial string matches of topics as well)
     if (query) {
+      const isFormatMatch = tutorial.format
+        .toLowerCase()
+        .includes(query.toLowerCase())
+
       const isAuthorMatch = tutorial.author
         .toLowerCase()
         .includes(query.toLowerCase())
@@ -38,53 +84,56 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
       // TODO: enable this to search topic substrings once we're generating a string version of the topics array for search purposes
       // const isTopicMatch = tutorial.topicSearchString.includes(query);
 
-      isQueryMatch = isAuthorMatch || isSourceMatch || isTitleMatch
-    }
+      isQueryMatch = isFormatMatch || isAuthorMatch || isSourceMatch || isTitleMatch
 
-    // If the user hasn't typed a query, filter just by author, source and topic
-    if (!query) {
-      if (topic && !author && !source) {
-        return isTopicMatch
+      // If the user has typed a query, filter by the same rules as above for format, author, source and topic, and require the query to match each condition as well
+      // Format combos
+      if (format && !topic && !author && !source) {
+        return isFormatMatch && isQueryMatch
       }
-      if (topic && author && !source) {
-        return isTopicMatch && isAuthorMatch
+      if (format && topic && !author && !source) {
+        return isFormatMatch && isTopicMatch && isQueryMatch
       }
-      if (topic && !author && source) {
-        return isTopicMatch && isSourceMatch
+      if (format && topic && author && !source) {
+        return isFormatMatch && isTopicMatch && isAuthorMatch && isQueryMatch
       }
-      if (!topic && author && !source) {
-        return isAuthorMatch
+      if (format && topic && author && source) {
+        return (
+          isFormatMatch &&
+          isTopicMatch &&
+          isAuthorMatch &&
+          isSourceMatch &&
+          isQueryMatch
+        )
       }
-      if (!topic && author && source) {
-        return isAuthorMatch && isSourceMatch
-      }
-      if (!topic && !author && source) {
-        return isSourceMatch
-      }
-    }
 
-    // If the user has typed a query, filter by author, source and topic and the query
-    if (query) {
-      if (topic && !author && !source) {
+      // Remaining topic combos
+      if (!format && topic && !author && !source) {
         return isTopicMatch && isQueryMatch
       }
-      if (topic && author && !source) {
+      if (!format && topic && author && !source) {
         return isTopicMatch && isAuthorMatch && isQueryMatch
       }
-      if (topic && !author && source) {
+      if (!format && topic && !author && source) {
         return isTopicMatch && isSourceMatch && isQueryMatch
       }
-      if (!topic && author && !source) {
+
+      // Remaining author combos
+      if (!format && !topic && author && !source) {
         return isAuthorMatch && isQueryMatch
       }
-      if (!topic && author && source) {
+      if (!format && !topic && author && source) {
         return isAuthorMatch && isSourceMatch && isQueryMatch
       }
-      if (!topic && !author && source) {
+
+      // Remaining source combo
+      if (!format && !topic && !author && source) {
         return isSourceMatch && isQueryMatch
       }
-      if (!topic && !author && !source) {
-        return isQueryMatch
+
+      // Remaining query combo
+      if (!format && !topic && !author && !source) {
+        return isQueryMatch && isQueryMatch
       }
     }
   })
