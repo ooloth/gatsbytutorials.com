@@ -1,8 +1,11 @@
 const Footer = () => (
-  <footer className="container bt b--black-05 pv4 lh-copy sans-serif">
+  <footer className="container bt b--black-10 pv4 lh-copy sans-serif">
     <p>
       Missing a tutorial?{' '}
-      <Anchor href="https://github.com/ooloth/gatsby-tutorials" className="link">
+      <Anchor
+        href="https://github.com/ooloth/gatsby-tutorials#how-do-i-add-a-tutorial"
+        className="link"
+      >
         Add it to the directory
       </Anchor>
       .

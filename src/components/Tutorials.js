@@ -47,7 +47,7 @@ function Tutorial({ tutorial, setAuthor, setSource, setTopic }) {
   }
 
   return (
-    <li className="bt b--black-05 pv4 lh-tall">
+    <li className="bt b--black-10 pv4 lh-tall">
       <h3 className="flex items-baseline lh-title">
         {tutorialEmoji}
         <Anchor href={tutorial.link} className="link">

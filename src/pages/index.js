@@ -177,7 +177,7 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
     <section>
       <h2 className="sr-only">Search for Gatsby JS tutorials</h2>
 
-      {/* <div className="search-grid bb b--black-05 bg-white"> */}
+      {/* <div className="search-grid bb b--black-10 bg-white"> */}
       <form className="pv3">
         <label className="mono">
           <span className="pr2 fw7">Search:</span>
@@ -271,7 +271,7 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
 
 function Formats({ formats, currentFormat, setFormat }) {
   return (
-    <section className="bt b--black-05 pv4">
+    <section className="bt b--black-10 pv4">
       <h2 className="mb3 mono f5">Formats</h2>
 
       <ul className="lh-tall">
@@ -292,7 +292,7 @@ function Formats({ formats, currentFormat, setFormat }) {
 
 function Topics({ topics, currentTopic, setTopic }) {
   return (
-    <section className="bt b--black-05 pv4">
+    <section className="bt b--black-10 pv4">
       <h2 className="mb3 mono f5">Topics</h2>
 
       <ul className="lh-tall">
@@ -313,7 +313,7 @@ function Topics({ topics, currentTopic, setTopic }) {
 
 function Authors({ authors, currentAuthor, setAuthor }) {
   return (
-    <section className="bt b--black-05 pv4">
+    <section className="bt b--black-10 pv4">
       <h2 className="mb3 mono f5">Authors</h2>
 
       <ul className="lh-tall">
@@ -334,7 +334,7 @@ function Authors({ authors, currentAuthor, setAuthor }) {
 
 function Sources({ sources, currentSource, setSource }) {
   return (
-    <section className="bt b--black-05 pv4">
+    <section className="bt b--black-10 pv4">
       <h2 className="mb3 mono f5">Sources</h2>
 
       <ul className="lh-tall">

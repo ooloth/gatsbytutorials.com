@@ -6,7 +6,7 @@ Website: https://www.gatsbytutorials.com
 
 ## How do I add a tutorial?
 
-1. Add it to `src/data/tutorials.yml
+1. Add it to `src/data/tutorials.yml`
 2. Submit a pull request.
 
 **Please use this format and indentation:**

@@ -21,6 +21,16 @@ const Header = ({ icon, count }) => (
         />
       </h1>
     </div>
+
+    {/* <div className="pt2">
+      <Anchor
+        href="https://github.com/ooloth/gatsby-tutorials#how-do-i-add-a-tutorial"
+        className="dib br2 bg-purple pv2 ph3 white animate hover:underline"
+        style={{ marginLeft: `5rem ` }}
+      >
+        Add a tutorial
+      </Anchor>
+    </div> */}
   </header>
 )
 

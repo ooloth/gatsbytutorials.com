@@ -22,7 +22,7 @@
       & > ul > li { @apply .pr4 }
 
       & aside {
-        @apply .bl .b--black-05;
+        @apply .bl .b--black-10;
         /* position: sticky;
         top: 0; */
 
