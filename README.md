@@ -29,7 +29,7 @@ Website: https://www.gatsbytutorials.com
 - `date` - Date tutorial was originally published (`string` in `YYYY-MM-DD` format; required)
 - `length` - Length of tutorial, if applicable (`string`; optional)
 - `author` - Name of author or speaker (`string`; required)
-- `source` - Name of YouTube channel, podcast, conference, blog, etc. (`string`; optional)
+- `source` - Name of YouTube channel, podcast, conference, blog, etc. if different from the author's name (`string`; optional)
 - `topics` - Array of primary topics covered by the tutorial (`array` of `strings`; optional)
 
 ---

@@ -1,9 +1,9 @@
-function FilterButton({ text, count, handleFilter }) {
+function FilterButton({ text, count, handleFilter, className = `` }) {
   return (
     <button
       value={text}
       onClick={handleFilter}
-      className="group lh-copy mono f6 black-60"
+      className={`group lh-copy mono f6 black-60 ${className}`}
     >
       <span className="relative z--1 underline group-hover:blue">{text}</span>
       {count && (

@@ -19,9 +19,9 @@ function IndexPage({ data }) {
     return { name: format, count: formatsWithCounts[format] }
   })
 
-  // 1. Determine which topics exist
+  // 1. Determine which topics exist (and sort them alphabetically)
   const topicArrays = tutorials.map(tutorial => tutorial.node.topics)
-  const allTopics = topicArrays.reduce((acc, curr) => acc.concat(curr), [])
+  const allTopics = topicArrays.reduce((acc, curr) => acc.concat(curr), []).sort()
 
   // 2. Create an objects with each topic and the number of times it appears
   const topicsWithCounts = allTopics.reduce((acc, curr) => {
@@ -36,8 +36,8 @@ function IndexPage({ data }) {
     return { name: topic, count: topicsWithCounts[topic] }
   })
 
-  // 1. Determine which authors exist
-  const allAuthors = tutorials.map(tutorial => tutorial.node.author)
+  // 1. Determine which authors exist (and sort them alphabetically)
+  const allAuthors = tutorials.map(tutorial => tutorial.node.author).sort()
 
   // 2. Create an objects with each author and the number of times they appear
   const authorsWithCounts = allAuthors.reduce((acc, curr) => {
@@ -52,8 +52,9 @@ function IndexPage({ data }) {
     return { name: author, count: authorsWithCounts[author] }
   })
 
-  // 1. Determine which sources exist
-  const allSources = tutorials.map(tutorial => tutorial.node.source)
+  // 1. Determine which sources exist (and sort alphabetically)
+  // FIXME: how to sort alphabetically with a mix of capital and small first letters?
+  const allSources = tutorials.map(tutorial => tutorial.node.source).sort()
 
   // 2. Create an objects with each author and the number of times they appear
   const sourcesWithCounts = allSources.reduce((acc, curr) => {
@@ -148,25 +149,25 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
 
     // If the user has typed a query, filter by author, source and topic and the query
     if (query) {
-      if (topic && !author && !source && query) {
+      if (topic && !author && !source) {
         return isTopicMatch && isQueryMatch
       }
-      if (topic && author && !source && query) {
+      if (topic && author && !source) {
         return isTopicMatch && isAuthorMatch && isQueryMatch
       }
-      if (topic && !author && source && query) {
+      if (topic && !author && source) {
         return isTopicMatch && isSourceMatch && isQueryMatch
       }
-      if (!topic && author && !source && query) {
+      if (!topic && author && !source) {
         return isAuthorMatch && isQueryMatch
       }
-      if (!topic && author && source && query) {
+      if (!topic && author && source) {
         return isAuthorMatch && isSourceMatch && isQueryMatch
       }
-      if (!topic && !author && source && query) {
+      if (!topic && !author && source) {
         return isSourceMatch && isQueryMatch
       }
-      if (!topic && !author && !source && query) {
+      if (!topic && !author && !source) {
         return isQueryMatch
       }
     }
@@ -258,17 +259,17 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
 
         {/* Lists of all types, topics, authors and sources */}
         <aside>
-          <Formats formats={formats} setFormat={setFormat} />
-          <Topics topics={topics} setTopic={setTopic} />
-          <Authors authors={authors} setAuthor={setAuthor} />
-          <Sources sources={sources} setSource={setSource} />
+          <Formats formats={formats} currentFormat={format} setFormat={setFormat} />
+          <Topics topics={topics} currentTopic={topic} setTopic={setTopic} />
+          <Authors authors={authors} currentAuthor={author} setAuthor={setAuthor} />
+          <Sources sources={sources} currentSource={source} setSource={setSource} />
         </aside>
       </div>
     </section>
   )
 }
 
-function Formats({ formats, setFormat }) {
+function Formats({ formats, currentFormat, setFormat }) {
   return (
     <section className="bt b--black-05 pv4">
       <h2 className="mb3 mono f5">Formats</h2>
@@ -280,6 +281,7 @@ function Formats({ formats, setFormat }) {
               text={format.name}
               count={format.count}
               handleFilter={() => setFormat(format.name)}
+              className={format.name === currentFormat ? `blue` : ``}
             />
           </li>
         ))}
@@ -288,7 +290,7 @@ function Formats({ formats, setFormat }) {
   )
 }
 
-function Topics({ topics, setTopic }) {
+function Topics({ topics, currentTopic, setTopic }) {
   return (
     <section className="bt b--black-05 pv4">
       <h2 className="mb3 mono f5">Topics</h2>
@@ -300,6 +302,7 @@ function Topics({ topics, setTopic }) {
               text={topic.name}
               count={topic.count}
               handleFilter={() => setTopic(topic.name)}
+              className={topic.name === currentTopic ? `blue` : ``}
             />
           </li>
         ))}
@@ -308,7 +311,7 @@ function Topics({ topics, setTopic }) {
   )
 }
 
-function Authors({ authors, setAuthor }) {
+function Authors({ authors, currentAuthor, setAuthor }) {
   return (
     <section className="bt b--black-05 pv4">
       <h2 className="mb3 mono f5">Authors</h2>
@@ -320,6 +323,7 @@ function Authors({ authors, setAuthor }) {
               text={author.name}
               count={author.count}
               handleFilter={() => setAuthor(author.name)}
+              className={author.name === currentAuthor ? `blue` : ``}
             />
           </li>
         ))}
@@ -328,21 +332,25 @@ function Authors({ authors, setAuthor }) {
   )
 }
 
-function Sources({ sources, setSource }) {
+function Sources({ sources, currentSource, setSource }) {
   return (
     <section className="bt b--black-05 pv4">
       <h2 className="mb3 mono f5">Sources</h2>
 
       <ul className="lh-tall">
-        {sources.map(source => (
-          <li key={source.name}>
-            <FilterButton
-              text={source.name}
-              count={source.count}
-              handleFilter={() => setSource(source.name)}
-            />
-          </li>
-        ))}
+        {sources.map(
+          source =>
+            source.name && (
+              <li key={source.name}>
+                <FilterButton
+                  text={source.name}
+                  count={source.count}
+                  handleFilter={() => setSource(source.name)}
+                  className={source.name === currentSource ? `blue` : ``}
+                />
+              </li>
+            )
+        )}
       </ul>
     </section>
   )

@@ -6,6 +6,7 @@
   author: Kyle Mathews
   source: ReactNext 2017
   topics:
+    - general
     - performance
 
 - title: 'Live Coding With Level Up Tuts: Moving My Personal Site To GatsbyJS'
@@ -17,5 +18,60 @@
   source: Level Up Tutorials
   topics:
     - migration
+    - v1
+
+- title: Build Blazingly Fast Websites with Gatsby
+  link: https://devmode.fm/episodes/build-blazingly-fast-websites-with-gatsby
+  format: audio
+  date: 2018-10-15
+  length: '1:06:52'
+  author: Jason Lengstorf
+  source: devMode.fm
+  topics:
+    - general
+    - graphql
+    - performance
+    - v2
+
+- title: Add a Chat Widget to Your Gatsby Blog
+  link: https://pusher.com/tutorials/chat-gatsby/
+  format: text
+  date: 2018-05-31
+  length: ''
+  author: Wern Ancheta
+  source: Pusher
+  topics:
+    - authentication
+    - chat
+
+- title: Improving Gatsby Blog Deploy UX
+  link: https://benmccormick.org/2017/11/07/blog-deploy-ux/
+  format: text
+  date: 2017-11-07
+  length: ''
+  author: Ben McCormick
+  source: ''
+  topics:
+    - travis CI
+
+- title: Adding RSS, Atom, and JSON Feed to Gatsby
+  link: https://benmccormick.org/2017/06/03/rss-atom-json-gatsby/
+  format: text
+  date: 2017-06-03
+  length: ''
+  author: Ben McCormick
+  source: ''
+  topics:
+    - rss
+
+- title: Getting Started with GatsbyJS (Live Coding with Jesse)
+  link: https://www.youtube.com/watch?v=nufLF1kcn_4
+  format: video
+  date: 2017-11-09
+  length: '1:24:35'
+  author: Jesse R. Weigel
+  source: freeCodeCamp
+  topics:
+    - general
     - v1
 
