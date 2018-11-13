@@ -69,6 +69,7 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
 
     // If the user has typed a query, check if it matches the tutorial's format, author, source or title (TODO: add partial string matches of topics as well)
     if (query) {
+      // TODO: replace this logic with a better fuzzy search algorithm...
       const isFormatMatch = tutorial.format
         .toLowerCase()
         .includes(query.toLowerCase())
