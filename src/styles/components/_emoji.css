@@ -1,1 +1,7 @@
 .emoji { font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' }
+
+.tutorial-emoji {
+  flex: none;
+  width: 1.45rem;
+  font-size: .85em;
+}
