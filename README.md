@@ -46,6 +46,8 @@ The easiest approach is to use the make your changes here on the GitHub website:
 - `source` - Name of YouTube channel, podcast, conference, blog, etc. if different from the author's name (`string`; optional)
 - `topics` - Main topic(s) covered by the tutorial (`array` of `strings`; optional)
 
+Please add a tutorial series as one entry that links to the series homepage.
+
 ---
 
 Happy learning! 🤓

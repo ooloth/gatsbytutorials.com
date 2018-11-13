@@ -55,7 +55,6 @@ function Tutorial({ tutorial, setAuthor, setSource, setTopic }) {
           <AuthorSVG className="icon mr2 black-60" />
           <FilterButton
             text={tutorial.author}
-            count="1"
             handleFilter={() => setAuthor(tutorial.author)}
           />
         </p>
@@ -66,7 +65,6 @@ function Tutorial({ tutorial, setAuthor, setSource, setTopic }) {
           <SourceSVG className="icon mr2 black-60" />
           <FilterButton
             text={tutorial.source}
-            count="1"
             handleFilter={() => setSource(tutorial.source)}
           />
         </p>
@@ -80,13 +78,10 @@ function Tutorial({ tutorial, setAuthor, setSource, setTopic }) {
           />
 
           <ul>
-            {tutorial.topics.map(topic => (
-              <li key={topic} className="dib mr2">
-                <FilterButton
-                  text={topic}
-                  count="1"
-                  handleFilter={() => setTopic(topic)}
-                />
+            {tutorial.topics.map((topic, i) => (
+              <li key={i} className="dib mr2">
+                <FilterButton text={topic} handleFilter={() => setTopic(topic)} />
+                {i < tutorial.topics.length - 1 && `, `}
               </li>
             ))}
           </ul>

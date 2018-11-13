@@ -132,7 +132,7 @@
   topics:
     - netlify
 
-- title: Build a Blog with React and Markdown using Gatsby
+- title: Build a Blog with React and Markdown using Gatsby (13 videos)
   link: https://egghead.io/courses/build-a-blog-with-react-and-markdown-using-gatsby
   format: video
   date: ''
@@ -153,3 +153,60 @@
   topics:
     - introduction
     - v1
+
+- title: A First Look at Gatsby, a Static Site Generator for React
+  link: https://www.youtube.com/watch?v=CSemYFzHAtU
+  format: video
+  date: 2017-07-07
+  length: '19:30'
+  author: Scott Tolinski
+  source: Level Up Tutorials
+  topics:
+    - introduction
+    - v1
+
+- title: 'Gatsby, Static Site Generator: Tutorial (13 videos)'
+  link: https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpMXuwazIt4mWtTuqOHdjRlk
+  format: video
+  date: 2017-09-19
+  length: '75:31'
+  author: Mike Dane
+  source: ''
+  topics:
+    - introduction
+    - v1
+
+- title: GatsbyJS Tutorials (9 videos)
+  link: https://www.youtube.com/playlist?list=PLLnpHn493BHHfoINKLELxDch3uJlSapxg
+  format: video
+  date: 2017-10-04
+  length: '107:38'
+  author: Scott Tolinski
+  source: Level Up Tutorials
+  topics:
+    - introduction
+    - blog
+    - v1
+
+- title: 'Open Source Lightning Talk: Gatsby'
+  link: https://www.youtube.com/watch?v=y588qNiCZZo
+  format: video
+  date: 2016-11-03
+  length: '8:12'
+  author: Kyle Mathews
+  source: GraphQL Summit 2016
+  topics:
+    - introduction
+    - graphql
+
+- title: Static site generation with Gatsby.js
+  link: https://www.youtube.com/watch?v=y588qNiCZZo
+  format: video
+  date: 2016-03-30
+  length: '25:29'
+  author: Scott Nonnenberg
+  source: ''
+  topics:
+    - introduction
+    - blog
+    - v0
