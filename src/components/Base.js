@@ -13,9 +13,9 @@ function Base({ children }) {
               siteUrl
             }
           }
-          gatsbyIcon: file(relativePath: { eq: "images/gatsby-icon.png" }) {
+          gatsbyIcon: file(relativePath: { eq: "images/favicon.png" }) {
             childImageSharp {
-              fluid(maxWidth: 100) {
+              fluid(maxWidth: 80) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -32,14 +32,9 @@ function Base({ children }) {
       render={data => (
         <>
           <SiteMetadata site={data.site.siteMetadata} />
-
           <Header icon={data.gatsbyIcon} count={data.tutorials.edges.length} />
-
           {children}
-
           <Footer />
-
-          {/* <StructuredData site={data.site.siteMetadata} /> */}
         </>
       )}
     />
@@ -60,7 +55,7 @@ import '../styles/index.css'
  *
  */
 
-import siteImage from '../images/placeholder.jpg'
+import siteImage from '../images/favicon.png'
 
 function SiteMetadata({ site }) {
   return (
@@ -109,36 +104,6 @@ function SiteMetadata({ site }) {
         <meta name="twitter:site" content={site.twitterHandle} />
       )}
     </Helmet>
-  )
-}
-
-/*
- *
- * Structured Data
- *
- */
-
-function StructuredData({ site }) {
-  const structuredData = `{
-    "@context": "http://schema.org",
-    "@type": "Person",
-    "email": "mailto:email@website.com",
-    "image": "${site.siteUrl + siteImage.replace(`js/../`, ``)}",
-    "jobTitle": "What they do",
-    "name": "Their name",
-    "url": "${site.siteUrl}",
-    "sameAs": [
-      "https://www.facebook.com/clientname",
-      "https://twitter.com/clientname",
-      "https://www.youtube.com/channel/clientchannel"
-    ]
-  }`
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: structuredData }}
-    />
   )
 }
 

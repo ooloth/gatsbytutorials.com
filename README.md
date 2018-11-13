@@ -1,6 +1,15 @@
 # Gatsby Tutorials
 
-Gatsby Tutorials is a website where you can find all of the GatsbyJS tutorials that are available online.
+Gatsby Tutorials is a website that lists all of the GatsbyJS tutorials available online.
+
+You can discover tutorials that interest you in several ways:
+
+- Browse the list (recent tutorials listed first)
+- Search for specific words or phrases
+- Filter by format (audio, text or video)
+- Filter by topic
+- Filter by author
+- Filter by source
 
 Website: https://www.gatsbytutorials.com
 

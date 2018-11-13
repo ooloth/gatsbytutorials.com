@@ -39,7 +39,7 @@ function Tutorial({ tutorial, setAuthor, setSource, setTopic }) {
       <div className="flex pt1">
         {tutorial.date && (
           <p className={`flex items-center pr3`}>
-            <DateSVG className="icon" style={{ marginRight: `.5rem` }} />
+            <DateSVG className="icon mr2" />
             {tutorial.date}
           </p>
         )}

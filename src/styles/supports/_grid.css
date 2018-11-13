@@ -26,7 +26,8 @@
         /* position: sticky;
         top: 0; */
 
-        & section { @apply .pl4 }
+        & a,
+        section { @apply .pl4 }
       }
     }
   }

@@ -222,8 +222,16 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
           setTopic={setTopic}
         />
 
-        {/* Lists of all types, topics, authors and sources */}
-        <aside>
+        <aside className="bt b--black-10 pt4">
+          {/* Link to add a new tutorial */}
+          <Anchor
+            href="https://github.com/ooloth/gatsby-tutorials#how-do-i-add-a-tutorial"
+            className="link db mb4 mono"
+          >
+            Add a tutorial
+          </Anchor>
+
+          {/* Lists of all types, topics, authors and sources */}
           <Formats formats={formats} currentFormat={format} setFormat={setFormat} />
           <Topics topics={topics} currentTopic={topic} setTopic={setTopic} />
           <Authors authors={authors} currentAuthor={author} setAuthor={setAuthor} />
@@ -243,6 +251,7 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
 import React, { useState } from 'react'
 
 import Tutorials from '../components/Tutorials'
+import Anchor from '../components/Anchor'
 import Formats from '../components/Formats'
 import Topics from '../components/Topics'
 import Authors from '../components/Authors'
