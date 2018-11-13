@@ -1,22 +1,22 @@
 # Gatsby Tutorials
 
-Gatsby Tutorials is a website that lists every GatsbyJS learning resource currently available online.
+[Gatsby Tutorials](https://www.gatsbytutorials.com) is a website that lists every GatsbyJS learning resource currently available online. 🎉
 
-You can discover tutorials that interest you in several ways:
+You can find tutorials that interest you in several ways:
 
-- **Browse** the list (recent tutorials listed first)
-- **Search** for specific words or phrases
-- **Filter** by format (audio, text or video)
-- **Filter** by topic
-- **Filter** by author
-- **Filter** by source
+- **Browse** the list (recent tutorials are listed first) 👀
+- **Search** for specific words or phrases 📝
+- **Filter** by format (🎧, ✍️ or 📺)
+- **Filter** by topic 🤷‍♂️
+- **Filter** by author 👩‍🏫
+- **Filter** by source 🗞️
 
-Website: https://www.gatsbytutorials.com
+Know of a GatsbyJS tutorial that is missing from the list? Please add it! 🙏
 
 ## How do I add a tutorial?
 
-1. Add it to `src/data/tutorials.yml`
-2. Submit a pull request.
+1. Add it to `src/data/tutorials.yml` 📜
+2. Submit a pull request. 📤
 
 **Please use this format and indentation:**
 
