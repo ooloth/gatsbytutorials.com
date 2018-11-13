@@ -227,6 +227,11 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
             className="link db mb4 md:f6 mono"
           >
             Add a tutorial
+            <Emoji
+              emoji="🙌"
+              ariaLabel="Emoji of two hands raised in appreciation"
+              className="emoji pl2"
+            />
           </Anchor>
 
           {/* Lists of all types, topics, authors and sources */}
@@ -250,6 +255,7 @@ import React, { useState, useRef, useEffect } from 'react'
 
 import Tutorials from '../components/Tutorials'
 import Anchor from '../components/Anchor'
+import Emoji from '../components/Emoji'
 import Formats from '../components/Formats'
 import Topics from '../components/Topics'
 import Authors from '../components/Authors'
