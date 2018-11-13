@@ -10,7 +10,7 @@
     - introduction
     - performance
 
-- title: 'Live Coding With Level Up Tuts: Moving My Personal Site To GatsbyJS'
+- title: Moving My Personal Site To GatsbyJS
   link: https://www.youtube.com/watch?v=xqaThBnesfY
   format: video
   date: 2017-07-10
@@ -70,7 +70,7 @@
   topics:
     - rss
 
-- title: Getting Started with GatsbyJS (Live Coding with Jesse)
+- title: Getting Started with GatsbyJS
   link: https://www.youtube.com/watch?v=nufLF1kcn_4
   format: video
   date: 2017-11-09
@@ -539,4 +539,709 @@
   source: Gatsby
   topics:
     - layout
+    - v2
+
+- title: Moving from create-react-app to Gatsby.js
+  link: https://www.gatsbyjs.org/blog/2018-06-18-moving-from-create-react-app-to-gatsby-js/
+  format: text
+  date: 2018-06-18
+  length: '6:00'
+  authors: 
+    - Khaled Garbaya
+  source: Gatsby
+  topics:
+    - migration
+    - introduction
+
+- title: Why Narative Loves Gatsby
+  link: https://www.gatsbyjs.org/blog/2018-06-18-why-narative-loves-gatsby/
+  format: text
+  date: 2018-06-18
+  length: '5:00'
+  authors: 
+    - Dennis Brotzky
+  source: Gatsby
+  topics:
+    - introduction
+
+- title: Gatsby for Marketers, Managers, Agencies and Teams
+  link: https://www.gatsbyjs.org/blog/2018-06-08-gatsby-marketers-managers-agencies-teams/
+  format: text
+  date: 2018-06-08
+  length: '2:00'
+  authors: 
+    - Linda Watkins
+  source: Gatsby
+  topics:
+    - introduction
+
+- title: Introduction to Gatsby
+  link: https://www.gatsbyjs.org/blog/2017-05-31-introduction-to-gatsby/
+  format: text
+  date: 2018-05-31
+  length: '3:00'
+  authors: 
+    - Michelle Barker
+  source: Gatsby
+  topics:
+    - introduction
+
+- title: Gatsby JS Crash Course
+  link: https://www.youtube.com/watch?v=6YhqQ2ZW1sc
+  format: video
+  date: 2018-04-12
+  length: '1:04:33'
+  authors: 
+    - Brad Traversy
+  source: Traversy Media
+  topics:
+    - introduction
+    - v1
+
+- title: Build a Gatsby Blog Using the Cosmic JS Source Plugin
+  link: https://www.gatsbyjs.org/blog/2018-06-07-build-a-gatsby-blog-using-the-cosmic-js-source-plugin/
+  format: text
+  date: 2018-06-07
+  length: '8:00'
+  authors: 
+    - Tony Spiro
+  source: Gatsby
+  topics:
+    - blog
+    - gatsby-blog-cosmicjs
+    - gatsby-source-cosmicjs
+
+- title: Build a Blazing Fast Website with GatsbyJS and Contentful
+  link: https://www.youtube.com/watch?v=wlIdop5Yv_Y
+  format: video
+  date: 2018-06-25
+  length: '1:08:41'
+  authors: 
+    - Khaled Garbaya
+  source: freeCodeCamp
+  topics:
+    - blog
+    - gatsby-source-contentful
+    - v1
+
+- title: How to Use GatsbyJS for Static Site Rendering
+  link: https://www.youtube.com/watch?v=3jeznGJHenI
+  format: video
+  date: 2017-09-22
+  length: '1:08:41'
+  authors: 
+    - Sarah Denaci
+  source: Fullstack Academy
+  topics:
+    - introduction
+
+- title: Using GraphQL in a Static Site Generator
+  link: https://www.youtube.com/watch?v=7S8RNnTGdzI
+  format: video
+  date: 2017-08-27
+  length: '28:17'
+  authors: 
+    - Kyle Mathews
+  source: GraphQL NYC
+  topics:
+    - introduction
+    - graphql
+
+- title: 'Gatsby: Full Tutorial for Beginners'
+  link: https://www.youtube.com/watch?v=mHFAM0CXviE
+  format: video
+  date: 2018-10-23
+  length: '1:11:15'
+  authors: 
+    - Mike Dane
+  source: freeCodeCamp
+  topics:
+    - introduction
+    - v1
+
+- title: Build a Gatsby.js and Deploy with Netlify
+  link: https://www.youtube.com/watch?v=THkkdFSffiw
+  format: video
+  date: 2018-03-14
+  length: '5:42'
+  authors: 
+    - Billy Le
+  source: Techramento
+  topics:
+    - introduction
+    - v1
+
+- title: 'GatsbyJS: Dynamic Apps, Static Files, Unreal Performance'
+  link: https://www.youtube.com/watch?v=OU56cuFKh94
+  format: video
+  date: 2018-10-07
+  length: '57:40'
+  authors: 
+    - Jason Lengstorf
+  source: ReactJS Portland
+  topics:
+    - performance
+
+- title: Static Site Generation With Gatsby.js
+  link: https://www.heavybit.com/library/podcasts/jamstack-radio/ep-22-static-site-generation-with-gatsbyjs/
+  format: audio
+  date: 2017-11-02
+  length: '34:10'
+  authors: 
+    - Kyle Mathews
+  source: JAMstack Radio
+  topics:
+    - introduction
+
+- title: Gotchas of Gatsby.js
+  link: https://www.youtube.com/watch?v=oDEFkUJ1h_c
+  format: video
+  date: 2018-07-18
+  length: '35:34'
+  authors: 
+    - Jan Hrubý
+  source: React Vienna
+  topics:
+    - introduction
+
+- title: 'Review: GatsbyJS - Static site generator for ReactJS'
+  link: https://www.youtube.com/watch?v=HHRTL8NMFVo
+  format: video
+  date: 2017-07-09
+  length: '14:52'
+  authors: 
+    - Jamie Barton
+  source: ''
+  topics:
+    - introduction
+
+- title: Gatsby v2 Updates
+  link: https://www.youtube.com/watch?v=jhLiFF4Q6vM
+  format: video
+  date: 2018-05-29
+  length: '18:09'
+  authors: 
+    - Kyle Mathews
+  source: ''
+  topics:
+    - introduction
+    - v2
+
+- title: How to Upgrade Gatsby from v1 to v2
+  link: https://www.youtube.com/watch?v=Le_olZW_Vro
+  format: video
+  date: 2018-08-06
+  length: '14:31'
+  authors: 
+    - Harry Wolff
+  source: ''
+  topics:
+    - introduction
+    - v2
+
+- title: 'GatsbyJS: A Powerful FE Tool for Decoupled Devs'
+  link: https://www.youtube.com/watch?v=UgWBJnbZ9jU
+  format: video
+  date: 2018-07-15
+  length: '53:03'
+  authors: 
+    - Grayson Hicks
+  source: Drupal Asheville
+  topics:
+    - introduction
+
+- title: 'Gatsby Inkstreaming: Refactoring lengstorf.com'
+  link: https://www.youtube.com/playlist?list=PLz8Iz-Fnk_eQ1VgnbqODjaO8SiWYGGPQb
+  format: video
+  date: 2018-10-07
+  length: '9:06:10'
+  authors: 
+    - Jason Lengstorf
+  source: ''
+  topics:
+    - v2
+    - gatsby-plugin-emotion
+
+- title: Creating Nodes in GatsbyJS with Two Data Sources Using the sourceNode API
+  link: https://www.youtube.com/watch?v=a916SAaHXPQ
+  format: video
+  date: 2018-09-14
+  length: '1:34:20'
+  authors: 
+    - Jason Lengstorf
+  source: ''
+  topics:
+    - sourceNode api
+    - v2
+
+- title: Build a Podcast Mashup App Using OneGraph and Gatsby
+  link: https://www.youtube.com/watch?v=10jeoEWy-8g
+  format: video
+  date: 2018-10-10
+  length: '1:04:30'
+  authors: 
+    - Jason Lengstorf
+    - Sean Grove
+  source: ''
+  topics:
+    - graphql
+    - app
+    - OneGraph
+
+- title: Katie Builds Her First Gatsby Website
+  link: https://www.youtube.com/watch?v=oH6qy9Wjj9A
+  format: video
+  date: 2018-10-12
+  length: '1:30:15'
+  authors: 
+    - Jason Lengstorf
+    - Katie Fujihara
+  source: ''
+  topics:
+    - introduction
+    - v2
+
+- title: Deploy a Site With the AWS Amplify CLI
+  link: https://www.youtube.com/watch?v=nujYbwyz-_A
+  format: video
+  date: 2018-09-20
+  length: '33:24'
+  authors: 
+    - Jason Lengstorf
+    - Nader Dabit
+  source: ''
+  topics:
+    - aws amplify
+
+- title: Pro Gatsby Preview
+  link: https://www.youtube.com/playlist?list=PLLnpHn493BHFkuP4cVybiMWO67Hqq6vJI
+  format: video
+  date: 2018-03-05
+  length: '43:30'
+  authors: 
+    - Scott Tolinski
+  source: Level Up Tutorials
+  topics:
+    - introduction
+    - v1
+
+- title: How Gatsby and Next.js Really Work (and What it Means for Speed and SEO)
+  link: https://www.youtube.com/watch?v=IFHj3hIVYng
+  format: video
+  date: 2018-07-11
+  length: '12:47'
+  authors: 
+    - Gabe Rogan
+    - Sadek Drobi
+  source: Prismic
+  topics:
+    - introduction
+
+- title: Gatsby.js + WordPress
+  link: https://www.youtube.com/playlist?list=PLUBR53Dw-Ef8fe-8xJXtMpd1-uhgd2Qa6
+  format: video
+  date: 2018-04-14
+  length: '2:17:16'
+  authors:
+    - Ivan Dorić
+  source: Watch + Learn
+  topics:
+    - introduction
+    - blog
+    - gatsby-source-wordpress
+
+- title: Gatsby v2 Deep Dive with Kyle Mathews
+  link: https://www.youtube.com/watch?v=QQZDr_RiiTg
+  format: video
+  date: 2018-08-27
+  length: '31:24'
+  authors:
+    - Kyle Mathews
+  source: Gatsby
+  topics:
+    - introduction
+    - v2
+
+- title: GatsbyJS Meetup
+  link: https://www.youtube.com/watch?v=7M-7GlQGeGc
+  format: video
+  date: 2018-08-23
+  length: '31:24'
+  authors:
+    - Kyle Mathews
+  source: Gatsby
+  topics:
+    - introduction
+    - v2
+
+- title: Making Open Source More Open
+  link: https://www.youtube.com/watch?v=extv915_vYI
+  format: video
+  date: 2018-08-27
+  length: '9:10'
+  authors:
+    - Marisa Morby
+  source: Gatsby
+  topics:
+    - open source
+
+- title: Work-in-Progress Gatsby Store Live Demo
+  link: https://www.youtube.com/watch?v=MMF0zUqBjPQ
+  format: video
+  date: 2018-06-27
+  length: '24:36'
+  authors:
+    - Marisa Morby
+    - Jason Lengstorf
+  source: Gatsby
+  topics:
+    - open source
+    - ecommerce
+
+- title: Data in Gatsby v2
+  link: https://www.youtube.com/watch?v=nlqF3p2l894
+  format: video
+  date: 2018-08-27
+  length: '20:10'
+  authors:
+    - Andrew Rhyne
+  source: Gatsby
+  topics:
+    - data
+    - gatsby-source-graphql
+    - v2
+
+- title: Build a Gatsby v2 Site
+  link: https://www.youtube.com/watch?v=gSRK9CZRIxk
+  format: video
+  date: 2018-08-27
+  length: '10:48'
+  authors:
+    - Kyle Galbraith
+  source: Gatsby
+  topics:
+    - introduction
+    - blog
+    - v2
+    - aws s3
+    - aws cloudfront
+
+- title: 5 Questions about Gatsby.js
+  link: https://www.youtube.com/watch?v=SN1i8-kJYg0
+  format: video
+  date: 2018-06-22
+  length: '5:46'
+  authors:
+    - Grayson Hicks
+  source: Gatsby
+  topics:
+    - introduction
+
+- title: 'Gatsby v2: Faster build times, Guess.js, and more!'
+  link: https://www.youtube.com/watch?v=cX3CldSwWmc
+  format: video
+  date: 2018-09-27
+  length: '59:43'
+  authors:
+    - Linda Watkins
+    - Kyle Mathews
+    - Dustin Schau
+  source: Gatsby
+  topics:
+    - introduction
+    - v2
+
+- title: 'Headless Drupal: Building Blazing-Fast Websites with React/GatsbyJS + Drupal'
+  link: https://www.youtube.com/watch?v=TuVeWTieJGI
+  format: video
+  date: 2017-10-23
+  length: '50:33'
+  authors:
+    - Kyle Mathews
+  source: Bay Area Drupal Camp
+  topics:
+    - introduction
+    - gatsby-source-drupal
+
+- title: Build a Gatsby Website in Less than 5 Mins!
+  link: https://www.youtube.com/watch?v=iLRB3yIF9DY
+  format: video
+  date: 2018-08-26
+  length: '4:25'
+  authors:
+    - JavaScript Joe
+  source: ''
+  topics:
+    - introduction
+    - netlify
+    - v2
+
+- title: Building Blazing Fast Websites with React, Gatsby, and Contentful
+  link: https://www.youtube.com/watch?v=3bRsd175KNI
+  format: video
+  date: 2017-10-23
+  length: '11:26'
+  authors:
+    - Kyle Mathews
+  source: Heavybit
+  topics:
+    - introduction
+    - performance
+
+- title: 'GatsbyJS: Pros and Cons and In-Between'
+  link: https://www.youtube.com/watch?v=3Rx1IIjJJ6w
+  format: video
+  date: 2018-02-20
+  length: '1:11:34'
+  authors:
+    - Gabriel Konkle
+  source: React Denver
+  topics:
+    - introduction
+    - performance
+
+- title: How to Create a Recommended Articles Section in GatsbyJS
+  link: https://www.youtube.com/watch?v=bz-ZzmNkoO8
+  format: video
+  date: 2018-06-28
+  length: '25:54'
+  authors:
+    - Adrian Oprea
+  source: ''
+  topics:
+    - blog
+
+- title: How to Make a Contact Form in Gatsby with Netlify
+  link: https://www.youtube.com/watch?v=hF7xJhzrr9s
+  format: video
+  date: 2018-03-09
+  length: '13:24'
+  authors:
+    - Scott Tolinski
+  source: Level Up Tutorials
+  topics:
+    - netlify
+    - form
+
+- title: 'GatsbyJS: Make Blazingly Fast Static Websites with React'
+  link: https://www.youtube.com/watch?v=4InJKj1g_-c
+  format: video
+  date: 2018-08-08
+  length: '23:03'
+  authors:
+    - Pavithra Kodmad
+  source: ANZ Coders
+  topics:
+    - introduction
+
+- title: Bring React to Your Static Websites with Gatsby.js
+  link: https://www.youtube.com/watch?v=aeyOKv-N500
+  format: video
+  date: 2018-06-06
+  length: '23:33'
+  authors:
+    - Sten Pittet
+  source: Tech Talks YLD
+  topics:
+    - introduction
+
+- title: Discovering GatsbyJS
+  link: https://www.youtube.com/watch?v=9969CImxtBQ
+  format: video
+  date: 2017-07-11
+  length: '1:10:26'
+  authors:
+    - Jérôme Poskin
+  source: ''
+  topics:
+    - introduction
+    - v1
+
+- title: Intro to Gatsby.js
+  link: https://www.youtube.com/watch?v=TJ09SYDuvfo
+  format: video
+  date: 2017-08-28
+  length: '27:05'
+  authors:
+    - Ben McCormick
+  source: ''
+  topics:
+    - introduction
+    - v1
+
+- title: Gatsby UX Research
+  link: https://www.youtube.com/watch?v=dTl817c6G_E
+  format: video
+  date: 2018-05-29
+  length: '17:27'
+  authors:
+    - Shannon Soper
+  source: Contentful
+  topics:
+    - documentation
+
+- title: Building Websites with Gatsby
+  link: https://www.youtube.com/watch?v=AQGzRqYJa8k
+  format: video
+  date: 2018-02-21
+  length: '37:45'
+  authors:
+    - Kyle Mathews
+  source: Contentful
+  topics:
+    - introduction
+
+- title: Create a Gatsby Source Plugin
+  link: https://www.youtube.com/watch?v=5HHa-R-Jq3s
+  format: video
+  date: 2018-05-23
+  length: '8:52'
+  authors:
+    - Mike Allanson
+  source: Contentful
+  topics:
+    - plugins
+    - data
+    - gatsby-source-pixabay
+
+- title: 'GatsbyJS: Static Site Generator for React'
+  link: https://www.youtube.com/watch?v=PAnYxgoMc6c
+  format: video
+  date: 2017-09-22
+  length: '6:30'
+  authors: []
+  source: TopTech
+  topics:
+    - introduction
+    - v1
+
+- title: Kyle Mathews, Gatsby, Wordpress, GraphQL and Web Performance by Default
+  link: https://www.youtube.com/watch?v=kY-dxi_6stQ
+  format: video
+  date: 2018-03-23
+  length: '33:26'
+  authors:
+    - Kyle Mathews
+    - Ryan Florence
+  source: Workshop.me
+  topics:
+    - introduction
+    - performance
+
+- title: Static Sites with Gatsby
+  link: https://www.youtube.com/watch?v=UobFjlQOCOQ
+  format: video
+  date: 2018-10-30
+  length: '47:39'
+  authors:
+    - Geoffrey Hunt
+  source: bbd.tv
+  topics:
+    - introduction
+    - v2
+
+- title: Gatsby v2
+  link: https://www.youtube.com/watch?v=wVfgN-oXdVA
+  format: video
+  date: 2018-10-18
+  length: '28:30'
+  authors:
+    - Callum Macdonald
+  source: Gatsby Central
+  topics:
+    - v2
+
+- title: 'Gatsby: A React.js Static Site Generator'
+  link: https://www.youtube.com/watch?v=G4LVKJOOj7o
+  format: video
+  date: 2016-04-18
+  length: '49:48'
+  authors:
+    - Kyle Mathews
+  source: StaticWebTech
+  topics:
+    - introduction
+    - v0
+
+- title: 'Episode 39: Gatsby'
+  link: https://www.orbit.fm/weboftomorrow/39
+  format: audio
+  date: 2017-08-07
+  length: '48:15'
+  authors:
+    - Kyle Mathews
+  source: Web of Tomorrow
+  topics:
+    - introduction
+    - performance
+
+- title: Dealing with the Limitations of Gatsby Source Drupal
+  link: https://www.youtube.com/watch?v=qhrA6ftyFpM
+  format: video
+  date: 2018-08-27
+  length: '26:06'
+  authors:
+    - Brian Perry
+  source: Decoupled Days
+  topics:
+    - gatsby-source-drupal
+
+- title: Refactoring My Gatsby Starter to v2
+  link: https://www.youtube.com/watch?v=Htk7dduynDY
+  format: video
+  date: 2018-10-08
+  length: '2:06:00'
+  authors:
+    - Georgi Yanev
+  source: ''
+  topics:
+    - v2
+
+- title: 'Episode 13: Gatsby'
+  link: https://www.youtube.com/watch?v=aqv4_iewECM
+  format: video
+  date: 2017-07-17
+  length: '5:08'
+  authors: []
+  source: 5 minutes of React podcast
+  topics:
+    - introduction
+    - blog
+
+- title: Build a Portfolio Website with Netlify and NetlifyCMS (3 videos)
+  link: https://www.youtube.com/watch?v=wmLDUWNs63w&t=0s&list=PLuJHeJTDddjlO8JCSfITdCy1mZsZnZcKS&index=2
+  format: video
+  date: 2018-06-21
+  length: '37:53'
+  authors: 
+    - Denver COder
+  source: ''
+  topics:
+    - netlify
+    - netlify cms
+
+- title: Deploying Your First Gatsby Site to Netlify
+  link: https://www.youtube.com/watch?v=TbQ4kWX29lQ
+  format: video
+  date: 2018-10-23
+  length: '13:16'
+  authors: 
+    - James Q. Quick
+  source: ''
+  topics:
+    - introduction
+    - netlify
+    - v2
+
+- title: Decoupled Drupal + Gatsby
+  link: https://www.youtube.com/watch?v=fx2Qo3D47tI
+  format: video
+  date: 2018-08-25
+  length: '1:00:32'
+  authors: 
+    - Kyle Mathews
+  source: Decoupled Days
+  topics:
+    - introduction
+    - performance
     - v2
