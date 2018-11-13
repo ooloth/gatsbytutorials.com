@@ -4,8 +4,10 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
   const [author, setAuthor] = useState(null)
   const [source, setSource] = useState(null)
   const [query, setQuery] = useState(null)
+  const searchInput = useRef()
 
-  // TODO: add format to search...
+  // On the first render, focus the search input
+  useEffect(() => searchInput.current.focus(), [])
 
   // Filter the visible tutorials based on the active filters and/or search query
   const filteredTutorials = tutorials.filter(({ node: tutorial }) => {
@@ -147,6 +149,7 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
         <label className="mono">
           <span className="pr2 fw7">Search:</span>
           <input
+            ref={searchInput}
             onChange={e => setQuery(e.target.value)}
             type="text"
             placeholder="Type here..."
@@ -248,7 +251,7 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
  *
  */
 
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 import Tutorials from '../components/Tutorials'
 import Anchor from '../components/Anchor'
