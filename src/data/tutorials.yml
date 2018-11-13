@@ -142,3 +142,14 @@
   topics:
     - blog
     - v2
+
+- title: 'Gatsby, Static Site Generator For React: Introduction'
+  link: https://www.youtube.com/watch?v=rBlH1UvluiU
+  format: video
+  date: 2017-12-02
+  length: '31:44'
+  author: Sebastian Eschweiler
+  source: CodingTheSmartWay.com
+  topics:
+    - introduction
+    - v1
