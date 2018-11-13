@@ -373,9 +373,112 @@
   link: https://www.gatsbyjs.org/blog/2018-09-27-sendgrid-knowledge-center-cuts-page-load-times-in-half-with-gatsby/
   format: text
   date: 2018-10-23
-  length: '59:19'
+  length: '4:00'
   authors: 
     - Linda Watkins
   source: Gatsby
   topics:
     - performance
+
+- title: 'Web Performance 102: Keeping Gatsby Sites Blazing Fast'
+  link: https://www.gatsbyjs.org/blog/2018-10-03-gatsby-perf/
+  format: text
+  date: 2018-10-03
+  length: '8:00'
+  authors: 
+    - Dustin Schau
+  source: Gatsby
+  topics:
+    - performance
+    - v2
+
+- title: How We Improved Gatsby's Accessibility in v2 by Switching to @reach/router
+  link: https://www.gatsbyjs.org/blog/2018-09-27-reach-router/
+  format: text
+  date: 2018-09-27
+  length: '4:00'
+  authors: 
+    - Amberley Romo
+  source: Gatsby
+  topics:
+    - a11y
+    - v2
+
+- title: Announcing Support for Natively Querying 3rd-Party GraphQL APIs with Gatsby
+  link: https://www.gatsbyjs.org/blog/2018-09-25-announcing-graphql-stitching-support/
+  format: text
+  date: 2018-09-25
+  length: '5:00'
+  authors: 
+    - Mikhail Novikov
+  source: Gatsby
+  topics:
+    - gatsby-source-graphql
+    - v2
+
+- title: GatsbyJS with Creator Kyle Mathews
+  link: https://www.lullabot.com/podcasts/drupalizeme-podcast/gatsbyjs-with-creator-kyle-mathews
+  format: audio
+  date: 2018-08-16
+  length: '58:48'
+  authors: 
+    - Kyle Mathews
+  source: Lullabot
+  topics:
+    - introduction
+    - v2
+
+- title: Announcing Gatsby 2.0.0 🎉🎉🎉
+  link: https://www.gatsbyjs.org/blog/2018-09-17-gatsby-v2/
+  format: text
+  date: 2018-09-17
+  length: '9:00'
+  authors: 
+    - Kyle Mathews
+  source: Gatsby
+  topics:
+    - v2
+
+- title: What Kind of Company Will We Be? A Look at Gatsby’s Mission and Values.
+  link: https://www.gatsbyjs.org/blog/2018-09-07-gatsby-values/
+  format: text
+  date: 2018-09-07
+  length: '9:00'
+  authors: 
+    - Jason Lengstorf
+  source: Gatsby
+  topics:
+    - gatsby inc.
+
+- title: Publishing Your Next Gatsby Site to AWS With AWS Amplify
+  link: https://www.gatsbyjs.org/blog/2018-08-24-gatsby-aws-hosting/
+  format: text
+  date: 2018-09-04
+  length: '3:00'
+  authors: 
+    - Nader Dabit
+  source: Gatsby
+  topics:
+    - aws amplify
+
+- title: Using Decoupled Drupal with Gatsby
+  link: https://www.gatsbyjs.org/blog/2018-08-13-using-decoupled-drupal-with-gatsby/
+  format: text
+  date: 2018-08-13
+  length: '3:00'
+  authors: 
+    - Shannon Soper
+  source: Gatsby
+  topics:
+    - gatsby-source-drupal
+
+- title: My Experience Doing Pair Programming with the Gatsby Team and Why You Should Do It
+  link: https://www.gatsbyjs.org/blog/2018-08-11-gatsby-pair-programming/
+  format: text
+  date: 2018-08-11
+  length: '3:00'
+  authors: 
+    - Horacio Herrera
+  source: Gatsby
+  topics:
+    - pair programming
