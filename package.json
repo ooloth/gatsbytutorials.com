@@ -2,7 +2,7 @@
   "name": "gatsby-tutorials",
   "description": "Gatsby Tutorials",
   "repository": "github:ooloth/gatsby-tutorials.git",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "author": "Michael Uloth <hello@michaeluloth.com>",
   "browserslist": [
     ">0.25%",
