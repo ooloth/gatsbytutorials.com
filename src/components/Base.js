@@ -74,6 +74,7 @@ function SiteMetadata({ site }) {
       <link rel="canonical" href={site.siteUrl} />
 
       {/* Preconnect to external data sources */}
+      <link rel="preconnect" href="https://www.google-analytics.com" />
       <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 
       {/* Schema.org for Google */}
