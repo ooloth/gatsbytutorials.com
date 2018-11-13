@@ -210,3 +210,45 @@
     - introduction
     - blog
     - v0
+
+- title: 'Lightning Talks: Kyle Matthews'
+  link: https://www.youtube.com/watch?v=RFkNRKL6ZoE
+  format: video
+  date: 2016-02-25
+  length: '6:13'
+  author: Kyle Mathews
+  source: React.js Conf 2016
+  topics:
+    - introduction
+    - blog
+
+- title: Introducing Gatsby Themes
+  link: https://www.gatsbyjs.org/blog/2018-11-11-introducing-gatsby-themes/
+  format: text
+  date: 2018-11-11
+  length: '5:00'
+  author: Chris Biscardi
+  source: Gatsby
+  topics:
+    - themes
+
+- title: Gatsby for Apps
+  link: https://www.gatsbyjs.org/blog/2018-11-07-gatsby-for-apps/
+  format: text
+  date: 2018-11-07
+  length: '11:00'
+  author: Dustin Schau
+  source: Gatsby
+  topics:
+    - app
+
+- title: Deploying a Gatsby Blog to Azure
+  link: https://www.gatsbyjs.org/blog/2018-11-05-deploying-gatsby-to-azure/
+  format: text
+  date: 2018-11-05
+  length: '5:00'
+  author: Doug McDonald
+  source: Gatsby
+  topics:
+    - blog
+    - azure

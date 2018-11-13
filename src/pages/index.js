@@ -4,7 +4,9 @@ function IndexPage({ data }) {
   // TODO: replace these runtime calculations with detailed YAML version once we're compiling it at build time
 
   // 1. Determine which formats exist
-  const allFormats = tutorials.map(tutorial => tutorial.node.format)
+  const allFormats = tutorials
+    .map(tutorial => tutorial.node.format.toLowerCase()) // convert to lowercase
+    .sort()
 
   // 2. Create an objects with each topic and the number of times it appears
   const formatsWithCounts = allFormats.reduce((acc, curr) => {
@@ -21,7 +23,10 @@ function IndexPage({ data }) {
 
   // 1. Determine which topics exist (and sort them alphabetically)
   const topicArrays = tutorials.map(tutorial => tutorial.node.topics)
-  const allTopics = topicArrays.reduce((acc, curr) => acc.concat(curr), []).sort()
+  const allTopics = topicArrays
+    .reduce((acc, curr) => acc.concat(curr), []) // spread topic arrays into one array
+    .map(topic => topic.toLowerCase()) // convert topics to lowercase
+    .sort() // sort into alphabetical order
 
   // 2. Create an objects with each topic and the number of times it appears
   const topicsWithCounts = allTopics.reduce((acc, curr) => {
@@ -55,7 +60,7 @@ function IndexPage({ data }) {
   // 1. Determine which sources exist (and sort alphabetically)
   const allSources = tutorials
     .map(tutorial => tutorial.node.source)
-    .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
+    .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase())) // ignore case
 
   // 2. Create an objects with each author and the number of times they appear
   const sourcesWithCounts = allSources.reduce((acc, curr) => {

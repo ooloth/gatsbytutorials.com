@@ -78,12 +78,17 @@ function Tutorial({ tutorial, setAuthor, setSource, setTopic }) {
           />
 
           <ul>
-            {tutorial.topics.map((topic, i) => (
-              <li key={i} className="dib mr2">
-                <FilterButton text={topic} handleFilter={() => setTopic(topic)} />
-                {i < tutorial.topics.length - 1 && `, `}
-              </li>
-            ))}
+            {tutorial.topics
+              .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase())) // ignore case
+              .map((topic, i) => (
+                <li key={i} className="dib mr2">
+                  <FilterButton
+                    text={topic.toLowerCase()}
+                    handleFilter={() => setTopic(topic.toLowerCase())}
+                  />
+                  {i < tutorial.topics.length - 1 && `, `}
+                </li>
+              ))}
           </ul>
         </div>
       )}
