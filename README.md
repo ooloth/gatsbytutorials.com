@@ -17,10 +17,10 @@ Notice a tutorial is missing from the list? Please add it! 🙏
 
 The easiest approach is to use the make your changes here on the GitHub website:
 
-1. Go to the [`src/data/tutorials.yml` file on GitHub](https://github.com/ooloth/gatsby-tutorials/blob/master/src/data/tutorials.yml) 📜
-2. Use the file editor to add a new tutorial (or edit existing ones). 📝
-3. Preview your changes. 👀
-3. Commit your changes. ✅
+1. Open the [`src/data/tutorials.yml` list on GitHub](https://github.com/ooloth/gatsby-tutorials/blob/master/src/data/tutorials.yml) 📜
+2. Use the file editor to add a new tutorial (or edit existing ones). ✏️
+3. Preview your changes. 👓
+3. Commit your changes. 👍
 4. Create a pull request. 📤
 
 **Please use this format and indentation:**
