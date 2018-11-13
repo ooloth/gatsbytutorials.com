@@ -31,16 +31,9 @@ function Base({ children }) {
       `}
       render={data => (
         <>
-          <noscript>
-            To view Gatsby Tutorials, please enable JavaScript in your browser.
-          </noscript>
-
           <SiteMetadata site={data.site.siteMetadata} />
-
           <Header icon={data.gatsbyIcon} count={data.tutorials.edges.length} />
-
           {children}
-
           <Footer />
         </>
       )}
