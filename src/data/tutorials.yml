@@ -482,3 +482,61 @@
   source: Gatsby
   topics:
     - pair programming
+
+- title: Free Swag for Gatsby Contributors
+  link: https://www.gatsbyjs.org/blog/2018-08-09-swag-store/
+  format: text
+  date: 2018-08-09
+  length: '5:00'
+  authors: 
+    - Jason Lengstorf
+  source: Gatsby
+  topics:
+    - ecommerce
+    - open source
+
+- title: Learning How to Code with Gatsby
+  link: https://www.gatsbyjs.org/blog/2018-07-07-graphic-design-class/
+  format: text
+  date: 2018-07-07
+  length: '6:00'
+  authors: 
+    - Shannon Soper
+  source: Gatsby
+  topics:
+    - introduction
+
+- title: Automatically Create Pages from Components in any Directory
+  link: https://www.gatsbyjs.org/blog/2018-07-07-the-gatsby-plugin-page-creator/
+  format: text
+  date: 2018-07-07
+  length: '4:00'
+  authors: 
+    - Steven Natera
+  source: Gatsby
+  topics:
+    - gatsby-plugin-page-creator
+
+- title: 'Escalade Sports: From $5000 to $5/month in Hosting With Gatsby'
+  link: https://www.gatsbyjs.org/blog/2018-06-14-escalade-sports-from-5000-to-5-in-hosting/
+  format: text
+  date: 2018-06-21
+  length: '3:00'
+  authors: 
+    - Sam Bhagwat
+  source: Gatsby
+  topics:
+    - migration
+    - netlify
+
+- title: Life After Layouts
+  link: https://www.gatsbyjs.org/blog/2018-06-08-life-after-layouts/
+  format: text
+  date: 2018-06-19
+  length: '6:00'
+  authors: 
+    - Jason Lengstorf
+  source: Gatsby
+  topics:
+    - layout
+    - v2
