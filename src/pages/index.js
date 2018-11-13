@@ -53,8 +53,9 @@ function IndexPage({ data }) {
   })
 
   // 1. Determine which sources exist (and sort alphabetically)
-  // FIXME: how to sort alphabetically with a mix of capital and small first letters?
-  const allSources = tutorials.map(tutorial => tutorial.node.source).sort()
+  const allSources = tutorials
+    .map(tutorial => tutorial.node.source)
+    .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
 
   // 2. Create an objects with each author and the number of times they appear
   const sourcesWithCounts = allSources.reduce((acc, curr) => {

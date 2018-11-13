@@ -15,7 +15,6 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
     let isTopicMatch = false
     let isAuthorMatch = false
     let isSourceMatch = false
-    let isTitleMatch = false
     let isQueryMatch = false
 
     // If the user hasn't filtered or searched, abort and include all the tutorials
@@ -144,7 +143,6 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
     <section>
       <h2 className="sr-only">Search for Gatsby JS tutorials</h2>
 
-      {/* <div className="search-grid bb b--black-10 bg-white"> */}
       <form className="pv3">
         <label className="mono">
           <span className="pr2 fw7">Search:</span>
@@ -214,9 +212,8 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
           </span>
         </p>
       )}
-      {/* </div> */}
 
-      {/* Currently visible tutorials */}
+      {/* Tutorials matching search and filter parameters (if any) */}
       <div className="directory-grid">
         <Tutorials
           tutorials={filteredTutorials}

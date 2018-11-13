@@ -8,7 +8,9 @@ function FilterButton({ text, count, handleFilter, className = `` }) {
       <span className="relative z--1 underline group-hover:blue">{text}</span>
       {count && (
         <>
-          [<span className="relative z--1 blue">{count}</span>]
+          <span className="pl1">[</span>
+          <span className="relative z--1 blue">{count}</span>
+          <span>]</span>
         </>
       )}
     </button>
