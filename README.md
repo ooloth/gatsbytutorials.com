@@ -5,18 +5,23 @@
 You can find tutorials that interest you in several ways:
 
 - **Browse** the list (recent tutorials are listed first) 👀
-- **Search** for specific words or phrases 📝
+- **Search** for specific words or phrases 🕵️‍♀️
 - **Filter** by format (🎧, ✍️ or 📺)
 - **Filter** by topic 🤷‍♂️
 - **Filter** by author 👩‍🏫
 - **Filter** by source 🗞️
 
-Know of a GatsbyJS tutorial that is missing from the list? Please add it! 🙏
+Notice a tutorial is missing from the list? Please add it! 🙏
 
 ## How do I add a tutorial?
 
-1. Add it to `src/data/tutorials.yml` 📜
-2. Submit a pull request. 📤
+The easiest approach is to use the make your changes here on the GitHub website:
+
+1. Go to the [`src/data/tutorials.yml` file on GitHub](https://github.com/ooloth/gatsby-tutorials/blob/master/src/data/tutorials.yml) 📜
+2. Use the file editor to add a new tutorial (or edit existing ones). 📝
+3. Preview your changes. 👀
+3. Commit your changes. ✅
+4. Create a pull request. 📤
 
 **Please use this format and indentation:**
 
