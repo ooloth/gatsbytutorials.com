@@ -23,7 +23,7 @@ The easiest approach is to use the make your changes here on the GitHub website:
 3. **Commit** your changes 👍
 4. Create a **pull request** 📤
 
-**Please use this format and indentation:**
+**Please follow this format and indentation:**
 
 ```yaml
 - title: 'GatsbyJS: How to Create the Fastest Sites in the World'
@@ -35,6 +35,7 @@ The easiest approach is to use the make your changes here on the GitHub website:
     - Kyle Mathews
   source: ReactNext 2017
   topics:
+    - introduction
     - performance
 ```
 
