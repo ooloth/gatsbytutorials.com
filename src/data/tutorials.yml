@@ -75,3 +75,70 @@
     - introduction
     - v1
 
+- title: React-Based Content Management with Netlify CMS & Gatsby
+  link: https://www.youtube.com/watch?v=YyRwMy59d4M
+  format: video
+  date: 2018-03-30
+  length: '27:34'
+  author: Matt Biilmann
+  source: Real World React
+  topics:
+    - netlify cms
+
+- title: Learn Gatsby.js
+  link: https://kalinchernev.github.io/learn-gatsbyjs/
+  format: text
+  date: 2017-10-03
+  length: '15:00'
+  author: Kalin Chernev
+  source: ''
+  topics:
+    - introduction
+    - v1
+
+- title: Building a Photo Site With GatsbyJS and the WordPress.com API
+  link: https://jeremey.blog/gatsby-photo/
+  format: text
+  date: 2017-12-11
+  length: '18:00'
+  author: Jeremey DuVall
+  source: ''
+  topics:
+    - gatsby-source-wordpress
+    - gatsby-image
+    - graphql
+    - templates
+    - v1
+
+- title: Experimenting With GatsbyJS and the WordPress.com API
+  link: https://jeremey.blog/gatsbyjs-and-wp-com-api/
+  format: text
+  date: 2017-12-07
+  length: '4:00'
+  author: Jeremey DuVall
+  source: ''
+  topics:
+    - introduction
+    - gatsby-source-wordpress
+    - v1
+
+- title: 'A Step-by-Step Guide: Gatsby on Netlify'
+  link: https://www.netlify.com/blog/2016/02/24/a-step-by-step-guide-gatsby-on-netlify/
+  format: text
+  date: 2018-06-23
+  length: ''
+  author: Aaron Autrand
+  source: Netlify
+  topics:
+    - netlify
+
+- title: Build a Blog with React and Markdown using Gatsby
+  link: https://egghead.io/courses/build-a-blog-with-react-and-markdown-using-gatsby
+  format: video
+  date: ''
+  length: '31:00'
+  author: Taylor Bell
+  source: Egghead
+  topics:
+    - blog
+    - v2

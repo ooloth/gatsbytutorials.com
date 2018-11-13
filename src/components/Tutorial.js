@@ -37,12 +37,10 @@ function Tutorial({ tutorial, setAuthor, setSource, setTopic }) {
       </h3>
 
       <div className="flex pt1">
-        {tutorial.date && (
-          <p className={`flex items-center pr3`}>
-            <DateSVG className="icon mr2" />
-            {tutorial.date}
-          </p>
-        )}
+        <p className={`flex items-center pr3`}>
+          <DateSVG className="icon mr2" />
+          {tutorial.date ? tutorial.date : `Not specified`}
+        </p>
 
         {tutorial.length && (
           <p className="flex items-center">
@@ -109,7 +107,7 @@ import FilterButton from '../components/FilterButton'
 
 import { ReactComponent as DateSVG } from '../svg/calendar.svg'
 import { ReactComponent as AuthorSVG } from '../svg/user.svg'
-import { ReactComponent as SourceSVG } from '../svg/map-marker-alt.svg'
+import { ReactComponent as SourceSVG } from '../svg/bullhorn.svg'
 import { ReactComponent as LengthSVG } from '../svg/clock.svg'
 import { ReactComponent as TopicSVG } from '../svg/bookmark.svg'
 
