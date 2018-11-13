@@ -42,7 +42,12 @@ function IndexPage({ data }) {
   })
 
   // 1. Determine which authors exist (and sort them alphabetically)
-  const allAuthors = tutorials.map(tutorial => tutorial.node.author).sort()
+  // const allAuthors = tutorials.map(tutorial => tutorial.node.author).sort()
+
+  const authorArrays = tutorials.map(tutorial => tutorial.node.authors)
+  const allAuthors = authorArrays
+    .reduce((acc, curr) => acc.concat(curr), []) // spread topic arrays into one array
+    .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase())) // ignore case
 
   // 2. Create an objects with each author and the number of times they appear
   const authorsWithCounts = allAuthors.reduce((acc, curr) => {
@@ -106,7 +111,7 @@ export const query = graphql`
           format
           date(formatString: "MMM DD, YYYY")
           length
-          author
+          authors
           source
           topics
         }

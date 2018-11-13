@@ -23,7 +23,7 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
     // Check if the tutorial matches any active filters
     if (format && tutorial.format.includes(format)) isFormatMatch = true
     if (topic && tutorial.topics.includes(topic)) isTopicMatch = true
-    if (author && tutorial.author.includes(author)) isAuthorMatch = true
+    if (author && tutorial.authors.includes(author)) isAuthorMatch = true
     if (source && tutorial.source.includes(source)) isSourceMatch = true
 
     // If the user hasn't typed a query, filter just by author, source and topic
@@ -73,17 +73,15 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
         .toLowerCase()
         .includes(query.toLowerCase())
 
-      const isAuthorMatch = tutorial.author
-        .toLowerCase()
-        .includes(query.toLowerCase())
-
       const isSourceMatch = tutorial.source
         .toLowerCase()
         .includes(query.toLowerCase())
 
       const isTitleMatch = tutorial.title.toLowerCase().includes(query.toLowerCase())
-      // TODO: enable this to search topic substrings once we're generating a string version of the topics array for search purposes
+
+      // TODO: enable these to search topic and author array substrings once we're generating string versions of the topics and authors arrays for search purposes
       // const isTopicMatch = tutorial.topicSearchString.includes(query);
+      // const isAuthorMatch = tutorial.authorSearchString.includes(query);
 
       isQueryMatch = isFormatMatch || isAuthorMatch || isSourceMatch || isTitleMatch
 

@@ -3,7 +3,8 @@
   format: video
   date: 2017-10-01
   length: '24:52'
-  author: Kyle Mathews
+  authors:
+    - Kyle Mathews
   source: ReactNext 2017
   topics:
     - introduction
@@ -14,7 +15,8 @@
   format: video
   date: 2017-07-10
   length: '54:05'
-  author: Scott Tolisnki
+  authors:
+    - Scott Tolinski
   source: Level Up Tutorials
   topics:
     - migration
@@ -25,7 +27,8 @@
   format: audio
   date: 2018-10-15
   length: '1:06:52'
-  author: Jason Lengstorf
+  authors:
+    - Jason Lengstorf
   source: devMode.fm
   topics:
     - introduction
@@ -38,7 +41,8 @@
   format: text
   date: 2018-05-31
   length: ''
-  author: Wern Ancheta
+  authors:
+    - Wern Ancheta
   source: Pusher
   topics:
     - authentication
@@ -49,7 +53,8 @@
   format: text
   date: 2017-11-07
   length: ''
-  author: Ben McCormick
+  authors:
+    - Ben McCormick
   source: ''
   topics:
     - travis CI
@@ -59,7 +64,8 @@
   format: text
   date: 2017-06-03
   length: ''
-  author: Ben McCormick
+  authors:
+    - Ben McCormick
   source: ''
   topics:
     - rss
@@ -69,7 +75,8 @@
   format: video
   date: 2017-11-09
   length: '1:24:35'
-  author: Jesse R. Weigel
+  authors:
+    - Jesse R. Weigel
   source: freeCodeCamp
   topics:
     - introduction
@@ -80,7 +87,8 @@
   format: video
   date: 2018-03-30
   length: '27:34'
-  author: Matt Biilmann
+  authors:
+    - Matt Biilmann
   source: Real World React
   topics:
     - netlify cms
@@ -90,7 +98,8 @@
   format: text
   date: 2017-10-03
   length: '15:00'
-  author: Kalin Chernev
+  authors:
+    - Kalin Chernev
   source: ''
   topics:
     - introduction
@@ -101,7 +110,8 @@
   format: text
   date: 2017-12-11
   length: '18:00'
-  author: Jeremey DuVall
+  authors:
+    - Jeremey DuVall
   source: ''
   topics:
     - gatsby-source-wordpress
@@ -115,7 +125,8 @@
   format: text
   date: 2017-12-07
   length: '4:00'
-  author: Jeremey DuVall
+  authors:
+    - Jeremey DuVall
   source: ''
   topics:
     - introduction
@@ -127,7 +138,8 @@
   format: text
   date: 2018-06-23
   length: ''
-  author: Aaron Autrand
+  authors:
+    - Aaron Autrand
   source: Netlify
   topics:
     - netlify
@@ -135,9 +147,10 @@
 - title: Build a Blog with React and Markdown using Gatsby (13 videos)
   link: https://egghead.io/courses/build-a-blog-with-react-and-markdown-using-gatsby
   format: video
-  date: ''
+  date: null
   length: '31:00'
-  author: Taylor Bell
+  authors:
+    - Taylor Bell
   source: Egghead
   topics:
     - blog
@@ -148,7 +161,8 @@
   format: video
   date: 2017-12-02
   length: '31:44'
-  author: Sebastian Eschweiler
+  authors:
+    - Sebastian Eschweiler
   source: CodingTheSmartWay.com
   topics:
     - introduction
@@ -159,7 +173,8 @@
   format: video
   date: 2017-07-07
   length: '19:30'
-  author: Scott Tolinski
+  authors:
+    - Scott Tolinski
   source: Level Up Tutorials
   topics:
     - introduction
@@ -170,7 +185,8 @@
   format: video
   date: 2017-09-19
   length: '75:31'
-  author: Mike Dane
+  authors:
+    - Mike Dane
   source: ''
   topics:
     - introduction
@@ -181,7 +197,8 @@
   format: video
   date: 2017-10-04
   length: '107:38'
-  author: Scott Tolinski
+  authors:
+    - Scott Tolinski
   source: Level Up Tutorials
   topics:
     - introduction
@@ -193,7 +210,8 @@
   format: video
   date: 2016-11-03
   length: '8:12'
-  author: Kyle Mathews
+  authors:
+    - Kyle Mathews
   source: GraphQL Summit 2016
   topics:
     - introduction
@@ -204,7 +222,8 @@
   format: video
   date: 2016-03-30
   length: '25:29'
-  author: Scott Nonnenberg
+  authors:
+    - Scott Nonnenberg
   source: ''
   topics:
     - introduction
@@ -216,7 +235,8 @@
   format: video
   date: 2016-02-25
   length: '6:13'
-  author: Kyle Mathews
+  authors:
+    - Kyle Mathews
   source: React.js Conf 2016
   topics:
     - introduction
@@ -227,7 +247,8 @@
   format: text
   date: 2018-11-11
   length: '5:00'
-  author: Chris Biscardi
+  authors:
+    - Chris Biscardi
   source: Gatsby
   topics:
     - themes
@@ -237,7 +258,8 @@
   format: text
   date: 2018-11-07
   length: '11:00'
-  author: Dustin Schau
+  authors:
+    - Dustin Schau
   source: Gatsby
   topics:
     - app
@@ -247,8 +269,113 @@
   format: text
   date: 2018-11-05
   length: '5:00'
-  author: Doug McDonald
+  authors:
+    - Doug McDonald
   source: Gatsby
   topics:
-    - blog
     - azure
+    - blog
+
+- title: Using Unstructured Data in Gatsby
+  link: https://www.gatsbyjs.org/blog/2018-10-25-unstructured-data/
+  format: text
+  date: 2018-10-25
+  length: '9:00'
+  authors:
+    - Amberley Romo
+  source: Gatsby
+  topics:
+    - createPages API
+    - data
+
+- title: Using VS Code for Supercharged Gatsby.js Development
+  link: https://www.gatsbyjs.org/blog/2018-10-18-vscode-gatsby-development/
+  format: text
+  date: 2018-10-22
+  length: '5:00'
+  authors:
+    - Michael Holtzman
+  source: Gatsby
+  topics:
+    - vs code
+
+- title: 'Delivering Modern Website Experiences: The Journey to a Content Mesh'
+  link: https://www.gatsbyjs.org/blog/2018-10-04-journey-to-the-content-mesh
+  format: text
+  date: 2018-10-04
+  length: '4:00'
+  authors:
+    - Sam Bhagwat
+  source: Gatsby
+  topics:
+    - cms
+    - jamstack
+
+- title: 'Journey to the Content Mesh, Part 2: Unbundling of the CMS'
+  link: https://www.gatsbyjs.org/blog/2018-10-10-unbundling-of-the-cms
+  format: text
+  date: 2018-10-10
+  length: '3:00'
+  authors:
+    - Sam Bhagwat
+  source: Gatsby
+  topics:
+    - cms
+    - jamstack
+
+- title: 'Journey to the Content Mesh, Part 3: The Rise of Modern Web Development'
+  link: https://www.gatsbyjs.org/blog/2018-10-11-rise-of-modern-web-development
+  format: text
+  date: 2018-10-11
+  length: '4:00'
+  authors:
+    - Sam Bhagwat
+  source: Gatsby
+  topics:
+    - jamstack
+
+- title: 'Journey to the Content Mesh Part 4: Why Mobile Performance Is Crucial'
+  link: https://www.gatsbyjs.org/blog/2018-10-16-why-mobile-performance-is-crucial
+  format: text
+  date: 2018-10-16
+  length: '7:00'
+  authors:
+    - Sam Bhagwat
+  source: Gatsby
+  topics:
+    - performance
+
+- title: 'Journey to the Content Mesh Conclusion: Creating Compelling Content Experiences'
+  link: https://www.gatsbyjs.org/blog/2018-10-18-creating-compelling-content-experiences/
+  format: text
+  date: 2018-10-18
+  length: '7:00'
+  authors:
+    - Sam Bhagwat
+  source: Gatsby
+  topics:
+    - cms
+    - jamstack
+
+- title: 'Beyond Static: Building Dynamic Apps with Gatsby'
+  link: https://www.youtube.com/watch?v=BrBK4yxodXA
+  format: video
+  date: 2018-10-23
+  length: '59:19'
+  authors: 
+    - Dustin Schau
+    - Linda Watkins
+  source: Gatsby
+  topics:
+    - app
+
+- title: SendGrid Knowledge Center cuts page load times in half with Gatsby
+  link: https://www.gatsbyjs.org/blog/2018-09-27-sendgrid-knowledge-center-cuts-page-load-times-in-half-with-gatsby/
+  format: text
+  date: 2018-10-23
+  length: '59:19'
+  authors: 
+    - Linda Watkins
+  source: Gatsby
+  topics:
+    - performance

@@ -36,7 +36,7 @@ function Tutorial({ tutorial, setAuthor, setSource, setTopic }) {
         </Anchor>
       </h3>
 
-      <div className="flex pt1">
+      <div className="flex pt1 pb3">
         <p className={`flex items-center pr3`}>
           <DateSVG className="icon mr2" />
           {tutorial.date ? tutorial.date : `Not specified`}
@@ -50,15 +50,13 @@ function Tutorial({ tutorial, setAuthor, setSource, setTopic }) {
         )}
       </div>
 
-      {tutorial.author && (
-        <p className="flex items-center mt3 pt1 f6">
-          <AuthorSVG className="icon mr2 black-60" />
-          <FilterButton
-            text={tutorial.author}
-            handleFilter={() => setAuthor(tutorial.author)}
-          />
-        </p>
-      )}
+      {tutorial.authors &&
+        tutorial.authors.map(author => (
+          <p key={author} className="flex items-center pt1 f6">
+            <AuthorSVG className="icon mr2 black-60" />
+            <FilterButton text={author} handleFilter={() => setAuthor(author)} />
+          </p>
+        ))}
 
       {tutorial.source && (
         <p className="flex items-center pt1 f6">
