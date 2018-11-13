@@ -132,6 +132,7 @@ export const query = graphql`
           title
           link
           format
+          language
           date(formatString: "MMM DD, YYYY")
           length
           authors
