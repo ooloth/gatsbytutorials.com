@@ -44,7 +44,7 @@ The easiest approach is to use the make your changes here on the GitHub website:
 - `length` - Length of tutorial, if applicable (`string`; optional)
 - `author` - Name of author or speaker (`string`; required)
 - `source` - Name of YouTube channel, podcast, conference, blog, etc. if different from the author's name (`string`; optional)
-- `topics` - Array of primary topics covered by the tutorial (`array` of `strings`; optional)
+- `topics` - Main topic(s) covered by the tutorial (`array` of `strings`; optional)
 
 ---
 

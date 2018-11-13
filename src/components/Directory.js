@@ -226,7 +226,7 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
           {/* Link to add a new tutorial */}
           <Anchor
             href="https://github.com/ooloth/gatsby-tutorials#how-do-i-add-a-tutorial"
-            className="link db mb4 mono"
+            className="link db mb4 md:f6 mono"
           >
             Add a tutorial
           </Anchor>

@@ -22,9 +22,7 @@ const Footer = () => (
       .
     </p>
     <p>
-      Built with{' '}
-      <Emoji emoji="❤️" ariaLabel="An emoji of a red heart" className="emoji" />
-      by{` `}
+      Built by{` `}
       <Anchor href="https://www.michaeluloth.com" className="link">
         Michael Uloth
       </Anchor>
