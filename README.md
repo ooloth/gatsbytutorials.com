@@ -54,19 +54,16 @@ Where possible, please add tutorial series as one entry with a link to the serie
 
 ## Coming Up
 
-### Improve filtering
-
+### Better filters
 - [ ] Filter tutorials by language
 - [ ] Filter by multiple topics at once
 - [ ] Cancel active filter by clicking it again
 
-### Improve performance
-
+### Better performance
 - [ ] Paginate tutorials (and search results)
 - [ ] Generate filter lists at build time
 
-### Improve search
-
+### Better search
 - [ ] Implement fuzzy search to allow non-sequential search terms
 - [ ] Highlight search string in search results
 
