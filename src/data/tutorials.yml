@@ -1359,6 +1359,7 @@
   length: '6:00'
   authors: 
     - Connor Wilson
+  source: ''
   topics:
     - introduction
     - plugins
@@ -1374,6 +1375,7 @@
   length: '9:00'
   authors: 
     - Connor Wilson
+  source: ''
   topics:
     - introduction
     - starters
