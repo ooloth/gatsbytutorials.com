@@ -1401,7 +1401,7 @@
   link: https://www.gatsbyjs.org/tutorial/
   format: text
   language: en
-  date: null
+  date: 2018-09-08
   length: ''
   authors: []
   source: Gatsby
@@ -1410,3 +1410,73 @@
     - blog
     - templates
     - v2
+
+- title: WordPress Source Plugin Tutorial
+  link: https://www.gatsbyjs.org/docs/wordpress-source-plugin-tutorial/
+  format: text
+  language: en
+  date: 2018-10-16
+  length: ''
+  authors: []
+  source: Gatsby
+  topics:
+    - gatsby-source-wordpress
+    - blog
+    - v2
+
+- title: Adding Images to a WordPress Site
+  link: https://www.gatsbyjs.org/docs/image-tutorial/
+  format: text
+  language: en
+  date: 2018-10-16
+  length: ''
+  authors: []
+  source: Gatsby
+  topics:
+    - gatsby-source-wordpress
+    - gatsby-image
+
+- title: Source Plugin Tutorial
+  link: https://www.gatsbyjs.org/docs/source-plugin-tutorial/
+  format: text
+  language: en
+  date: 2018-11-06
+  length: ''
+  authors: []
+  source: Gatsby
+  topics:
+    - data
+    - plugins
+    - gatsby-node
+    - createNode api
+    - node-fetch
+    - query-string
+
+- title: Gatsby E-Commerce Tutorial
+  link: https://www.gatsbyjs.org/docs/ecommerce-tutorial/
+  format: text
+  language: en
+  date: 2018-10-26
+  length: ''
+  authors: []
+  source: Gatsby
+  topics:
+    - e-commerce
+    - stripe
+    - gatsby-plugin-stripe-checkout
+    - aws lambda
+    - serverless
+
+- title: Making a Site with User Authentication
+  link: https://www.gatsbyjs.org/docs/authentication-tutorial/
+  format: text
+  language: en
+  date: 2018-11-06
+  length: ''
+  authors: []
+  source: Gatsby
+  topics:
+    - app
+    - authentication
+    - gatsby-node
+    - gatsby-plugin-create-client-paths
