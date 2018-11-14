@@ -74,9 +74,9 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
         .toLowerCase()
         .includes(query.toLowerCase())
 
-      const isSourceMatch = tutorial.source
-        .toLowerCase()
-        .includes(query.toLowerCase())
+      const isSourceMatch =
+        tutorial.source &&
+        tutorial.source.toLowerCase().includes(query.toLowerCase())
 
       const isTitleMatch = tutorial.title.toLowerCase().includes(query.toLowerCase())
 

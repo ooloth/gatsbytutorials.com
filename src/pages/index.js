@@ -67,7 +67,10 @@ function IndexPage({ data }) {
 
   // 1. Determine which sources exist (and sort alphabetically)
   const allSources = tutorials
-    .map(tutorial => tutorial.node.source)
+    .map(tutorial => {
+      if (tutorial.node.source) return tutorial.node.source
+      else return ''
+    })
     .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase())) // ignore case
 
   // 2. Create an objects with each author and the number of times they appear
