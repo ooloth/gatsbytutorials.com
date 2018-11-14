@@ -52,6 +52,24 @@ The easiest approach is to use the make your changes here on the GitHub website:
 
 Where possible, please add tutorial series as one entry with a link to the series homepage.
 
+## Coming Up
+
+### Improve filtering
+
+[] Filter tutorials by language
+[] Filter by multiple topics at once
+[] Cancel active filter by clicking it again
+
+### Improve performance
+
+[] Paginate tutorials (and search results)
+[] Generate filter lists at build time
+
+### Improve search
+
+[] Implement fuzzy search to allow non-sequential search terms
+[] Highlight search string in search results
+
 ---
 
 Happy learning! 🤓
