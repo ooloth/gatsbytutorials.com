@@ -52,7 +52,7 @@ The easiest approach is to use the make your changes here on the GitHub website:
 
 Where possible, please add tutorial series as one entry with a link to the series homepage.
 
-## Coming Up
+## Coming Soon
 
 ### Better filters
 
