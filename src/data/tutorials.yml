@@ -1396,3 +1396,17 @@
     - contentful
     - netlify
     - v2
+
+- title: Official Gatsby.js Tutorial
+  link: https://www.gatsbyjs.org/tutorial/
+  format: text
+  language: en
+  date: null
+  length: ''
+  authors: []
+  source: Gatsby
+  topics:
+    - introduction
+    - blog
+    - templates
+    - v2
