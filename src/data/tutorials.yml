@@ -1552,3 +1552,71 @@
     - webtask.io
     - axios
     - v1
+
+- title: 'A PWA Example: Build an E-Commerce Progressive Web App with Gatsby'
+  link: https://snipcart.com/blog/pwa-example-ecommerce-gatsby
+  format: text
+  language: en
+  date: 2018-07-03
+  length: ''
+  authors:
+    - Jean-Sebastien Tremblay
+  source: Snipcart
+  topics:
+    - introduction
+    - pwa
+    - gatsby-plugin-manifest
+    - gatsby-plugin-offline
+    - e-commerce
+    - snipcart
+    - v1
+
+- title: Creating a Static E-Commerce Website with Snipcart, GatsbyJS and DatoCMS
+  link: https://snipcart.com/blog/static-ecommerce-gatsby-datocms
+  format: text
+  language: en
+  date: 2018-06-18
+  length: ''
+  authors:
+    - Stefano Verna
+  source: Snipcart
+  topics:
+    - introduction
+    - datoCMS
+    - cms
+    - e-commerce
+    - snipcart
+    - v1
+
+- title: Handling Static Forms, Auth & Serverless Functions with Gatsby on Netlify
+  link: https://snipcart.com/blog/static-forms-serverless-gatsby-netlify
+  format: text
+  language: en
+  date: 2018-04-25
+  length: ''
+  authors:
+    - Maxime Laboissonniere
+  source: Snipcart
+  topics:
+    - aws lambda
+    - form
+    - authentication
+    - netlify
+    - netlify identity
+    - netlify forms
+    - v1
+
+- title: ReactJS E-Commerce with No Backend Using Snipcart & Gatsby
+  link: https://snipcart.com/blog/snipcart-reactjs-static-ecommerce-gatsby
+  format: text
+  language: en
+  date: 2016-01-28
+  length: ''
+  authors:
+    - Gabriel Robert
+  source: Snipcart
+  topics:
+    - introduction
+    - e-commerce
+    - snipcart
+    - v0
