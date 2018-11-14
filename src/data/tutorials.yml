@@ -374,7 +374,7 @@
   topics:
     - jamstack
 
-- title: 'Journey to the Content Mesh Part 4: Why Mobile Performance Is Crucial'
+- title: 'Journey to the Content Mesh, Part 4: Why Mobile Performance Is Crucial'
   link: https://www.gatsbyjs.org/blog/2018-10-16-why-mobile-performance-is-crucial
   format: text
   language: en
@@ -546,7 +546,7 @@
     - Jason Lengstorf
   source: Gatsby
   topics:
-    - ecommerce
+    - e-commerce
     - open source
 
 - title: Learning How to Code with Gatsby
@@ -984,7 +984,7 @@
   source: Gatsby
   topics:
     - open source
-    - ecommerce
+    - e-commerce
 
 - title: Data in Gatsby v2
   link: https://www.youtube.com/watch?v=nlqF3p2l894
@@ -1480,3 +1480,75 @@
     - authentication
     - gatsby-node
     - gatsby-plugin-create-client-paths
+
+- title: 'JAMstack PWA : Let’s Build a Polling App with Gatsby.js, Firebase and Styled-Components, Part 1'
+  link: https://medium.com/@UnicornAgency/jamstack-pwa-lets-build-a-polling-app-with-gatsby-js-firebase-and-styled-components-pt-1-78a03a633092
+  format: text
+  language: en
+  date: 2018-02-20
+  length: '13:00'
+  authors:
+    - John Korzhuk
+  source: Unicorn Agency
+  topics:
+    - app
+    - jamstack
+    - styled-components
+    - v1
+
+
+- title: 'JAMstack PWA : Let’s Build a Polling App with Gatsby.js, Firebase and Styled-Components, Part 2'
+  link: https://medium.com/@UnicornAgency/jamstack-pwa-lets-build-a-polling-app-with-gatsby-js-firebase-and-styled-components-pt-2-9044534ea6bc
+  format: text
+  language: en
+  date: 2018-04-17
+  length: '11:00'
+  authors:
+    - John Korzhuk
+  source: Unicorn Agency
+  topics:
+    - app
+    - jamstack
+    - firebase
+    - authentication
+    - gatsby-browser
+    - styled-components
+    - netlify
+    - v1
+
+- title: 'JAMstack PWA : Let’s Build a Polling App with Gatsby.js, Firebase and Styled-Components, Part 3'
+  link: https://medium.com/@UnicornAgency/jamstack-pwa-lets-build-a-polling-app-with-gatsby-js-firebase-and-styled-components-pt-3-89fa499534fd
+  format: text
+  language: en
+  date: 2018-05-08
+  length: '5:00'
+  authors:
+    - John Korzhuk
+  source: Unicorn Agency
+  topics:
+    - pwa
+    - service worker
+    - gatsby-plugin-manifest
+    - gatsby-plugin-offline
+    - v1
+
+- title: Building a Blog with Gatsby, React and Webtask.io!
+  link: https://medium.com/@UnicornAgency/jamstack-pwa-lets-build-a-polling-app-with-gatsby-js-firebase-and-styled-components-pt-3-89fa499534fd
+  format: text
+  language: en
+  date: 2018-03-01
+  length: ''
+  authors:
+    - Luke Oliff
+  source: Auth0
+  topics:
+    - introduction
+    - blog
+    - pagination
+    - gatsby-node
+    - templates
+    - authentication
+    - auth0
+    - webtask.io
+    - axios
+    - v1
