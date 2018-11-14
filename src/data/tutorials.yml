@@ -1362,3 +1362,37 @@
     - introduction
     - performance
     - v2
+ 
+- title: How to Write a Gatsby Source Plugin (featuring Cat Facts)
+  link: https://medium.com/@cwlsn/how-to-write-a-gatsby-source-plugin-featuring-cat-facts-f0c769a10bfd
+  format: text
+  language: en
+  date: 2018-11-13
+  length: '6:00'
+  authors: 
+    - Connor Wilson
+  source: ''
+  topics:
+    - introduction
+    - plugins
+    - data
+    - graphql
+    - v2
+  
+- title: 'JAMstack Basics: How to Create a Gatsby Starter with Contentful and Deploy to Netlify'
+  link: https://itnext.io/jamstack-basics-how-to-create-a-gatsby-starter-with-contentful-and-deploy-to-netlify-846354cc74bc
+  format: text
+  language: en
+  date: 2018-10-10
+  length: '9:00'
+  authors: 
+    - Connor Wilson
+  source: ''
+  topics:
+    - introduction
+    - starters
+    - graphql
+    - jamstack
+    - contentful
+    - netlify
+    - v2
