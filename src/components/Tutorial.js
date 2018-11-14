@@ -69,7 +69,11 @@ function Tutorial({ tutorial, setAuthor, setSource, setTopic }) {
       )}
 
       {tutorial.topics && (
-        <div className="topics flex mt3 pt1">
+        <div
+          className={`topics flex ${
+            tutorial.authors || tutorial.source ? `mt3 pt1` : ``
+          }`}
+        >
           <TopicSVG
             className="icon mr2 black-60"
             style={{ transform: `translateY(.4rem)` }}

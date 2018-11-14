@@ -47,7 +47,12 @@ function IndexPage({ data }) {
   // 1. Determine which authors exist (and sort them alphabetically)
   // const allAuthors = tutorials.map(tutorial => tutorial.node.author).sort()
 
-  const authorArrays = tutorials.map(tutorial => tutorial.node.authors)
+  const authorArrays = tutorials
+    // .map(tutorial => tutorial.node.authors)
+    .map(tutorial => {
+      if (tutorial.node.authors) return tutorial.node.authors
+      else return []
+    })
   const allAuthors = authorArrays
     .reduce((acc, curr) => acc.concat(curr), []) // spread topic arrays into one array
     .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase())) // ignore case
