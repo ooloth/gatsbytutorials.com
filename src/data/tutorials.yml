@@ -1,3 +1,18 @@
+- title: 'Implement i18n to a Gatsby site'
+  link: https://www.obytes.com/blog/2018/implement-i18n-to-gatsby/
+  format: text
+  language: en
+  date: 2018-10-07
+  length: '15:00'
+  authors:
+    - Ismail Ghallou
+  source: Obytes
+  topics:
+    - i18n
+    - styled-components
+    - Context api
+    - Recompose
+    - react-intl
 - title: 'Build a Blog Using Gatsby.js & React'
   link: https://codeburst.io/build-a-blog-using-gatsby-js-react-8561bfe8fc91
   format: text
