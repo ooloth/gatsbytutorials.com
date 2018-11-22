@@ -1899,6 +1899,22 @@
     - gatsby-source-strapi
     - templates
     - createPages api
+    
+- title: 'Gatsby.js: How to set up and use the React Static Site Generator'
+  link: https://medium.freecodecamp.org/setting-up-and-getting-used-to-gatsby-1fc27985ae8a
+  format: text
+  language: en
+  date: 2018-01-05
+  length: '06:00'
+  authors:
+    - Aman Mittal
+  source: freeCodeCamp
+  topics:
+    - introduction
+    - navigation
+    - gatsby-link
+    - deployment
+    - github pages
 
 - title: Gatsby + Contentful + Netlify (and Algolia)
   link: https://www.gatsbyjs.org/blog/2017-12-06-gatsby-plus-contentful-plus-netlify/
