@@ -1908,8 +1908,8 @@
   length: '06:00'
   authors:
     - Aman Mittal
-   source: freeCodeCamp
-   topics:
+  source: freeCodeCamp
+  topics:
     - introduction
     - navigation
     - gatsby-link
