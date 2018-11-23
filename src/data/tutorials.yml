@@ -1,3 +1,18 @@
+- title: 'How To Build A Blog From Scratch With React, Markdown, GraphQL and GatsbyJS'
+  link: https://medium.com/crowdbotics/how-to-build-your-own-blog-from-scratch-with-gatsbyjs-graphql-react-and-markdown-78352c367bd1
+  format: text
+  language: en
+  date: 2018-11-21
+  length: '10:00'
+  authors:
+    - Aman Mittal
+  source: Crowdbotics
+  topics:
+    - graphql
+    - markdown
+    - blog
+    - createPages api
+    - v2
 - title: 'Implement i18n to a Gatsby site'
   link: https://www.obytes.com/blog/2018/implement-i18n-to-gatsby/
   format: text
