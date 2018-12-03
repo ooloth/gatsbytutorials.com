@@ -1,3 +1,17 @@
+- title: 'Creating Your First Gatsby Theme'
+  link: https://blog.alexluong.com/creating-your-first-gatsby-theme
+  format: text
+  language: en
+  date: 2018-11-29
+  length: ''
+  authors: 
+    - Alex Luong
+  source: ''
+  topics:
+    - theme
+    - blog
+    - introduction
+
 - title: 'How To Build A Blog From Scratch With React, Markdown, GraphQL and GatsbyJS'
   link: https://medium.com/crowdbotics/how-to-build-your-own-blog-from-scratch-with-gatsbyjs-graphql-react-and-markdown-78352c367bd1
   format: text
