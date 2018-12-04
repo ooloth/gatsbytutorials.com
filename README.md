@@ -62,7 +62,7 @@ Where possible, please add tutorial series as one entry with a link to the serie
 
 ### Better performance ⚡️
 
-- [ ] Paginate tutorials (and search results)
+- [ ] Paginate tutorials list (and search results)
 - [ ] Generate filter lists at build time
 
 ### Better search 🕵️‍♂️
