@@ -1,7 +1,12 @@
 function Authors({ authors, currentAuthor, setAuthor }) {
+  function handleClick(e) {
+    if (e.target.value === currentAuthor) setAuthor(null)
+    else setAuthor(e.target.value)
+  }
+
   return (
-    <section className="bt b--black-10 pv4">
-      <h2 className="mb3 mono f5">Authors</h2>
+    <section className="mt3 shadow br2 bg-white pa3 h5 overflow-auto animate hover:shadow-lg">
+      <h2 className="mb3 f4">Authors</h2>
 
       <ul className="lh-tall">
         {authors.map(author => (
@@ -9,8 +14,9 @@ function Authors({ authors, currentAuthor, setAuthor }) {
             <FilterButton
               text={author.name}
               count={author.count}
-              handleFilter={() => setAuthor(author.name)}
-              className={author.name === currentAuthor ? `blue` : ``}
+              active={author.name === currentAuthor}
+              handleFilter={handleClick}
+              className={author.name === currentAuthor ? `bg-blue white` : ``}
             />
           </li>
         ))}

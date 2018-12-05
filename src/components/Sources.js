@@ -1,7 +1,12 @@
 function Sources({ sources, currentSource, setSource }) {
+  function handleClick(e) {
+    if (e.target.value === currentSource) setSource(null)
+    else setSource(e.target.value)
+  }
+
   return (
-    <section className="bt b--black-10 pv4">
-      <h2 className="mb3 mono f5">Sources</h2>
+    <section className="mt3 shadow br2 bg-white pa3 h5 overflow-auto animate hover:shadow-lg">
+      <h2 className="mb3 f4">Sources</h2>
 
       <ul className="lh-tall">
         {sources.map(
@@ -11,8 +16,9 @@ function Sources({ sources, currentSource, setSource }) {
                 <FilterButton
                   text={source.name}
                   count={source.count}
-                  handleFilter={() => setSource(source.name)}
-                  className={source.name === currentSource ? `blue` : ``}
+                  active={source.name === currentSource}
+                  handleFilter={handleClick}
+                  className={source.name === currentSource ? `bg-blue white` : ``}
                 />
               </li>
             )

@@ -1,7 +1,12 @@
 function Formats({ formats, currentFormat, setFormat }) {
+  function handleClick(e) {
+    if (e.target.value === currentFormat) setFormat(null)
+    else setFormat(e.target.value)
+  }
+
   return (
-    <section className="bt b--black-10 pv4">
-      <h2 className="mb3 mono f5">Formats</h2>
+    <section className="shadow br2 bg-white pa3 animate hover:shadow-lg">
+      <h2 className="mb3 f4">Formats</h2>
 
       <ul className="lh-tall">
         {formats.map(format => (
@@ -9,8 +14,9 @@ function Formats({ formats, currentFormat, setFormat }) {
             <FilterButton
               text={format.name}
               count={format.count}
-              handleFilter={() => setFormat(format.name)}
-              className={format.name === currentFormat ? `blue` : ``}
+              active={format.name === currentFormat}
+              handleFilter={handleClick}
+              className={format.name === currentFormat ? `bg-blue white` : ``}
             />
           </li>
         ))}

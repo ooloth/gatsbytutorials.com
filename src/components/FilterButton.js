@@ -1,18 +1,21 @@
-function FilterButton({ text, count, handleFilter, className = `` }) {
+function FilterButton({ text, count, active, handleFilter, className = `` }) {
   return (
     <button
       value={text}
       onClick={handleFilter}
-      className={`group lh-copy mono f6 black-60 ${className}`}
+      className={`inline-flex mt2 br2 bg-light-gray pv1 ph2 no-wrap hover:bg-blue hover:white ${className}`}
     >
-      <span className="relative z--1 underline group-hover:blue">{text}</span>
-      {count && (
+      <span className="pointer-events-none">{text}</span>
+
+      {active && <span>&nbsp;×</span>}
+
+      {/* {count && (
         <>
-          <span className="pl1">[</span>
-          <span className="relative z--1 blue">{count}</span>
-          <span>]</span>
+          <span className="pl1">(</span>
+          <span className="relative blue">{count}</span>
+          <span>)</span>
         </>
-      )}
+      )} */}
     </button>
   )
 }
