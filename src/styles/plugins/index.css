@@ -4,5 +4,9 @@
  *
  */
 
+/* purgecss start ignore */
+
 @import './react-modal';
 @import './react-stickynode';
+
+/* purgecss end ignore */
