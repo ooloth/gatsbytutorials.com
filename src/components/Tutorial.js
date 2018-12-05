@@ -26,27 +26,15 @@ function Tutorial({
   let tutorialEmoji
   if (tutorial.format === `video`) {
     tutorialEmoji = (
-      <Emoji
-        emoji="📺"
-        ariaLabel="Emoji of a television"
-        className="tutorial-emoji"
-      />
+      <Emoji emoji="📺" ariaLabel="Emoji of a television" className="flex-none" />
     )
   } else if (tutorial.format === `audio`) {
     tutorialEmoji = (
-      <Emoji
-        emoji="🎧"
-        ariaLabel="Emoji of a headphones"
-        className="tutorial-emoji"
-      />
+      <Emoji emoji="🎧" ariaLabel="Emoji of a headphones" className="flex-none" />
     )
   } else if (tutorial.format === `text`) {
     tutorialEmoji = (
-      <Emoji
-        emoji="📕"
-        ariaLabel="Emoji of a hand writing"
-        className="tutorial-emoji"
-      />
+      <Emoji emoji="📕" ariaLabel="Emoji of a hand writing" className="flex-none" />
     )
   }
 
@@ -59,8 +47,7 @@ function Tutorial({
       </h3>
 
       <div className="flex flex-wrap items-baseline pt1">
-        {tutorialEmoji}
-
+        {tutorialEmoji}&nbsp;
         {tutorial.authors && tutorial.authors.length > 0 ? (
           tutorial.authors.map((author, i) => (
             <Fragment key={author}>
@@ -88,7 +75,6 @@ function Tutorial({
             {tutorial.source}
           </button>
         )}
-
         {tutorial.date && <p>・{tutorial.date}</p>}
       </div>
 

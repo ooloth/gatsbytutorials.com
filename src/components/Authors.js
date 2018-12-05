@@ -5,10 +5,10 @@ function Authors({ authors, currentAuthor, setAuthor }) {
   }
 
   return (
-    <section className="mt3 shadow br2 bg-white pa3 h5 overflow-auto animate hover:shadow-lg">
-      <h2 className="mb3 f4">Authors</h2>
+    <section className="mt3 shadow br2 bg-white h5 overflow-auto animate hover:shadow-lg">
+      <h2 className="sticky top-0 pt3 ph3 pb2 mb2 bg-white-90 f4">Authors</h2>
 
-      <ul className="lh-tall">
+      <ul className="ph3 lh-tall">
         {authors.map(author => (
           <li key={author.name}>
             <FilterButton
