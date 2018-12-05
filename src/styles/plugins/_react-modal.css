@@ -1,0 +1,39 @@
+/*
+ *
+ * Overlay
+ *
+ */
+
+.ReactModal__Overlay { 
+  z-index: 10000 !important;
+  background-color: transparent;
+  transition: background-color 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.ReactModal__Overlay--after-open { 
+  background-color: var(--black-60);
+}
+
+.ReactModal__Overlay--before-close { 
+  background-color: transparent;
+}
+
+/*
+ *
+ * Content
+ *
+ */
+
+.ReactModal__Content {
+  transform: translateX(100%);
+  /* See: http://easings.net/*/
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.ReactModal__Content--after-open {
+  transform: translateX(0%);
+}
+
+.ReactModal__Content--before-close {
+  transform: translateX(100%);
+}

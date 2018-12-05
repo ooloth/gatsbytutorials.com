@@ -93,7 +93,7 @@ function IndexPage({ data }) {
 
   return (
     <Base>
-      <main className="container min-vh-75 sans-serif">
+      <main className="bg-near-white min-vh-75 sans-serif">
         <Directory
           tutorials={tutorials}
           formats={formats}

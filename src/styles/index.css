@@ -10,3 +10,5 @@
 @import './components/index';
 @import './supports/index';
 @import './utilities/index';
+
+@import './new';

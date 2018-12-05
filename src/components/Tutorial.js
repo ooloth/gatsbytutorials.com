@@ -1,4 +1,27 @@
-function Tutorial({ tutorial, setAuthor, setSource, setTopic }) {
+function Tutorial({
+  tutorial,
+  currentTopic,
+  currentAuthor,
+  currentSource,
+  setAuthor,
+  setSource,
+  setTopic
+}) {
+  function handleTopicClick(e) {
+    if (e.target.value === currentTopic) setTopic(null)
+    else setTopic(e.target.value)
+  }
+
+  function handleAuthorClick(e) {
+    if (e.target.value === currentAuthor) setAuthor(null)
+    else setAuthor(e.target.value)
+  }
+
+  function handleSourceClick(e) {
+    if (e.target.value === currentSource) setSource(null)
+    else setSource(e.target.value)
+  }
+
   // Choose which tutorial category emoji to show next to the title
   let tutorialEmoji
   if (tutorial.format === `video`) {
@@ -20,7 +43,7 @@ function Tutorial({ tutorial, setAuthor, setSource, setTopic }) {
   } else if (tutorial.format === `text`) {
     tutorialEmoji = (
       <Emoji
-        emoji="✍️"
+        emoji="📕"
         ariaLabel="Emoji of a hand writing"
         className="tutorial-emoji"
       />
@@ -28,45 +51,46 @@ function Tutorial({ tutorial, setAuthor, setSource, setTopic }) {
   }
 
   return (
-    <li className="bt b--black-10 pv4 lh-tall">
+    <li className="mt3 shadow br2 bg-white pa3 lh-tall animate hover:shadow-lg">
       <h3 className="flex items-baseline lh-title fw6">
-        {tutorialEmoji}
-        <Anchor href={tutorial.link} className="link">
+        <Anchor href={tutorial.link} className="f4 hover:blue hover:underline">
           {tutorial.title}
         </Anchor>
       </h3>
 
-      <div className="flex pt1 pb3">
-        <p className={`flex items-center pr3`}>
-          <DateSVG className="icon mr2" />
-          {tutorial.date ? tutorial.date : `Not specified`}
-        </p>
+      <div className="flex flex-wrap items-baseline pt1">
+        {tutorialEmoji}
 
-        {tutorial.length && (
-          <p className="flex items-center">
-            <LengthSVG className="icon" style={{ marginRight: `.35rem` }} />
-            {tutorial.length}
-          </p>
+        {tutorial.authors && tutorial.authors.length > 0 ? (
+          tutorial.authors.map((author, i) => (
+            <Fragment key={author}>
+              <button
+                value={author}
+                onClick={handleAuthorClick}
+                className={`hover:blue hover:underline ${
+                  author === currentAuthor ? `blue underline` : ``
+                }`}
+              >
+                {author}
+              </button>
+
+              {i < tutorial.authors.length - 1 && <span>,&nbsp;</span>}
+            </Fragment>
+          ))
+        ) : (
+          <button
+            value={tutorial.source}
+            onClick={handleSourceClick}
+            className={`hover:blue hover:underline ${
+              tutorial.source === currentSource ? `blue underline` : ``
+            }`}
+          >
+            {tutorial.source}
+          </button>
         )}
+
+        {tutorial.date && <p>・{tutorial.date}</p>}
       </div>
-
-      {tutorial.authors &&
-        tutorial.authors.map(author => (
-          <p key={author} className="flex items-center pt1 f6">
-            <AuthorSVG className="icon mr2 black-60" />
-            <FilterButton text={author} handleFilter={() => setAuthor(author)} />
-          </p>
-        ))}
-
-      {tutorial.source && (
-        <p className="flex items-center pt1 f6">
-          <SourceSVG className="icon mr2 black-60" />
-          <FilterButton
-            text={tutorial.source}
-            handleFilter={() => setSource(tutorial.source)}
-          />
-        </p>
-      )}
 
       {tutorial.topics && (
         <div
@@ -74,21 +98,32 @@ function Tutorial({ tutorial, setAuthor, setSource, setTopic }) {
             tutorial.authors || tutorial.source ? `mt3 pt1` : ``
           }`}
         >
-          <TopicSVG
-            className="icon mr2 black-60"
-            style={{ transform: `translateY(.4rem)` }}
-          />
+          <ul className="nb1 lh-solid">
+            {tutorial.source && tutorial.authors.length > 0 && (
+              <li className="dib mr1 mb1 f6">
+                <FilterButton
+                  text={tutorial.source}
+                  // active={tutorial.source === currentSource}
+                  handleFilter={handleSourceClick}
+                  className={
+                    tutorial.source === currentSource ? `bg-blue white` : ``
+                  }
+                />
+              </li>
+            )}
 
-          <ul>
             {tutorial.topics
               .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase())) // ignore case
               .map((topic, i) => (
-                <li key={i} className="dib mr2">
+                <li key={i} className="dib mr1 mb1 f6">
                   <FilterButton
                     text={topic.toLowerCase()}
-                    handleFilter={() => setTopic(topic.toLowerCase())}
+                    // active={topic.toLowerCase() === currentTopic}
+                    handleFilter={handleTopicClick}
+                    className={
+                      topic.toLowerCase() === currentTopic ? `bg-blue white` : ``
+                    }
                   />
-                  {i < tutorial.topics.length - 1 && `, `}
                 </li>
               ))}
           </ul>
@@ -104,16 +139,10 @@ function Tutorial({ tutorial, setAuthor, setSource, setTopic }) {
  *
  */
 
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import Anchor from '../components/Anchor'
 import Emoji from '../components/Emoji'
 import FilterButton from '../components/FilterButton'
-
-import { ReactComponent as DateSVG } from '../svg/calendar.svg'
-import { ReactComponent as AuthorSVG } from '../svg/user.svg'
-import { ReactComponent as SourceSVG } from '../svg/bullhorn.svg'
-import { ReactComponent as LengthSVG } from '../svg/clock.svg'
-import { ReactComponent as TopicSVG } from '../svg/bookmark.svg'
 
 export default Tutorial

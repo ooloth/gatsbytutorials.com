@@ -9,25 +9,17 @@
 
 @supports (display: grid) {
   
-  /* .search-grid {
-    position: sticky;
-    top: 0;
-  } */
-
   .directory-grid {
     @media (--md) {
       display: grid;
       grid-template-columns: 1fr auto;
 
-      & > ul > li { @apply .pr4 }
+      & > ul > li { @apply .mr3 }
 
       & aside {
-        @apply .bl .b--black-10;
-        /* position: sticky;
-        top: 0; */
-
+        
         & a,
-        section { @apply .pl4 }
+        section { @apply .ml3 }
       }
     }
   }
