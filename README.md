@@ -43,7 +43,7 @@ The easiest approach is to use the make your changes here on the GitHub website:
 - `link` - Working URL where tutorial can be found (`string`; required)
 - `format` - Media format of tutorial (`string` with the value `video`, `audio` or `text`; required)
 - `language` - Spoken/written language of the tutorial (`string` with a two-letter [ISO 639-1 language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes); required)
-- `date` - Date tutorial was originally published (`string` in `YYYY-MM-DD` format; optional)
+- `date` - Date tutorial was published (`string` in `YYYY-MM-DD` format; optional)
 - `authors` - Name of author(s) or speaker(s) (`array` of `strings`; optional)
 - `source` - Name of YouTube channel, podcast, conference, blog, etc. if different from author's name (`string`; optional)
 - `topics` - Main topic(s) covered by the tutorial (`array` of `strings`; required)
