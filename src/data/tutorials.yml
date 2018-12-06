@@ -1,3 +1,30 @@
+- title: 'How To Build A Gatsby Site From The Ground Up: Comprehensive Step-By-Step Tutorial'
+  link: https://justinformentin.com/guide-to-building-a-gatsby-site
+  format: text
+  language: en
+  date: 2018-12-05
+  length: '41:00'
+  authors:
+    - Justin Formentin
+  source: ''
+  topics:
+    - Blog
+    - SEO
+    - Prettier
+    - Netlify
+    - JSON-LD
+    - CircleCI
+    - Codeclimate
+    - Google Analytics
+    - Syntax Highlighting
+    - gatsby-image
+    - gatsby-plugin-emotion
+    - gatsby-plugin-typography
+    - gatsby-plugin-offline
+    - gatsby-plugin-sitemap
+    - gatsby-plugin-manifest
+    - V2
+    
 - title: 'Creating Your First Gatsby Theme'
   link: https://blog.alexluong.com/creating-your-first-gatsby-theme
   format: text
