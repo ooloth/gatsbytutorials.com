@@ -25,6 +25,22 @@
     - gatsby-plugin-manifest
     - V2
     
+- title: 'All You Need to Know About i18n with Gatsby'
+  link: https://phraseapp.com/blog/posts/i18n-with-gatsby/
+  format: text
+  language: en
+  date: 2018-12-14
+  length: ''
+  authors: 
+    - Theo Despoudis
+  source: phraseapp.com
+  topics:
+    - i18n
+    - introduction
+    - i18next
+    - PhraseApp
+    - react-i18next-phraseapp
+    
 - title: 'Creating Your First Gatsby Theme'
   link: https://blog.alexluong.com/creating-your-first-gatsby-theme
   format: text
