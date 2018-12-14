@@ -39,7 +39,7 @@
     - introduction
     - i18next
     - PhraseApp
-    - In-Context Editor
+    - react-i18next-phraseapp
     
 - title: 'Creating Your First Gatsby Theme'
   link: https://blog.alexluong.com/creating-your-first-gatsby-theme
