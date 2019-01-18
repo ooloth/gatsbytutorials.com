@@ -1,3 +1,74 @@
+- title: 'Up & Running with Gatsby (series)'
+  link: https://www.youtube.com/watch?v=eCtgG5Sx6kk&list=PLs_LGDWysHJptEmAKxXjLCQvl7sAbXPBw
+  format: video
+  language: en
+  date: 2019-01-17
+  length: '14:12'
+  authors: 
+    - Michael Uloth
+  source: 'Up & Running Tutorials'
+  topics:
+    - introduction
+    - starters
+    - plugins
+
+- title: 'Pump up the JAM with Gatsby'
+  link: https://www.youtube.com/watch?v=fwTxNylQhn8
+  format: video
+  language: en
+  date: 2018-10-20
+  length: '45:34'
+  authors: 
+    - Stefan Adolf
+  source: 'React Day Berlin'
+  topics:
+    - introduction
+    - jamstack
+    - contentful
+    - netlify
+
+- title: 'The Complete Guide to Build a Full Blown Multilanguage Website with Gatsby.js'
+  link: https://www.storyblok.com/tp/gatsby-multilanguage-website-tutorial
+  format: text
+  language: en
+  date: 2018-11-14
+  length: ''
+  authors: 
+    - Alexander Feiglstorfer
+  source: 'Storyblok'
+  topics:
+    - gatsby-source-storyblok
+    - storyblok-react
+    - createPages api
+    - i18n
+
+- title: 'How I Made My Portfolio Website Blazing Fast with Gatsby'
+  link: https://medium.freecodecamp.org/how-i-made-my-portfolio-website-blazing-fast-with-gatsby-82ccddc2f671
+  format: text
+  language: en
+  date: 2018-08-12
+  length: '7:00'
+  authors: 
+    - Maribel Duran
+  source: 'freeCodeCamp'
+  topics:
+    - performance
+    - gatsby-image
+    - netlify
+
+- title: 'Easy Gatsby Image Components'
+  link: https://noahgilmore.com/blog/easy-gatsby-image-components/
+  format: text
+  language: en
+  date: 2018-11-01
+  length: ''
+  authors: 
+    - Noah Gilmore
+  source: ''
+  topics:
+    - gatsby-image
+    - StaticQuery
+
 - title: 'How To Build A Gatsby Site From The Ground Up: Comprehensive Step-By-Step Tutorial'
   link: https://justinformentin.com/guide-to-building-a-gatsby-site
   format: text
@@ -24,6 +95,17 @@
     - gatsby-plugin-sitemap
     - gatsby-plugin-manifest
     - V2
+    - introduction
+    - graphql
+    - staticquery
+    - markdown
+    - filtering
+    - sorting
+    - dates
+    - createPages api
+    - tags
+    - pagination
+    - seo
     
 - title: 'All You Need to Know About i18n with Gatsby'
   link: https://phraseapp.com/blog/posts/i18n-with-gatsby/
