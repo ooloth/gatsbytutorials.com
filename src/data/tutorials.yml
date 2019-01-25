@@ -2,8 +2,8 @@
   link: https://www.youtube.com/watch?v=eCtgG5Sx6kk&list=PLs_LGDWysHJptEmAKxXjLCQvl7sAbXPBw
   format: video
   language: en
-  date: 2019-01-17
-  length: '14:12'
+  date: 2019-01-24
+  length: '25:05'
   authors: 
     - Michael Uloth
   source: 'Up & Running Tutorials'
@@ -11,6 +11,131 @@
     - introduction
     - starters
     - plugins
+
+- title: "Deploy a Static React Blog using GatsbyJS and Github"
+  link: https://hashnode.com/post/deploy-a-static-react-blog-using-gatsbyjs-and-github-cjg2vzpe0003h0ls1rdaztnrr
+  format: text
+  language: en
+  date: 2018-04-16
+  length: ''
+  authors: 
+    - Ryosuke
+  source: ''
+  topics:
+    - blog
+    - gatsby-transformer-remark
+    - createPages api
+    - github pages
+
+- title: 'Generate Documentation for any React Project Using GatsbyJS'
+  link: https://hashnode.com/post/generate-documentation-for-any-react-project-using-gatsbyjs-cjmcjqhfv00d6ges1m6ljzpud
+  format: text
+  language: en
+  date: 2018-09-21
+  length: ''
+  authors: 
+    - Ryosuke
+  source: ''
+  topics:
+    - gatsby-mdx
+    - gatsby-transformer-react-docgen
+    - gatsby-transformer-remark
+    - documentation
+
+- title: 'Gatsby ImageSharp from a URL'
+  link: https://blog.alexluong.com/gatsby-image-sharp-from-url
+  format: text
+  language: en
+  date: 2018-07-28
+  length: ''
+  authors: 
+    - Alex Luong
+  source: ''
+  topics:
+    - onCreateNode
+    - createRemoteFileNode
+    - gatsby-plugin-sharp
+    - gatsby-tranformer-sharp
+
+- title: 'Animating Page Transitions in Gatsby'
+  link: https://divdev.io/animating-gatsby-pt/
+  format: text
+  language: en
+  date: 2018-12-01
+  length: '5:00'
+  authors: 
+    - Dimitri Ivashchuk
+  source: ''
+  topics:
+    - animation
+    - page transitions
+    - react-transition-group
+    - gatsby-plugin-layout
+
+- title: 'Using Excerpts'
+  link: https://using-remark.gatsbyjs.org/excerpts/
+  format: text
+  language: en
+  date: 2017-11-14
+  length: '1:00'
+  authors: 
+    - Jay Gatsby
+  source: ''
+  topics:
+    - gatsby-transformer-remark
+
+- title: 'How To Optimize Your Gatsby Blog For SEO'
+  link: https://khalilstemmler.com/blog/how-to-optimize-your-gatsby-blog-for-seo/
+  format: text
+  language: en
+  date: 2018-12-01
+  length: ''
+  authors: 
+    - Khalil Stemmler
+  source: ''
+  topics:
+    - gatsby-plugin-react-helmet
+    - seo
+
+- title: 'An Introduction To Using Gatsby Image & Gatsby.js V2'
+  link: https://codebushi.com/using-gatsby-image/
+  format: text
+  language: en
+  date: 2018-09-20
+  length: ''
+  authors: 
+    - Hunter Chang
+  source: CODE Bushi
+  topics:
+    - gatsby-image
+    - graphql
+
+- title: 'Image Optimization Made Easy with Gatsby.js'
+  link: https://medium.com/@kyle.robert.gill/ridiculously-easy-image-optimization-with-gatsby-js-59d48e15db6e
+  format: text
+  language: en
+  date: 2018-01-10
+  length: '6:00'
+  authors: 
+    - Kyle Gill
+  source: ''
+  topics:
+    - gatsby-image
+    - graphql
+
+- title: 'Cool image loading with Gatsby.js v2 and Netlify CMS v2'
+  link: https://blog.rousek.name/2018/08/10/cool-image-loading-with-gatsbyjs-v2-and-netlify-cms-v2/
+  format: text
+  language: en
+  date: 2018-08-10
+  length: ''
+  authors: 
+    - Zápisník Josefa Rouska
+  source: ''
+  topics:
+    - netlify-cms
+    - gatsby-remark-images
+    - gatsby-plugin-netlify-cms-paths
 
 - title: 'Pump up the JAM with Gatsby'
   link: https://www.youtube.com/watch?v=fwTxNylQhn8
@@ -152,7 +277,7 @@
     - blog
     - createPages api
     - v2
-- title: 'Implement i18n to a Gatsby site'
+- title: 'Implement i18n to a Gatsby Site'
   link: https://www.obytes.com/blog/2018/implement-i18n-to-gatsby/
   format: text
   language: en
