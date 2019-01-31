@@ -2418,3 +2418,17 @@
     - createPages api
     - templates
     - v1
+
+- title: 'Gatsby on AWS, the right way'
+  link: https://blog.joshwalsh.me/aws-gatsby/
+  format: text
+  language: en
+  date: 2019-01-10
+  authors: 
+    - Joshua Walsh
+  topics:
+    - performance
+    - aws
+    - continuous-integration
+    - cloud
+    - hosting
