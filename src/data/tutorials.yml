@@ -1,9 +1,9 @@
-- title: 'Up & Running with Gatsby (series)'
+- title: 'Up & Running with Gatsby (4 videos)'
   link: https://www.youtube.com/watch?v=eCtgG5Sx6kk&list=PLs_LGDWysHJptEmAKxXjLCQvl7sAbXPBw
   format: video
   language: en
-  date: 2019-01-31
-  length: '39:44'
+  date: 2019-02-15
+  length: '60:22'
   authors: 
     - Michael Uloth
   source: 'Up & Running Tutorials'
@@ -11,6 +11,7 @@
     - introduction
     - starters
     - plugins
+    - jsx
 
 - title: "Deploy a Static React Blog using GatsbyJS and Github"
   link: https://hashnode.com/post/deploy-a-static-react-blog-using-gatsbyjs-and-github-cjg2vzpe0003h0ls1rdaztnrr
