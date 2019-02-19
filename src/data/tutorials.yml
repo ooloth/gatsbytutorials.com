@@ -1,3 +1,18 @@
+- title: 'Gatsby and Contentful (6 videos)'
+  link: https://www.youtube.com/watch?v=fY3mBJSDA44&list=PL2dKqfImstaRbjzzirbBfv9W2kycaKjvs
+  format: video
+  language: en
+  date: 2019-02-08
+  length: ''
+  authors: 
+    - Sebastian Eschweiler
+  source: 'CodingTheSmartWay.com'
+  topics:
+    - introduction
+    - starters
+    - blog
+    - contentful
+    
 - title: 'Up & Running with Gatsby (4 videos)'
   link: https://www.youtube.com/watch?v=eCtgG5Sx6kk&list=PLs_LGDWysHJptEmAKxXjLCQvl7sAbXPBw
   format: video
