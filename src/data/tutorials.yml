@@ -28,6 +28,8 @@
     - plugins
     - jsx
     - layout
+    - gatsby-plugin-sass
+    - gatsby-plugin-postcss
 
 - title: "Deploy a Static React Blog using GatsbyJS and Github"
   link: https://hashnode.com/post/deploy-a-static-react-blog-using-gatsbyjs-and-github-cjg2vzpe0003h0ls1rdaztnrr
