@@ -1,4 +1,5 @@
 function Directory({ tutorials, formats, topics, authors, sources }) {
+  // TODO: refactor this to useReducer or xstate?
   const [format, setFormat] = useState(null)
   const [topic, setTopic] = useState(null)
   const [author, setAuthor] = useState(null)
@@ -29,7 +30,10 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
     if (format && tutorial.format.includes(format)) isFormatMatch = true
     if (topic && tutorial.topics.includes(topic)) isTopicMatch = true
     if (author && tutorial.authors.includes(author)) isAuthorMatch = true
-    if (source && tutorial.source.includes(source)) isSourceMatch = true
+    if (source && tutorial.source && tutorial.source.includes(source))
+      isSourceMatch = true
+
+    console.log({ isSourceMatch })
 
     // If the user hasn't typed a query, filter just by author, source and topic
     if (!query) {
