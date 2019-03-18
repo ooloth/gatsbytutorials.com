@@ -33,6 +33,206 @@
     - css modules
     - gatsby-plugin-styled-components
 
+- title: Gatsby Themes Roadmap
+  link: https://www.gatsbyjs.org/blog/2019-03-11-gatsby-themes-roadmap/
+  format: text
+  language: en
+  date: 2019-03-11
+  length: '6:00'
+  authors:
+    - Chris Biscardi
+  source: Gatsby
+  topics:
+    - themes
+
+- title: How to Talk About Gatsby to Clients and Your Team
+  link: https://www.gatsbyjs.org/blog/2019-03-07-sell-gatsby-to-clients/
+  format: text
+  language: en
+  date: 2019-03-07
+  length: '9:00'
+  authors:
+    - Linda Watkins
+  source: Gatsby
+  topics:
+    - introduction
+
+- title: New Schema Customization API in Gatsby
+  link: https://www.gatsbyjs.org/blog/2019-03-04-new-schema-customization/
+  format: text
+  language: en
+  date: 2019-03-04
+  length: '10:00'
+  authors:
+    - Mikhail Novikov
+  source: Gatsby
+  topics:
+    - schema customization
+    - createTypes api
+    - createResolvers api
+
+- title: A Method for Localization with Gatsby and Sanity.io
+  link: https://www.gatsbyjs.org/blog/2019-03-01-localization-with-gatsby-and-sanity/
+  format: text
+  language: en
+  date: 2019-03-01
+  length: '6:00'
+  authors:
+    - Travis Stanley
+  source: Gatsby
+  topics:
+    - localization
+    - sanity
+
+- title: Getting Started with Gatsby Themes and MDX
+  link: https://www.gatsbyjs.org/blog/2019-02-26-getting-started-with-gatsby-themes/
+  format: text
+  language: en
+  date: 2019-02-26
+  length: '6:00'
+  authors:
+    - Katie Fujihara
+  source: Gatsby
+  topics:
+    - themes
+    - yarn workspaces
+    - gatsby-mdx
+    - gatsby-plugin-page-creator
+
+- title: Introducing useStaticQuery
+  link: https://www.gatsbyjs.org/blog/2019-02-20-introducing-use-static-query/
+  format: text
+  language: en
+  date: 2019-02-20
+  length: '4:00'
+  authors:
+    - Sidhartha Chatterjee
+  source: Gatsby
+  topics:
+    - react hooks
+    - graphql
+    - useStaticQuery
+
+- title: 'Behind the Scenes Q & A: What Makes Gatsby Great Webinar'
+  link: https://www.gatsbyjs.org/blog/2019-02-14-behind-the-scenes-q-and-a/
+  format: text
+  language: en
+  date: 2019-02-14
+  length: '20:00'
+  authors:
+    - Linda Watkins
+  source: Gatsby
+  topics:
+    - gatsby-source-graphql
+    - environment variables
+    - gatsby-plugin-typescript
+    - source plugins
+    - lighthouse
+    - graphql
+    - cms
+    - gatsby preview
+    - seo
+    - app
+    - authentication
+    
+- title: 'Gatsby Themes: Watch Us Build a Theme Live'
+  link: https://www.gatsbyjs.org/blog/2019-02-11-gatsby-themes-livestream-and-example/
+  format: text
+  language: en
+  date: 2019-02-11
+  length: '2:00'
+  authors:
+    - Jason Lengstorf
+  source: Gatsby
+  topics:
+    - themes
+    - gatsby-plugin-page-creator
+    - gatsby-mdx
+    - gatsby-source-filesystem
+
+- title: How We're Migrating a Government Open Data Site to Gatsby
+  link: https://www.gatsbyjs.org/blog/2019-02-08-government-open-data-site-with-gatsby/
+  format: text
+  language: en
+  date: 2019-02-08
+  length: '12:00'
+  authors:
+    - Ryan Johnson
+  source: Gatsby
+  topics:
+    - graphql 
+    - gatsby-transformer-excel
+    - onPostBuild api
+    - onClientEntry api
+    - federalist
+
+- title: Using React Context API with Gatsby
+  link: https://www.gatsbyjs.org/blog/2019-01-31-using-react-context-api-with-gatsby/
+  format: text
+  language: en
+  date: 2019-01-31
+  length: '6:00'
+  authors:
+    - Muhammad Muhsin
+  source: Gatsby
+  topics:
+    - wrapRootElement api
+    - dark mode
+    - react context
+
+- title: Why Themes?
+  link: https://www.gatsbyjs.org/blog/2019-01-31-why-themes/
+  format: text
+  language: en
+  date: 2019-01-31
+  length: '6:00'
+  authors:
+    - Kyle Mathews
+  source: Gatsby
+  topics:
+    - themes
+
+- title: 'Themes Update: Child Theming and Component Shadowing'
+  link: https://www.gatsbyjs.org/blog/2019-01-29-themes-update-child-theming-and-component-shadowing/
+  format: text
+  language: en
+  date: 2019-01-29
+  length: '4:00'
+  authors:
+    - Chris Biscardi
+  source: Gatsby
+  topics:
+    - themes
+
+- title: Blazing Fast Development with Gatsby and Sanity.io
+  link: https://www.gatsbyjs.org/blog/2019-01-25-blazing-fast-development-with-gatsby-and-sanity-io/
+  format: text
+  language: en
+  date: 2019-01-25
+  length: '6:00'
+  authors:
+    - Knut Melvær
+  source: Gatsby
+  topics:
+    - cms
+    - sanity
+    - gatsby-source-sanity
+
+- title: Modern Publications with Gatsby & Ghost
+  link: https://www.gatsbyjs.org/blog/2019-01-14-modern-publications-with-gatsby-ghost/
+  format: text
+  language: en
+  date: 2019-01-14
+  length: '3:00'
+  authors:
+    - John O’Nolan
+  source: Gatsby
+  topics:
+    - cms
+    - ghost
+    - gatsby-source-ghost
+    - gatsby-starter-ghost
+
 - title: Kentico Cloud & Gatsby Take You Beyond Static Websites
   link: https://www.gatsbyjs.org/blog/2018-12-19-kentico-cloud-and-gatsby-take-you-beyond-static-websites/
   format: text
