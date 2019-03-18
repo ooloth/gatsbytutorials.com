@@ -13,12 +13,12 @@
     - blog
     - contentful
     
-- title: 'Up & Running with Gatsby (7 videos)'
+- title: 'Up & Running with Gatsby (8 videos)'
   link: https://www.youtube.com/watch?v=eCtgG5Sx6kk&list=PLs_LGDWysHJptEmAKxXjLCQvl7sAbXPBw
   format: video
   language: en
-  date: 2019-03-11
-  length: '106:58'
+  date: 2019-03-18
+  length: '128:46'
   authors: 
     - Michael Uloth
   source: 'Up & Running Tutorials'
@@ -30,6 +30,127 @@
     - layout
     - gatsby-plugin-sass
     - gatsby-plugin-postcss
+    - css modules
+    - gatsby-plugin-styled-components
+
+- title: Kentico Cloud & Gatsby Take You Beyond Static Websites
+  link: https://www.gatsbyjs.org/blog/2018-12-19-kentico-cloud-and-gatsby-take-you-beyond-static-websites/
+  format: text
+  language: en
+  date: 2019-01-07
+  length: '7:00'
+  authors:
+    - Ondrej Polesny
+  source: Gatsby
+  topics:
+    - introduction
+    - kentico cloud
+    - gatsby-source-kentico-cloud
+    - createPages api
+
+- title: How Gatsby Scales with your Expertise & Scope
+  link: https://www.gatsbyjs.org/blog/2018-12-19-gatsby-scales-with-expertise-and-scope/
+  format: text
+  language: en
+  date: 2019-01-03
+  length: '4:00'
+  authors:
+    - LekoArts
+  source: Gatsby
+  topics:
+    - introduction
+
+- title: Publish Multiple Gatsby Sites in a Monorepo, Using Lerna, Travis & Now
+  link: https://www.gatsbyjs.org/blog/2019-01-01-publish-multiple-gatsby-sites/
+  format: text
+  language: en
+  date: 2019-01-01
+  length: '26:00'
+  authors:
+    - Andrico Karoulla
+  source: Gatsby
+  topics:
+    - monorepo
+    - lerna
+    - environment variables
+    - dotenv
+    - continuous integration
+    - travis
+    - testing
+    - enzyme
+    - jest
+    - now
+
+- title: Per-Link Gatsby Page Transitions with TransitionLink
+  link: https://www.gatsbyjs.org/blog/2018-12-04-per-link-gatsby-page-transitions-with-transitionlink/
+  format: text
+  language: en
+  date: 2018-12-27
+  length: '6:00'
+  authors:
+    - Tyler Barnes
+  source: Gatsby
+  topics:
+    - page transitions
+    - gatsby-plugin-transition-link
+
+- title: 'Turning the Static Dynamic: Gatsby + Netlify Functions + Netlify Identity'
+  link: https://www.gatsbyjs.org/blog/2018-12-17-turning-the-static-dynamic/
+  format: text
+  language: en
+  date: 2018-12-26
+  length: '11:00'
+  authors:
+    - swyx
+  source: Gatsby
+  topics:
+    - netlify functions
+    - http-proxy-middleware
+    - netlify-lambda
+    - netlify.toml
+    - netlify identity
+    - netlify-identity-widget
+    - gatsby-plugin-create-client-paths
+
+- title: Building a Custom, Accessible Image Lightbox
+  link: https://www.gatsbyjs.org/blog/2018-11-03-building-an-accessible-lightbox/
+  format: text
+  language: en
+  date: 2018-12-20
+  length: '7:00'
+  authors:
+    - Sergiy Dybskiy
+  source: Gatsby
+  topics:
+    - gatsby-image
+    - styled-components
+    - '@reach/dialog'
+    
+- title: How to Export a Drupal Site to Gatsby
+  link: https://www.gatsbyjs.org/blog/2018-10-26-export-a-drupal-site-to-gatsby/
+  format: text
+  language: en
+  date: 2018-12-18
+  length: '7:00'
+  authors:
+    - Joaquín Bravo Contreras
+  source: Gatsby
+  topics:
+    - drupal
+    - mysqldump
+    - better-sqlite3
+
+- title: 5 Analogies That Explain What Gatsby Can Do For You
+  link: https://www.gatsbyjs.org/blog/2018-12-04-gatsby-analogy/
+  format: text
+  language: en
+  date: 2018-12-04
+  length: '5:00'
+  authors:
+    - Amberley Romo
+  source: Gatsby
+  topics:
+    - introduction
 
 - title: "Deploy a Static React Blog using GatsbyJS and Github"
   link: https://hashnode.com/post/deploy-a-static-react-blog-using-gatsbyjs-and-github-cjg2vzpe0003h0ls1rdaztnrr
@@ -601,7 +722,7 @@
   link: https://www.gatsbyjs.org/blog/2018-11-11-introducing-gatsby-themes/
   format: text
   language: en
-  date: 2018-11-11
+  date: 2018-11-10
   length: '5:00'
   authors:
     - Chris Biscardi
