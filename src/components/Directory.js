@@ -33,8 +33,6 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
     if (source && tutorial.source && tutorial.source.includes(source))
       isSourceMatch = true
 
-    console.log({ isSourceMatch })
-
     // If the user hasn't typed a query, filter just by author, source and topic
     if (!query) {
       // Format combos
