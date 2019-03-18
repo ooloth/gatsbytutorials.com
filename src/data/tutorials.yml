@@ -918,6 +918,56 @@
     - introduction
     - blog
 
+- title: How We Got Here and The Future of the Web
+  link: https://www.youtube.com/watch?v=1tjvFldRg6A
+  format: video
+  language: en
+  date: 2018-12-07
+  length: '34:11'
+  authors:
+    - Kyle Mathews
+  source: Gatsby
+  topics:
+    - introduction
+
+- title: The Journey to the Content Mesh
+  link: https://www.youtube.com/watch?v=1JqNymVi_pc
+  format: video
+  language: en
+  date: 2018-12-07
+  length: '33:49'
+  authors:
+    - Sam Bhagwat
+  source: Gatsby
+  topics:
+    - introduction
+    - performance
+    - cms
+
+- title: Introducing Gatsby Themes
+  link: https://www.youtube.com/watch?v=wX84vXBpMR8
+  format: video
+  language: en
+  date: 2018-12-07
+  length: '33:47'
+  authors:
+    - Chris Biscardi
+  source: Gatsby
+  topics:
+    - themes
+
+- title: 'Gatsby Product Announcement: The Future is in the Cloud'
+  link: https://www.youtube.com/watch?v=TXxUAJkBrjE
+  format: video
+  language: en
+  date: 2018-12-07
+  length: '15:42'
+  authors:
+    - Andrew Rhyne
+  source: Gatsby
+  topics:
+    - gatsby preview
+
 - title: Introducing Gatsby Themes
   link: https://www.gatsbyjs.org/blog/2018-11-11-introducing-gatsby-themes/
   format: text
