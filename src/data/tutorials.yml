@@ -2551,15 +2551,16 @@
     - createPages api
     - templates
 
-- title: Building a Static Blog using Gatsby and Strapi
-  link: https://www.gatsbyjs.org/blog/2018-1-18-strapi-and-gatsby/
-  format: text
+- title: 'Building a Static Blog using Gatsby and Strapi (Written tutorial with 8 videos)'
+  link: https://blog.strapi.io/building-a-static-website-using-gatsby-and-strapi/
+  format: text, video
   language: en
-  date: 2018-01-18
-  length: '14:00'
+  date: 2019-02-27
+  length: ''
   authors:
     - Pierre Burgy
-  source: Gatsby
+    - David Kartuzinski
+  source: Strapi.io 
   topics:
     - blog
     - introduction
@@ -2568,6 +2569,8 @@
     - gatsby-source-strapi
     - templates
     - createPages api
+    - MIT
+    - gatsby-images
     
 - title: 'Gatsby.js: How to set up and use the React Static Site Generator'
   link: https://medium.freecodecamp.org/setting-up-and-getting-used-to-gatsby-1fc27985ae8a
