@@ -1,3 +1,18 @@
+- title: 'Gatsby 101 (14 written tutorials)'
+  link: https://gatsbyguides.com/
+  format: text
+  language: en
+  date: 2019-02-13
+  length: ''
+  authors: 
+    - Osio Labs
+  source: 'GatsbyGuides.com'
+  topics:
+    - introduction
+    - starters
+    - drupal
+    - cms
+
 - title: 'Gatsby and Contentful (6 videos)'
   link: https://www.youtube.com/watch?v=fY3mBJSDA44&list=PL2dKqfImstaRbjzzirbBfv9W2kycaKjvs
   format: video
