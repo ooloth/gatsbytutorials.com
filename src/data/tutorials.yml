@@ -42,11 +42,11 @@
     - blog
     - contentful
     
-- title: 'Up & Running with Gatsby (9 videos)'
+- title: 'Up & Running with Gatsby (10 videos)'
   link: https://www.youtube.com/watch?v=eCtgG5Sx6kk&list=PLs_LGDWysHJptEmAKxXjLCQvl7sAbXPBw
   format: video
   language: en
-  date: 2019-05-27
+  date: 2019-06-03
   length: ''
   authors: 
     - Michael Uloth
@@ -61,6 +61,7 @@
     - gatsby-plugin-postcss
     - css modules
     - gatsby-plugin-styled-components
+    - graphql
 
 - title: Gatsby Themes Roadmap
   link: https://www.gatsbyjs.org/blog/2019-03-11-gatsby-themes-roadmap/
