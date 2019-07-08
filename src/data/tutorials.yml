@@ -1,3 +1,36 @@
+- title: Using Gatsby Image with Netlify CMS
+  link: https://www.frontendstumbles.com/using-gatsby-image-with-netlify-cms/
+  format: text
+  language: en
+  date: 2019-05-24
+  length: ''
+  authors:
+    - Issy Dennis
+  source: 'frontendstumbles.com'
+  topics:
+    - netlify-cms
+    - cms
+    - graphql
+    - markdown
+    - gatsby-image
+    - gatsby-remark-images
+    - gatsby-remark-relative-images
+    
+- title: How to make a Gatsby site with Netlify CMS
+  link: https://www.frontendstumbles.com/gatsby-and-netlify-cms-tutorial/
+  format: text
+  language: en
+  date: 2019-05-21
+  length: ''
+  authors:
+    - Issy Dennis
+  source: 'frontendstumbles.com'
+  topics:
+    - netlify-cms
+    - cms
+    - graphql
+    - markdown
+    
 - title: How to build a Related Posts Component with Gatsby.js
   link: https://khalilstemmler.com/articles/gatsby-related-posts-component/
   format: text
