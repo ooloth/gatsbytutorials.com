@@ -4,11 +4,12 @@ globals:
   __dirname: false
   graphql: false
   process: false
-  TimelineLite: false
-  TimelineMax: false
-  TweenLite: false
-  TweenMax: false
+
+plugins:
+- react-hooks
 
 rules:
   import/first: 0
   no-use-before-define: 0
+  react-hooks/rules-of-hooks: error
+  react-hooks/exhaustive-deps: warn
