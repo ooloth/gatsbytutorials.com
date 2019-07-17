@@ -56,7 +56,7 @@ Where possible, please add tutorial series as one entry with a link to the serie
 
 - [ ] Filter tutorials by language
 - [ ] Filter by multiple topics at once
-- [x] Cancel active filter by clicking it again
+- [x] ~~Cancel active filter by clicking it again~~
 
 ### Better performance ⚡️
 
