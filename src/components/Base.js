@@ -117,8 +117,6 @@ function SiteMetadata({ site }) {
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
-import { setConfig } from 'react-hot-loader' // TODO: remove when HMR useState bug fixed
-setConfig({ pureSFC: true }) // TODO: remove when HMR useState bug is fixed
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
