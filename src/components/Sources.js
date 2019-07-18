@@ -11,14 +11,13 @@ function Sources({ sources, currentSource, setSource }) {
       <ul className="ph3 lh-tall">
         {sources.map(
           source =>
-            source.name && (
-              <li key={source.name}>
+            source && (
+              <li key={source}>
                 <FilterButton
-                  text={source.name}
-                  count={source.count}
-                  active={source.name === currentSource}
+                  text={source}
+                  active={source === currentSource}
                   handleFilter={handleClick}
-                  className={source.name === currentSource ? `bg-blue white` : ``}
+                  className={source === currentSource ? `bg-blue white` : ``}
                 />
               </li>
             )

@@ -10,13 +10,12 @@ function Formats({ formats, currentFormat, setFormat }) {
 
       <ul className="lh-tall">
         {formats.map(format => (
-          <li key={format.name}>
+          <li key={format}>
             <FilterButton
-              text={format.name}
-              count={format.count}
-              active={format.name === currentFormat}
+              text={format}
+              active={format === currentFormat}
               handleFilter={handleClick}
-              className={format.name === currentFormat ? `bg-blue white` : ``}
+              className={format === currentFormat ? `bg-blue white` : ``}
             />
           </li>
         ))}
@@ -25,11 +24,7 @@ function Formats({ formats, currentFormat, setFormat }) {
   )
 }
 
-/*
- *
- * Imports & Exports
- *
- */
+///////////////////////////////////////////////////////////////////////////////////
 
 import React from 'react'
 

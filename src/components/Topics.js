@@ -10,13 +10,12 @@ function Topics({ topics, currentTopic, setTopic }) {
 
       <ul className="ph3 lh-tall">
         {topics.map(topic => (
-          <li key={topic.name}>
+          <li key={topic}>
             <FilterButton
-              text={topic.name}
-              count={topic.count}
-              active={topic.name === currentTopic}
+              text={topic}
+              active={topic === currentTopic}
               handleFilter={handleClick}
-              className={topic.name === currentTopic ? `bg-blue white` : ``}
+              className={topic === currentTopic ? `bg-blue white` : ``}
             />
           </li>
         ))}

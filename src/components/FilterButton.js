@@ -1,4 +1,4 @@
-function FilterButton({ text, count, active, handleFilter, className = `` }) {
+function FilterButton({ text, active, handleFilter, className = `` }) {
   return (
     <button
       value={text}
@@ -8,23 +8,11 @@ function FilterButton({ text, count, active, handleFilter, className = `` }) {
       <span className="pointer-events-none">{text}</span>
 
       {active && <span>&nbsp;×</span>}
-
-      {/* {count && (
-        <>
-          <span className="pl1">(</span>
-          <span className="relative blue">{count}</span>
-          <span>)</span>
-        </>
-      )} */}
     </button>
   )
 }
 
-/*
- *
- * Imports & Exports
- *
- */
+///////////////////////////////////////////////////////////////////////////////////
 
 import React from 'react'
 

@@ -10,13 +10,12 @@ function Authors({ authors, currentAuthor, setAuthor }) {
 
       <ul className="ph3 lh-tall">
         {authors.map(author => (
-          <li key={author.name}>
+          <li key={author}>
             <FilterButton
-              text={author.name}
-              count={author.count}
-              active={author.name === currentAuthor}
+              text={author}
+              active={author === currentAuthor}
               handleFilter={handleClick}
-              className={author.name === currentAuthor ? `bg-blue white` : ``}
+              className={author === currentAuthor ? `bg-blue white` : ``}
             />
           </li>
         ))}
