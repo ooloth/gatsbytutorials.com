@@ -12,7 +12,7 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
 
   function handleQuery(e) {
     setQuery(e.target.value)
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0) // scroll to top whenever typing a search query
   }
 
   // Filter the visible tutorials based on the active filters and/or search query
@@ -97,13 +97,16 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
         tutorial.source &&
         tutorial.source.toLowerCase().includes(query.toLowerCase())
 
-      const isTitleMatch = tutorial.title.toLowerCase().includes(query.toLowerCase())
+      const isTitleMatch = tutorial.title
+        .toLowerCase()
+        .includes(query.toLowerCase())
 
       // TODO: enable these to search topic and author array substrings once we're generating string versions of the topics and authors arrays for search purposes
       // const isTopicMatch = tutorial.topicSearchString.includes(query);
       // const isAuthorMatch = tutorial.authorSearchString.includes(query);
 
-      isQueryMatch = isFormatMatch || isAuthorMatch || isSourceMatch || isTitleMatch
+      isQueryMatch =
+        isFormatMatch || isAuthorMatch || isSourceMatch || isTitleMatch
 
       // If the user has typed a query, filter by the same rules as above for format, author, source and topic, and require the query to match each condition as well
       // Format combos
@@ -340,11 +343,7 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
   )
 }
 
-/*
- *
- * Imports & Exports
- *
- */
+///////////////////////////////////////////////////////////////////////////////////
 
 import React, { useState, useRef, useEffect } from 'react'
 import Sticky from 'react-stickynode'
