@@ -2888,3 +2888,94 @@
     - continuous-integration
     - cloud
     - hosting
+
+- title: 'Create a Localized Website using Gatsby and Cosmic JS'
+  link: https://cosmicjs.com/articles/create-a-localized-website-using-gatsby-and-cosmic-js
+  format: text
+  language: en
+  date: 2019-05-03
+  length: '10:00'
+  authors:
+    - Flynn Buckingham
+  source: cosmicjs
+  topics:
+    - localization
+    - cosmicjs
+    - cms
+
+- title: 'How to build an Ecommerce Website using Gatsby and Cosmic JS'
+  link: https://cosmicjs.com/articles/how-to-build-an-ecommerce-website-using-gatsby-and-cosmic-js-jv1b1y52
+  format: text
+  language: en
+  date: 2019-05-01
+  length: '12:00'
+  authors:
+    - Ankit Kumar
+  source: cosmicjs
+  topics:
+    - ecommerce
+    - cosmicjs
+    - cms 
+    
+- title: 'How to Build a Documentation App With Gatsby and Cosmic JS'
+  link: https://cosmicjs.com/articles/how-to-build-a-documentation-app-with-gatsby-and-cosmic-js-jrb4den5
+  format: text
+  language: en
+  date: 2019-02-11
+  length: '10:00'
+  authors:
+    - Jacob Knaack
+  source: cosmicjs
+  topics:
+    - documentation
+    - markdown
+    - graphql
+    - cosmicjs
+    - cms
+    
+- title: 'Video: Build a Cosmic JS-powered blog using Gatsby'
+  link: https://cosmicjs.com/articles/video-build-a-cosmic-js-powered-blog-using-gatsby-jpsrqozy
+  format: video
+  language: en
+  date: 2018-12-17
+  length: '60:00'
+  authors:
+    - Carson Gibbons
+    - Tony Spiro
+    - Jason Lengstorf
+  source: cosmicjs
+  topics:
+    - video
+    - blog
+    - cosmicjs
+ 
+- title: 'Webinar Video: Localization with Gatsby and Cosmic JS'
+  link: https://cosmicjs.com/articles/webinar-video-localization-with-gatsby-and-cosmic-js-jnyqtjoa
+  format: video
+  language: en
+  date: 2018-11-01
+  length: '45:00'
+  authors:
+    - Tony Spiro
+    - Jason Lengstorf
+  source: cosmicjs
+  topics:
+    - webinar
+    - localization
+    - cosmicjs
+    - cms
+    
+- title: 'Building and Designing a Portfolio Site Using Gatsby JS and Cosmic JS'
+  link: https://cosmicjs.com/articles/building-and-designing-a-portfolio-site-using-gatsby-js-and-cosmic-js
+  format: text
+  language: en
+  date: 2019-05-13
+  length: '12:00'
+  authors:
+    - Jacob Knaack
+  source: cosmicjs
+  topics:
+    - portfolio
+    - graphql
+    - cosmicjs
+    - cms
