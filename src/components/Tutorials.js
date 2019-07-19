@@ -21,7 +21,7 @@ function Tutorials({
   }
 
   return tutorials.length > 0 ? (
-    <ul className="nt3">
+    <List>
       {tutorials.map(tutorial => (
         <Tutorial
           key={tutorial.node.title + tutorial.node.date}
@@ -35,41 +35,67 @@ function Tutorials({
           setTopic={setTopic}
         />
       ))}
-    </ul>
+    </List>
   ) : (
     <NoResults resetSearch={resetSearch} />
   )
 }
 
-/*
- *
- * No Results
- *
- */
+///////////////////////////////////////////////////////////////////////////////////
+
+const List = styled.ul`
+  margin-top: calc(var(--s4) * -1);
+`
+
+///////////////////////////////////////////////////////////////////////////////////
 
 function NoResults({ resetSearch }) {
   return (
-    <div className="self-start tc br2 bg-white pv4 ph3 shadow">
-      <h3 className="pb1 lh-solid f3 fw6">No results</h3>
-
-      <button
-        onClick={resetSearch}
-        className="inline-flex mt3 br2 bg-purple pv2 ph3 no-wrap white animate hover:bg-blue"
-      >
-        Reset search
-      </button>
-    </div>
+    <Message>
+      <Heading>No results</Heading>
+      <Button onClick={resetSearch}>Reset search</Button>
+    </Message>
   )
 }
 
-/*
- *
- * Imports & Exports
- *
- */
+///////////////////////////////////////////////////////////////////////////////////
+
+const Message = styled.div`
+  align-self: flex-start;
+  box-shadow: var(--shadow);
+  border-radius: var(--r2);
+  background-color: white;
+  padding: var(--s6);
+  text-align: center;
+`
+
+const Heading = styled.h3`
+  padding-bottom: var(--s1);
+  line-height: 1;
+  font-size: var(--f6);
+  font-weight: 600;
+`
+
+const Button = styled.button`
+  display: inline-flex;
+  margin-top: var(--s4);
+  border-radius: var(--r2);
+  background-color: var(--purple);
+  padding: var(--s2) var(--s4);
+  white-space: nowrap;
+  color: white;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--blue);
+  }
+`
+
+///////////////////////////////////////////////////////////////////////////////////
 
 import React from 'react'
+import styled from 'styled-components'
 
-import Tutorial from '../components/Tutorial'
+import Tutorial from './Tutorial'
 
 export default Tutorials

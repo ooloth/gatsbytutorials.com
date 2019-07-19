@@ -4,43 +4,85 @@ function Header() {
   const count = tutorialsWithDates.length + tutorialsWithoutDates.length
 
   return (
-    <header className="bg-near-white pv4 sans-serif">
-      <div className="container pv2">
-        <div className="flex items-center" style={{ maxWidth: `32rem` }}>
-          <Img
+    <StyledHeader>
+      <Inner>
+        <Content>
+          <Logo
             fluid={icon.childImageSharp.fluid}
-            alt="GatsbyJS logo, consisting of a white 'G' on a purple circle"
-            className="flex-none w3 br-100 shadow"
+            alt="GatsbyJS logo of a white 'G' on a purple circle"
           />
 
-          <h1 className="pl3 lh-copy f5 fw4">
-            <span className="fw7">Gatsby Tutorials</span> is a community-updated
-            list of
-            {` ${count}`}&nbsp;video, audio and written tutorials to help you learn{' '}
-            <Anchor href="https://www.gatsbyjs.org" className="link">
-              GatsbyJS
-            </Anchor>
+          <Heading>
+            <Bold>Gatsby Tutorials</Bold> is a community-updated list of{` `}
+            {count}&nbsp;video, audio and written tutorials to help you learn{' '}
+            <Link href="https://www.gatsbyjs.org">GatsbyJS</Link>
             {`. `}
-            <Emoji
-              emoji="👩‍💻"
-              ariaLabel="An emoji of a woman coding on a laptop"
-              className="emoji"
-            />
-          </h1>
-        </div>
-      </div>
-    </header>
+            <Emoji emoji="👩‍💻" ariaLabel="An emoji of a woman coding on a laptop" />
+          </Heading>
+        </Content>
+      </Inner>
+    </StyledHeader>
   )
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-import React from 'react'
+const StyledHeader = styled.header`
+  background-color: var(--near-white);
+  padding-top: var(--s6);
+  padding-bottom: var(--s6);
+  font-family: var(--bodyFont);
+`
 
-import Anchor from '../components/Anchor'
-import Emoji from '../components/Emoji'
-import Img from '../components/Img'
+const Inner = styled.div`
+  ${container}
+  padding-top: var(--s2);
+  padding-bottom: var(--s2);
+`
+
+const Content = styled.div`
+  display: flex;
+  align-items: center;
+  max-width: 32rem;
+`
+
+const Logo = styled(Image)`
+  flex: none;
+  box-shadow: var(--shadow);
+  border-radius: var(--r100);
+  width: var(--s8);
+`
+
+const Heading = styled.h1`
+  padding-left: var(--s4);
+  line-height: var(--lh2);
+  font-size: var(--f3);
+  font-weight: 400;
+`
+
+const Bold = styled.span`
+  font-weight: 700;
+`
+
+const Link = styled(Anchor)`
+  color: var(--blue);
+
+  &:hover {
+    text-decoration: underline;
+  }
+`
+
+///////////////////////////////////////////////////////////////////////////////////
+
+import React from 'react'
+import styled from 'styled-components'
+import Image from 'gatsby-image'
+
+import Anchor from './Anchor'
+import Emoji from './Emoji'
+import Img from './Img'
 import useGatsbyIcon from '../queries/useGatsbyIcon'
 import useTutorialsData from '../queries/useTutorialsData'
+import { container } from '../styles'
 
 export default Header
