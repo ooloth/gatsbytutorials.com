@@ -80,7 +80,6 @@ import Image from 'gatsby-image'
 
 import Anchor from './Anchor'
 import Emoji from './Emoji'
-import Img from './Img'
 import useGatsbyIcon from '../queries/useGatsbyIcon'
 import useTutorialsData from '../queries/useTutorialsData'
 import { container } from '../styles'
