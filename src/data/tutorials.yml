@@ -2935,13 +2935,14 @@
     
 - title: 'Video: Build a Cosmic JS-powered blog using Gatsby'
   link: https://cosmicjs.com/articles/video-build-a-cosmic-js-powered-blog-using-gatsby-jpsrqozy
-  format: text
+  format: video
   language: en
-  date: 2019-12-17
+  date: 2018-12-17
   length: '60:00'
   authors:
     - Carson Gibbons
     - Tony Spiro
+    - Jason Lengstorf
   source: cosmicjs
   topics:
     - video
@@ -2950,12 +2951,13 @@
  
 - title: 'Webinar Video: Localization with Gatsby and Cosmic JS'
   link: https://cosmicjs.com/articles/webinar-video-localization-with-gatsby-and-cosmic-js-jnyqtjoa
-  format: text
+  format: video
   language: en
-  date: 2019-11-01
+  date: 2018-11-01
   length: '45:00'
   authors:
     - Tony Spiro
+    - Jason Lengstorf
   source: cosmicjs
   topics:
     - webinar
