@@ -1,41 +1,27 @@
-const Emoji = ({ emoji, ariaLabel, className = ``, style = {} }) => (
-  <span
-    role="img"
-    aria-label={ariaLabel}
-    className={`emoji ${className}`}
-    style={style}
-  >
-    {emoji}
-  </span>
-)
+function Emoji({ emoji, ariaLabel, ...props }) {
+  return (
+    <Span role="img" aria-label={ariaLabel} {...props}>
+      {emoji}
+    </Span>
+  )
+}
 
 Emoji.propTypes = {
   emoji: PropTypes.string.isRequired,
-  ariaLabel: PropTypes.string.isRequired,
-  className: PropTypes.string,
-  style: PropTypes.object
+  ariaLabel: PropTypes.string.isRequired
 }
 
-/*
- *
- * Imports & Exports
- *
- */
+///////////////////////////////////////////////////////////////////////////////////
+
+const Span = styled.span`
+  flex: none;
+  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+`
+
+///////////////////////////////////////////////////////////////////////////////////
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 export default Emoji
-
-/*
-
-INSTRUCTIONS:
-
-<Emoji 
-  emoji={emoji, required}
-  ariaLabel={string, required}
-  className={string, optional}
-  style={string || object, optional}
-/>
-
-*/

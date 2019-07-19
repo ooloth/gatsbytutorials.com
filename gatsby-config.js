@@ -17,7 +17,6 @@ module.exports = {
     locale: `en_CA`,
     twitterHandle: ``,
     facebookAppId: ``
-    // TODO: update siteImage variable in Base.js
   },
   plugins: [
     {
@@ -27,12 +26,12 @@ module.exports = {
         path: `${__dirname}/src/`
       }
     },
-    `gatsby-plugin-postcss`,
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
-    `gatsby-transformer-yaml`,
     `gatsby-plugin-svgr`,
+    `gatsby-transformer-yaml`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-robots-txt`,

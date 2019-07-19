@@ -1,47 +1,63 @@
-const Footer = () => (
-  <footer className="bg-near-white pv4 lh-copy sans-serif">
-    <div className="container ">
-      <p>
-        Missing a tutorial?{' '}
-        <Anchor
-          href="https://github.com/ooloth/gatsby-tutorials#how-do-i-add-a-tutorial"
-          className="link"
-        >
-          Add it to the directory
-        </Anchor>
-        .
-      </p>
-      <p className="pv3">
-        Want to learn more about GatsbyJS? Check out the{' '}
-        <Anchor href="https://www.gatsbyjs.org/tutorial/" className="link">
-          official tutorial
-        </Anchor>{' '}
-        and{' '}
-        <Anchor href="https://www.gatsbyjs.org/docs/" className="link">
-          docs
-        </Anchor>
-        .
-      </p>
-      <p>
-        Built by{` `}
-        <Anchor href="https://www.michaeluloth.com" className="link">
-          Michael Uloth
-        </Anchor>
-        .
-      </p>
-    </div>
-  </footer>
-)
+function Footer() {
+  return (
+    <StyledFooter>
+      <Inner>
+        <Paragraph>
+          Missing a tutorial?{' '}
+          <Link href="https://github.com/ooloth/gatsby-tutorials#how-do-i-add-a-tutorial">
+            Add it to the directory
+          </Link>
+          .
+        </Paragraph>
 
-/*
- *
- * Imports & Exports
- *
- */
+        <Paragraph>
+          Want to learn more about GatsbyJS? Check out the{' '}
+          <Link href="https://www.gatsbyjs.org/tutorial/">official tutorial</Link>{' '}
+          and <Link href="https://www.gatsbyjs.org/docs/">docs</Link>.
+        </Paragraph>
+
+        <Paragraph>
+          Built by{` `}
+          <Link href="https://www.michaeluloth.com">Michael Uloth</Link>.
+        </Paragraph>
+      </Inner>
+    </StyledFooter>
+  )
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+
+const StyledFooter = styled.footer`
+  background-color: var(--near-white);
+  padding-top: var(--s4);
+  padding-bottom: var(--s4);
+  line-height: var(--lh2);
+  font-family: var(--bodyFont);
+`
+
+const Inner = styled.div`
+  ${container}
+`
+
+const Paragraph = styled.p`
+  margin-top: var(--s4);
+  margin-bottom: var(--s4);
+`
+
+const Link = styled(Anchor)`
+  color: var(--blue);
+
+  &:hover {
+    text-decoration: underline;
+  }
+`
+
+///////////////////////////////////////////////////////////////////////////////////
 
 import React from 'react'
+import styled from 'styled-components'
 
-import Anchor from '../components/Anchor'
-import Emoji from '../components/Emoji'
+import Anchor from './Anchor'
+import { container } from '../styles'
 
 export default Footer

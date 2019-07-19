@@ -173,39 +173,28 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
   })
 
   return (
-    <section className="">
-      <h2 className="sr-only">Search for Gatsby JS tutorials</h2>
+    <>
+      <section>
+        <SrText as="h2">Search for Gatsby JS tutorials</SrText>
 
-      <Sticky>
-        {status => (
-          <div
-            className={`bg-near-white animate ${
-              status.status === Sticky.STATUS_FIXED ? `shadow pv2` : ``
-            }`}
-          >
-            <div
-              className={`flex justify-between container w-100 animate ${
-                status.status === Sticky.STATUS_FIXED
-                  ? `items-baseline`
-                  : `items-end`
-              }`}
-            >
-              <form className="flex-auto">
-                <label className="flex mono">
-                  <span className="flex-none pr2 fw7">Search:</span>
-                  <input
-                    ref={searchInput}
-                    value={query}
-                    onChange={handleQuery}
-                    type="text"
-                    placeholder="Type here..."
-                    className="flex-auto f6"
-                  />
-                </label>
-              </form>
+        <StyledSticky>
+          {status => (
+            <SearchBar sticky={status.status === Sticky.STATUS_FIXED}>
+              <Inner sticky={status.status === Sticky.STATUS_FIXED}>
+                <Form>
+                  <Label>
+                    <Text>Search:</Text>
+                    <Input
+                      ref={searchInput}
+                      value={query}
+                      onChange={handleQuery}
+                      type="text"
+                      placeholder="Type here..."
+                    />
+                  </Label>
+                </Form>
 
-              <div className="flex items-end">
-                <TriggerAndOverlay
+                <MobileMenu
                   formats={formats}
                   topics={topics}
                   authors={authors}
@@ -218,89 +207,24 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
                   setTopic={setTopic}
                   setAuthor={setAuthor}
                   setSource={setSource}
-                  className="flex items-center md:dn ml3 br2 pv2 ph3 bg-purple tc white shadow animate hover:bg-blue"
                 />
 
-                {/* Link to add a new tutorial */}
-                <Anchor
-                  href="https://github.com/ooloth/gatsby-tutorials#how-do-i-add-a-tutorial"
-                  className="flex-none dn md:inline-flex ml3 br2 pv2 ph3 bg-purple lh-solid tc white shadow animate hover:bg-blue"
-                >
+                <AddTutorial href="https://github.com/ooloth/gatsby-tutorials#how-do-i-add-a-tutorial">
                   <span>Add a tutorial</span>
-
-                  <Emoji
+                  <HandsUp
                     emoji="🙌"
                     ariaLabel="Emoji of two hands raised in appreciation"
-                    className="pl2"
-                    style={{ lineHeight: 0.75 }}
                   />
-                </Anchor>
-              </div>
-            </div>
-          </div>
-        )}
-      </Sticky>
+                </AddTutorial>
+              </Inner>
+            </SearchBar>
+          )}
+        </StyledSticky>
+      </section>
 
-      <div className="container pv3">
-        {/* {format && (
-          <div className="flex items-baseline pb3">
-            <p className="pr2 mono">
-              <span className="pr2 fw7">Format:</span>
-              <span className="lh-copy mono f6 black-60">{format}</span>
-            </p>
-            <button onClick={() => setFormat(null)} className="f6 mono">
-              [<span className="link">Clear filter</span>]
-            </button>
-          </div>
-        )} */}
-
-        {/* {topic && (
-          <div className="flex items-baseline pb3">
-            <p className="pr2 mono">
-              <span className="pr2 fw7">Topic:</span>
-              <span className="lh-copy mono f6 black-60">{topic}</span>
-            </p>
-            <button onClick={() => setTopic(null)} className="f6 mono">
-              [<span className="link">Clear filter</span>]
-            </button>
-          </div>
-        )} */}
-
-        {/* {author && (
-          <div className="flex items-baseline pb3">
-            <p className="pr2 mono">
-              <span className="pr2 fw7">Author:</span>
-              <span className="lh-copy mono f6 black-60">{author}</span>
-            </p>
-            <button onClick={() => setAuthor(null)} className="f6 mono">
-              [<span className="link">Clear filter</span>]
-            </button>
-          </div>
-        )} */}
-
-        {/* {source && (
-          <div className="flex items-baseline pb3">
-            <p className="pr2 mono">
-              <span className="pr2 fw7">Source:</span>
-              <span className="lh-copy mono f6 black-60">{source}</span>
-            </p>
-            <button onClick={() => setSource(null)} className="f6 mono">
-              [<span className="link">Clear filter</span>]
-            </button>
-          </div>
-        )} */}
-
-        {/* {(format || author || source || topic || query) && (
-          <p className="pb3 mono">
-            <span className="pr2 fw7">Results:</span>
-            <span className="lh-copy mono f6 black-60">
-              {filteredTutorials.length}
-            </span>
-          </p>
-        )} */}
-
-        {/* Tutorials matching search and filter parameters (if any) */}
-        <div className="directory-grid">
+      <Container>
+        <LayoutGrid>
+          {/* Tutorials matching search and filter parameters (if any) */}
           <Tutorials
             tutorials={filteredTutorials}
             currentFormat={format}
@@ -315,46 +239,165 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
             searchInput={searchInput}
           />
 
-          <aside className="dn md:db">
-            {/* Lists of all types, topics, authors and sources */}
-            <Formats
-              formats={formats}
-              currentFormat={format}
-              setFormat={setFormat}
+          {/* Lists of all formats, topics, authors and sources */}
+          <LargeScreenFilters>
+            <FilterMenu
+              heading="Formats"
+              filters={formats}
+              activeFilter={format}
+              setFilter={setFormat}
             />
 
-            <Topics topics={topics} currentTopic={topic} setTopic={setTopic} />
-
-            <Authors
-              authors={authors}
-              currentAuthor={author}
-              setAuthor={setAuthor}
+            <FilterMenu
+              heading="Topics"
+              filters={topics}
+              activeFilter={topic}
+              setFilter={setTopic}
             />
 
-            <Sources
-              sources={sources}
-              currentSource={source}
-              setSource={setSource}
+            <FilterMenu
+              heading="Authors"
+              filters={authors}
+              activeFilter={author}
+              setFilter={setAuthor}
             />
-          </aside>
-        </div>
-      </div>
-    </section>
+
+            <FilterMenu
+              heading="Sources"
+              filters={sources}
+              activeFilter={source}
+              setFilter={setSource}
+            />
+          </LargeScreenFilters>
+        </LayoutGrid>
+      </Container>
+    </>
   )
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
 
+const StyledSticky = styled(Sticky)`
+  position: relative;
+  z-index: 1;
+`
+
+const SearchBar = styled.div`
+  background-color: var(--near-white);
+  transition: all 0.2s ease-in-out;
+
+  ${p =>
+    p.sticky &&
+    css`
+      box-shadow: var(--shadow);
+      padding-top: var(--s2);
+      padding-bottom: var(--s2);
+    `}
+`
+
+const Inner = styled.div`
+  ${container}
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+
+  ${p =>
+    p.sticky &&
+    css`
+      align-items: baseline;
+    `}
+`
+
+const AddTutorial = styled(Anchor)`
+  flex: none;
+  display: none;
+  margin-left: var(--s4);
+  box-shadow: var(--shadow);
+  border-radius: var(--r2);
+  background-color: var(--purple);
+  padding: var(--s2) var(--s4);
+  line-height: 1;
+  text-align: center;
+  color: white;
+  transition: background-color 0.2s ease-in-out;
+
+  ${media.md`
+    display: inline-flex;
+  `}
+
+  &:hover {
+    background-color: var(--blue);
+  }
+`
+
+const Container = styled.section`
+  ${container}
+  padding-top: var(--s4);
+  padding-bottom: var(--s4);
+`
+
+const Form = styled.form`
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+`
+
+const Label = styled.label`
+  display: flex;
+  font-family: var(--codeFont);
+`
+
+const Text = styled.span`
+  flex: none;
+  padding-right: var(--s2);
+  font-weight: 700;
+`
+
+const Input = styled.input`
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  font-size: var(--f2);
+`
+
+const HandsUp = styled(Emoji)`
+  padding-left: var(--s2);
+  line-height: 0.75;
+`
+
+const LayoutGrid = styled.div`
+  @supports (grid-auto-rows: 0) {
+    ${media.md`
+      display: grid;
+      grid-template-columns: 1fr auto;
+      & > ul > li { margin-right: var(--s4) }
+      & > div > section { margin-left: var(--s4) }
+    `}
+  }
+`
+
+const LargeScreenFilters = styled.div`
+  display: none;
+
+  ${media.md`
+    display: block;
+  `}
+`
+
+///////////////////////////////////////////////////////////////////////////////////
+
 import React, { useState, useRef, useEffect } from 'react'
+import styled, { css } from 'styled-components'
 import Sticky from 'react-stickynode'
 
-import Tutorials from '../components/Tutorials'
-import Anchor from '../components/Anchor'
-import Emoji from '../components/Emoji'
-import Formats from '../components/Formats'
-import Topics from '../components/Topics'
-import Authors from '../components/Authors'
-import Sources from '../components/Sources'
-import TriggerAndOverlay from '../components/TriggerAndOverlay'
+import SrText from './SrText'
+import Tutorials from './Tutorials'
+import Anchor from './Anchor'
+import Emoji from './Emoji'
+import FilterMenu from './FilterMenu'
+import MobileMenu from './MobileMenu'
+import { container, media } from '../styles'
 
 export default Directory

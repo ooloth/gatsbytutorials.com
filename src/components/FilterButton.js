@@ -1,19 +1,42 @@
-function FilterButton({ text, active, handleFilter, className = `` }) {
+function FilterButton({ text, active, handleFilter, ...props }) {
   return (
-    <button
-      value={text}
-      onClick={handleFilter}
-      className={`inline-flex mt2 br2 bg-light-gray pv1 ph2 no-wrap hover:bg-blue hover:white ${className}`}
-    >
-      <span className="pointer-events-none">{text}</span>
-
+    <Button value={text} active={active} onClick={handleFilter} {...props}>
+      <Text>{text}</Text>
       {active && <span>&nbsp;×</span>}
-    </button>
+    </Button>
   )
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
 
+const Button = styled.button`
+  display: inline-flex;
+  margin-top: var(--s2);
+  border-radius: var(--r2);
+  background-color: var(--light-gray);
+  padding: var(--s1) var(--s2);
+  white-space: nowrap;
+
+  &:hover {
+    background-color: var(--blue);
+    color: white;
+  }
+
+  ${props =>
+    props.active &&
+    css`
+      background-color: var(--blue);
+      color: white;
+    `}
+`
+
+const Text = styled.span`
+  pointer-events: none;
+`
+
+///////////////////////////////////////////////////////////////////////////////////
+
 import React from 'react'
+import styled, { css } from 'styled-components'
 
 export default FilterButton

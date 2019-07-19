@@ -25,110 +25,161 @@ function Tutorial({
   // Choose which tutorial category emoji to show next to the title
   let tutorialEmoji
   if (tutorial.format === `video`) {
-    tutorialEmoji = (
-      <Emoji emoji="📺" ariaLabel="Emoji of a television" className="flex-none" />
-    )
+    tutorialEmoji = <Emoji emoji="📺" ariaLabel="Emoji of a television" />
   } else if (tutorial.format === `audio`) {
-    tutorialEmoji = (
-      <Emoji emoji="🎧" ariaLabel="Emoji of a headphones" className="flex-none" />
-    )
+    tutorialEmoji = <Emoji emoji="🎧" ariaLabel="Emoji of a headphones" />
   } else if (tutorial.format === `text`) {
-    tutorialEmoji = (
-      <Emoji emoji="📕" ariaLabel="Emoji of a hand writing" className="flex-none" />
-    )
+    tutorialEmoji = <Emoji emoji="📕" ariaLabel="Emoji of a hand writing" />
   }
 
   return (
-    <li className="mt3 shadow br2 bg-white pa3 lh-tall animate hover:shadow-lg">
-      <h3 className="flex items-baseline lh-title fw6">
-        <Anchor href={tutorial.link} className="f4 hover:blue hover:underline">
-          {tutorial.title}
-        </Anchor>
-      </h3>
+    <Item>
+      <Title>
+        <Link href={tutorial.link}>{tutorial.title}</Link>
+      </Title>
 
-      <div className="flex flex-wrap items-baseline pt1">
+      <Details>
         {tutorialEmoji}&nbsp;
         {tutorial.authors && tutorial.authors.length > 0 ? (
           tutorial.authors.map((author, i) => (
             <Fragment key={author}>
-              <button
+              <Button
                 value={author}
                 onClick={handleAuthorClick}
-                className={`hover:blue hover:underline ${
-                  author === currentAuthor ? `blue underline` : ``
-                }`}
+                active={author === currentAuthor}
               >
                 {author}
-              </button>
+              </Button>
 
               {i < tutorial.authors.length - 1 && <span>,&nbsp;</span>}
             </Fragment>
           ))
         ) : (
-          <button
+          <Button
             value={tutorial.source}
             onClick={handleSourceClick}
-            className={`hover:blue hover:underline ${
-              tutorial.source === currentSource ? `blue underline` : ``
-            }`}
+            active={tutorial.source === currentSource}
           >
             {tutorial.source}
-          </button>
+          </Button>
         )}
         {tutorial.date && <p>・{tutorial.date}</p>}
-      </div>
+      </Details>
 
       {tutorial.topics && (
-        <div
-          className={`topics flex ${
-            tutorial.authors || tutorial.source ? `mt3 pt1` : ``
-          }`}
-        >
-          <ul className="nb1 lh-solid">
+        <Topics includesAuthorOrSource={tutorial.authors || tutorial.source}>
+          <List>
             {tutorial.source && tutorial.authors.length > 0 && (
-              <li className="dib mr1 mb1 f6">
+              <ListItem>
                 <FilterButton
                   text={tutorial.source}
-                  // active={tutorial.source === currentSource}
+                  active={tutorial.source === currentSource}
                   handleFilter={handleSourceClick}
-                  className={
-                    tutorial.source === currentSource ? `bg-blue white` : ``
-                  }
                 />
-              </li>
+              </ListItem>
             )}
 
             {tutorial.topics
               .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase())) // ignore case
               .map((topic, i) => (
-                <li key={i} className="dib mr1 mb1 f6">
+                <ListItem key={i}>
                   <FilterButton
                     text={topic.toLowerCase()}
-                    // active={topic.toLowerCase() === currentTopic}
+                    active={topic.toLowerCase() === currentTopic}
                     handleFilter={handleTopicClick}
-                    className={
-                      topic.toLowerCase() === currentTopic ? `bg-blue white` : ``
-                    }
                   />
-                </li>
+                </ListItem>
               ))}
-          </ul>
-        </div>
+          </List>
+        </Topics>
       )}
-    </li>
+    </Item>
   )
 }
 
-/*
- *
- * Imports & Exports
- *
- */
+///////////////////////////////////////////////////////////////////////////////////
+
+const Item = styled.li`
+  margin-top: var(--s4);
+  box-shadow: var(--shadow);
+  border-radius: var(--r2);
+  background-color: white;
+  padding: var(--s4);
+  line-height: var(--lh3);
+  transition: box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: var(--shadow-lg);
+  }
+`
+
+const Title = styled.h3`
+  display: flex;
+  align-items: baseline;
+  line-height: var(--lh1);
+  font-weight: 600;
+`
+
+const Link = styled(Anchor)`
+  font-size: var(--f5);
+
+  &:hover {
+    color: var(--blue);
+    text-decoration: underline;
+  }
+`
+
+const Details = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  padding-top: var(--s1);
+`
+
+const Button = styled.button`
+  &:hover {
+    color: blue;
+    text-decoration: underline;
+  }
+
+  ${props =>
+    props.active &&
+    css`
+      color: blue;
+      text-decoration: underline;
+    `}
+`
+
+const Topics = styled.div`
+  display: flex;
+
+  ${props =>
+    props.includesAuthorOrSource &&
+    css`
+      margin-top: var(--s4);
+      padding-top: var(--s1);
+    `}
+`
+
+const List = styled.ul`
+  margin-top: calc(var(--s1) * -1);
+  line-height: 1;
+`
+
+const ListItem = styled.li`
+  display: inline-block;
+  margin-right: var(--s1);
+  margin-bottom: var(--s1);
+  font-size: var(--f2);
+`
+
+///////////////////////////////////////////////////////////////////////////////////
 
 import React, { Fragment } from 'react'
+import styled, { css } from 'styled-components'
 
-import Anchor from '../components/Anchor'
-import Emoji from '../components/Emoji'
-import FilterButton from '../components/FilterButton'
+import Anchor from './Anchor'
+import Emoji from './Emoji'
+import FilterButton from './FilterButton'
 
 export default Tutorial

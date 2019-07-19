@@ -2,6 +2,8 @@ function Base({ children }) {
   return (
     <>
       <Metadata />
+      <CustomProperties />
+      <Reset />
       <Header />
       {children}
       <Footer />
@@ -13,9 +15,9 @@ function Base({ children }) {
 
 import React from 'react'
 
-import Metadata from '../components/Metadata'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import '../styles/index.css'
+import Metadata from './Metadata'
+import Header from './Header'
+import Footer from './Footer'
+import { CustomProperties, Reset } from '../styles'
 
 export default Base
