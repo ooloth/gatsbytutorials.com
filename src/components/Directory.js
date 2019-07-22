@@ -240,7 +240,7 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
           />
 
           {/* Lists of all formats, topics, authors and sources */}
-          <LargeScreenFilters>
+          <Sidebar>
             <FilterMenu
               heading="Formats"
               filters={formats}
@@ -268,7 +268,7 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
               activeFilter={source}
               setFilter={setSource}
             />
-          </LargeScreenFilters>
+          </Sidebar>
         </LayoutGrid>
       </Container>
     </>
@@ -368,17 +368,14 @@ const HandsUp = styled(Emoji)`
 `
 
 const LayoutGrid = styled.div`
-  @supports (grid-auto-rows: 0) {
-    ${media.md`
-      display: grid;
-      grid-template-columns: 1fr auto;
-      & > ul > li { margin-right: var(--s4) }
-      & > div > section { margin-left: var(--s4) }
-    `}
+  display: grid;
+  grid-template-columns: 1fr auto;
+  & > div > section {
+    margin-left: var(--s6);
   }
 `
 
-const LargeScreenFilters = styled.div`
+const Sidebar = styled.div`
   display: none;
 
   ${media.md`
