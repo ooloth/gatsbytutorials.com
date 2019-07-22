@@ -41,7 +41,7 @@ function MobileMenu({
         onRequestClose={closeModal}
         closeTimeoutMS={500} // match exit animation timing
       >
-        <SmallScreenFilters>
+        <ModalContent>
           {/* Lists of all types, topics, authors and sources */}
           <FilterMenu
             heading="Formats"
@@ -70,7 +70,7 @@ function MobileMenu({
             activeFilter={currentSource}
             setFilter={setSource}
           />
-        </SmallScreenFilters>
+        </ModalContent>
       </StyledModal>
     </>
   )
@@ -146,7 +146,7 @@ const StyledModal = styled(ReactModalAdapter)`
   }
 `
 
-const SmallScreenFilters = styled.div`
+const ModalContent = styled.div`
   padding: var(--s4);
   font-size: var(--f2);
 

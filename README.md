@@ -48,7 +48,9 @@ The easiest approach is to use the make your changes here on the GitHub website:
 - `source` - Name of YouTube channel, podcast, conference, blog, etc. if different from author's name (`string`; optional)
 - `topics` - Main topic(s) covered by the tutorial (`array` of `strings`; required)
 
-Where possible, please add tutorial series as one entry with a link to the series homepage.
+### What if the tutorial is part of a series?
+
+Rather than adding every tutorial in the series separately, please add the entire series as one entry that links to the series homepage (or the first tutorial in the series).
 
 ## Coming Soon
 
