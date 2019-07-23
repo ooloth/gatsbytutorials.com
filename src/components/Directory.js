@@ -268,6 +268,8 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
               activeFilter={source}
               setFilter={setSource}
             />
+
+            <Contributors />
           </Sidebar>
         </LayoutGrid>
       </Container>
@@ -377,9 +379,19 @@ const LayoutGrid = styled.div`
 
 const Sidebar = styled.div`
   display: none;
+  max-width: 19rem;
 
   ${media.md`
     display: block;
+    
+  `}
+
+  ${media.lg`
+    max-width: 22rem;
+  `}
+
+  ${media.xl`
+    max-width: var(--s13);
   `}
 `
 
@@ -389,6 +401,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 import Sticky from 'react-stickynode'
 
+import Contributors from './Contributors'
 import SrText from './SrText'
 import Tutorials from './Tutorials'
 import Anchor from './Anchor'
