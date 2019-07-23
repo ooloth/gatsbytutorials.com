@@ -26,6 +26,22 @@ module.exports = {
         path: `${__dirname}/src/`
       }
     },
+    {
+      resolve: `gatsby-source-apiserver`,
+      options: {
+        url: `https://api.github.com/repos/ooloth/gatsbytutorials.com/contributors`,
+        name: `contributors`,
+        verboseOutput: process.env.NODE_ENV !== `production`
+      }
+    },
+    {
+      resolve: `gatsby-plugin-remote-images`,
+      options: {
+        nodeType: `contributors`,
+        imagePath: `avatar_url`,
+        name: `avatarImage`
+      }
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,

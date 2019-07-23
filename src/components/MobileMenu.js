@@ -70,6 +70,8 @@ function MobileMenu({
             activeFilter={currentSource}
             setFilter={setSource}
           />
+
+          <Contributors />
         </ModalContent>
       </StyledModal>
     </>
@@ -134,6 +136,8 @@ const StyledModal = styled(ReactModalAdapter)`
     box-shadow: var(--shadow-lg);
     background-color: var(--near-white);
     transform: translateX(100%);
+    padding-top: var(--s4);
+    padding-bottom: var(--s4);
     transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 
     &.ReactModal__Content--after-open {
@@ -178,8 +182,9 @@ import styled from 'styled-components'
 import Modal from 'react-modal'
 import noScroll from 'no-scroll'
 
-import SrText from './SrText'
 import FilterMenu from './FilterMenu'
+import Contributors from './Contributors'
+import SrText from './SrText'
 import { ReactComponent as FiltersSVG } from '../svg/sliders-h.svg'
 import { icon, media } from '../styles'
 
