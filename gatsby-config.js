@@ -88,7 +88,9 @@ module.exports = {
         icon: `src/images/favicon.png`
       }
     },
-    `gatsby-plugin-offline`,
+    // remove old service worker versions in Safari 🧨
+    `gatsby-plugin-remove-serviceworker`,
+    // `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
