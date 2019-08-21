@@ -10,7 +10,7 @@ function useTutorialsData() {
             node {
               title
               link
-              format
+              formats
               date(formatString: "MMM DD, YYYY")
               length
               authors
@@ -28,7 +28,7 @@ function useTutorialsData() {
             node {
               title
               link
-              format
+              formats
               language
               date(formatString: "MMM DD, YYYY")
               length

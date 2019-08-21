@@ -7,9 +7,14 @@ function IndexPage() {
   // TODO: replace these runtime calculations with detailed YAML version once we're compiling these lists at build time
 
   // Create a sorted list of all unique formats
+  const formatArrays = tutorials.map(tutorial => tutorial.node.formats)
   const formats = [
-    ...new Set(tutorials.map(tutorial => tutorial.node.format.toLowerCase()))
-  ].sort()
+    ...new Set(
+      formatArrays
+        .reduce((acc, curr) => [...acc, ...curr]) // merge arrays into one
+        .map(format => format.toLowerCase()) // convert all formats to lowercase
+    )
+  ].sort();
 
   // Create a sorted list of all unique topics
   const topicArrays = tutorials.map(tutorial => tutorial.node.topics)
