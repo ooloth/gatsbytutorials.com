@@ -28,7 +28,9 @@ The easiest approach is to use the make your changes here on the GitHub website:
 ```yaml
 - title: 'GatsbyJS: How to Create the Fastest Sites in the World'
   link: https://www.youtube.com/watch?v=Gtd-Ht-D0sg
-  format: video
+  formats: 
+    - video
+    - text
   language: en
   date: 2017-10-01
   authors: 
@@ -41,7 +43,7 @@ The easiest approach is to use the make your changes here on the GitHub website:
 
 - `title` - Title of tutorial (`string`; required)
 - `link` - Working URL where tutorial can be found (`string`; required)
-- `format` - Media format of tutorial (`string` with the value `video`, `audio` or `text`; required)
+- `formats` - Media format of tutorial (`array` of `strings` with values `video`, `audio` or `text`; required)
 - `language` - Spoken/written language of the tutorial (`string` with a two-letter [ISO 639-1 language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes); required)
 - `date` - Date tutorial was published (`string` in `YYYY-MM-DD` format; optional)
 - `authors` - Name of author(s) or speaker(s) (`array` of `strings`; optional)
