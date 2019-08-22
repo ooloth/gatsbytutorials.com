@@ -22,14 +22,10 @@ function Tutorial({
     else setSource(e.target.value)
   }
 
-  // Choose which tutorial category emoji to show next to the title
-  let tutorialEmoji
-  if (tutorial.format === `video`) {
-    tutorialEmoji = <Emoji emoji="📺" ariaLabel="Emoji of a television" />
-  } else if (tutorial.format === `audio`) {
-    tutorialEmoji = <Emoji emoji="🎧" ariaLabel="Emoji of a headphones" />
-  } else if (tutorial.format === `text`) {
-    tutorialEmoji = <Emoji emoji="📕" ariaLabel="Emoji of a hand writing" />
+  const tutorialEmojis = {
+    text: "📕",
+    video: "📺",
+    audio: "🎧",
   }
 
   return (
@@ -39,7 +35,11 @@ function Tutorial({
       </Title>
 
       <Details>
-        {tutorialEmoji}&nbsp;
+        {tutorial.formats && tutorial.formats.length > 0 && (
+          tutorial.formats.map((format, i) => (
+            <Emoji key={i} emoji={tutorialEmojis[format] || "❓"} ariaLabel={`Emoji of a ${format}`} />
+          ))
+        )}&nbsp;
         {tutorial.authors && tutorial.authors.length > 0 ? (
           tutorial.authors.map((author, i) => (
             <Fragment key={author}>
@@ -55,14 +55,14 @@ function Tutorial({
             </Fragment>
           ))
         ) : (
-          <Button
-            value={tutorial.source}
-            onClick={handleSourceClick}
-            active={tutorial.source === currentSource}
-          >
-            {tutorial.source}
-          </Button>
-        )}
+            <Button
+              value={tutorial.source}
+              onClick={handleSourceClick}
+              active={tutorial.source === currentSource}
+            >
+              {tutorial.source}
+            </Button>
+          )}
         {tutorial.date && <p>・{tutorial.date}</p>}
       </Details>
 
