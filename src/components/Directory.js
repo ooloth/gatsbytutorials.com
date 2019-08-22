@@ -27,7 +27,7 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
     if (!format && !author && !source && !topic && !query) return true
 
     // Check if the tutorial matches any active filters
-    if (format && tutorial.format.includes(format)) isFormatMatch = true
+    if (format && tutorial.formats.includes(format)) isFormatMatch = true
     if (topic && tutorial.topics.includes(topic)) isTopicMatch = true
     if (author && tutorial.authors.includes(author)) isAuthorMatch = true
     if (source && tutorial.source && tutorial.source.includes(source))

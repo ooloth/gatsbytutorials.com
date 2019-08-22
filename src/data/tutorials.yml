@@ -2823,7 +2823,8 @@
 - title: 'Building a Static Blog using Gatsby and Strapi (Written tutorial with 8 videos)'
   link: https://blog.strapi.io/building-a-static-website-using-gatsby-and-strapi/
   formats:
-    - text, video
+    - text
+    - video
   language: en
   date: 2019-02-27
   length: ''
