@@ -1,3 +1,18 @@
+- title: Custom Gatsby Source Plugin Tutorial
+  link: https://codebushi.com/custom-gatsby-source-plugin/
+  formats:
+    - text
+  language: en
+  date: 2019-08-24
+  length: ''
+  authors:
+    - Hunter Chang
+  source: 'codebushi.com'
+  topics:
+    - graphql
+    - gatsby-node
+    - sourceNodes
+
 - title: Gatsby and Snipcart E-commerce Tutorial
   link: https://www.frontendstumbles.com/gatsby-and-snipcart-ecommerce-tutorial/
   formats:
