@@ -89,10 +89,6 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
     // If the user has typed a query, check if it matches the tutorial's format, author, source or title (TODO: add partial string matches of topics as well)
     if (query) {
       // TODO: replace this logic with a better fuzzy search algorithm...
-      const isFormatMatch = tutorial.format
-        .toLowerCase()
-        .includes(query.toLowerCase())
-
       const isSourceMatch =
         tutorial.source &&
         tutorial.source.toLowerCase().includes(query.toLowerCase())
@@ -101,12 +97,12 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
         .toLowerCase()
         .includes(query.toLowerCase())
 
-      // TODO: enable these to search topic and author array substrings once we're generating string versions of the topics and authors arrays for search purposes
+      // TODO: enable these to search author array substrings once we're generating string versions of the arrays for search purposes
+      // const isFormatMatch = tutorial.formatSearchString.includes(query);
       // const isTopicMatch = tutorial.topicSearchString.includes(query);
       // const isAuthorMatch = tutorial.authorSearchString.includes(query);
 
-      isQueryMatch =
-        isFormatMatch || isAuthorMatch || isSourceMatch || isTitleMatch
+      isQueryMatch = isSourceMatch || isTitleMatch
 
       // If the user has typed a query, filter by the same rules as above for format, author, source and topic, and require the query to match each condition as well
       // Format combos
