@@ -5,19 +5,19 @@ exports.onCreateNode = ({ node, actions }) => {
     createNodeField({
       node,
       name: `authorsAsString`,
-      value: node.authors ? node.authors.join(` `) : ``
+      value: node.authors ? node.authors.join(` `).toLowerCase() : ``
     })
 
     createNodeField({
       node,
       name: `formatsAsString`,
-      value: node.formats ? node.formats.join(` `) : ``
+      value: node.formats ? node.formats.join(` `).toLowerCase() : ``
     })
 
     createNodeField({
       node,
       name: `topicsAsString`,
-      value: node.topics ? node.topics.join(` `) : ``
+      value: node.topics ? node.topics.join(` `).toLowerCase() : ``
     })
   }
 }
