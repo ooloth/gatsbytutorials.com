@@ -20,9 +20,8 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
   )
 
   const filteredAndSearchedTuts = useMemo(
-    () =>
-      searchFilteredTutorials(filteredTuts, format, topic, author, source, query),
-    [filteredTuts, format, topic, author, source, query]
+    () => searchFilteredTutorials(filteredTuts, query),
+    [filteredTuts, query]
   )
 
   return (
@@ -155,14 +154,7 @@ function filterTutorials(tutorials, format, topic, author, source) {
   })
 }
 
-function searchFilteredTutorials(
-  filteredTutorials,
-  format,
-  topic,
-  author,
-  source,
-  query
-) {
+function searchFilteredTutorials(filteredTutorials, query) {
   if (!query) return filteredTutorials
 
   return filteredTutorials.filter(({ node: tutorial }) => {
@@ -171,22 +163,18 @@ function searchFilteredTutorials(
         tutorial.title && tutorial.title.toLowerCase().includes(word.toLowerCase())
 
       const isFormatsMatch =
-        !format && // if filter is engaged, don't include field in search
         tutorial.fields.formatsAsString &&
         tutorial.fields.formatsAsString.includes(word.toLowerCase())
 
       const isTopicsMatch =
-        !topic && // if filter is engaged, don't include field in search
         tutorial.fields.topicsAsString &&
         tutorial.fields.topicsAsString.includes(word.toLowerCase())
 
       const isAuthorsMatch =
-        !author && // if filter is engaged, don't include field in search
         tutorial.fields.authorsAsString &&
         tutorial.fields.authorsAsString.includes(word.toLowerCase())
 
       const isSourceMatch =
-        !source && // if filter is engaged, don't include field in search
         tutorial.source &&
         tutorial.source.toLowerCase().includes(word.toLowerCase())
 
