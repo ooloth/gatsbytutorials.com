@@ -1,9 +1,8 @@
 function Directory({ tutorials, formats, topics, authors, sources }) {
-  // TODO: refactor this to useReducer or xstate?
-  const [format, setFormat] = useState(null)
-  const [topic, setTopic] = useState(null)
-  const [author, setAuthor] = useState(null)
-  const [source, setSource] = useState(null)
+  const [format, setFormat] = useState(``)
+  const [topic, setTopic] = useState(``)
+  const [author, setAuthor] = useState(``)
+  const [source, setSource] = useState(``)
   const [query, setQuery] = useState(``)
   const searchInput = useRef()
 
@@ -15,158 +14,16 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
     window.scrollTo(0, 0) // scroll to top whenever typing a search query
   }
 
-  // Filter the visible tutorials based on the active filters and/or search query
-  let filteredTutorials = tutorials.filter(({ node: tutorial }) => {
-    let isFormatMatch = false
-    let isTopicMatch = false
-    let isAuthorMatch = false
-    let isSourceMatch = false
-    let isQueryMatch = false
+  const filteredTuts = useMemo(
+    () => filterTutorials(tutorials, format, topic, author, source),
+    [tutorials, format, topic, author, source]
+  )
 
-    // If the user hasn't filtered or searched, abort and include all the tutorials
-    if (!format && !author && !source && !topic && !query) return true
-
-    // Check if the tutorial matches any active filters
-    if (format && tutorial.formats.includes(format)) isFormatMatch = true
-    if (topic && tutorial.topics.includes(topic)) isTopicMatch = true
-    if (author && tutorial.authors.includes(author)) isAuthorMatch = true
-    if (source && tutorial.source && tutorial.source.includes(source))
-      isSourceMatch = true
-
-    // If the user hasn't typed a query, filter just by author, source and topic
-    if (!query) {
-      // Format combos
-      if (format && !topic && !author && !source) {
-        return isFormatMatch
-      }
-      if (format && topic && !author && !source) {
-        return isFormatMatch && isTopicMatch
-      }
-      if (format && topic && author && !source) {
-        return isFormatMatch && isTopicMatch && isAuthorMatch
-      }
-      if (format && topic && author && source) {
-        return isFormatMatch && isTopicMatch && isAuthorMatch && isSourceMatch
-      }
-      if (format && !topic && author && !source) {
-        return isFormatMatch && isAuthorMatch
-      }
-      if (format && !topic && author && source) {
-        return isFormatMatch && isAuthorMatch && isSourceMatch
-      }
-      if (format && !topic && !author && source) {
-        return isFormatMatch && isSourceMatch
-      }
-
-      // Remaining topic combos
-      if (!format && topic && !author && !source) {
-        return isTopicMatch
-      }
-      if (!format && topic && author && !source) {
-        return isTopicMatch && isAuthorMatch
-      }
-      if (!format && topic && author && source) {
-        return isTopicMatch && isAuthorMatch && isSourceMatch
-      }
-      if (!format && topic && !author && source) {
-        return isTopicMatch && isSourceMatch
-      }
-
-      // Remaining author combos
-      if (!format && !topic && author && !source) {
-        return isAuthorMatch
-      }
-      if (!format && !topic && author && source) {
-        return isAuthorMatch && isSourceMatch
-      }
-
-      // Remaining source combo
-      if (!format && !topic && !author && source) {
-        return isSourceMatch
-      }
-    }
-
-    // If the user has typed a query, check if it matches the tutorial's format, author, source or title (TODO: add partial string matches of topics as well)
-    if (query) {
-      // TODO: replace this logic with a better fuzzy search algorithm...
-      const isSourceMatch =
-        tutorial.source &&
-        tutorial.source.toLowerCase().includes(query.toLowerCase())
-
-      const isTitleMatch = tutorial.title
-        .toLowerCase()
-        .includes(query.toLowerCase())
-
-      // TODO: enable these to search author array substrings once we're generating string versions of the arrays for search purposes
-      // const isFormatMatch = tutorial.formatSearchString.includes(query);
-      // const isTopicMatch = tutorial.topicSearchString.includes(query);
-      // const isAuthorMatch = tutorial.authorSearchString.includes(query);
-
-      isQueryMatch = isSourceMatch || isTitleMatch
-
-      // If the user has typed a query, filter by the same rules as above for format, author, source and topic, and require the query to match each condition as well
-      // Format combos
-      if (format && !topic && !author && !source) {
-        return isFormatMatch && isQueryMatch
-      }
-      if (format && topic && !author && !source) {
-        return isFormatMatch && isTopicMatch && isQueryMatch
-      }
-      if (format && topic && author && !source) {
-        return isFormatMatch && isTopicMatch && isAuthorMatch && isQueryMatch
-      }
-      if (format && topic && author && source) {
-        return (
-          isFormatMatch &&
-          isTopicMatch &&
-          isAuthorMatch &&
-          isSourceMatch &&
-          isQueryMatch
-        )
-      }
-      if (format && !topic && author && !source) {
-        return isFormatMatch && isAuthorMatch && isQueryMatch
-      }
-      if (format && !topic && author && source) {
-        return isFormatMatch && isAuthorMatch && isSourceMatch && isQueryMatch
-      }
-      if (format && !topic && !author && source) {
-        return isFormatMatch && isSourceMatch && isQueryMatch
-      }
-
-      // Remaining topic combos
-      if (!format && topic && !author && !source) {
-        return isTopicMatch && isQueryMatch
-      }
-      if (!format && topic && author && !source) {
-        return isTopicMatch && isAuthorMatch && isQueryMatch
-      }
-      if (!format && topic && author && source) {
-        return isTopicMatch && isAuthorMatch && isSourceMatch && isQueryMatch
-      }
-      if (!format && topic && !author && source) {
-        return isTopicMatch && isSourceMatch && isQueryMatch
-      }
-
-      // Remaining author combos
-      if (!format && !topic && author && !source) {
-        return isAuthorMatch && isQueryMatch
-      }
-      if (!format && !topic && author && source) {
-        return isAuthorMatch && isSourceMatch && isQueryMatch
-      }
-
-      // Remaining source combo
-      if (!format && !topic && !author && source) {
-        return isSourceMatch && isQueryMatch
-      }
-
-      // Remaining query combo
-      if (!format && !topic && !author && !source) {
-        return isQueryMatch
-      }
-    }
-  })
+  const filteredAndSearchedTuts = useMemo(
+    () =>
+      searchFilteredTutorials(filteredTuts, format, topic, author, source, query),
+    [filteredTuts, format, topic, author, source, query]
+  )
 
   return (
     <>
@@ -222,7 +79,7 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
         <LayoutGrid>
           {/* Tutorials matching search and filter parameters (if any) */}
           <Tutorials
-            tutorials={filteredTutorials}
+            tutorials={filteredAndSearchedTuts}
             currentFormat={format}
             currentTopic={topic}
             currentAuthor={author}
@@ -271,6 +128,77 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
       </Container>
     </>
   )
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+
+function filterTutorials(tutorials, format, author, source, topic) {
+  if (!format && !author && !source && !topic) return tutorials
+
+  return tutorials.filter(({ node: tutorial }) => {
+    const isFormatMatch =
+      format && tutorial.formats && tutorial.formats.includes(format)
+
+    const isTopicMatch =
+      topic && tutorial.topics && tutorial.topics.includes(topic)
+
+    const isAuthorMatch =
+      author && tutorial.authors && tutorial.authors.includes(author)
+
+    const isSourceMatch =
+      source && tutorial.source && tutorial.source.includes(source)
+
+    return (
+      (format ? isFormatMatch : true) &&
+      (topic ? isTopicMatch : true) &&
+      (author ? isAuthorMatch : true) &&
+      (source ? isSourceMatch : true)
+    )
+  })
+}
+
+function searchFilteredTutorials(
+  filteredTutorials,
+  format,
+  topic,
+  author,
+  source,
+  query
+) {
+  if (!query) return filteredTutorials
+
+  return filteredTutorials.filter(({ node: tutorial }) => {
+    const isTitleMatch =
+      tutorial.title && tutorial.title.toLowerCase().includes(query.toLowerCase())
+
+    const isFormatsMatch =
+      !format &&
+      tutorial.fields.formatsAsString &&
+      tutorial.fields.formatsAsString.includes(query.toLowerCase())
+
+    const isTopicsMatch =
+      !topic &&
+      tutorial.fields.topicsAsString &&
+      tutorial.fields.topicsAsString.includes(query.toLowerCase())
+
+    const isAuthorsMatch =
+      !author &&
+      tutorial.fields.authorsAsString &&
+      tutorial.fields.authorsAsString.includes(query.toLowerCase())
+
+    const isSourceMatch =
+      !source &&
+      tutorial.source &&
+      tutorial.source.toLowerCase().includes(query.toLowerCase())
+
+    return (
+      isTitleMatch ||
+      isFormatsMatch ||
+      isTopicsMatch ||
+      isAuthorsMatch ||
+      isSourceMatch
+    )
+  })
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -393,7 +321,7 @@ const Sidebar = styled.div`
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useMemo } from 'react'
 import styled, { css } from 'styled-components'
 import Sticky from 'react-stickynode'
 

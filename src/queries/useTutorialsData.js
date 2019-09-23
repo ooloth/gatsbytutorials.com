@@ -16,6 +16,11 @@ function useTutorialsData() {
               authors
               source
               topics
+              fields {
+                authorsAsString
+                formatsAsString
+                topicsAsString
+              }
             }
           }
         }
@@ -35,6 +40,11 @@ function useTutorialsData() {
               authors
               source
               topics
+              fields {
+                authorsAsString
+                formatsAsString
+                topicsAsString
+              }
             }
           }
         }
