@@ -20,7 +20,7 @@ function Tutorials({
     searchInput.current.focus()
   }
 
-  return tutorials.length > 0 ? (
+  return tutorials && tutorials.length > 0 ? (
     <List>
       {tutorials.map(tutorial => (
         <Tutorial
