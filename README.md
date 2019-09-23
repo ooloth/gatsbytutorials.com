@@ -60,7 +60,7 @@ Rather than adding every tutorial in the series separately, please add the entir
 
 - [ ] Filter tutorials by language
 - [ ] Filter by multiple topics at once
-- [x] ~~Cancel active filter by clicking it again~~
+- [x] ~Cancel active filter by clicking it again~
 
 ### Better performance ⚡️
 
@@ -69,7 +69,7 @@ Rather than adding every tutorial in the series separately, please add the entir
 
 ### Better search 🕵️‍♂️
 
-- [ ] Implement fuzzy search to allow non-sequential search terms
+- [x] ~Allow non-sequential search terms~
 - [ ] Highlight search string in search results
 
 ---
