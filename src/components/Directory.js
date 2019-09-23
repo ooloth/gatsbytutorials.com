@@ -19,11 +19,8 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
     [tutorials, format, topic, author, source]
   )
 
-  const filteredAndSearchedTuts = useMemo(
-    () =>
-      searchFilteredTutorials(filteredTuts, format, topic, author, source, query),
-    [filteredTuts, format, topic, author, source, query]
-  )
+  const fuse = new Fuse(filteredTuts, fuseOptions)
+  const filteredAndSearchedTuts = query ? fuse.search(query) : filteredTuts
 
   return (
     <>
@@ -40,6 +37,7 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
                     <Input
                       ref={searchInput}
                       value={query}
+                      maxlength="32"
                       onChange={handleQuery}
                       type="text"
                       placeholder="Type here..."
@@ -137,16 +135,16 @@ function filterTutorials(tutorials, format, author, source, topic) {
 
   return tutorials.filter(({ node: tutorial }) => {
     const isFormatMatch =
-      format && tutorial.formats && tutorial.formats.includes(format)
+      format && tutorial.formats && new Set(tutorial.formats).has(format)
 
     const isTopicMatch =
-      topic && tutorial.topics && tutorial.topics.includes(topic)
+      topic && tutorial.topics && new Set(tutorial.topics).has(topic)
 
     const isAuthorMatch =
-      author && tutorial.authors && tutorial.authors.includes(author)
+      author && tutorial.authors && new Set(tutorial.authors).has(author)
 
     const isSourceMatch =
-      source && tutorial.source && tutorial.source.includes(source)
+      source && tutorial.source && new Set(tutorial.sources).has(source)
 
     return (
       (format ? isFormatMatch : true) &&
@@ -157,48 +155,20 @@ function filterTutorials(tutorials, format, author, source, topic) {
   })
 }
 
-function searchFilteredTutorials(
-  filteredTutorials,
-  format,
-  topic,
-  author,
-  source,
-  query
-) {
-  if (!query) return filteredTutorials
-
-  return filteredTutorials.filter(({ node: tutorial }) => {
-    const isTitleMatch =
-      tutorial.title && tutorial.title.toLowerCase().includes(query.toLowerCase())
-
-    const isFormatsMatch =
-      !format &&
-      tutorial.fields.formatsAsString &&
-      tutorial.fields.formatsAsString.includes(query.toLowerCase())
-
-    const isTopicsMatch =
-      !topic &&
-      tutorial.fields.topicsAsString &&
-      tutorial.fields.topicsAsString.includes(query.toLowerCase())
-
-    const isAuthorsMatch =
-      !author &&
-      tutorial.fields.authorsAsString &&
-      tutorial.fields.authorsAsString.includes(query.toLowerCase())
-
-    const isSourceMatch =
-      !source &&
-      tutorial.source &&
-      tutorial.source.toLowerCase().includes(query.toLowerCase())
-
-    return (
-      isTitleMatch ||
-      isFormatsMatch ||
-      isTopicsMatch ||
-      isAuthorsMatch ||
-      isSourceMatch
-    )
-  })
+const fuseOptions = {
+  shouldSort: true,
+  threshold: 0.25,
+  location: 0,
+  distance: 100,
+  maxPatternLength: 32,
+  minMatchCharLength: 1,
+  keys: [
+    `node.title`,
+    `node.formats`,
+    `node.topics`,
+    `node.authors`,
+    `node.sources`
+  ]
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -324,6 +294,7 @@ const Sidebar = styled.div`
 import React, { useState, useRef, useEffect, useMemo } from 'react'
 import styled, { css } from 'styled-components'
 import Sticky from 'react-stickynode'
+import Fuse from 'fuse.js'
 
 import Contributors from './Contributors'
 import SrText from './SrText'
