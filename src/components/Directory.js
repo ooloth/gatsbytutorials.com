@@ -19,9 +19,11 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
     [tutorials, format, topic, author, source]
   )
 
-  const fuse = new Fuse(filteredTuts, fuseOptions)
-  const filteredAndSearchedTuts = query ? fuse.search(query) : filteredTuts
-
+  const filteredAndSearchedTuts = useMemo(
+    () =>
+      searchFilteredTutorials(filteredTuts, format, topic, author, source, query),
+    [filteredTuts, format, topic, author, source, query]
+  )
   return (
     <>
       <section>
@@ -37,7 +39,6 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
                     <Input
                       ref={searchInput}
                       value={query}
-                      maxlength="32"
                       onChange={handleQuery}
                       type="text"
                       placeholder="Type here..."
@@ -155,20 +156,54 @@ function filterTutorials(tutorials, format, author, source, topic) {
   })
 }
 
-const fuseOptions = {
-  shouldSort: true,
-  threshold: 0.25,
-  location: 0,
-  distance: 100,
-  maxPatternLength: 32,
-  minMatchCharLength: 1,
-  keys: [
-    `node.title`,
-    `node.formats`,
-    `node.topics`,
-    `node.authors`,
-    `node.sources`
-  ]
+function searchFilteredTutorials(
+  filteredTutorials,
+  format,
+  topic,
+  author,
+  source,
+  query
+) {
+  if (!query) return filteredTutorials
+
+  return filteredTutorials.filter(({ node: tutorial }) => {
+    function wordExistsInTutorial(word) {
+      const isTitleMatch =
+        tutorial.title && tutorial.title.toLowerCase().includes(word.toLowerCase())
+
+      const isFormatsMatch =
+        !format && // if filter engaged, don't include in search
+        tutorial.fields.formatsAsString &&
+        tutorial.fields.formatsAsString.includes(word.toLowerCase())
+
+      const isTopicsMatch =
+        !topic && // if filter engaged, don't include in search
+        tutorial.fields.topicsAsString &&
+        tutorial.fields.topicsAsString.includes(word.toLowerCase())
+
+      const isAuthorsMatch =
+        !author && // if filter engaged, don't include in search
+        tutorial.fields.authorsAsString &&
+        tutorial.fields.authorsAsString.includes(word.toLowerCase())
+
+      const isSourceMatch =
+        !source && // if filter engaged, don't include in search
+        tutorial.source &&
+        tutorial.source.toLowerCase().includes(word.toLowerCase())
+
+      return (
+        isTitleMatch ||
+        isFormatsMatch ||
+        isTopicsMatch ||
+        isAuthorsMatch ||
+        isSourceMatch
+      )
+    }
+
+    // Require every word in the query to exist in the tutorial data
+    const queryArray = query.toLowerCase().split(` `)
+    return queryArray.every(wordExistsInTutorial)
+  })
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
