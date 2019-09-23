@@ -329,7 +329,6 @@ const Sidebar = styled.div`
 import React, { useState, useRef, useEffect, useMemo } from 'react'
 import styled, { css } from 'styled-components'
 import Sticky from 'react-stickynode'
-import Fuse from 'fuse.js'
 
 import Contributors from './Contributors'
 import SrText from './SrText'
