@@ -172,22 +172,22 @@ function searchFilteredTutorials(
         tutorial.title && tutorial.title.toLowerCase().includes(word.toLowerCase())
 
       const isFormatsMatch =
-        !format && // if filter engaged, don't include in search
+        !format && // if filter is engaged, don't include field in search
         tutorial.fields.formatsAsString &&
         tutorial.fields.formatsAsString.includes(word.toLowerCase())
 
       const isTopicsMatch =
-        !topic && // if filter engaged, don't include in search
+        !topic && // if filter is engaged, don't include field in search
         tutorial.fields.topicsAsString &&
         tutorial.fields.topicsAsString.includes(word.toLowerCase())
 
       const isAuthorsMatch =
-        !author && // if filter engaged, don't include in search
+        !author && // if filter is engaged, don't include field in search
         tutorial.fields.authorsAsString &&
         tutorial.fields.authorsAsString.includes(word.toLowerCase())
 
       const isSourceMatch =
-        !source && // if filter engaged, don't include in search
+        !source && // if filter is engaged, don't include field in search
         tutorial.source &&
         tutorial.source.toLowerCase().includes(word.toLowerCase())
 
