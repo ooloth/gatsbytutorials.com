@@ -23,9 +23,9 @@ function Tutorial({
   }
 
   const tutorialEmojis = {
-    text: "📕",
-    video: "📺",
-    audio: "🎧",
+    text: '📕',
+    video: '📺',
+    audio: '🎧'
   }
 
   return (
@@ -35,11 +35,16 @@ function Tutorial({
       </Title>
 
       <Details>
-        {tutorial.formats && tutorial.formats.length > 0 && (
+        {tutorial.formats &&
+          tutorial.formats.length > 0 &&
           tutorial.formats.map((format, i) => (
-            <Emoji key={i} emoji={tutorialEmojis[format] || "❓"} ariaLabel={`Emoji of a ${format}`} />
-          ))
-        )}&nbsp;
+            <Emoji
+              key={i}
+              emoji={tutorialEmojis[format] || '❓'}
+              ariaLabel={`Emoji of a ${format}`}
+            />
+          ))}
+        &nbsp;
         {tutorial.authors && tutorial.authors.length > 0 ? (
           tutorial.authors.map((author, i) => (
             <Fragment key={author}>
@@ -55,14 +60,14 @@ function Tutorial({
             </Fragment>
           ))
         ) : (
-            <Button
-              value={tutorial.source}
-              onClick={handleSourceClick}
-              active={tutorial.source === currentSource}
-            >
-              {tutorial.source}
-            </Button>
-          )}
+          <Button
+            value={tutorial.source}
+            onClick={handleSourceClick}
+            active={tutorial.source === currentSource}
+          >
+            {tutorial.source}
+          </Button>
+        )}
         {tutorial.date && <p>・{tutorial.date}</p>}
       </Details>
 
