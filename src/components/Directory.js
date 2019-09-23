@@ -24,6 +24,7 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
       searchFilteredTutorials(filteredTuts, format, topic, author, source, query),
     [filteredTuts, format, topic, author, source, query]
   )
+
   return (
     <>
       <section>
@@ -131,9 +132,7 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-function filterTutorials(tutorials, format, author, source, topic) {
-  if (!format && !author && !source && !topic) return tutorials
-
+function filterTutorials(tutorials, format, topic, author, source) {
   return tutorials.filter(({ node: tutorial }) => {
     const isFormatMatch =
       format && tutorial.formats && new Set(tutorial.formats).has(format)
