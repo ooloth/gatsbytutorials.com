@@ -24,9 +24,7 @@ function Contributors() {
                         ...contributor.avatarImage.childImageSharp.fluid,
                         aspectRatio: 1 / 1
                       }}
-                      alt={`Visit the GitHub page of ${
-                        contributor.login
-                      } (opens in a new window).`}
+                      alt={`Visit the GitHub page of ${contributor.login} (opens in a new window).`}
                     />
                   </Anchor>
                 </Item>

@@ -4,10 +4,16 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
   const [author, setAuthor] = useState(``)
   const [source, setSource] = useState(``)
   const [query, setQuery] = useState(``)
+  const [limited, setLimited] = useState(true)
   const searchInput = useRef()
 
   // On the first render, focus the search input
   useEffect(() => searchInput.current.focus(), [])
+
+  // On any filter or search, reset limited to true
+  useEffect(() => {
+    setLimited(true)
+  }, [format, topic, author, source, query])
 
   function handleQuery(e) {
     setQuery(e.target.value)
@@ -23,6 +29,16 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
     () => searchFilteredTutorials(filteredTuts, query),
     [filteredTuts, query]
   )
+
+  const limitedTuts = useMemo(
+    () =>
+      limited
+        ? [...filteredAndSearchedTuts].splice(0, 15)
+        : filteredAndSearchedTuts,
+    [limited, filteredAndSearchedTuts]
+  )
+
+  const showLoadMore = limited && filteredAndSearchedTuts.length > 15
 
   return (
     <>
@@ -77,19 +93,27 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
       <Container>
         <LayoutGrid>
           {/* Tutorials matching search and filter parameters (if any) */}
-          <Tutorials
-            tutorials={filteredAndSearchedTuts}
-            currentFormat={format}
-            currentTopic={topic}
-            currentAuthor={author}
-            currentSource={source}
-            setFormat={setFormat}
-            setTopic={setTopic}
-            setAuthor={setAuthor}
-            setSource={setSource}
-            setQuery={setQuery}
-            searchInput={searchInput}
-          />
+          <div>
+            <Tutorials
+              tutorials={limitedTuts}
+              currentFormat={format}
+              currentTopic={topic}
+              currentAuthor={author}
+              currentSource={source}
+              setFormat={setFormat}
+              setTopic={setTopic}
+              setAuthor={setAuthor}
+              setSource={setSource}
+              setQuery={setQuery}
+              searchInput={searchInput}
+            />
+
+            {showLoadMore && (
+              <SeeMoreButton onClick={() => setLimited(false)}>
+                See all {filteredAndSearchedTuts.length} matching tutorials
+              </SeeMoreButton>
+            )}
+          </div>
 
           {/* Lists of all formats, topics, authors and sources */}
           <Sidebar>
@@ -290,6 +314,22 @@ const LayoutGrid = styled.div`
   grid-template-columns: 1fr auto;
   & > div > section {
     margin-left: var(--s6);
+  }
+`
+
+const SeeMoreButton = styled.button`
+  margin-top: var(--s5);
+  box-shadow: var(--shadow);
+  border-radius: var(--r2);
+  background-color: var(--purple);
+  padding: var(--s2) var(--s4);
+  line-height: 1;
+  text-align: center;
+  color: white;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: var(--blue);
   }
 `
 
