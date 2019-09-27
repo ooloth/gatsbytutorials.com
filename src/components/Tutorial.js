@@ -127,9 +127,10 @@ const Title = styled.h3`
 
 const Link = styled(Anchor)`
   font-size: var(--f5);
+  transition: color 0.05s ease-in-out;
 
   &:hover {
-    color: var(--blue);
+    color: var(--purple);
     text-decoration: underline;
   }
 `

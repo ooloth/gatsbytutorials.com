@@ -16,16 +16,17 @@ const Button = styled.button`
   background-color: var(--light-gray);
   padding: var(--s1) var(--s2);
   white-space: nowrap;
+  transition: color 0.05s ease-in-out, background-color 0.05s ease-in-out;
 
   &:hover {
-    background-color: var(--blue);
+    background-color: var(--purple);
     color: white;
   }
 
   ${props =>
     props.active &&
     css`
-      background-color: var(--blue);
+      background-color: var(--purple);
       color: white;
     `}
 `

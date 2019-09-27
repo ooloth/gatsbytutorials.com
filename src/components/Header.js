@@ -65,9 +65,12 @@ const Bold = styled.span`
 `
 
 const Link = styled(Anchor)`
-  color: var(--blue);
+  font-weight: 700;
+  color: var(--purple);
+  transition: color 0.05s ease-in-out;
 
   &:hover {
+    color: black;
     text-decoration: underline;
   }
 `
