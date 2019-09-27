@@ -24,8 +24,8 @@ function Tutorials({
     <List>
       {tutorials.map(tutorial => (
         <Tutorial
-          key={tutorial.node.title + tutorial.node.date}
-          tutorial={tutorial.node}
+          key={tutorial.title + tutorial.date}
+          tutorial={tutorial}
           currentFormat={currentFormat}
           currentTopic={currentTopic}
           currentAuthor={currentAuthor}
