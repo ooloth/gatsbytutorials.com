@@ -132,7 +132,7 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
 ///////////////////////////////////////////////////////////////////////////////////
 
 function filterTutorials(tutorials, format, topic, author, source) {
-  return tutorials.filter(({ node: tutorial }) => {
+  return tutorials.filter(tutorial => {
     const isFormatMatch =
       format && tutorial.formats && new Set(tutorial.formats).has(format)
 
@@ -157,7 +157,7 @@ function filterTutorials(tutorials, format, topic, author, source) {
 function searchFilteredTutorials(filteredTutorials, query) {
   if (!query) return filteredTutorials
 
-  return filteredTutorials.filter(({ node: tutorial }) => {
+  return filteredTutorials.filter(tutorial => {
     function wordExistsInTutorial(word) {
       const isTitleMatch =
         tutorial.title && tutorial.title.toLowerCase().includes(word.toLowerCase())
