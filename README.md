@@ -65,7 +65,7 @@ Rather than adding every tutorial in the series separately, please add the entir
 ### Better performance ⚡️
 
 - [ ] Paginate tutorials list (and search results)
-- [ ] Generate filter lists at build time
+- [x] ~Generate filter lists at build time~
 
 ### Better search 🕵️‍♂️
 
