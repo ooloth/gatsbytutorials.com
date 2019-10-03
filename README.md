@@ -16,7 +16,7 @@ Notice a tutorial is missing from the list? Please add it! 🙏
 
 ## How do I add a tutorial?
 
-The easiest approach is to use the make your changes here on the GitHub website:
+The easiest approach is to use the make your changes here on GitHub:
 
 1. **Open** the [`src/data/tutorials.yml` file on GitHub](https://github.com/ooloth/gatsby-tutorials/blob/master/src/data/tutorials.yml) 📂
 2. Use the **file editor** to add a new tutorial (or edit existing ones) ✏️
