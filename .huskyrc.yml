@@ -1,2 +1,2 @@
 hooks:
-  pre-commit: npm run validate
+  pre-commit: lint-staged
