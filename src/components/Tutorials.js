@@ -9,7 +9,7 @@ function Tutorials({
   setAuthor,
   setSource,
   setQuery,
-  searchInput
+  searchInput,
 }) {
   function resetSearch() {
     setFormat(null)

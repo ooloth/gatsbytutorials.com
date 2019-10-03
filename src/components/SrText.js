@@ -11,7 +11,7 @@ const SrText = styled.span`
 `
 
 SrText.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 }
 
 ///////////////////////////////////////////////////////////////////////////////////

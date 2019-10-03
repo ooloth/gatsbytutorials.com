@@ -1,4 +1,6 @@
-extends: "react-app"
+extends:
+  - 'react-app'
+  - 'prettier'
 
 globals:
   __dirname: false
@@ -6,10 +8,10 @@ globals:
   process: false
 
 plugins:
-- react-hooks
+  - react-hooks
 
 rules:
-  import/first: 0
-  no-use-before-define: 0
+  import/first: off
+  no-use-before-define: off
   react-hooks/rules-of-hooks: error
   react-hooks/exhaustive-deps: warn

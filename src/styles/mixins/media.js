@@ -2,7 +2,7 @@ const breakpoints = {
   sm: 36,
   md: 48,
   lg: 62,
-  xl: 75
+  xl: 75,
 }
 
 // Iterate through the sizes and create a media template

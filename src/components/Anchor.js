@@ -10,7 +10,7 @@ function Anchor({ href, srText, children, ...props }) {
 Anchor.propTypes = {
   href: PropTypes.string.isRequired,
   srText: PropTypes.string, // if anchor has no visible text
-  children: PropTypes.node
+  children: PropTypes.node,
 }
 
 ///////////////////////////////////////////////////////////////////////////////////

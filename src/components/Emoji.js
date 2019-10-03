@@ -8,7 +8,7 @@ function Emoji({ emoji, ariaLabel, ...props }) {
 
 Emoji.propTypes = {
   emoji: PropTypes.string.isRequired,
-  ariaLabel: PropTypes.string.isRequired
+  ariaLabel: PropTypes.string.isRequired,
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
