@@ -12,8 +12,8 @@ function Footer() {
 
         <Paragraph>
           Want to learn more about GatsbyJS? Check out the{' '}
-          <Link href="https://www.gatsbyjs.org/tutorial/">official tutorial</Link>{' '}
-          and <Link href="https://www.gatsbyjs.org/docs/">docs</Link>.
+          <Link href="https://www.gatsbyjs.org/tutorial/">official tutorial</Link> and{' '}
+          <Link href="https://www.gatsbyjs.org/docs/">docs</Link>.
         </Paragraph>
 
         <Paragraph>

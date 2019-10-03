@@ -30,7 +30,7 @@
     - markdown
     - styled-components
     - starters
-    
+
 - title: Using Gatsby Image with Netlify CMS
   link: https://www.frontendstumbles.com/using-gatsby-image-with-netlify-cms/
   formats:
@@ -49,7 +49,7 @@
     - gatsby-image
     - gatsby-remark-images
     - gatsby-remark-relative-images
-    
+
 - title: How to make a Gatsby site with Netlify CMS
   link: https://www.frontendstumbles.com/gatsby-and-netlify-cms-tutorial/
   formats:
@@ -65,7 +65,7 @@
     - cms
     - graphql
     - markdown
-    
+
 - title: How to build a Related Posts Component with Gatsby.js
   link: https://khalilstemmler.com/articles/gatsby-related-posts-component/
   formats:
@@ -80,7 +80,7 @@
     - components
     - blog
     - graphql
-    
+
 - title: 'Gatsby 101 (14 written tutorials)'
   link: https://gatsbyguides.com/
   formats:
@@ -88,7 +88,7 @@
   language: en
   date: 2019-02-13
   length: ''
-  authors: 
+  authors:
     - Osio Labs
   source: 'GatsbyGuides.com'
   topics:
@@ -104,7 +104,7 @@
   language: en
   date: 2019-02-08
   length: ''
-  authors: 
+  authors:
     - Sebastian Eschweiler
   source: 'CodingTheSmartWay.com'
   topics:
@@ -112,7 +112,7 @@
     - starters
     - blog
     - contentful
-    
+
 - title: 'Up & Running with Gatsby (10 videos)'
   link: https://www.youtube.com/watch?v=eCtgG5Sx6kk&list=PLs_LGDWysHJptEmAKxXjLCQvl7sAbXPBw
   formats:
@@ -120,7 +120,7 @@
   language: en
   date: 2019-06-03
   length: ''
-  authors: 
+  authors:
     - Michael Uloth
   source: 'Up & Running Tutorials'
   topics:
@@ -243,7 +243,7 @@
     - seo
     - app
     - authentication
-    
+
 - title: 'Gatsby Themes: Watch Us Build a Theme Live'
   link: https://www.gatsbyjs.org/blog/2019-02-11-gatsby-themes-livestream-and-example/
   formats:
@@ -271,7 +271,7 @@
     - Ryan Johnson
   source: Gatsby
   topics:
-    - graphql 
+    - graphql
     - gatsby-transformer-excel
     - onPostBuild api
     - onClientEntry api
@@ -447,7 +447,7 @@
     - gatsby-image
     - styled-components
     - '@reach/dialog'
-    
+
 - title: How to Export a Drupal Site to Gatsby
   link: https://www.gatsbyjs.org/blog/2018-10-26-export-a-drupal-site-to-gatsby/
   formats:
@@ -476,14 +476,14 @@
   topics:
     - introduction
 
-- title: "Deploy a Static React Blog using GatsbyJS and Github"
+- title: 'Deploy a Static React Blog using GatsbyJS and Github'
   link: https://hashnode.com/post/deploy-a-static-react-blog-using-gatsbyjs-and-github-cjg2vzpe0003h0ls1rdaztnrr
   formats:
     - text
   language: en
   date: 2018-04-16
   length: ''
-  authors: 
+  authors:
     - Ryosuke
   source: ''
   topics:
@@ -499,7 +499,7 @@
   language: en
   date: 2018-09-21
   length: ''
-  authors: 
+  authors:
     - Ryosuke
   source: ''
   topics:
@@ -515,7 +515,7 @@
   language: en
   date: 2018-07-28
   length: ''
-  authors: 
+  authors:
     - Alex Luong
   source: ''
   topics:
@@ -531,7 +531,7 @@
   language: en
   date: 2018-12-01
   length: '5:00'
-  authors: 
+  authors:
     - Dimitri Ivashchuk
   source: ''
   topics:
@@ -547,7 +547,7 @@
   language: en
   date: 2017-11-14
   length: '1:00'
-  authors: 
+  authors:
     - Jay Gatsby
   source: ''
   topics:
@@ -560,7 +560,7 @@
   language: en
   date: 2018-12-01
   length: ''
-  authors: 
+  authors:
     - Khalil Stemmler
   source: ''
   topics:
@@ -574,7 +574,7 @@
   language: en
   date: 2018-09-20
   length: ''
-  authors: 
+  authors:
     - Hunter Chang
   source: CODE Bushi
   topics:
@@ -588,7 +588,7 @@
   language: en
   date: 2018-01-10
   length: '6:00'
-  authors: 
+  authors:
     - Kyle Gill
   source: ''
   topics:
@@ -602,7 +602,7 @@
   language: en
   date: 2018-08-10
   length: ''
-  authors: 
+  authors:
     - Zápisník Josefa Rouska
   source: ''
   topics:
@@ -617,7 +617,7 @@
   language: en
   date: 2018-10-20
   length: '45:34'
-  authors: 
+  authors:
     - Stefan Adolf
   source: 'React Day Berlin'
   topics:
@@ -633,7 +633,7 @@
   language: en
   date: 2018-11-14
   length: ''
-  authors: 
+  authors:
     - Alexander Feiglstorfer
   source: 'Storyblok'
   topics:
@@ -649,7 +649,7 @@
   language: en
   date: 2018-08-12
   length: '7:00'
-  authors: 
+  authors:
     - Maribel Duran
   source: 'freeCodeCamp'
   topics:
@@ -664,7 +664,7 @@
   language: en
   date: 2018-11-01
   length: ''
-  authors: 
+  authors:
     - Noah Gilmore
   source: ''
   topics:
@@ -709,7 +709,7 @@
     - tags
     - pagination
     - seo
-    
+
 - title: 'All You Need to Know About i18n with Gatsby'
   link: https://phraseapp.com/blog/posts/i18n-with-gatsby/
   formats:
@@ -717,7 +717,7 @@
   language: en
   date: 2018-12-14
   length: ''
-  authors: 
+  authors:
     - Theo Despoudis
   source: phraseapp.com
   topics:
@@ -726,7 +726,7 @@
     - i18next
     - PhraseApp
     - react-i18next-phraseapp
-    
+
 - title: 'Creating Your First Gatsby Theme'
   link: https://blog.alexluong.com/creating-your-first-gatsby-theme
   formats:
@@ -734,7 +734,7 @@
   language: en
   date: 2018-11-29
   length: ''
-  authors: 
+  authors:
     - Alex Luong
   source: ''
   topics:
@@ -781,7 +781,7 @@
   language: en
   date: 2018-09-27
   length: '14:00'
-  authors: 
+  authors:
     - Sai Gowtham
   source: Codeburst
   topics:
@@ -796,7 +796,7 @@
     - seo
     - netlify
     - v2
-    
+
 - title: 'GatsbyJS: How to Create the Fastest Sites in the World'
   link: https://www.youtube.com/watch?v=Gtd-Ht-D0sg
   formats:
@@ -1277,7 +1277,7 @@
   language: en
   date: 2018-10-23
   length: '59:19'
-  authors: 
+  authors:
     - Dustin Schau
     - Linda Watkins
   source: Gatsby
@@ -1291,7 +1291,7 @@
   language: en
   date: 2018-10-23
   length: '4:00'
-  authors: 
+  authors:
     - Linda Watkins
   source: Gatsby
   topics:
@@ -1304,7 +1304,7 @@
   language: en
   date: 2018-10-03
   length: '8:00'
-  authors: 
+  authors:
     - Dustin Schau
   source: Gatsby
   topics:
@@ -1318,7 +1318,7 @@
   language: en
   date: 2018-09-27
   length: '4:00'
-  authors: 
+  authors:
     - Amberley Romo
   source: Gatsby
   topics:
@@ -1332,7 +1332,7 @@
   language: en
   date: 2018-09-25
   length: '5:00'
-  authors: 
+  authors:
     - Mikhail Novikov
   source: Gatsby
   topics:
@@ -1346,7 +1346,7 @@
   language: en
   date: 2018-08-16
   length: '58:48'
-  authors: 
+  authors:
     - Kyle Mathews
   source: Lullabot
   topics:
@@ -1360,7 +1360,7 @@
   language: en
   date: 2018-09-17
   length: '9:00'
-  authors: 
+  authors:
     - Kyle Mathews
   source: Gatsby
   topics:
@@ -1373,7 +1373,7 @@
   language: en
   date: 2018-09-07
   length: '9:00'
-  authors: 
+  authors:
     - Jason Lengstorf
   source: Gatsby
   topics:
@@ -1386,7 +1386,7 @@
   language: en
   date: 2018-09-04
   length: '3:00'
-  authors: 
+  authors:
     - Nader Dabit
   source: Gatsby
   topics:
@@ -1399,7 +1399,7 @@
   language: en
   date: 2018-08-13
   length: '3:00'
-  authors: 
+  authors:
     - Shannon Soper
   source: Gatsby
   topics:
@@ -1412,7 +1412,7 @@
   language: en
   date: 2018-08-11
   length: '3:00'
-  authors: 
+  authors:
     - Horacio Herrera
   source: Gatsby
   topics:
@@ -1425,7 +1425,7 @@
   language: en
   date: 2018-08-09
   length: '5:00'
-  authors: 
+  authors:
     - Jason Lengstorf
   source: Gatsby
   topics:
@@ -1439,7 +1439,7 @@
   language: en
   date: 2018-07-07
   length: '6:00'
-  authors: 
+  authors:
     - Shannon Soper
   source: Gatsby
   topics:
@@ -1452,7 +1452,7 @@
   language: en
   date: 2018-07-07
   length: '4:00'
-  authors: 
+  authors:
     - Steven Natera
   source: Gatsby
   topics:
@@ -1465,7 +1465,7 @@
   language: en
   date: 2018-06-21
   length: '3:00'
-  authors: 
+  authors:
     - Sam Bhagwat
   source: Gatsby
   topics:
@@ -1479,7 +1479,7 @@
   language: en
   date: 2018-06-19
   length: '6:00'
-  authors: 
+  authors:
     - Jason Lengstorf
   source: Gatsby
   topics:
@@ -1493,7 +1493,7 @@
   language: en
   date: 2018-06-18
   length: '6:00'
-  authors: 
+  authors:
     - Khaled Garbaya
   source: Gatsby
   topics:
@@ -1507,7 +1507,7 @@
   language: en
   date: 2018-06-18
   length: '5:00'
-  authors: 
+  authors:
     - Dennis Brotzky
   source: Gatsby
   topics:
@@ -1520,7 +1520,7 @@
   language: en
   date: 2018-06-08
   length: '2:00'
-  authors: 
+  authors:
     - Linda Watkins
   source: Gatsby
   topics:
@@ -1533,7 +1533,7 @@
   language: en
   date: 2018-05-31
   length: '3:00'
-  authors: 
+  authors:
     - Michelle Barker
   source: Gatsby
   topics:
@@ -1546,7 +1546,7 @@
   language: en
   date: 2018-04-12
   length: '1:04:33'
-  authors: 
+  authors:
     - Brad Traversy
   source: Traversy Media
   topics:
@@ -1560,7 +1560,7 @@
   language: en
   date: 2018-06-07
   length: '8:00'
-  authors: 
+  authors:
     - Tony Spiro
   source: Gatsby
   topics:
@@ -1575,7 +1575,7 @@
   language: en
   date: 2018-06-25
   length: '1:08:41'
-  authors: 
+  authors:
     - Khaled Garbaya
   source: freeCodeCamp
   topics:
@@ -1590,7 +1590,7 @@
   language: en
   date: 2017-09-22
   length: '1:08:41'
-  authors: 
+  authors:
     - Sarah Denaci
   source: Fullstack Academy
   topics:
@@ -1603,7 +1603,7 @@
   language: en
   date: 2017-08-27
   length: '28:17'
-  authors: 
+  authors:
     - Kyle Mathews
   source: GraphQL NYC
   topics:
@@ -1617,7 +1617,7 @@
   language: en
   date: 2018-10-23
   length: '1:11:15'
-  authors: 
+  authors:
     - Mike Dane
   source: freeCodeCamp
   topics:
@@ -1631,7 +1631,7 @@
   language: en
   date: 2018-03-14
   length: '5:42'
-  authors: 
+  authors:
     - Billy Le
   source: Techramento
   topics:
@@ -1645,7 +1645,7 @@
   language: en
   date: 2018-10-07
   length: '57:40'
-  authors: 
+  authors:
     - Jason Lengstorf
   source: ReactJS Portland
   topics:
@@ -1658,7 +1658,7 @@
   language: en
   date: 2017-11-02
   length: '34:10'
-  authors: 
+  authors:
     - Kyle Mathews
   source: JAMstack Radio
   topics:
@@ -1671,7 +1671,7 @@
   language: en
   date: 2018-07-18
   length: '35:34'
-  authors: 
+  authors:
     - Jan Hrubý
   source: React Vienna
   topics:
@@ -1684,7 +1684,7 @@
   language: en
   date: 2017-07-09
   length: '14:52'
-  authors: 
+  authors:
     - Jamie Barton
   source: ''
   topics:
@@ -1697,7 +1697,7 @@
   language: en
   date: 2018-05-29
   length: '18:09'
-  authors: 
+  authors:
     - Kyle Mathews
   source: ''
   topics:
@@ -1711,7 +1711,7 @@
   language: en
   date: 2018-08-06
   length: '14:31'
-  authors: 
+  authors:
     - Harry Wolff
   source: ''
   topics:
@@ -1725,7 +1725,7 @@
   language: en
   date: 2018-07-15
   length: '53:03'
-  authors: 
+  authors:
     - Grayson Hicks
   source: Drupal Asheville
   topics:
@@ -1738,7 +1738,7 @@
   language: en
   date: 2018-10-07
   length: '9:06:10'
-  authors: 
+  authors:
     - Jason Lengstorf
   source: ''
   topics:
@@ -1752,7 +1752,7 @@
   language: en
   date: 2018-09-14
   length: '1:34:20'
-  authors: 
+  authors:
     - Jason Lengstorf
   source: ''
   topics:
@@ -1766,7 +1766,7 @@
   language: en
   date: 2018-10-10
   length: '1:04:30'
-  authors: 
+  authors:
     - Jason Lengstorf
     - Sean Grove
   source: ''
@@ -1782,7 +1782,7 @@
   language: en
   date: 2018-10-12
   length: '1:30:15'
-  authors: 
+  authors:
     - Jason Lengstorf
     - Katie Fujihara
   source: ''
@@ -1797,7 +1797,7 @@
   language: en
   date: 2018-09-20
   length: '33:24'
-  authors: 
+  authors:
     - Jason Lengstorf
     - Nader Dabit
   source: ''
@@ -1811,7 +1811,7 @@
   language: en
   date: 2018-03-05
   length: '43:30'
-  authors: 
+  authors:
     - Scott Tolinski
   source: Level Up Tutorials
   topics:
@@ -1825,7 +1825,7 @@
   language: en
   date: 2018-07-11
   length: '12:47'
-  authors: 
+  authors:
     - Gabe Rogan
     - Sadek Drobi
   source: Prismic
@@ -2272,7 +2272,7 @@
   language: en
   date: 2018-06-21
   length: '37:53'
-  authors: 
+  authors:
     - Denver COder
   source: ''
   topics:
@@ -2286,7 +2286,7 @@
   language: en
   date: 2018-10-23
   length: '13:16'
-  authors: 
+  authors:
     - James Q. Quick
   source: ''
   topics:
@@ -2301,14 +2301,14 @@
   language: en
   date: 2018-08-25
   length: '1:00:32'
-  authors: 
+  authors:
     - Kyle Mathews
   source: Decoupled Days
   topics:
     - introduction
     - performance
     - v2
- 
+
 - title: How to Write a Gatsby Source Plugin (featuring Cat Facts)
   link: https://medium.com/@cwlsn/how-to-write-a-gatsby-source-plugin-featuring-cat-facts-f0c769a10bfd
   formats:
@@ -2316,7 +2316,7 @@
   language: en
   date: 2018-11-13
   length: '6:00'
-  authors: 
+  authors:
     - Connor Wilson
   source: ''
   topics:
@@ -2325,15 +2325,16 @@
     - data
     - graphql
     - v2
-  
-- title: 'JAMstack Basics: How to Create a Gatsby Starter with Contentful and Deploy to Netlify'
+
+- title: 'JAMstack Basics: How to Create a Gatsby Starter with Contentful and Deploy to
+    Netlify'
   link: https://itnext.io/jamstack-basics-how-to-create-a-gatsby-starter-with-contentful-and-deploy-to-netlify-846354cc74bc
   formats:
     - text
   language: en
   date: 2018-10-10
   length: '9:00'
-  authors: 
+  authors:
     - Connor Wilson
   source: ''
   topics:
@@ -2435,7 +2436,8 @@
     - gatsby-node
     - gatsby-plugin-create-client-paths
 
-- title: 'JAMstack PWA : Let’s Build a Polling App with Gatsby.js, Firebase and Styled-Components, Part 1'
+- title: 'JAMstack PWA : Let’s Build a Polling App with Gatsby.js, Firebase and
+    Styled-Components, Part 1'
   link: https://medium.com/@UnicornAgency/jamstack-pwa-lets-build-a-polling-app-with-gatsby-js-firebase-and-styled-components-pt-1-78a03a633092
   formats:
     - text
@@ -2451,8 +2453,8 @@
     - styled-components
     - v1
 
-
-- title: 'JAMstack PWA : Let’s Build a Polling App with Gatsby.js, Firebase and Styled-Components, Part 2'
+- title: 'JAMstack PWA : Let’s Build a Polling App with Gatsby.js, Firebase and
+    Styled-Components, Part 2'
   link: https://medium.com/@UnicornAgency/jamstack-pwa-lets-build-a-polling-app-with-gatsby-js-firebase-and-styled-components-pt-2-9044534ea6bc
   formats:
     - text
@@ -2472,7 +2474,8 @@
     - netlify
     - v1
 
-- title: 'JAMstack PWA : Let’s Build a Polling App with Gatsby.js, Firebase and Styled-Components, Part 3'
+- title: 'JAMstack PWA : Let’s Build a Polling App with Gatsby.js, Firebase and
+    Styled-Components, Part 3'
   link: https://medium.com/@UnicornAgency/jamstack-pwa-lets-build-a-polling-app-with-gatsby-js-firebase-and-styled-components-pt-3-89fa499534fd
   formats:
     - text
@@ -2846,7 +2849,7 @@
   authors:
     - Pierre Burgy
     - David Kartuzinski
-  source: Strapi.io 
+  source: Strapi.io
   topics:
     - blog
     - introduction
@@ -2857,7 +2860,7 @@
     - createPages api
     - MIT
     - gatsby-images
-    
+
 - title: 'Gatsby.js: How to set up and use the React Static Site Generator'
   link: https://medium.freecodecamp.org/setting-up-and-getting-used-to-gatsby-1fc27985ae8a
   formats:
@@ -3120,7 +3123,7 @@
     - text
   language: en
   date: 2019-01-10
-  authors: 
+  authors:
     - Joshua Walsh
   topics:
     - performance
@@ -3157,8 +3160,8 @@
   topics:
     - ecommerce
     - cosmicjs
-    - cms 
-    
+    - cms
+
 - title: 'How to Build a Documentation App With Gatsby and Cosmic JS'
   link: https://cosmicjs.com/articles/how-to-build-a-documentation-app-with-gatsby-and-cosmic-js-jrb4den5
   formats:
@@ -3175,7 +3178,7 @@
     - graphql
     - cosmicjs
     - cms
-    
+
 - title: 'Video: Build a Cosmic JS-powered blog using Gatsby'
   link: https://cosmicjs.com/articles/video-build-a-cosmic-js-powered-blog-using-gatsby-jpsrqozy
   formats:
@@ -3192,7 +3195,7 @@
     - video
     - blog
     - cosmicjs
- 
+
 - title: 'Webinar Video: Localization with Gatsby and Cosmic JS'
   link: https://cosmicjs.com/articles/webinar-video-localization-with-gatsby-and-cosmic-js-jnyqtjoa
   formats:
@@ -3209,7 +3212,7 @@
     - localization
     - cosmicjs
     - cms
-    
+
 - title: 'Building and Designing a Portfolio Site Using Gatsby JS and Cosmic JS'
   link: https://cosmicjs.com/articles/building-and-designing-a-portfolio-site-using-gatsby-js-and-cosmic-js
   formats:

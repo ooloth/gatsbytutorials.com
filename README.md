@@ -1,6 +1,7 @@
 # Gatsby Tutorials
 
-[Gatsby Tutorials](https://www.gatsbytutorials.com) is a website that aims to list every GatsbyJS learning resource currently available online. 🎉
+[Gatsby Tutorials](https://www.gatsbytutorials.com) is a website that aims to list every
+GatsbyJS learning resource currently available online. 🎉
 
 You can find tutorials that interest you in several ways:
 
@@ -20,20 +21,20 @@ The easiest approach is to use the make your changes here on the GitHub website:
 1. **Open** the [`src/data/tutorials.yml` file on GitHub](https://github.com/ooloth/gatsby-tutorials/blob/master/src/data/tutorials.yml) 📂
 2. Use the **file editor** to add a new tutorial (or edit existing ones) ✏️
 3. **Preview** your changes 👓
-3. **Commit** your changes 👍
-4. Create a **pull request** 📤
+4. **Commit** your changes 👍
+5. Create a **pull request** 📤
 
 **Please follow this format and indentation:**
 
 ```yaml
 - title: 'GatsbyJS: How to Create the Fastest Sites in the World'
   link: https://www.youtube.com/watch?v=Gtd-Ht-D0sg
-  formats: 
+  formats:
     - video
     - text
   language: en
   date: 2017-10-01
-  authors: 
+  authors:
     - Kyle Mathews
   source: ReactNext 2017
   topics:
@@ -43,16 +44,21 @@ The easiest approach is to use the make your changes here on the GitHub website:
 
 - `title` - Title of tutorial (`string`; required)
 - `link` - Working URL where tutorial can be found (`string`; required)
-- `formats` - Media format of tutorial (`array` of `strings` with values `video`, `audio` or `text`; required)
-- `language` - Spoken/written language of the tutorial (`string` with a two-letter [ISO 639-1 language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes); required)
+- `formats` - Media format of tutorial (`array` of `strings` with values `video`,
+  `audio` or `text`; required)
+- `language` - Spoken/written language of the tutorial (`string` with a two-letter
+  [ISO 639-1 language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes);
+  required)
 - `date` - Date tutorial was published (`string` in `YYYY-MM-DD` format; optional)
 - `authors` - Name of author(s) or speaker(s) (`array` of `strings`; optional)
-- `source` - Name of YouTube channel, podcast, conference, blog, etc. if different from author's name (`string`; optional)
+- `source` - Name of YouTube channel, podcast, conference, blog, etc. if different from
+  author's name (`string`; optional)
 - `topics` - Main topic(s) covered by the tutorial (`array` of `strings`; required)
 
 ### What if the tutorial is part of a series?
 
-Rather than adding every tutorial in the series separately, please add the entire series as one entry that links to the series homepage (or the first tutorial in the series).
+Rather than adding every tutorial in the series separately, please add the entire series
+as one entry that links to the series homepage (or the first tutorial in the series).
 
 ## Coming Soon
 
@@ -64,13 +70,13 @@ Rather than adding every tutorial in the series separately, please add the entir
 
 ### Better performance ⚡️
 
-- [x] ~Limit default length of tutorials list~
+- [x] ~Limit initial length of tutorials list~
 - [x] ~Generate filter lists at build time~
 
 ### Better search 🕵️‍♂️
 
 - [x] ~Allow non-sequential search terms~
-- [ ] Highlight search string in search results
+- [ ] Highlight search terms in search results
 
 ---
 

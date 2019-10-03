@@ -10,7 +10,7 @@ function MobileMenu({
   setAuthor,
   sources,
   currentSource,
-  setSource
+  setSource,
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false)
 

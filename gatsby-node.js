@@ -8,19 +8,19 @@ exports.onCreateNode = ({ node, actions }) => {
     createNodeField({
       node,
       name: `formatsAsString`,
-      value: node.formats ? node.formats.join(` `).toLowerCase() : ``
+      value: node.formats ? node.formats.join(` `).toLowerCase() : ``,
     })
 
     createNodeField({
       node,
       name: `topicsAsString`,
-      value: node.topics ? node.topics.join(` `).toLowerCase() : ``
+      value: node.topics ? node.topics.join(` `).toLowerCase() : ``,
     })
 
     createNodeField({
       node,
       name: `authorsAsString`,
-      value: node.authors ? node.authors.join(` `).toLowerCase() : ``
+      value: node.authors ? node.authors.join(` `).toLowerCase() : ``,
     })
   }
 }
@@ -97,7 +97,7 @@ exports.createPages = async ({ graphql, reporter }) => {
       formatArrays
         .reduce((acc, curr) => [...acc, ...curr]) // merge arrays into one
         .map(format => format.toLowerCase()) // convert all formats to lowercase
-    )
+    ),
   ].sort()
 
   // Create a sorted list of all unique topics
@@ -107,7 +107,7 @@ exports.createPages = async ({ graphql, reporter }) => {
       topicArrays
         .reduce((acc, curr) => [...acc, ...curr]) // merge arrays into one
         .map(topic => topic.toLowerCase()) // convert all topics to lowercase
-    )
+    ),
   ].sort()
 
   // Create a sorted list of all unique authors
@@ -115,12 +115,12 @@ exports.createPages = async ({ graphql, reporter }) => {
   const authors = [
     ...new Set(
       authorArrays.reduce((acc, curr) => [...acc, ...curr]) // merge arrays
-    )
+    ),
   ].sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase())) // ignore case
 
   // Create a sorted list of all unique sources
   const sources = [
-    ...new Set(tutorials.map(tutorial => (tutorial.source ? tutorial.source : '')))
+    ...new Set(tutorials.map(tutorial => (tutorial.source ? tutorial.source : ''))),
   ].sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase())) // ignore case
 
   // Will add this object to the index page context in .onCreatePage() below:
@@ -129,7 +129,7 @@ exports.createPages = async ({ graphql, reporter }) => {
     formats: formats,
     topics: topics,
     authors: authors,
-    sources: sources
+    sources: sources,
   }
 }
 
@@ -143,7 +143,7 @@ exports.onCreatePage = ({ page, actions }) => {
     deletePage(page)
     createPage({
       ...page,
-      context: indexPageContext
+      context: indexPageContext,
     })
   }
 }

@@ -3,7 +3,7 @@ const {
   NODE_ENV,
   URL: NETLIFY_SITE_URL = `https://www.gatsbytutorials.com`,
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
-  CONTEXT: NETLIFY_ENV = NODE_ENV
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
 } = process.env
 const isNetlifyProduction = NETLIFY_ENV === `production`
 const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
@@ -16,31 +16,31 @@ module.exports = {
     language: `en`,
     locale: `en_CA`,
     twitterHandle: ``,
-    facebookAppId: ``
+    facebookAppId: ``,
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: `${__dirname}/src/`
-      }
+        path: `${__dirname}/src/`,
+      },
     },
     {
       resolve: `gatsby-source-apiserver`,
       options: {
         url: `https://api.github.com/repos/ooloth/gatsbytutorials.com/contributors`,
         name: `contributors`,
-        verboseOutput: process.env.NODE_ENV !== `production`
-      }
+        verboseOutput: process.env.NODE_ENV !== `production`,
+      },
     },
     {
       resolve: `gatsby-plugin-remote-images`,
       options: {
         nodeType: `contributors`,
         imagePath: `avatar_url`,
-        name: `avatarImage`
-      }
+        name: `avatarImage`,
+      },
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
@@ -56,20 +56,20 @@ module.exports = {
         resolveEnv: () => NETLIFY_ENV,
         env: {
           production: {
-            policy: [{ userAgent: `*` }]
+            policy: [{ userAgent: `*` }],
           },
           'branch-deploy': {
             policy: [{ userAgent: `*`, disallow: [`/`] }],
             sitemap: null,
-            host: null
+            host: null,
           },
           'deploy-preview': {
             policy: [{ userAgent: `*`, disallow: [`/`] }],
             sitemap: null,
-            host: null
-          }
-        }
-      }
+            host: null,
+          },
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -85,8 +85,8 @@ module.exports = {
         // Multiple icons will be generated for various devices.
         // Multiple favicons will be generated and added to each HTML page.
         // This path is relative to the root of the site.
-        icon: `src/images/favicon.png`
-      }
+        icon: `src/images/favicon.png`,
+      },
     },
     // remove old service worker versions in Safari 🧨
     `gatsby-plugin-remove-serviceworker`,
@@ -97,8 +97,8 @@ module.exports = {
         trackingId: 'UA-9710963-7',
         head: true, // Puts tracking script in the head instead of the body
         anonymize: true, // Setting this parameter is optional
-        respectDNT: true // Setting this parameter is also optional
-      }
+        respectDNT: true, // Setting this parameter is also optional
+      },
     },
     `gatsby-plugin-netlify-cache`,
     {
@@ -107,17 +107,15 @@ module.exports = {
         headers: {
           // First one is required for the HSTS list:
           '/*': [
-            `Strict-Transport-Security: max-age=63072000; includeSubDomains; preload`
+            `Strict-Transport-Security: max-age=63072000; includeSubDomains; preload`,
           ],
           '/*.html': [`Cache-Control: public, max-age=0, must-revalidate`],
           '/*.js': [`Cache-Control: public, max-age=0, must-revalidate`],
-          '/sw.js': [
-            `Cache-Control: max-age=0, no-cache, no-store, must-revalidate`
-          ],
+          '/sw.js': [`Cache-Control: max-age=0, no-cache, no-store, must-revalidate`],
           '/icons/*': [`Cache-Control: public,max-age=31536000,immutable`],
-          '/static/*': [`Cache-Control: public,max-age=31536000,immutable`]
-        }
-      }
-    }
-  ]
+          '/static/*': [`Cache-Control: public,max-age=31536000,immutable`],
+        },
+      },
+    },
+  ],
 }

@@ -39,12 +39,8 @@ function Metadata() {
       <meta property="og:locale" content={site.locale} />
 
       {/* Non-essential, but required for analytics */}
-      {site.facebookAppId && (
-        <meta property="fb:app_id" content={site.facebookAppId} />
-      )}
-      {site.twitterHandle && (
-        <meta name="twitter:site" content={site.twitterHandle} />
-      )}
+      {site.facebookAppId && <meta property="fb:app_id" content={site.facebookAppId} />}
+      {site.twitterHandle && <meta name="twitter:site" content={site.twitterHandle} />}
     </Helmet>
   )
 }

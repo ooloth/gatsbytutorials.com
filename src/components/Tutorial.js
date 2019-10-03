@@ -5,7 +5,7 @@ function Tutorial({
   currentSource,
   setAuthor,
   setSource,
-  setTopic
+  setTopic,
 }) {
   function handleTopicClick(e) {
     if (e.target.value === currentTopic) setTopic(null)
@@ -25,7 +25,7 @@ function Tutorial({
   const tutorialEmojis = {
     text: '📕',
     video: '📺',
-    audio: '🎧'
+    audio: '🎧',
   }
 
   return (

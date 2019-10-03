@@ -32,9 +32,7 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
 
   const limitedTuts = useMemo(
     () =>
-      limited
-        ? [...filteredAndSearchedTuts].splice(0, 15)
-        : filteredAndSearchedTuts,
+      limited ? [...filteredAndSearchedTuts].splice(0, 15) : filteredAndSearchedTuts,
     [limited, filteredAndSearchedTuts]
   )
 
@@ -160,8 +158,7 @@ function filterTutorials(tutorials, format, topic, author, source) {
     const isFormatMatch =
       format && tutorial.formats && new Set(tutorial.formats).has(format)
 
-    const isTopicMatch =
-      topic && tutorial.topics && new Set(tutorial.topics).has(topic)
+    const isTopicMatch = topic && tutorial.topics && new Set(tutorial.topics).has(topic)
 
     const isAuthorMatch =
       author && tutorial.authors && new Set(tutorial.authors).has(author)
@@ -199,8 +196,7 @@ function searchFilteredTutorials(filteredTutorials, query) {
         tutorial.fields.authorsAsString.includes(word.toLowerCase())
 
       const isSourceMatch =
-        tutorial.source &&
-        tutorial.source.toLowerCase().includes(word.toLowerCase())
+        tutorial.source && tutorial.source.toLowerCase().includes(word.toLowerCase())
 
       return (
         isTitleMatch ||

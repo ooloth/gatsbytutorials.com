@@ -5,10 +5,7 @@ function Contributors() {
     <Section>
       <Heading>
         Contributors{' '}
-        <Emoji
-          emoji="😍"
-          ariaLabel="A smiling cartoon face with hearts for eyes"
-        />
+        <Emoji emoji="😍" ariaLabel="A smiling cartoon face with hearts for eyes" />
       </Heading>
 
       <List>
@@ -22,7 +19,7 @@ function Contributors() {
                     <Avatar
                       fluid={{
                         ...contributor.avatarImage.childImageSharp.fluid,
-                        aspectRatio: 1 / 1
+                        aspectRatio: 1 / 1,
                       }}
                       alt={`Visit the GitHub page of ${contributor.login} (opens in a new window).`}
                     />
