@@ -1,0 +1,10 @@
+# Runs validation scripts on staged files only
+linters:
+  # eslint:
+  '*.js':
+    - eslint
+
+  # prettier:
+  '**/*.+(js|jsx|ts|tsx|json|yml|yaml|css|html|md|mdx|graphql)':
+    - prettier --write
+    - git add
