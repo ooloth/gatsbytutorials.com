@@ -1,4 +1,4 @@
-const SrText = styled.span`
+const SrText = styled.span<Props>`
   display: block;
   position: absolute;
   overflow: hidden;
@@ -10,13 +10,16 @@ const SrText = styled.span`
   white-space: nowrap;
 `
 
-SrText.propTypes = {
-  children: PropTypes.node.isRequired,
+///////////////////////////////////////////////////////////////////////////////////
+
+interface Props {
+  children: ReactNode
+  [key: string]: any
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-import PropTypes from 'prop-types'
+import { ReactNode } from 'react'
 import styled from 'styled-components'
 
 export default SrText

@@ -1,14 +1,17 @@
-function Emoji({ emoji, ariaLabel, ...props }) {
+function Emoji({ emoji, ariaLabel, ...rest }: Props) {
   return (
-    <Span role="img" aria-label={ariaLabel} {...props}>
+    <Span role="img" aria-label={ariaLabel} {...rest}>
       {emoji}
     </Span>
   )
 }
 
-Emoji.propTypes = {
-  emoji: PropTypes.string.isRequired,
-  ariaLabel: PropTypes.string.isRequired,
+///////////////////////////////////////////////////////////////////////////////////
+
+interface Props {
+  emoji: string
+  ariaLabel: string
+  [key: string]: any
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -21,7 +24,6 @@ const Span = styled.span`
 ///////////////////////////////////////////////////////////////////////////////////
 
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 export default Emoji
