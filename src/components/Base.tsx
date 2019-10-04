@@ -1,4 +1,4 @@
-function Base({ children }) {
+function Base({ children }: Props) {
   return (
     <>
       <Metadata />
@@ -13,7 +13,13 @@ function Base({ children }) {
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-import React from 'react'
+interface Props {
+  children: ReactNode
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+
+import React, { ReactNode } from 'react'
 import 'what-input'
 
 import Metadata from './Metadata'
