@@ -1,4 +1,4 @@
-function IndexPage({ pageContext }) {
+function IndexPage({ pageContext }: Props) {
   const { tutorials, formats, topics, authors, sources } = pageContext
 
   return (
@@ -14,6 +14,30 @@ function IndexPage({ pageContext }) {
       </Main>
     </Base>
   )
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+
+interface Props {
+  pageContext: {
+    tutorials: Array<Tutorial>
+    formats: Array<string>
+    topics: Array<string>
+    authors: Array<string>
+    sources: Array<string>
+  }
+}
+
+interface Tutorial {
+  title: string
+  link: string
+  formats: Array<string>
+  language: string
+  topics: Array<string>
+  date?: string
+  length?: string
+  authors?: Array<string>
+  source?: string
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
