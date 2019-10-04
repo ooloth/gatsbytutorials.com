@@ -9,8 +9,8 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "noUnusedLocals": false,
-    "allowJs": true
-    // "skipLibCheck": true // enable if dependencies are failing
+    "allowJs": true,
+    "skipLibCheck": true // ignore libraries
   },
   "exclude": ["node_modules", "public", ".cache"]
 }
