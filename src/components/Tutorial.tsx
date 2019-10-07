@@ -6,27 +6,30 @@ function Tutorial({
   setAuthor,
   setSource,
   setTopic,
-}) {
-  function handleTopicClick(e) {
-    if (e.target.value === currentTopic) setTopic(null)
-    else setTopic(e.target.value)
+}: Props) {
+  function handleTopicClick(e: SyntheticEvent) {
+    const button = e.target as HTMLButtonElement
+    if (button.value === currentTopic) setTopic(``)
+    else setTopic(button.value)
   }
 
-  function handleAuthorClick(e) {
-    if (e.target.value === currentAuthor) setAuthor(null)
-    else setAuthor(e.target.value)
+  function handleAuthorClick(e: SyntheticEvent) {
+    const button = e.target as HTMLButtonElement
+    if (button.value === currentAuthor) setAuthor(``)
+    else setAuthor(button.value)
   }
 
-  function handleSourceClick(e) {
-    if (e.target.value === currentSource) setSource(null)
-    else setSource(e.target.value)
+  function handleSourceClick(e: SyntheticEvent) {
+    const button = e.target as HTMLButtonElement
+    if (button.value === currentSource) setSource(``)
+    else setSource(button.value)
   }
 
-  const tutorialEmojis = {
+  const formatEmojis = {
     text: '📕',
     video: '📺',
     audio: '🎧',
-  }
+  } as FormatEmojis
 
   return (
     <Item>
@@ -40,7 +43,7 @@ function Tutorial({
           tutorial.formats.map((format, i) => (
             <Emoji
               key={i}
-              emoji={tutorialEmojis[format] || '❓'}
+              emoji={formatEmojis[format] || '❓'}
               ariaLabel={`Emoji of a ${format}`}
             />
           ))}
@@ -56,7 +59,9 @@ function Tutorial({
                 {author}
               </Button>
 
-              {i < tutorial.authors.length - 1 && <span>,&nbsp;</span>}
+              {tutorial.authors && i < tutorial.authors.length - 1 && (
+                <span>,&nbsp;</span>
+              )}
             </Fragment>
           ))
         ) : (
@@ -72,9 +77,9 @@ function Tutorial({
       </Details>
 
       {tutorial.topics && (
-        <Topics includesAuthorOrSource={tutorial.authors || tutorial.source}>
+        <Topics includesAuthorOrSource={Boolean(tutorial.authors || tutorial.source)}>
           <List>
-            {tutorial.source && tutorial.authors.length > 0 && (
+            {tutorial.source && tutorial.authors && tutorial.authors.length > 0 && (
               <ListItem>
                 <FilterButton
                   text={tutorial.source}
@@ -85,7 +90,7 @@ function Tutorial({
             )}
 
             {tutorial.topics
-              .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase())) // ignore case
+              .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
               .map((topic, i) => (
                 <ListItem key={i}>
                   <FilterButton
@@ -100,6 +105,20 @@ function Tutorial({
       )}
     </Item>
   )
+}
+
+interface Props {
+  tutorial: TutorialType
+  currentTopic: string
+  currentAuthor: string
+  currentSource: string
+  setTopic: (topic: string) => void
+  setAuthor: (author: string) => void
+  setSource: (source: string) => void
+}
+
+interface FormatEmojis {
+  [key: string]: string
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -142,7 +161,7 @@ const Details = styled.div`
   padding-top: var(--s1);
 `
 
-const Button = styled.button`
+const Button = styled.button<ButtonProps>`
   &:hover {
     color: blue;
     text-decoration: underline;
@@ -156,7 +175,11 @@ const Button = styled.button`
     `}
 `
 
-const Topics = styled.div`
+interface ButtonProps {
+  active: boolean
+}
+
+const Topics = styled.div<TopicsProps>`
   display: flex;
 
   ${props =>
@@ -166,6 +189,10 @@ const Topics = styled.div`
       padding-top: var(--s1);
     `}
 `
+
+interface TopicsProps {
+  includesAuthorOrSource: boolean
+}
 
 const List = styled.ul`
   margin-top: calc(var(--s1) * -1);
@@ -181,11 +208,12 @@ const ListItem = styled.li`
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-import React, { Fragment } from 'react'
+import React, { Fragment, SyntheticEvent } from 'react'
 import styled, { css } from 'styled-components'
 
 import Anchor from './Anchor'
 import Emoji from './Emoji'
 import FilterButton from './FilterButton'
+import { Tutorial as TutorialType } from '../types'
 
 export default Tutorial
