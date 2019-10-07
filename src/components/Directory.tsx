@@ -1,22 +1,21 @@
-function Directory({ tutorials, formats, topics, authors, sources }) {
+function Directory({ tutorials, formats, topics, authors, sources }: Props) {
   const [format, setFormat] = useState(``)
   const [topic, setTopic] = useState(``)
   const [author, setAuthor] = useState(``)
   const [source, setSource] = useState(``)
   const [query, setQuery] = useState(``)
   const [limited, setLimited] = useState(true)
-  const searchInput = useRef()
+  const searchInput = useRef() as React.MutableRefObject<HTMLInputElement>
 
   // On the first render, focus the search input
-  useEffect(() => searchInput.current.focus(), [])
+  useEffect(() => searchInput.current.focus(), [searchInput.current])
 
   // On any filter or search, reset limited to true
-  useEffect(() => {
-    setLimited(true)
-  }, [format, topic, author, source, query])
+  useEffect(() => setLimited(true), [format, topic, author, source, query])
 
-  function handleQuery(e) {
-    setQuery(e.target.value)
+  function handleQuery(e: SyntheticEvent) {
+    const button = e.target as HTMLButtonElement
+    setQuery(button.value)
     window.scrollTo(0, 0) // scroll to top whenever typing a search query
   }
 
@@ -44,7 +43,7 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
         <SrText as="h2">Search for Gatsby JS tutorials</SrText>
 
         <StyledSticky>
-          {status => (
+          {(status: StickyNodeStatus) => (
             <SearchBar sticky={status.status === Sticky.STATUS_FIXED}>
               <Inner sticky={status.status === Sticky.STATUS_FIXED}>
                 <Form>
@@ -94,7 +93,6 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
           <div>
             <Tutorials
               tutorials={limitedTuts}
-              currentFormat={format}
               currentTopic={topic}
               currentAuthor={author}
               currentSource={source}
@@ -151,66 +149,16 @@ function Directory({ tutorials, formats, topics, authors, sources }) {
   )
 }
 
-///////////////////////////////////////////////////////////////////////////////////
-
-function filterTutorials(tutorials, format, topic, author, source) {
-  return tutorials.filter(tutorial => {
-    const isFormatMatch =
-      format && tutorial.formats && new Set(tutorial.formats).has(format)
-
-    const isTopicMatch = topic && tutorial.topics && new Set(tutorial.topics).has(topic)
-
-    const isAuthorMatch =
-      author && tutorial.authors && new Set(tutorial.authors).has(author)
-
-    const isSourceMatch =
-      source && tutorial.source && new Set(tutorial.sources).has(source)
-
-    return (
-      (format ? isFormatMatch : true) &&
-      (topic ? isTopicMatch : true) &&
-      (author ? isAuthorMatch : true) &&
-      (source ? isSourceMatch : true)
-    )
-  })
+interface Props {
+  tutorials: Array<Tutorial>
+  formats: Array<string>
+  topics: Array<string>
+  authors: Array<string>
+  sources: Array<string>
 }
 
-function searchFilteredTutorials(filteredTutorials, query) {
-  if (!query) return filteredTutorials
-
-  return filteredTutorials.filter(tutorial => {
-    function wordExistsInTutorial(word) {
-      const isTitleMatch =
-        tutorial.title && tutorial.title.toLowerCase().includes(word.toLowerCase())
-
-      const isFormatsMatch =
-        tutorial.fields.formatsAsString &&
-        tutorial.fields.formatsAsString.includes(word.toLowerCase())
-
-      const isTopicsMatch =
-        tutorial.fields.topicsAsString &&
-        tutorial.fields.topicsAsString.includes(word.toLowerCase())
-
-      const isAuthorsMatch =
-        tutorial.fields.authorsAsString &&
-        tutorial.fields.authorsAsString.includes(word.toLowerCase())
-
-      const isSourceMatch =
-        tutorial.source && tutorial.source.toLowerCase().includes(word.toLowerCase())
-
-      return (
-        isTitleMatch ||
-        isFormatsMatch ||
-        isTopicsMatch ||
-        isAuthorsMatch ||
-        isSourceMatch
-      )
-    }
-
-    // Require every word in the query to exist in the tutorial data
-    const queryArray = query.toLowerCase().split(` `)
-    return queryArray.every(wordExistsInTutorial)
-  })
+interface StickyNodeStatus {
+  status: number
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -220,7 +168,7 @@ const StyledSticky = styled(Sticky)`
   z-index: 1;
 `
 
-const SearchBar = styled.div`
+const SearchBar = styled.div<SearchBarProps>`
   background-color: var(--near-white);
   transition: all 0.2s ease-in-out;
 
@@ -233,7 +181,11 @@ const SearchBar = styled.div`
     `}
 `
 
-const Inner = styled.div`
+interface SearchBarProps {
+  sticky: boolean
+}
+
+const Inner = styled.div<SearchBarProps>`
   ${container}
   display: flex;
   justify-content: space-between;
@@ -335,7 +287,6 @@ const Sidebar = styled.div`
 
   ${media.md`
     display: block;
-    
   `}
 
   ${media.lg`
@@ -349,7 +300,7 @@ const Sidebar = styled.div`
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-import React, { useState, useRef, useEffect, useMemo } from 'react'
+import React, { useState, useRef, useEffect, useMemo, SyntheticEvent } from 'react'
 import styled, { css } from 'styled-components'
 import Sticky from 'react-stickynode'
 
@@ -360,6 +311,8 @@ import Anchor from './Anchor'
 import Emoji from './Emoji'
 import FilterMenu from './FilterMenu'
 import MobileMenu from './MobileMenu'
+import { filterTutorials, searchFilteredTutorials } from '../logic'
+import { Tutorial } from '../types'
 import { container, media } from '../styles'
 
 export default Directory
