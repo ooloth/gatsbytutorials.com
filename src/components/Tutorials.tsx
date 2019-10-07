@@ -1,6 +1,5 @@
 function Tutorials({
   tutorials,
-  currentFormat,
   currentTopic,
   currentAuthor,
   currentSource,
@@ -10,12 +9,12 @@ function Tutorials({
   setSource,
   setQuery,
   searchInput,
-}) {
+}: Props) {
   function resetSearch() {
-    setFormat(null)
-    setTopic(null)
-    setAuthor(null)
-    setSource(null)
+    setFormat(``)
+    setTopic(``)
+    setAuthor(``)
+    setSource(``)
     setQuery(``)
     searchInput.current.focus()
   }
@@ -26,7 +25,6 @@ function Tutorials({
         <Tutorial
           key={tutorial.title + tutorial.date}
           tutorial={tutorial}
-          currentFormat={currentFormat}
           currentTopic={currentTopic}
           currentAuthor={currentAuthor}
           currentSource={currentSource}
@@ -41,6 +39,19 @@ function Tutorials({
   )
 }
 
+interface Props {
+  tutorials: Array<TutorialType>
+  currentTopic: string
+  currentAuthor: string
+  currentSource: string
+  setFormat: (format: string) => void
+  setTopic: (topic: string) => void
+  setAuthor: (author: string) => void
+  setSource: (source: string) => void
+  setQuery: (query: string) => void
+  searchInput: React.MutableRefObject<HTMLInputElement>
+}
+
 ///////////////////////////////////////////////////////////////////////////////////
 
 const List = styled.ul`
@@ -49,13 +60,17 @@ const List = styled.ul`
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-function NoResults({ resetSearch }) {
+function NoResults({ resetSearch }: NoResultsProps) {
   return (
     <Message>
       <Heading>No results</Heading>
       <Button onClick={resetSearch}>Reset search</Button>
     </Message>
   )
+}
+
+interface NoResultsProps {
+  resetSearch: () => void
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -93,9 +108,10 @@ const Button = styled.button`
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-import React from 'react'
+import React, { SyntheticEvent } from 'react'
 import styled from 'styled-components'
 
 import Tutorial from './Tutorial'
+import { Tutorial as TutorialType } from '../types'
 
 export default Tutorials
