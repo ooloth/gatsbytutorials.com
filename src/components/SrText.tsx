@@ -10,8 +10,6 @@ const SrText = styled.span<Props>`
   white-space: nowrap;
 `
 
-///////////////////////////////////////////////////////////////////////////////////
-
 interface Props {
   children: ReactNode
   [key: string]: any

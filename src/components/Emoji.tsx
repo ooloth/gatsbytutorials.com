@@ -6,8 +6,6 @@ function Emoji({ emoji, ariaLabel, ...rest }: Props) {
   )
 }
 
-///////////////////////////////////////////////////////////////////////////////////
-
 interface Props {
   emoji: string
   ariaLabel: string

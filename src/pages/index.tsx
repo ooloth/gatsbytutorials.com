@@ -16,8 +16,6 @@ function IndexPage({ pageContext }: Props) {
   )
 }
 
-///////////////////////////////////////////////////////////////////////////////////
-
 interface Props {
   pageContext: {
     tutorials: Array<Tutorial>
@@ -26,18 +24,6 @@ interface Props {
     authors: Array<string>
     sources: Array<string>
   }
-}
-
-interface Tutorial {
-  title: string
-  link: string
-  formats: Array<string>
-  language: string
-  topics: Array<string>
-  date?: string
-  length?: string
-  authors?: Array<string>
-  source?: string
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -55,5 +41,6 @@ import styled from 'styled-components'
 
 import Base from '../components/Base'
 import Directory from '../components/Directory'
+import { Tutorial } from '../types'
 
 export default IndexPage
