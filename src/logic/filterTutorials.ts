@@ -9,7 +9,8 @@ function filterTutorials(
     const isFormatMatch = format && item.formats && new Set(item.formats).has(format)
     const isTopicMatch = topic && item.topics && new Set(item.topics).has(topic)
     const isAuthorMatch = author && item.authors && new Set(item.authors).has(author)
-    const isSourceMatch = source && item.source && new Set(item.source).has(source)
+    const isSourceMatch =
+      source && item.source && item.source.toLowerCase() === source.toLowerCase()
 
     return (
       (format ? isFormatMatch : true) &&
