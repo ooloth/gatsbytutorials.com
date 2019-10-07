@@ -11,8 +11,9 @@ function MobileMenu({
   sources,
   currentSource,
   setSource,
-}) {
+}: Props) {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const modalRef = useRef() as React.MutableRefObject<HTMLElement>
 
   useEffect(() => {
     // Bind modal to appElement (http://reactcommunity.org/react-modal/accessibility/)
@@ -21,11 +22,11 @@ function MobileMenu({
 
   function openModal() {
     setIsModalOpen(true)
-    noScroll.on()
+    disableBodyScroll(modalRef.current)
   }
 
   function closeModal() {
-    noScroll.off()
+    enableBodyScroll(modalRef.current)
     setIsModalOpen(false)
   }
 
@@ -37,6 +38,7 @@ function MobileMenu({
       </Button>
 
       <StyledModal
+        ref={modalRef}
         isOpen={isModalOpen}
         onRequestClose={closeModal}
         closeTimeoutMS={500} // match exit animation timing
@@ -78,6 +80,21 @@ function MobileMenu({
   )
 }
 
+interface Props {
+  formats: Array<string>
+  currentFormat: string
+  setFormat: (format: string) => void
+  topics: Array<string>
+  currentTopic: string
+  setTopic: (topic: string) => void
+  authors: Array<string>
+  currentAuthor: string
+  setAuthor: (author: string) => void
+  sources: Array<string>
+  currentSource: string
+  setSource: (source: string) => void
+}
+
 ///////////////////////////////////////////////////////////////////////////////////
 
 const Button = styled.button`
@@ -104,6 +121,38 @@ const Button = styled.button`
 const FiltersIcon = styled(FiltersSVG)`
   ${icon}
 `
+
+const ReactModalAdapter = React.forwardRef(
+  (
+    { isOpen, className, ...rest }: ReactModalAdapterProps,
+    modalRef:
+      | string
+      | ((instance: ReactModal | null) => void)
+      | React.RefObject<ReactModal>
+      | null
+      | undefined
+  ) => {
+    const overlayClassName = `${className}__overlay`
+    const contentClassName = `${className}__content`
+
+    return (
+      <Modal
+        ref={modalRef}
+        isOpen={isOpen}
+        portalClassName={className}
+        className={contentClassName}
+        overlayClassName={overlayClassName}
+        {...rest}
+      />
+    )
+  }
+)
+
+interface ReactModalAdapterProps {
+  isOpen: boolean
+  className: string
+  [key: string]: any
+}
 
 const StyledModal = styled(ReactModalAdapter)`
   &__overlay {
@@ -161,26 +210,10 @@ const ModalContent = styled.div`
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-function ReactModalAdapter({ className, ...props }) {
-  const overlayClassName = `${className}__overlay`
-  const contentClassName = `${className}__content`
-
-  return (
-    <Modal
-      portalClassName={className}
-      className={contentClassName}
-      overlayClassName={overlayClassName}
-      {...props}
-    />
-  )
-}
-
-///////////////////////////////////////////////////////////////////////////////////
-
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef, SyntheticEvent } from 'react'
 import styled from 'styled-components'
 import Modal from 'react-modal'
-import noScroll from 'no-scroll'
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 
 import FilterMenu from './FilterMenu'
 import Contributors from './Contributors'
