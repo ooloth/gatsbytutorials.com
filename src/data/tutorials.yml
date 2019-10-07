@@ -1,3 +1,18 @@
+- title: 'How to convert existing markdown Gatsby blog to mdx'
+  link: https://gatsbytemplates.io/blog/mdx-convert/
+  formats:
+    - text
+  language: en
+  date: 2019-09-29
+  authors:
+    - Vsevolod Andruschenko
+  source: 'gatsbytemplates.io'
+  topics:
+    - blog
+    - markdown
+    - mdx
+    - gatsby-plugin-mdx
+    
 - title: Custom Gatsby Source Plugin Tutorial
   link: https://codebushi.com/custom-gatsby-source-plugin/
   formats:
