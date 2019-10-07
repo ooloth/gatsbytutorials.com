@@ -48,7 +48,7 @@ function Metadata() {
 ///////////////////////////////////////////////////////////////////////////////////
 
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 import siteImage from '../images/favicon.png'
 import useSiteMetadata from '../queries/useSiteMetadata'

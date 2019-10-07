@@ -1,15 +1,22 @@
-function FilterButton({ text, active, handleFilter, ...props }) {
+function FilterButton({ text, active, handleFilter, ...rest }: Props) {
   return (
-    <Button value={text} active={active} onClick={handleFilter} {...props}>
+    <Button value={text} active={active} onClick={handleFilter} {...rest}>
       <Text>{text}</Text>
       {active && <span>&nbsp;×</span>}
     </Button>
   )
 }
 
+interface Props {
+  text: string
+  active: boolean
+  handleFilter: (e: SyntheticEvent) => void
+  [key: string]: any
+}
+
 ///////////////////////////////////////////////////////////////////////////////////
 
-const Button = styled.button`
+const Button = styled.button<ButtonProps>`
   display: inline-flex;
   margin-top: var(--s2);
   border-radius: var(--r2);
@@ -31,13 +38,17 @@ const Button = styled.button`
     `}
 `
 
+interface ButtonProps {
+  active: boolean
+}
+
 const Text = styled.span`
   pointer-events: none;
 `
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-import React from 'react'
+import React, { SyntheticEvent } from 'react'
 import styled, { css } from 'styled-components'
 
 export default FilterButton

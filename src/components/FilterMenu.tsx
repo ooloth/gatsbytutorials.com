@@ -1,7 +1,8 @@
-function FilterMenu({ heading, filters, activeFilter, setFilter }) {
-  function handleClick(e) {
-    if (e.target.value === activeFilter) setFilter(null)
-    else setFilter(e.target.value)
+function FilterMenu({ heading, filters, activeFilter, setFilter }: Props) {
+  function handleClick(e: SyntheticEvent) {
+    const button = e.target as HTMLButtonElement
+    if (button.value === activeFilter) setFilter(``)
+    else setFilter(button.value)
   }
 
   return (
@@ -24,6 +25,13 @@ function FilterMenu({ heading, filters, activeFilter, setFilter }) {
       </List>
     </Section>
   )
+}
+
+interface Props {
+  heading: string
+  filters: Array<string>
+  activeFilter: string
+  setFilter: (filter: string) => void
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -60,7 +68,7 @@ const List = styled.ul`
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-import React from 'react'
+import React, { SyntheticEvent } from 'react'
 import styled from 'styled-components'
 
 import FilterButton from './FilterButton'

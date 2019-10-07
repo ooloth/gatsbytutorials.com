@@ -1,5 +1,5 @@
 function Contributors() {
-  const contributors = useContributorsData()
+  const contributors: Contributors = useContributorsData()
 
   return (
     <Section>
@@ -31,6 +31,29 @@ function Contributors() {
       </List>
     </Section>
   )
+}
+
+type Contributors = Array<Contributor>
+
+interface Contributor {
+  avatarImage: GatsbyImageSharpFluid_withWebp
+  html_url: string
+  id: string
+  login: string
+}
+
+interface GatsbyImageSharpFluid_withWebp {
+  childImageSharp: {
+    fluid: {
+      base64: string
+      aspectRatio: number
+      src: string
+      srcSet: string
+      srcWebp: string
+      srcSetWebp: string
+      sizes: string
+    }
+  }
 }
 
 ///////////////////////////////////////////////////////////////////////////////////

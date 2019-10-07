@@ -7,8 +7,6 @@ function Anchor({ href, srText, children, ...rest }: Props) {
   )
 }
 
-///////////////////////////////////////////////////////////////////////////////////
-
 interface Props {
   href: string
   srText?: string
