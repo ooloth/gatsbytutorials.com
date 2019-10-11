@@ -1,3 +1,15 @@
+- title: 'How GatsbyJS can help your business to overtake competition?'
+  link: https://blog.pagepro.co/2019/10/09/how-gatsbyjs-can-help-your-business-to-overtake-competition/
+  formats:
+    - text
+  language: en
+  date: 2019-10-09
+  authors:
+    - Chris Lojniewski
+  source: Pagepro Blog
+  topics:
+    - business
+    - education
 - title: 'How to convert existing markdown Gatsby blog to mdx'
   link: https://gatsbytemplates.io/blog/mdx-convert/
   formats:
