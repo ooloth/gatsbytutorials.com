@@ -1,0 +1,11 @@
+name: Test typescript-action
+on: [push]
+
+jobs:
+  lint:
+    name: Type-check and lint
+    runs-on: ubuntu-latest
+    steps:
+      uses: actions/checkout@master
+      run: |
+        npm run type-check && lint-staged
