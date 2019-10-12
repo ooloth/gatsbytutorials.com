@@ -12,6 +12,6 @@ jobs:
       - name: Type-check all files
         run: npm run type-check
       - name: Run eslint on TS/JS files
-        run: npm run lint --fix
+        run: npm run lint -- --fix
       - name: Run prettier on all files
-        run: npm run prettier --check
+        run: npm run prettier -- --write --loglevel silent
