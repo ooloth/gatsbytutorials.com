@@ -108,7 +108,7 @@ const Button = styled.button`
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-import React, { SyntheticEvent } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 import Tutorial from './Tutorial'
