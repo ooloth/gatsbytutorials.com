@@ -8,7 +8,7 @@ function Directory({ tutorials, formats, topics, authors, sources }: Props) {
   const searchInput = useRef() as React.MutableRefObject<HTMLInputElement>
 
   // On the first render, focus the search input
-  useEffect(() => searchInput.current.focus(), [searchInput.current])
+  useEffect(() => searchInput.current.focus(), [searchInput])
 
   // On any filter or search, reset limited to true
   useEffect(() => setLimited(true), [format, topic, author, source, query])

@@ -71,7 +71,7 @@
   },
   "scripts": {
     "dev": "gatsby develop",
-    "lint": "eslint src",
+    "lint": "eslint '**/*.{js,jsx,ts,tsx}' --fix",
     "format": "npm run prettier -- --write",
     "prettier": "prettier \"**/*.+(js|jsx|ts|tsx|json|yml|yaml|css|html|md|mdx|graphql)\"",
     "validate": "npm run lint && npm run prettier -- --list-different",
