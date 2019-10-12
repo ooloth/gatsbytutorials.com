@@ -14,4 +14,4 @@ jobs:
       - name: Run eslint on TS/JS files
         run: npm run lint --fix
       - name: Run prettier on all files
-        run: npm run prettier --write
+        run: npm run prettier --check
