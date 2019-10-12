@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   lint:
-    name: Type-Check & Lint
+    name: Lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -12,6 +12,6 @@ jobs:
       - name: Type-check all files
         run: npm run type-check
       - name: Run eslint on TS/JS files
-        run: npm run lint
+        run: npm run lint --fix
       - name: Run prettier on all files
-        run: npm run prettier -- --list-different
+        run: npm run prettier --write
