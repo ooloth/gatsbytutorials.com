@@ -1,14 +1,13 @@
-name: CI
+name: Type-Check & Lint
 on: [push]
 
 jobs:
   lint:
-    name: Lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      # - name: Install dependencies
-      #   run: npm install
+      - name: Install dependencies
+        run: npm install
       - name: Type-check all files
         run: npm run type-check
       - name: Run eslint + prettier on staged files
