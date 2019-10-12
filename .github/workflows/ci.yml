@@ -3,9 +3,10 @@ on: [push]
 
 jobs:
   lint:
-    name: Type-check and lint
+    name: Lint
     runs-on: ubuntu-latest
     steps:
-      uses: actions/checkout@master
-      run: |
-        npm run type-check && lint-staged
+      - name: Type-check all files
+        run: npm run type-check
+      - name: Run eslint + prettier on staged files
+        run: lint-staged
