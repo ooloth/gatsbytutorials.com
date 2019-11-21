@@ -39,7 +39,7 @@
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-helmet": "^5.2.1",
-    "react-modal": "^3.10.1",
+    "react-modal": "^3.11.1",
     "react-stickynode": "^2.1.1",
     "styled-components": "^4.4.0",
     "what-input": "^5.2.6"
