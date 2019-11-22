@@ -1,4 +1,26 @@
-function Tutorial({
+import React, { Fragment, SyntheticEvent } from 'react'
+import styled, { css } from 'styled-components'
+
+import Anchor from './Anchor'
+import Emoji from './Emoji'
+import FilterButton from './FilterButton'
+import { Tutorial as TutorialType } from '../types'
+
+interface Props {
+  tutorial: TutorialType
+  currentTopic: string
+  currentAuthor: string
+  currentSource: string
+  setTopic: (topic: string) => void
+  setAuthor: (author: string) => void
+  setSource: (source: string) => void
+}
+
+interface FormatEmojis {
+  [key: string]: string
+}
+
+export default function Tutorial({
   tutorial,
   currentTopic,
   currentAuthor,
@@ -107,20 +129,6 @@ function Tutorial({
   )
 }
 
-interface Props {
-  tutorial: TutorialType
-  currentTopic: string
-  currentAuthor: string
-  currentSource: string
-  setTopic: (topic: string) => void
-  setAuthor: (author: string) => void
-  setSource: (source: string) => void
-}
-
-interface FormatEmojis {
-  [key: string]: string
-}
-
 ///////////////////////////////////////////////////////////////////////////////////
 
 const Item = styled.li`
@@ -205,15 +213,3 @@ const ListItem = styled.li`
   margin-bottom: var(--s1);
   font-size: var(--f2);
 `
-
-///////////////////////////////////////////////////////////////////////////////////
-
-import React, { Fragment, SyntheticEvent } from 'react'
-import styled, { css } from 'styled-components'
-
-import Anchor from './Anchor'
-import Emoji from './Emoji'
-import FilterButton from './FilterButton'
-import { Tutorial as TutorialType } from '../types'
-
-export default Tutorial

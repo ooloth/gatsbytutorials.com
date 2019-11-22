@@ -1,3 +1,5 @@
+import { css } from 'styled-components'
+
 export const container = css`
   margin-left: auto;
   margin-right: auto;
@@ -5,7 +7,3 @@ export const container = css`
   padding-right: 3%;
   max-width: 70rem;
 `
-
-///////////////////////////////////////////////////////////////////////////////////
-
-import { css } from 'styled-components'

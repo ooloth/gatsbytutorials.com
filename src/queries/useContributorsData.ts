@@ -1,4 +1,6 @@
-function useContributors() {
+import { useStaticQuery, graphql } from 'gatsby'
+
+export default function useContributors() {
   const { allContributors } = useStaticQuery(
     graphql`
       query {
@@ -22,9 +24,3 @@ function useContributors() {
 
   return allContributors.nodes
 }
-
-///////////////////////////////////////////////////////////////////////////////////
-
-import { useStaticQuery, graphql } from 'gatsby'
-
-export default useContributors

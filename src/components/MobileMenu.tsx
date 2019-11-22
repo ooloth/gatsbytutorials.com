@@ -1,4 +1,30 @@
-function MobileMenu({
+import React, { useState, useEffect, useRef } from 'react'
+import styled from 'styled-components'
+import Modal from 'react-modal'
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
+
+import FilterMenu from './FilterMenu'
+import Contributors from './Contributors'
+import SrText from './SrText'
+import { ReactComponent as FiltersSVG } from '../svg/sliders-h.svg'
+import { icon, media } from '../styles'
+
+interface Props {
+  formats: Array<string>
+  currentFormat: string
+  setFormat: (format: string) => void
+  topics: Array<string>
+  currentTopic: string
+  setTopic: (topic: string) => void
+  authors: Array<string>
+  currentAuthor: string
+  setAuthor: (author: string) => void
+  sources: Array<string>
+  currentSource: string
+  setSource: (source: string) => void
+}
+
+export default function MobileMenu({
   formats,
   currentFormat,
   setFormat,
@@ -80,21 +106,6 @@ function MobileMenu({
   )
 }
 
-interface Props {
-  formats: Array<string>
-  currentFormat: string
-  setFormat: (format: string) => void
-  topics: Array<string>
-  currentTopic: string
-  setTopic: (topic: string) => void
-  authors: Array<string>
-  currentAuthor: string
-  setAuthor: (author: string) => void
-  sources: Array<string>
-  currentSource: string
-  setSource: (source: string) => void
-}
-
 ///////////////////////////////////////////////////////////////////////////////////
 
 const Button = styled.button`
@@ -122,6 +133,12 @@ const FiltersIcon = styled(FiltersSVG)`
   ${icon}
 `
 
+interface ReactModalAdapterProps {
+  isOpen: boolean
+  className: string
+  [key: string]: any
+}
+
 const ReactModalAdapter = React.forwardRef(
   (
     { isOpen, className, ...rest }: ReactModalAdapterProps,
@@ -147,12 +164,6 @@ const ReactModalAdapter = React.forwardRef(
     )
   }
 )
-
-interface ReactModalAdapterProps {
-  isOpen: boolean
-  className: string
-  [key: string]: any
-}
 
 const StyledModal = styled(ReactModalAdapter)`
   &__overlay {
@@ -207,18 +218,3 @@ const ModalContent = styled.div`
     font-size: var(--f3);
   `}
 `
-
-///////////////////////////////////////////////////////////////////////////////////
-
-import React, { useState, useEffect, useRef } from 'react'
-import styled from 'styled-components'
-import Modal from 'react-modal'
-import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
-
-import FilterMenu from './FilterMenu'
-import Contributors from './Contributors'
-import SrText from './SrText'
-import { ReactComponent as FiltersSVG } from '../svg/sliders-h.svg'
-import { icon, media } from '../styles'
-
-export default MobileMenu

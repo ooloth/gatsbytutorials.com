@@ -1,4 +1,6 @@
-function useTutorialsData() {
+import { useStaticQuery, graphql } from 'gatsby'
+
+export default function useTutorialsData() {
   const { tutorialsWithDates, tutorialsWithoutDates } = useStaticQuery(
     graphql`
       query {
@@ -54,9 +56,3 @@ function useTutorialsData() {
 
   return [tutorialsWithDates.edges, tutorialsWithoutDates.edges]
 }
-
-///////////////////////////////////////////////////////////////////////////////////
-
-import { useStaticQuery, graphql } from 'gatsby'
-
-export default useTutorialsData

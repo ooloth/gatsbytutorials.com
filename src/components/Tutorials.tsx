@@ -1,4 +1,23 @@
-function Tutorials({
+import React from 'react'
+import styled from 'styled-components'
+
+import Tutorial from './Tutorial'
+import { Tutorial as TutorialType } from '../types'
+
+interface Props {
+  tutorials: Array<TutorialType>
+  currentTopic: string
+  currentAuthor: string
+  currentSource: string
+  setFormat: (format: string) => void
+  setTopic: (topic: string) => void
+  setAuthor: (author: string) => void
+  setSource: (source: string) => void
+  setQuery: (query: string) => void
+  searchInput: React.MutableRefObject<HTMLInputElement>
+}
+
+export default function Tutorials({
   tutorials,
   currentTopic,
   currentAuthor,
@@ -39,19 +58,6 @@ function Tutorials({
   )
 }
 
-interface Props {
-  tutorials: Array<TutorialType>
-  currentTopic: string
-  currentAuthor: string
-  currentSource: string
-  setFormat: (format: string) => void
-  setTopic: (topic: string) => void
-  setAuthor: (author: string) => void
-  setSource: (source: string) => void
-  setQuery: (query: string) => void
-  searchInput: React.MutableRefObject<HTMLInputElement>
-}
-
 ///////////////////////////////////////////////////////////////////////////////////
 
 const List = styled.ul`
@@ -60,6 +66,10 @@ const List = styled.ul`
 
 ///////////////////////////////////////////////////////////////////////////////////
 
+interface NoResultsProps {
+  resetSearch: () => void
+}
+
 function NoResults({ resetSearch }: NoResultsProps) {
   return (
     <Message>
@@ -67,10 +77,6 @@ function NoResults({ resetSearch }: NoResultsProps) {
       <Button onClick={resetSearch}>Reset search</Button>
     </Message>
   )
-}
-
-interface NoResultsProps {
-  resetSearch: () => void
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -105,13 +111,3 @@ const Button = styled.button`
     background-color: black;
   }
 `
-
-///////////////////////////////////////////////////////////////////////////////////
-
-import React from 'react'
-import styled from 'styled-components'
-
-import Tutorial from './Tutorial'
-import { Tutorial as TutorialType } from '../types'
-
-export default Tutorials

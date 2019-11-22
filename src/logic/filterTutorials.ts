@@ -1,4 +1,6 @@
-function filterTutorials(
+import { Tutorial } from '../types'
+
+export default function filterTutorials(
   tutorials: Array<Tutorial>,
   format: string,
   topic: string,
@@ -20,9 +22,3 @@ function filterTutorials(
     )
   })
 }
-
-///////////////////////////////////////////////////////////////////////////////////
-
-import { Tutorial } from '../types'
-
-export default filterTutorials

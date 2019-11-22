@@ -1,13 +1,23 @@
+import { css } from 'styled-components'
+
+interface Breakpoints {
+  [key: string]: number
+}
+
+interface MediaQueries {
+  [key: string]: (declarations: TemplateStringsArray) => TemplateStringsArray
+}
+
+interface Object {
+  [key: string]: object
+}
+
 const breakpoints = {
   sm: 36,
   md: 48,
   lg: 62,
   xl: 75,
 } as Breakpoints
-
-interface Breakpoints {
-  [key: string]: number
-}
 
 export const media = Object.keys(breakpoints).reduce((queryObject: Object, screen) => {
   queryObject[screen] = (declarations: TemplateStringsArray) => {
@@ -19,18 +29,6 @@ export const media = Object.keys(breakpoints).reduce((queryObject: Object, scree
   }
   return queryObject
 }, {}) as MediaQueries
-
-interface MediaQueries {
-  [key: string]: (declarations: TemplateStringsArray) => TemplateStringsArray
-}
-
-interface Object {
-  [key: string]: object
-}
-
-///////////////////////////////////////////////////////////////////////////////////
-
-import { css } from 'styled-components'
 
 /*
 

@@ -1,4 +1,35 @@
-function Contributors() {
+import React, { Fragment } from 'react'
+import styled from 'styled-components'
+import Image from 'gatsby-image'
+
+import Anchor from './Anchor'
+import Emoji from './Emoji'
+import useContributorsData from '../queries/useContributorsData'
+
+interface Contributor {
+  avatarImage: GatsbyImageSharpFluid_withWebp
+  html_url: string
+  id: string
+  login: string
+}
+
+type Contributors = Array<Contributor>
+
+interface GatsbyImageSharpFluid_withWebp {
+  childImageSharp: {
+    fluid: {
+      base64: string
+      aspectRatio: number
+      src: string
+      srcSet: string
+      srcWebp: string
+      srcSetWebp: string
+      sizes: string
+    }
+  }
+}
+
+export default function Contributors() {
   const contributors: Contributors = useContributorsData()
 
   return (
@@ -33,29 +64,6 @@ function Contributors() {
   )
 }
 
-type Contributors = Array<Contributor>
-
-interface Contributor {
-  avatarImage: GatsbyImageSharpFluid_withWebp
-  html_url: string
-  id: string
-  login: string
-}
-
-interface GatsbyImageSharpFluid_withWebp {
-  childImageSharp: {
-    fluid: {
-      base64: string
-      aspectRatio: number
-      src: string
-      srcSet: string
-      srcWebp: string
-      srcSetWebp: string
-      sizes: string
-    }
-  }
-}
-
 ///////////////////////////////////////////////////////////////////////////////////
 
 const Section = styled.section`
@@ -87,15 +95,3 @@ const Item = styled.li`
 const Avatar = styled(Image)`
   border-radius: var(--r2);
 `
-
-///////////////////////////////////////////////////////////////////////////////////
-
-import React, { Fragment } from 'react'
-import styled from 'styled-components'
-import Image from 'gatsby-image'
-
-import Anchor from './Anchor'
-import Emoji from './Emoji'
-import useContributorsData from '../queries/useContributorsData'
-
-export default Contributors

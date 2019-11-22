@@ -1,4 +1,10 @@
-function Footer() {
+import React from 'react'
+import styled from 'styled-components'
+
+import Anchor from './Anchor'
+import { container } from '../styles'
+
+export default function Footer() {
   return (
     <StyledFooter>
       <Inner>
@@ -54,13 +60,3 @@ const Link = styled(Anchor)`
     text-decoration: underline;
   }
 `
-
-///////////////////////////////////////////////////////////////////////////////////
-
-import React from 'react'
-import styled from 'styled-components'
-
-import Anchor from './Anchor'
-import { container } from '../styles'
-
-export default Footer

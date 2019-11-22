@@ -1,4 +1,9 @@
-function searchFilteredTutorials(filteredTutorials: Array<Tutorial>, query: string) {
+import { Tutorial } from '../types'
+
+export default function searchFilteredTutorials(
+  filteredTutorials: Array<Tutorial>,
+  query: string
+) {
   if (!query) return filteredTutorials
 
   return filteredTutorials.filter(item => {
@@ -35,9 +40,3 @@ function searchFilteredTutorials(filteredTutorials: Array<Tutorial>, query: stri
     return queryArray.every(wordExistsInTutorial)
   })
 }
-
-///////////////////////////////////////////////////////////////////////////////////
-
-import { Tutorial } from '../types'
-
-export default searchFilteredTutorials

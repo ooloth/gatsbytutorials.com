@@ -1,3 +1,5 @@
+import { createGlobalStyle } from 'styled-components'
+
 const CustomProperties = createGlobalStyle`
   :root {
     /* Font Families */
@@ -190,9 +192,5 @@ const CustomProperties = createGlobalStyle`
     --lightest-blue: #cdecff;
   }
 `
-
-///////////////////////////////////////////////////////////////////////////////////
-
-import { createGlobalStyle } from 'styled-components'
 
 export default CustomProperties

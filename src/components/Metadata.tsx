@@ -1,4 +1,10 @@
-function Metadata() {
+import React from 'react'
+import { Helmet } from 'react-helmet'
+
+import siteImage from '../images/favicon.png'
+import useSiteMetadata from '../queries/useSiteMetadata'
+
+export default function Metadata() {
   const site = useSiteMetadata()
 
   return (
@@ -44,13 +50,3 @@ function Metadata() {
     </Helmet>
   )
 }
-
-///////////////////////////////////////////////////////////////////////////////////
-
-import React from 'react'
-import { Helmet } from 'react-helmet'
-
-import siteImage from '../images/favicon.png'
-import useSiteMetadata from '../queries/useSiteMetadata'
-
-export default Metadata

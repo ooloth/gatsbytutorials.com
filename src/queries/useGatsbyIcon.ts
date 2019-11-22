@@ -1,4 +1,6 @@
-function useGatsbyIcon() {
+import { useStaticQuery, graphql } from 'gatsby'
+
+export default function useGatsbyIcon() {
   const { icon } = useStaticQuery(
     graphql`
       query {
@@ -15,9 +17,3 @@ function useGatsbyIcon() {
 
   return icon
 }
-
-///////////////////////////////////////////////////////////////////////////////////
-
-import { useStaticQuery, graphql } from 'gatsby'
-
-export default useGatsbyIcon

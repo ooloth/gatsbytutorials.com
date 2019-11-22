@@ -1,3 +1,12 @@
+import { ReactNode } from 'react'
+import styled from 'styled-components'
+
+interface Props {
+  children: ReactNode
+  [key: string]: any
+}
+
+// See: https://css-tricks.com/small-tweaks-can-make-huge-impact-websites-accessibility/#article-header-id-5
 const SrText = styled.span<Props>`
   display: block;
   position: absolute;
@@ -10,16 +19,4 @@ const SrText = styled.span<Props>`
   white-space: nowrap;
 `
 
-interface Props {
-  children: ReactNode
-  [key: string]: any
-}
-
-///////////////////////////////////////////////////////////////////////////////////
-
-import { ReactNode } from 'react'
-import styled from 'styled-components'
-
 export default SrText
-
-// See: https://css-tricks.com/small-tweaks-can-make-huge-impact-websites-accessibility/#article-header-id-5

@@ -1,4 +1,37 @@
-function Directory({ tutorials, formats, topics, authors, sources }: Props) {
+import React, { useState, useRef, useEffect, useMemo, SyntheticEvent } from 'react'
+import styled, { css } from 'styled-components'
+import Sticky from 'react-stickynode'
+
+import Contributors from './Contributors'
+import SrText from './SrText'
+import Tutorials from './Tutorials'
+import Anchor from './Anchor'
+import Emoji from './Emoji'
+import FilterMenu from './FilterMenu'
+import MobileMenu from './MobileMenu'
+import { filterTutorials, searchFilteredTutorials } from '../logic'
+import { Tutorial } from '../types'
+import { container, media } from '../styles'
+
+interface Props {
+  tutorials: Array<Tutorial>
+  formats: Array<string>
+  topics: Array<string>
+  authors: Array<string>
+  sources: Array<string>
+}
+
+interface StickyNodeStatus {
+  status: number
+}
+
+export default function Directory({
+  tutorials,
+  formats,
+  topics,
+  authors,
+  sources,
+}: Props) {
   const [format, setFormat] = useState(``)
   const [topic, setTopic] = useState(``)
   const [author, setAuthor] = useState(``)
@@ -149,18 +182,6 @@ function Directory({ tutorials, formats, topics, authors, sources }: Props) {
   )
 }
 
-interface Props {
-  tutorials: Array<Tutorial>
-  formats: Array<string>
-  topics: Array<string>
-  authors: Array<string>
-  sources: Array<string>
-}
-
-interface StickyNodeStatus {
-  status: number
-}
-
 ///////////////////////////////////////////////////////////////////////////////////
 
 const StyledSticky = styled(Sticky)`
@@ -297,22 +318,3 @@ const Sidebar = styled.div`
     max-width: var(--s13);
   `}
 `
-
-///////////////////////////////////////////////////////////////////////////////////
-
-import React, { useState, useRef, useEffect, useMemo, SyntheticEvent } from 'react'
-import styled, { css } from 'styled-components'
-import Sticky from 'react-stickynode'
-
-import Contributors from './Contributors'
-import SrText from './SrText'
-import Tutorials from './Tutorials'
-import Anchor from './Anchor'
-import Emoji from './Emoji'
-import FilterMenu from './FilterMenu'
-import MobileMenu from './MobileMenu'
-import { filterTutorials, searchFilteredTutorials } from '../logic'
-import { Tutorial } from '../types'
-import { container, media } from '../styles'
-
-export default Directory

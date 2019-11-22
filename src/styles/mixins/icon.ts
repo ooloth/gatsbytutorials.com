@@ -1,3 +1,5 @@
+import { css } from 'styled-components'
+
 export const icon = css`
   display: inline-block;
   width: 1em;
@@ -6,7 +8,3 @@ export const icon = css`
   fill: currentColor;
   pointer-events: none;
 `
-
-///////////////////////////////////////////////////////////////////////////////////
-
-import { css } from 'styled-components'

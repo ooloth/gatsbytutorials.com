@@ -1,3 +1,6 @@
+import { createGlobalStyle } from 'styled-components'
+import { media } from '../mixins/media'
+
 const Reset = createGlobalStyle`
   /* Adapted from Sanitize.css 8.0.0 and the Eric Meyer reset */
 
@@ -613,10 +616,5 @@ const Reset = createGlobalStyle`
   }
 }
 `
-
-///////////////////////////////////////////////////////////////////////////////////
-
-import { createGlobalStyle } from 'styled-components'
-import { media } from '../mixins/media'
 
 export default Reset

@@ -1,4 +1,14 @@
-function Header() {
+import React from 'react'
+import styled from 'styled-components'
+import Image from 'gatsby-image'
+
+import Anchor from './Anchor'
+import Emoji from './Emoji'
+import useGatsbyIcon from '../queries/useGatsbyIcon'
+import useTutorialsData from '../queries/useTutorialsData'
+import { container } from '../styles'
+
+export default function Header() {
   const icon = useGatsbyIcon()
   const [tutorialsWithDates, tutorialsWithoutDates] = useTutorialsData()
   const count = tutorialsWithDates.length + tutorialsWithoutDates.length
@@ -74,17 +84,3 @@ const Link = styled(Anchor)`
     text-decoration: underline;
   }
 `
-
-///////////////////////////////////////////////////////////////////////////////////
-
-import React from 'react'
-import styled from 'styled-components'
-import Image from 'gatsby-image'
-
-import Anchor from './Anchor'
-import Emoji from './Emoji'
-import useGatsbyIcon from '../queries/useGatsbyIcon'
-import useTutorialsData from '../queries/useTutorialsData'
-import { container } from '../styles'
-
-export default Header
