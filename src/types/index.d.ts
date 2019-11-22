@@ -1,4 +1,4 @@
-interface Tutorial {
+export interface Tutorial {
   title: string
   link: string
   formats: Array<string>
@@ -14,5 +14,3 @@ interface Tutorial {
     topicsAsString: string
   }
 }
-
-export default Tutorial
