@@ -1,3 +1,16 @@
+- title: 'How to Build a GatsbyJS Guitar-Chords-MDX Theme From Scratch'
+  link: https://owlypixel.com/building-gatsbyjs-theme-from-scratch/
+  formats:
+    - text
+  language: en
+  date: 2019-11-22
+  authors:
+    - Owlypixel
+  source: 'owlypixel.com'
+  topics:
+    - themes
+    - mdx
+    - guitar
 - title: 'How GatsbyJS can help your business to overtake competition?'
   link: https://blog.pagepro.co/2019/10/09/how-gatsbyjs-can-help-your-business-to-overtake-competition/
   formats:
