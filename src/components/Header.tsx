@@ -67,15 +67,15 @@ const Heading = styled.h1`
   padding-left: var(--s4);
   line-height: var(--lh2);
   font-size: var(--f3);
-  font-weight: 400;
+  font-weight: var(--fw1);
 `
 
 const Bold = styled.span`
-  font-weight: 700;
+  font-weight: var(--fw2);
 `
 
 const Link = styled(Anchor)`
-  font-weight: 700;
+  font-weight: var(--fw2);
   color: var(--purple);
   transition: color 0.05s ease-in-out;
 

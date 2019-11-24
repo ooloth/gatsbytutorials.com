@@ -55,10 +55,6 @@ export default function Tutorial({
 
   return (
     <Item>
-      <Title>
-        <Link href={tutorial.link}>{tutorial.title}</Link>
-      </Title>
-
       <Details>
         {tutorial.formats &&
           tutorial.formats.length > 0 &&
@@ -97,6 +93,9 @@ export default function Tutorial({
         )}
         {tutorial.date && <p>・{tutorial.date}</p>}
       </Details>
+      <Title>
+        <Link href={tutorial.link}>{tutorial.title}</Link>
+      </Title>
 
       {tutorial.topics && (
         <Topics includesAuthorOrSource={Boolean(tutorial.authors || tutorial.source)}>
@@ -132,12 +131,13 @@ export default function Tutorial({
 ///////////////////////////////////////////////////////////////////////////////////
 
 const Item = styled.li`
-  margin-top: var(--s4);
+  margin-top: var(--s5);
   box-shadow: var(--shadow);
-  border-radius: var(--r2);
+  border-radius: var(--r4);
   background-color: white;
-  padding: var(--s4);
+  padding: var(--s5);
   line-height: var(--lh3);
+  border-top: 3px solid var(--purple);
   transition: box-shadow 0.2s ease-in-out;
 
   &:hover {
@@ -148,6 +148,7 @@ const Item = styled.li`
 const Title = styled.h3`
   display: flex;
   align-items: baseline;
+  margin-top: var(--s1);
   line-height: var(--lh1);
   font-weight: 600;
 `
@@ -167,6 +168,8 @@ const Details = styled.div`
   flex-wrap: wrap;
   align-items: baseline;
   padding-top: var(--s1);
+  padding-bottom: var(--s1);
+  font-size: var(--f2);
 `
 
 const Button = styled.button<ButtonProps>`

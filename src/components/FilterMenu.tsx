@@ -10,7 +10,7 @@ interface Props {
   setFilter: (filter: string) => void
 }
 
-export default function FilterMenu({
+export default React.memo(function FilterMenu({
   heading,
   filters,
   activeFilter,
@@ -42,14 +42,14 @@ export default function FilterMenu({
       </List>
     </Section>
   )
-}
+})
 
 ///////////////////////////////////////////////////////////////////////////////////
 
 const Section = styled.section`
   margin-bottom: var(--s4);
   box-shadow: var(--shadow);
-  border-radius: var(--r2);
+  border-radius: var(--r4);
   background-color: white;
   padding-bottom: var(--s4);
   max-height: var(--s12);
