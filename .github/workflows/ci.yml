@@ -15,3 +15,19 @@ jobs:
         run: npm run lint
       - name: Run prettier on all files
         run: npm run format
+
+  lighthouse:
+    name: Lighthouse CI
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v2
+        with:
+          urls: |
+            https://www.gatsbytutorials.com
+      - name: Save results
+        uses: actions/upload-artifact@v1
+        with:
+          name: lighthouse-results
+          path: '.lighthouseci' # Saves the Lighthouse results as .json files
