@@ -27,5 +27,5 @@ jobs:
           PR_NUMBER: ${{ github.event.pull_request.number }}
         with:
           urls: |
-            https://deploy-preview-$PR_NUMBER--gatsbytutorials.netlify.com
+            https://deploy-preview-${PR_NUMBER}--gatsbytutorials.netlify.com
           temporaryPublicStorage: true
