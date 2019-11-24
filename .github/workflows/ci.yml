@@ -25,9 +25,7 @@ jobs:
         uses: treosh/lighthouse-ci-action@v2
         with:
           urls: |
-            https://www.gatsbytutorials.com
-      - name: Save results
-        uses: actions/upload-artifact@v1
-        with:
-          name: lighthouse-results
-          path: '.lighthouseci' # Saves the Lighthouse results as .json files
+            https://deploy-preview-$PR_NUMBER--gatsbytutorials.netlify.com
+          temporaryPublicStorage: true
+          env:
+            PR_NUMBER: ${{ github.event.pull_request.number }}
