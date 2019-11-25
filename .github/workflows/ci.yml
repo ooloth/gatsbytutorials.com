@@ -9,9 +9,9 @@ jobs:
       - uses: actions/checkout@v1
       - name: Install dependencies
         run: npm install
-      - name: Run type-checking on TS/JS files
+      - name: Type-check TS/JS files
         run: npm run type-check
-      - name: Run eslint on TS/JS files
+      - name: Lint TS/JS files
         run: npm run lint
-      - name: Run prettier on all files
+      - name: Format all files
         run: npm run format
