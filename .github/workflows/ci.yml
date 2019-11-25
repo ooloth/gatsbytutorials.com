@@ -24,8 +24,8 @@ jobs:
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v2
         with:
+          env:
+            PR_NUMBER: ${{ github.event.pull_request.number }}
           urls: |
             https://deploy-preview-$PR_NUMBER--gatsbytutorials.netlify.com
           temporaryPublicStorage: true
-          env:
-            PR_NUMBER: ${{ github.event.pull_request.number }}
