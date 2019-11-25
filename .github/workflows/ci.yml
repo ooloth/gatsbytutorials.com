@@ -24,7 +24,7 @@ jobs:
       - name: Audit URLs using Lighthouse
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
-        run: echo "The PR number is $PR_NUMBER"
+        run: echo "The PR number is ${PR_NUMBER}"
         # uses: treosh/lighthouse-ci-action@v2
         # with:
         #   urls: |
