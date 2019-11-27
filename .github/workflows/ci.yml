@@ -15,3 +15,13 @@ jobs:
         run: npm run lint
       - name: Format all files
         run: npm run format
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install dependencies
+        run: npm install
+      - name: Run tests
+        run: npm run test

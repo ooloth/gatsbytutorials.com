@@ -1,6 +1,11 @@
 // 1. Generate string versions of tutorial array fields for faster search
 ///////////////////////////////////////////////////////////////////////////////////
 
+// TODO: unit test this utility
+function convertArrayToString(array) {
+  return array ? array.join(` `).toLowerCase() : ``
+}
+
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
 
@@ -8,19 +13,19 @@ exports.onCreateNode = ({ node, actions }) => {
     createNodeField({
       node,
       name: `formatsAsString`,
-      value: node.formats ? node.formats.join(` `).toLowerCase() : ``,
+      value: convertArrayToString(node.formats),
     })
 
     createNodeField({
       node,
       name: `topicsAsString`,
-      value: node.topics ? node.topics.join(` `).toLowerCase() : ``,
+      value: convertArrayToString(node.topics),
     })
 
     createNodeField({
       node,
       name: `authorsAsString`,
-      value: node.authors ? node.authors.join(` `).toLowerCase() : ``,
+      value: convertArrayToString(node.authors),
     })
   }
 }
@@ -89,6 +94,8 @@ exports.createPages = async ({ graphql, reporter }) => {
   // Move tutorials with no date to the end of the list
   const { tutorialsWithDates, tutorialsWithoutDates } = result.data
   const tutorials = [...tutorialsWithDates.nodes, ...tutorialsWithoutDates.nodes]
+
+  // TODO: extract repeated patterns into utilities and test them...
 
   // Create a sorted list of all unique formats
   const formatArrays = tutorials.map(tutorial => tutorial.formats)
