@@ -65,17 +65,19 @@
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.3.0",
     "husky": "^3.1.0",
+    "jest": "^24.9.0",
     "lint-staged": "^9.4.3",
     "prettier": "^1.19.1",
     "typescript": "^3.7.2"
   },
   "scripts": {
+    "build": "gatsby build",
     "dev": "gatsby develop",
-    "lint": "eslint '**/*.{js,jsx,ts,tsx}' --fix",
     "format": "npm run prettier -- --write",
+    "lint": "eslint '**/*.{js,jsx,ts,tsx}' --fix",
     "prettier": "prettier \"**/*.+(js|jsx|ts|tsx|json|yml|yaml|css|html|md|mdx|graphql)\"",
-    "validate": "npm run lint && npm run prettier -- --list-different",
+    "test": "jest",
     "type-check": "tsc  --noEmit",
-    "build": "gatsby build"
+    "validate": "npm run lint && npm run prettier -- --list-different"
   }
 }
