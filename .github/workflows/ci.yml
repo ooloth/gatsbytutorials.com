@@ -15,3 +15,8 @@ jobs:
         run: npm run lint
       - name: Format all files
         run: npm run format
+  test:
+    name: Test
+    steps:
+      - name: Run tests
+        run: npm run test
