@@ -17,6 +17,7 @@ jobs:
         run: npm run format
   test:
     name: Test
+    runs-on: ubuntu-latest
     steps:
       - name: Run tests
         run: npm run test
