@@ -1,10 +1,10 @@
 import { Tutorial } from '../types'
 
-function fieldPassesFilter(
+export function fieldPassesFilter(
   field: Array<string> | string | undefined,
   filter: string
 ): boolean {
-  if (!filter) return true // field always passes if filter isn't set
+  if (!filter) return true // field always passes if filter is empty
   if (!field) return false // field always fails if empty while filter is set
 
   if (typeof field === 'string') {
@@ -20,7 +20,7 @@ export default function filterTutorials(
   topic: string,
   author: string,
   source: string
-) {
+): Array<Tutorial> {
   return tutorials.filter(item => {
     const passesFormatFilter = fieldPassesFilter(item.formats, format)
     const passesTopicFilter = fieldPassesFilter(item.topics, topic)
