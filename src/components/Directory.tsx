@@ -32,11 +32,11 @@ export default function Directory({
   authors,
   sources,
 }: Props) {
-  const [format, setFormat] = useState(``)
-  const [topic, setTopic] = useState(``)
-  const [author, setAuthor] = useState(``)
-  const [source, setSource] = useState(``)
-  const [query, setQuery] = useState(``)
+  const [format, setFormat] = useState('')
+  const [topic, setTopic] = useState('')
+  const [author, setAuthor] = useState('')
+  const [source, setSource] = useState('')
+  const [query, setQuery] = useState('')
   const [limited, setLimited] = useState(true)
   const searchInput = useRef() as React.MutableRefObject<HTMLInputElement>
 

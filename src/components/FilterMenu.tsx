@@ -18,7 +18,7 @@ export default function FilterMenu({
 }: Props) {
   function handleClick(e: SyntheticEvent) {
     const button = e.target as HTMLButtonElement
-    if (button.value === activeFilter) setFilter(``)
+    if (button.value === activeFilter) setFilter('')
     else setFilter(button.value)
   }
 
