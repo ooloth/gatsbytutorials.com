@@ -1,6 +1,4 @@
-// import { render } from '@testing-library/react'
-
-import filterTutorials, { fieldPassesFilter } from '../logic/filterTutorials'
+import { filterTutorials, fieldPassesFilter } from '.'
 
 describe(`fieldPassesFilter()`, () => {
   it(`always returns true if the filter is empty`, () => {
