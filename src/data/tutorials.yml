@@ -3268,3 +3268,48 @@
     - graphql
     - cosmicjs
     - cms
+    
+- title: 'Creating an Agency Site in GatsbyJS'
+  link: https://nabendu.blog/posts/creating-an-agency-site-in-gatsbyjs-1-1mdd/
+  formats:
+    - text
+  language: en
+  date: 2019-09-28
+  length: '12:00'
+  authors:
+    - Nabendu Biswas
+  topics:
+    - css
+    - graphql
+    - gatsby
+    - introduction
+    
+- title: 'Creating Blog site using Stackbit, GatsbyJS and DEV'
+  link: https://nabendu.blog/posts/creating-blog-site-using-slackbit-gatsbyjs-and-dev-1-55f0/
+  formats:
+    - text
+  language: en
+  date: 2019-11-14
+  length: '14:00'
+  authors:
+    - Nabendu Biswas
+  topics:
+    - css
+    - graphql
+    - gatsby
+    - stackbit
+    
+- title: 'Learn GatsbyJS by creating a tourism site'
+  link: https://nabendu.blog/posts/learn-gatsbyjs-by-creating-a-tourism-site-1-mnm/
+  formats:
+    - text
+  language: en
+  date: 2019-11-27
+  length: '31:00'
+  authors:
+    - Nabendu Biswas
+  topics:
+    - css
+    - graphql
+    - gatsby
+    - contentful
