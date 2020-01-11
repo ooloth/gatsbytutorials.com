@@ -16,7 +16,7 @@
     "babel-plugin-styled-components": "^1.10.6",
     "body-scroll-lock": "^2.6.4",
     "gatsby": "^2.17.17",
-    "gatsby-cli": "^2.8.14",
+    "gatsby-cli": "^2.8.26",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-google-analytics": "^2.1.29",
     "gatsby-plugin-manifest": "^2.2.30",
