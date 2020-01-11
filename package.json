@@ -59,7 +59,7 @@
     "@typescript-eslint/parser": "^2.9.0",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
-    "babel-preset-gatsby": "^0.2.23",
+    "babel-preset-gatsby": "^0.2.27",
     "eslint": "^6.7.1",
     "eslint-config-prettier": "^6.7.0",
     "eslint-config-react-app": "^5.0.2",
