@@ -1,3 +1,17 @@
+- title: 'How to create a Gatsby.js transformer plugin'
+  link: https://maximzubarev.com/how-to-create-a-gatsby-js-transformer-plugin
+  formats:
+    - text
+  language: en
+  date: 2020-02-17
+  authors:
+    - Maxim Zubarev
+  source: 'maximzubarev.com'
+  topics:
+    - plugins
+    - remark
+    - markdown
+    - gatsby-transformer-remark
 - title: 'How to Build a GatsbyJS Guitar-Chords-MDX Theme From Scratch'
   link: https://owlypixel.com/building-gatsbyjs-theme-from-scratch/
   formats:
