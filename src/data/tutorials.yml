@@ -3327,3 +3327,19 @@
     - graphql
     - gatsby
     - contentful
+
+- title: 'Build a coding blog from scratch with Gatsby and MDX'
+  link: https://scottspence.com/2019/10/31/build-an-mdx-blog/
+  formats:
+    - text
+    - video
+  language: en
+  date: 2019-10-31
+  length: '36:00'
+  authors:
+    - Scott Spence
+  topics:
+    - mdx
+    - graphql
+    - gatsby
+    - styled-components
