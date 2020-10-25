@@ -51,7 +51,7 @@
     - markdown
     - mdx
     - gatsby-plugin-mdx
-    
+
 - title: Custom Gatsby Source Plugin Tutorial
   link: https://codebushi.com/custom-gatsby-source-plugin/
   formats:
@@ -168,15 +168,15 @@
     - contentful
 
 - title: 'Up & Running with Gatsby (10 videos)'
-  link: https://www.youtube.com/watch?v=eCtgG5Sx6kk&list=PLs_LGDWysHJptEmAKxXjLCQvl7sAbXPBw
+  link: https://www.youtube.com/watch?v=jAa1wh5ATm0&list=PLHBEcHVSROXQQhXpNhmiVKKcw72Cc0V-U
   formats:
     - video
   language: en
-  date: 2019-06-03
+  date: 2019-08-03
   length: ''
   authors:
     - Michael Uloth
-  source: 'Up & Running Tutorials'
+  source: ''
   topics:
     - introduction
     - starters
@@ -3282,7 +3282,7 @@
     - graphql
     - cosmicjs
     - cms
-    
+
 - title: 'Creating an Agency Site in GatsbyJS'
   link: https://nabendu.blog/posts/creating-an-agency-site-in-gatsbyjs-1-1mdd/
   formats:
@@ -3297,7 +3297,7 @@
     - graphql
     - gatsby
     - introduction
-    
+
 - title: 'Creating Blog site using Stackbit, GatsbyJS and DEV'
   link: https://nabendu.blog/posts/creating-blog-site-using-slackbit-gatsbyjs-and-dev-1-55f0/
   formats:
@@ -3312,7 +3312,7 @@
     - graphql
     - gatsby
     - stackbit
-    
+
 - title: 'Learn GatsbyJS by creating a tourism site'
   link: https://nabendu.blog/posts/learn-gatsbyjs-by-creating-a-tourism-site-1-mnm/
   formats:
