@@ -1,3 +1,29 @@
+- title: 'Building a Website With Gatsby and a Headless CMS'
+  link: https://fmontes.com/blog/building-a-website-with-gatsby-and-a-headless-cms-part-1/
+  formats:
+    - text
+  language: en
+  date: 2019-01-19
+  authors:
+    - Freddy Montes
+  source: 'fmontes.com'
+  topics:
+    - headless
+    - dotcms
+    - graphql
+- title: 'Dealing with dynamic images in Gatsby'
+  link: https://fmontes.com/blog/dynamic-gatsby-images-an-anternative/
+  formats:
+    - text
+  language: en
+  date: 2020-05-04
+  authors:
+    - Freddy Montes
+  source: 'fmontes.com'
+  topics:
+    - images
+    - cloudinary
+    - graphql
 - title: 'How to create a Gatsby.js transformer plugin'
   link: https://maximzubarev.com/how-to-create-a-gatsby-js-transformer-plugin
   formats:
