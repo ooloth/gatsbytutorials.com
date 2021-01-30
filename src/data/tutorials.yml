@@ -11,6 +11,19 @@
     - headless
     - dotcms
     - graphql
+- title: 'How to make loading Google fonts faster on Gatsby'
+  link: https://gatsbytemplates.io/blog/fast-google-fonts/
+  formats:
+    - text
+  language: en
+  date: 2020-12-20
+  authors:
+    - Vsevolod
+  source: 'gatsbytemplates.io'
+  topics:
+    - gatsby
+    - plugins
+    - graphql
 - title: 'Dealing with dynamic images in Gatsby'
   link: https://fmontes.com/blog/dynamic-gatsby-images-an-anternative/
   formats:
