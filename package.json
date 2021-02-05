@@ -18,7 +18,7 @@
     "gatsby": "^2.17.17",
     "gatsby-cli": "^2.8.14",
     "gatsby-image": "^2.2.34",
-    "gatsby-plugin-google-analytics": "^2.1.29",
+    "gatsby-plugin-google-analytics": "^2.1.32",
     "gatsby-plugin-manifest": "^2.2.30",
     "gatsby-plugin-netlify": "^2.1.27",
     "gatsby-plugin-netlify-cache": "^1.2.0",
