@@ -22,7 +22,7 @@
     "gatsby-plugin-manifest": "^2.2.30",
     "gatsby-plugin-netlify": "^2.1.27",
     "gatsby-plugin-netlify-cache": "^1.2.0",
-    "gatsby-plugin-offline": "^3.0.24",
+    "gatsby-plugin-offline": "^3.0.31",
     "gatsby-plugin-react-helmet": "^3.1.16",
     "gatsby-plugin-remote-images": "^1.0.7",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
