@@ -15,7 +15,7 @@
     "autoprefixer": "^9.7.2",
     "babel-plugin-styled-components": "^1.10.6",
     "body-scroll-lock": "^2.6.4",
-    "gatsby": "^2.17.17",
+    "gatsby": "^2.18.21",
     "gatsby-cli": "^2.8.14",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-google-analytics": "^2.1.29",
