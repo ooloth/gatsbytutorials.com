@@ -11,7 +11,7 @@
   ],
   "dependencies": {
     "@hot-loader/react-dom": "^16.11.0",
-    "@svgr/webpack": "^4.3.3",
+    "@svgr/webpack": "^5.0.1",
     "autoprefixer": "^9.7.2",
     "babel-plugin-styled-components": "^1.10.6",
     "body-scroll-lock": "^2.6.4",
