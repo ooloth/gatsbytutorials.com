@@ -1,0 +1,1 @@
+This material is available for private, non-commercial use under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0-standalone.html). If you would like to reuse this material for commercial purposes, please contact me at hello@michaeluloth.com.
